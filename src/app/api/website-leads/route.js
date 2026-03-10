@@ -1,0 +1,209 @@
+import { NextResponse } from "next/server"
+import { prisma } from "@/lib/prisma"
+import nodemailer from "nodemailer"
+
+export async function POST(req) {
+  try {
+    const body = await req.json()
+
+    const {
+      fullName,
+      email,
+      phone,
+      profileType,
+      currentJobRole,
+      experience,
+      goal,
+      preferredBatch,
+      city,
+      leadSource,
+      utmSource,
+      utmMedium,
+      utmCampaign,
+      utmTerm,
+      utmContent,
+      gclid,
+    } = body
+
+
+    if (!fullName || !email || !phone) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Name, email and phone are required",
+        },
+        { status: 400 }
+      )
+    }
+
+    if (phone.length !== 10) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Phone must be 10 digits",
+        },
+        { status: 400 }
+      )
+    }
+
+
+    const lead = await prisma.websiteLead.create({
+      data: {
+        fullName,
+        email,
+        phone,
+
+        profileType: profileType || null,
+        currentJobRole: currentJobRole || null,
+        experience: experience || null,
+
+        goal: goal || null,
+        preferredBatch: preferredBatch || null,
+        city: city || null,
+
+        leadSource: leadSource || "Website",
+        leadStatus: "new",
+
+        utmSource: utmSource || null,
+        utmMedium: utmMedium || null,
+        utmCampaign: utmCampaign || null,
+        utmTerm: utmTerm || null,
+        utmContent: utmContent || null,
+        gclid: gclid || null,
+      },
+    })
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    })
+
+    await transporter.sendMail({
+      from: `"Webinar Lead" <${process.env.EMAIL_USER}>`,
+      to: ["inbound@pipelinevelocity.com", "hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"],
+      subject: "New AI/ML Webinar Registration",
+      html: `
+        <div style="font-family: Arial, sans-serif; background:#f5f7fa; padding:30px;">
+          <div style="max-width:520px; margin:auto; background:#ffffff; border-radius:8px; padding:25px; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+            <h2 style="color:#C41E3A; margin-bottom:20px;">
+              New AI/ML Webinar Registration
+            </h2>
+
+            <table style="width:100%; border-collapse:collapse; font-size:14px;">
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Name</td>
+                <td style="padding:8px;">${fullName}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Email</td>
+                <td style="padding:8px;">${email}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Phone</td>
+                <td style="padding:8px;">${phone}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Source</td>
+                <td style="padding:8px;">${utmSource || "-"}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Medium</td>
+                <td style="padding:8px;">${utmMedium || "-"}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Campaign</td>
+                <td style="padding:8px;">${utmCampaign || "-"}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Keyword</td>
+                <td style="padding:8px;">${utmTerm || "-"}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">Ad Content</td>
+                <td style="padding:8px;">${utmContent || "-"}</td>
+              </tr>
+
+              <tr>
+                <td style="padding:8px; font-weight:bold;">GCLID</td>
+                <td style="padding:8px;">${gclid || "-"}</td>
+              </tr>
+            </table>
+
+            <hr style="margin:20px 0; border:none; border-top:1px solid #eee;" />
+
+            <p style="font-size:12px; color:#888;">
+              Lead submitted from AI/ML Webinar Landing Page.
+            </p>
+          </div>
+        </div>
+      `,
+    })
+
+  
+    await transporter.sendMail({
+      from: '"Dandes Academy" <hello@dandesacademy.com>',
+      to: email,
+      subject: "Webinar Registration Confirmed – See You Live | Dandes Academy",
+      html: `
+        <div style="font-family: Arial, sans-serif; font-size:15px; line-height: 1.6; color: #333;">
+          <h2 style="color:#111;">Hello ${fullName || "there"},</h2>
+
+          <p>Thank you for registering for our upcoming webinar:</p>
+
+          <h3 style="margin-bottom: 10px; color: #000;">
+            AI Career Switch Blueprint – How Software Engineers Are Transitioning to AI/ML Roles
+          </h3>
+
+          <p><strong>📅 Date: 12th March 2026 (Thursday)</strong></p>
+          <p><strong>⏰ Time: 8:00 PM IST</strong></p>
+          <p><strong>📍 Mode: Live Online Session</strong></p>
+
+          <p>You will receive the joining link before the session starts.</p>
+
+          <p><strong>In this webinar, you will learn:</strong></p>
+
+          <ul style="padding-left: 20px;">
+            <li>Why many software engineers are moving into AI roles</li>
+            <li>How your existing software engineering experience becomes an advantage</li>
+            <li>The skills you should focus on (and what to skip)</li>
+            <li>A clear roadmap to transition into AI/ML roles</li>
+          </ul>
+
+          <p>Looking forward to seeing you live!</p>
+
+          <p>
+            Regards,<br/>
+            <strong>Srinivas Dande</strong><br/>
+            Founder & Lead Trainer<br/>
+            Dandes Academy
+          </p>
+        </div>
+      `,
+    });
+    
+    return NextResponse.json({
+      success: true,
+      data: lead,
+    })
+  } catch (error) {
+    console.error("Lead API error:", error)
+
+    return NextResponse.json(
+      {
+        success: false,
+        message: "Server error",
+      },
+      { status: 500 }
+    )
+  }
+}
