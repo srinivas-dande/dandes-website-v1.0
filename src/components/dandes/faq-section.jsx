@@ -54,7 +54,7 @@ export function FAQSection() {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-slate-50">
+    <section className="py-6 md:py-9 bg-slate-50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

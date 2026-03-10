@@ -27,7 +27,7 @@ export function LiveClassesSection() {
 ]
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-sky-50/50 to-white">
+    <section className="py-8 md:py-12 bg-gradient-to-b from-sky-50/50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-foreground mb-12">
           Live online classes, practice, and support
@@ -39,7 +39,7 @@ export function LiveClassesSection() {
               key={index}
               className="bg-card rounded-xl border border-border p-6 md:p-8"
             >
-              <div className={`w-14 h-14 ${feature.iconBg} rounded-xl flex items-center justify-center mb-6`}>
+              <div className={`w-14 h-14 ${feature.iconBg} rounded-xl flex items-center justify-center mb-6 mx-auto`}>
                 <Image
                   src={feature.image}
                   alt={feature.title}

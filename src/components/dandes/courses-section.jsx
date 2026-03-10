@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
@@ -85,7 +85,30 @@ function CourseCard({ course }) {
 }
 
 export function CoursesSection() {
+  
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const [isTransitioning, setIsTransitioning] = useState(true)
+
+  useEffect(() => {
+    if (isPaused) return
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1)
+      setIsTransitioning(true)
+    }, 4000)
+
+    return () => clearInterval(interval)
+  }, [isPaused])
+
+  useEffect(() => {
+    if (currentIndex === courses.length) {
+      setTimeout(() => {
+        setIsTransitioning(false)
+        setCurrentIndex(0)
+      }, 700)
+    }
+  }, [currentIndex])
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? courses.length - 1 : prev - 1))
@@ -96,7 +119,7 @@ export function CoursesSection() {
   }
 
   return (
-    <section className="bg-white py-16 px-4 md:py-24">
+    <section className="bg-white py-6 px-4 md:py-9">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -124,13 +147,19 @@ export function CoursesSection() {
 
           {/* Mobile/Tablet View - Carousel */}
           <div className="lg:hidden">
-            <div className="overflow-hidden">
+            <div
+              className="overflow-hidden"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onTouchStart={() => setIsPaused(true)}
+              onTouchEnd={() => setIsPaused(false)}
+            >
               <div
-                className="flex transition-transform duration-300 ease-in-out"
+                className={`flex ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {courses.map((course) => (
-                  <div key={course.id} className="w-full flex-shrink-0 px-2">
+                {[...courses, courses[0]].map((course, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-2">
                     <CourseCard course={course} />
                   </div>
                 ))}

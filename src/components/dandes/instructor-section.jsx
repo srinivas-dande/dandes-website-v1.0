@@ -13,7 +13,7 @@ const credentials = [
 
 export function InstructorSection() {
   return (
-    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-9 md:py-12 bg-white relative overflow-hidden">
       {/* Grid pattern background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, #d1d5db 1px, transparent 1px), linear-gradient(to bottom, #d1d5db 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

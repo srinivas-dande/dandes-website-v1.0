@@ -45,7 +45,7 @@ export function AudienceSection() {
   const content = tabContent[activeTab]
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-sky-50/50 to-white">
+    <section className="py-9 md:py-12 bg-gradient-to-b from-sky-50/50 to-white">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">

@@ -52,7 +52,7 @@ export function FeaturesSection() {
               className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow"
             >
               <div
-                className={`w-14 h-14 ${feature.iconBg} rounded-lg flex items-center justify-center mb-4`}
+                className={`w-14 h-14 ${feature.iconBg} rounded-lg flex items-center justify-center mb-4 mx-auto`}
               >
                 <Image
                   src={feature.image}

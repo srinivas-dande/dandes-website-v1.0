@@ -47,7 +47,7 @@ const comparisonData = [
 
 export function ComparisonSection() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-sky-50/50 to-white">
+    <section className="py-9 md:py-12 bg-gradient-to-b from-sky-50/50 to-white">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-12">

@@ -13,7 +13,7 @@ const supportItems = [
 
 export function CareerSupportSection() {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 lg:px-16 bg-white">
+    <section className="py-9 md:py-12 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
           {/* Image */}
