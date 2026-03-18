@@ -7,8 +7,8 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white border border-[#CECECE] h-[90px]">
-      <div className="h-full px-[70px] flex items-center justify-between max-w-[1440px] mx-auto">
+    <header className="bg-white border border-[#CECECE] h-[90px] relative z-50">
+      <div className="h-full px-4 md:px-[70px] flex items-center justify-between max-w-[1440px] mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="bg-[var(--dandes-red)] text-white font-bold text-xl px-2.5 py-1.5 rounded">
@@ -22,7 +22,7 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-12">
-          <a href="#" className="text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
+          <a href="/courses" className="text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
             Courses
           </a>
           <button className="flex items-center gap-1 text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
@@ -52,7 +52,7 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-white border-t border-[#CECECE] px-[70px] py-4 flex flex-col gap-4">
+        <nav className="md:hidden absolute top-[90px] left-0 w-full bg-white border-t border-[#CECECE] px-4 py-4 flex flex-col gap-4 z-50 shadow-md">
           <a href="#" className="text-[var(--dandes-dark)] font-medium py-2">
             Courses
           </a>

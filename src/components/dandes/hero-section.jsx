@@ -24,7 +24,8 @@ export function HeroSection() {
       {/* Gradient overlay to blend the background */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] bg-gradient-to-r from-white via-white/50 to-transparent" />
 
-      <div className="max-w-[1300px] mx-auto px-4 lg:px-[70px] py-12 lg:py-16 relative z-10 min-h-[609px]">
+      <div className="max-w-[1300px] 
+      mx-auto px-4 lg:px-[70px] py-12 lg:py-16 relative z-10 min-h-[609px]">
         <div className="flex flex-col lg:flex-row justify-between items-start h-full">
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
