@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { ArrowRight, ChevronDown } from "lucide-react"
 
-export function RegistrationForm() {
+export function AimlRegistrationForm() {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     fullName: "",
@@ -55,10 +55,9 @@ export function RegistrationForm() {
     city: formData.city,
 
     leadSource: "AI ML Course Landing Page",
-    
-    sourcePage: "Home_Page",
-    leadType: "getCourseDetails", 
-    
+
+    sourcePage : "ai_ml_course_page",
+    leadType : "getCourseDetails",
 
     utmSource: params.get("utm_source") || "",
     utmMedium: params.get("utm_medium") || "",

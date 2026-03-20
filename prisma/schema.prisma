@@ -306,6 +306,9 @@ model WebsiteLead {
   utmContent     String?
   gclid          String?
 
+  sourcePage     String?
+  leadType       String?
+
   createdAt      DateTime @default(now())
 
   @@map("website_leads")

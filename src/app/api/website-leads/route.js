@@ -23,6 +23,8 @@ export async function POST(req) {
       utmTerm,
       utmContent,
       gclid,
+      sourcePage,
+      leadType,
     } = body
 
 
@@ -70,6 +72,9 @@ export async function POST(req) {
         utmTerm: utmTerm || null,
         utmContent: utmContent || null,
         gclid: gclid || null,
+
+        sourcePage: sourcePage || null,
+        leadType: leadType || null,
       },
     })
 
@@ -83,7 +88,7 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: `"Webinar Lead" <${process.env.EMAIL_USER}>`,
-      to: ["inbound@pipelinevelocity.com", "hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"],
+      to: [ "hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"],
       subject: "New AI/ML Webinar Registration",
       html: `
         <div style="font-family: Arial, sans-serif; background:#f5f7fa; padding:30px;">
