@@ -96,7 +96,7 @@ export default function FlexibilitySupport() {
           Learn With Flexibility, Grow With Support
         </h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 32 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 32 }}>
           {/* Flexibility Card */}
           <div
             style={{

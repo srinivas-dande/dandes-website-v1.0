@@ -143,7 +143,14 @@ export function BlogPostContent() {
 
   return (
     <section style={{ padding: '60px 0 80px', backgroundColor: '#fff' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', gap: 48 }}>
+      <div style={{ 
+        maxWidth: 1200, 
+        margin: '0 auto', 
+        padding: '0 24px', 
+        display: 'flex', 
+        gap: 48,
+        flexWrap: 'wrap'
+      }}>
         
         {/* Main Content */}
         <article style={{ flex: 1, maxWidth: 760 }}>
@@ -689,7 +696,7 @@ export function BlogPostContent() {
         <h3 style={{ fontSize: 28, fontWeight: 700, color: '#1a1a1a', marginBottom: 40, textAlign: 'center' }}>
           Recent <span style={{ color: '#d12027' }}>Blogs</span>
         </h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
           {recentBlogs.map((blog) => (
             <div
               key={blog.id}
