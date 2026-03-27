@@ -66,10 +66,10 @@ export function BlogListingSection() {
   return (
     <section style={{ backgroundColor: '#fff', padding: '48px 0 80px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
-        <div style={{ display: 'flex', gap: 40, flexWrap: 'wrap'}}>
+        <div style={{ display: 'flex', gap: 40 }}>
           
           {/* Left Sidebar */}
-          <aside style={{ flex: '1 1 100%', maxWidth: '100%'}}>
+          <aside style={{ width: 240, flexShrink: 0 }}>
             
             {/* Search - Working */}
             <div style={{
@@ -249,7 +249,7 @@ export function BlogListingSection() {
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gridTemplateColumns: 'repeat(3, 1fr)',
               gap: 24,
             }}>
               {paginatedPosts.map((post) => (
