@@ -1,21 +1,21 @@
 import { ArrowRight } from "lucide-react"
 
 const coursesLinks = [
-  { label: "AI/ML", href: "#" },
+  { label: "AI/ML", href: "/ai-machine-learning-course" },
   { label: "System Design", href: "#" },
   { label: "Data Structure & Algorithm", href: "#" },
 ]
 
 const resourcesLinks = [
   { label: "Testimonials", href: "#" },
-  { label: "Blogs", href: "#" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Refund policy", href: "#" },
   { label: "Syllabus download", href: "#" },
   { label: "Class videos", href: "#" },
 ]
 
 const companyLinks = [
-  { label: "About Us", href: "#" },
+  { label: "About Us", href: "/about" },
   { label: "Srinivas", href: "#" },
   { label: "Contact Us", href: "#" },
 ]

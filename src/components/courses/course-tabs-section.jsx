@@ -35,7 +35,7 @@ const coursesData = {
     titleHighlight: "Data Structures and Algorithms Course",
     subtitle: "for working professionals and students",
     description: "If coding rounds feel inconsistent, the problem is usually structure and practice. This program helps you build strong DSA fundamentals, learn common patterns, and improve speed and accuracy through guided problem solving.",
-    ctaText: "Get DSA course details",
+    ctaText: "Get DSA course details", 
     highlights: [
       "Structured DSA roadmap and problem-solving patterns",
       "Practice focused learning, not just theory",
