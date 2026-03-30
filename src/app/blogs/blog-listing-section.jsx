@@ -267,6 +267,7 @@ export function BlogListingSection() {
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
               gap: 24,
+              rowGap: '35px',
             }}>
               {paginatedPosts.map((post) => (
                 <article key={post.id} style={{ display: 'flex', flexDirection: 'column' }}>
