@@ -25,7 +25,7 @@ export default function AboutHero() {
         >
           About Dandes Academy, Practical Training
           <br />
-          In AI And Data Science
+          In AI And Machine Learning
         </h1>
         
         <p
