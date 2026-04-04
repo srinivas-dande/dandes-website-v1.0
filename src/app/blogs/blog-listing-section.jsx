@@ -395,7 +395,7 @@ export function BlogListingSection() {
             {filteredPosts.length > 0 && (
               <div style={{
                 display: 'flex',
-                justifyContent: 'flex-start',
+                justifyContent: 'center',
                 alignItems: 'center',
                 gap: 8,
                 marginTop: 48,

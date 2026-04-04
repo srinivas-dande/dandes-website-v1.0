@@ -16,8 +16,8 @@ const resourcesLinks = [
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Srinivas", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Srinivas", href: "/srinivas" },
+  { label: "Contact Us", href: "/contact" },
 ]
 
 export function Footer() {
@@ -144,10 +144,10 @@ export function Footer() {
             © 2026 Dandes Academy. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors underline">
+            <a href="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors underline">
               Privacy policy
             </a>
-            <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors underline">
+            <a href="/terms-conditions" className="text-gray-400 text-sm hover:text-white transition-colors underline">
               Terms of service
             </a>
             <a href="#" className="text-gray-400 text-sm hover:text-white transition-colors underline">
