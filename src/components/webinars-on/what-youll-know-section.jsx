@@ -5,6 +5,10 @@ const benefits = [
   "What companies actually look for in 2026",
   "A practical learning roadmap in the right order",
   "How to build a portfolio that helps you get shortlisted",
+  "A practical learning roadmap in the right order",
+  "How to build a portfolio that helps you get shortlisted",
+  
+  
   
 ]
 
@@ -36,6 +40,7 @@ export default function WhatYoullKnowSection() {
             style={{
               flex: '0 0 45%',
               maxWidth: '45%',
+              height: '520px',
             }}
             className="what-youll-know-image"
           >
@@ -44,7 +49,7 @@ export default function WhatYoullKnowSection() {
               alt="Team of professionals collaborating in a meeting"
               style={{
                 width: '100%',
-                height: 'auto',
+                height: '100%',
                 borderRadius: 16,
                 objectFit: 'cover',
                 display: 'block',
