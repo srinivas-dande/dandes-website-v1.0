@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
+import { PopupFormModal } from "./popup-form-modal"
 
 const courses = [
   {
@@ -14,6 +16,7 @@ const courses = [
     highlights: ["Live classes", "Structured curriculum", "Hands-on projects", "Interview preparation."],
     highlightColor: "bg-cyan-50 text-cyan-700",
     ctaText: "View AI/ML course",
+    url: "/ai-machine-learning-course",
   },
   {
     id: 2,
@@ -24,6 +27,7 @@ const courses = [
     highlights: ["Foundations", "Real case studies", "Design patterns", "Interview practice"],
     highlightColor: "bg-red-50 text-red-600",
     ctaText: "View System Design course",
+    url: "/courses/ai-ml",
   },
   {
     id: 3,
@@ -34,6 +38,7 @@ const courses = [
     highlights: ["Core DSA", "Pattern recognition", "Interview focused prep"],
     highlightColor: "bg-emerald-50 text-emerald-700",
     ctaText: "View DSA course",
+    url: "/courses/ai-ml",
   },
 ]
 
@@ -74,21 +79,25 @@ function CourseCard({ course }) {
       </div>
 
       {/* CTA */}
-      <button className="inline-flex w-fit items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-gray-50">
+      <Link 
+        href={course.url}
+        className="inline-flex w-fit items-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-gray-50"
+      >
         {course.ctaText}
         <span className="flex h-6 w-6 items-center justify-center rounded bg-[#dc2626] text-white">
           <ChevronRight className="h-4 w-4" />
         </span>
-      </button>
+      </Link>
     </article>
   )
 }
 
 export function CoursesSection() {
-  
+
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(true)
+  const [showPopup, setShowPopup] = useState(false)
 
   useEffect(() => {
     if (isPaused) return
@@ -119,7 +128,10 @@ export function CoursesSection() {
   }
 
   return (
-    <section className="bg-white py-6 px-4 md:py-9">
+    <section 
+      id="courses-section"
+      className="bg-white py-6 px-4 md:py-9"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -188,11 +200,20 @@ export function CoursesSection() {
 
         {/* CTA Button */}
         <div className="mt-8 flex justify-center">
-          <button className="inline-flex items-center gap-2 rounded-md bg-[#dc2626] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b91c1c]">
+          <button 
+            onClick={() => setShowPopup(true)}
+            className="inline-flex items-center gap-2 rounded-md bg-[#dc2626] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b91c1c]"
+          >
             Register for free webinar
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>
+
+        <PopupFormModal
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        />
+
       </div>
     </section>
   )

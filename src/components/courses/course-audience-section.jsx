@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 const audienceData = {
   professionals: {
@@ -39,6 +40,8 @@ const audienceData = {
 }
 
 export function CourseAudienceSection() {
+  const [showPopup, setShowPopup] = useState(false)
+
   const [activeTab, setActiveTab] = useState('professionals')
   const data = audienceData[activeTab]
 
@@ -102,10 +105,19 @@ export function CourseAudienceSection() {
 
             <p className="text-gray-700 mb-4">Not sure which course fits your goal.</p>
 
-            <button className="bg-[#d12027] text-white py-3 px-6 rounded font-medium flex items-center gap-2 hover:bg-[#b81c22] transition-colors">
+            <button 
+              onClick={() => setShowPopup(true)}
+              className="bg-[#d12027] text-white py-3 px-6 rounded font-medium flex items-center gap-2 hover:bg-[#b81c22] transition-colors"
+            >
               Register for free webinar
               <ArrowRight className="w-4 h-4" />
             </button>
+
+            <PopupFormModal
+              showPopup={showPopup}
+              setShowPopup={setShowPopup}
+            />
+
           </div>
 
           {/* Right Cards */}

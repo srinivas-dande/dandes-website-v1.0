@@ -1,5 +1,13 @@
 "use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal" 
+
 export default function SrinivasHero() {
+  
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -55,8 +63,8 @@ export default function SrinivasHero() {
 
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-            <a
-              href="/course-details"
+            <Link
+              href="/free-class-videos"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -71,10 +79,10 @@ export default function SrinivasHero() {
               }}
             >
               Get course details
-            </a>
+            </Link>
 
-            <a
-              href="/webinar"
+            <button
+              onClick={() => setShowPopup(true)}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -101,7 +109,7 @@ export default function SrinivasHero() {
                   <path d="M5 3 L10 7 L5 11" />
                 </svg>
               </span>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -221,6 +229,12 @@ export default function SrinivasHero() {
           }
         }
       `}</style>
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }

@@ -1,6 +1,11 @@
 'use client'
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 export default function TeachingPreviewSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   const benefits = [
     'Taught by Srinivas Dande, the same instructor who leads the full program',
     'Covers topics across the curriculum: Python, ML, Deep Learning, and more',
@@ -124,6 +129,8 @@ export default function TeachingPreviewSection() {
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
             {/* Red button */}
             <button
+              onClick={() => setShowPopup(true)}
+
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -138,39 +145,7 @@ export default function TeachingPreviewSection() {
               Get course details
             </button>
 
-            {/* Register for webinar */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 12,
-                backgroundColor: '#fff',
-                padding: '6px 6px 6px 16px',
-                borderRadius: 50,
-                boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-              }}
-            >
-              <span style={{ fontSize: 14, fontWeight: 500, color: '#111' }}>
-                Register for the free webinar
-              </span>
-              <button
-                style={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 8,
-                  backgroundColor: '#d12027',
-                  border: 'none',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -215,6 +190,10 @@ export default function TeachingPreviewSection() {
           }
         }
       `}</style>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

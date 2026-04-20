@@ -1,6 +1,12 @@
 "use client"
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 export default function RoadmapCtaSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -95,7 +101,8 @@ export default function RoadmapCtaSection() {
             }}
           >
             {/* Primary button */}
-            <button
+            <Link
+             href = "/free-class-videos"
               style={{
                 backgroundColor: '#c91c2b',
                 color: '#fff',
@@ -107,8 +114,8 @@ export default function RoadmapCtaSection() {
                 cursor: 'pointer',
               }}
             >
-              Get course details
-            </button>
+              Watch Free class videos
+            </Link>
 
             {/* Secondary button with arrow */}
             <div
@@ -118,7 +125,9 @@ export default function RoadmapCtaSection() {
                 gap: 12,
               }}
             >
-              <span
+              <button
+                onClick={() => setShowPopup(true)}
+
                 style={{
                   fontSize: 16,
                   fontWeight: 600,
@@ -126,7 +135,7 @@ export default function RoadmapCtaSection() {
                 }}
               >
                 Register for the free webinar
-              </span>
+              </button>
               <button
                 style={{
                   backgroundColor: '#c91c2b',
@@ -170,6 +179,10 @@ export default function RoadmapCtaSection() {
           }
         }
       `}</style>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

@@ -1,9 +1,14 @@
 'use client'
-
-import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { useState } from "react"
+import { CheckCircle2 } from 'lucide-react'
 import { TechStackDiagram } from './tech-stack-diagram'
+import { PopupFormModal } from "../dandes/popup-form-modal"
+
 
 export function CourseHeroSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   const features = [
     'Live online classes with LMS recordings.',
     'Structured roadmaps, not random videos.',
@@ -47,15 +52,13 @@ export function CourseHeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors">
-                Get course details
-              </button>
-              <button className="flex items-center gap-2 text-gray-800 font-medium hover:text-[#d12027] transition-colors">
+              <button 
+                onClick={() => setShowPopup(true)}
+                className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors"
+              >
                 Register for the free webinar
-                <span className="bg-[#d12027] text-white rounded-full p-1.5">
-                  <ArrowRight className="w-4 h-4" />
-                </span>
               </button>
+              
             </div>
           </div>
 
@@ -65,6 +68,10 @@ export function CourseHeroSection() {
           </div>
         </div>
       </div>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

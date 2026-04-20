@@ -11,7 +11,7 @@ import { AimlStructuredSection } from '@/components/ai-ml/aiml-structured-sectio
 import { InstructorSection } from "@/components/dandes/instructor-section"
 import { TestimonialsSection } from "@/components/dandes/testimonials-section"
 import { AimlFaqSection } from '@/components/ai-ml/aiml-faq-section'
-import { CTASection } from "@/components/dandes/cta-section"
+import { AimlCTASection } from "@/components/ai-ml/aiml-cta-section"
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
@@ -35,7 +35,7 @@ export default function AiMlPage() {
       <InstructorSection />
       <TestimonialsSection />
       <AimlFaqSection />
-      <CTASection />
+      <AimlCTASection />
       <Footer />
     </main>
   )

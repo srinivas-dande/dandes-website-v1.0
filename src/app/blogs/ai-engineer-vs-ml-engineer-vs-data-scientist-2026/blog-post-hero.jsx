@@ -1,10 +1,18 @@
 'use client'
 
+import { useState } from "react"
+import { PopupFormModal } from "@/components/dandes/popup-form-modal"
+
+
 export function BlogPostHero({ 
+  
   heroImage = '/blogs/hero-banner.png',
   author = 'Srinivas Dandes',
   date = '24 Jan 2026',
 }) {
+
+  const [showPopup, setShowPopup] = useState(false)
+  
   const socialLinks = [
     { name: 'WhatsApp', icon: (
       <svg width={18} height={18} viewBox="0 0 24 24" fill="#fff">
@@ -125,6 +133,8 @@ export function BlogPostHero({
             Join the Free Webinar
           </span>
           <button
+            onClick={() => setShowPopup(true)}
+
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -147,6 +157,11 @@ export function BlogPostHero({
               <path d="M5 3 L12 8 L5 13" />
             </svg>
           </button>
+          <PopupFormModal
+            showPopup={showPopup}
+            setShowPopup={setShowPopup}
+          />
+
         </div>
       </div>
     </section>

@@ -1,6 +1,14 @@
-import { ArrowRight } from "lucide-react"
+"use client"
+
+import { useState } from "react"
+import { ArrowRight, X } from "lucide-react"
+import { RegistrationForm } from "./registration-form"
+import Link from "next/link"
 
 export function CTASection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section className="py-16 md:py-24 bg-[#FAEDFF] relative overflow-hidden">
       {/* Decorative triangles */}
@@ -38,23 +46,54 @@ export function CTASection() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <button className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors">
+            <Link 
+              href="/courses"
+              className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors"
+            >
               Get course details
-            </button>
+            </Link>
 
-            <button className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors">
+            <button 
+              onClick={() => setShowPopup(true)}
+              className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors"
+            >
               Register for the free webinar
               <span className="w-8 h-8 bg-[#d12027] rounded-full flex items-center justify-center">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
             </button>
+
           </div>
+
+          
 
           <p className="text-sm text-gray-500">
             Live online classes with LMS recordings. No spam, your details are used only to share course information and contact you about your inquiry.
           </p>
         </div>
+
+
       </div>
+        {showPopup && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+            onClick={() => setShowPopup(false)}
+          >
+            <div
+              className="relative max-h-[90vh] overflow-y-auto rounded-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white text-black shadow"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <RegistrationForm />
+            </div>
+          </div>
+        )}
     </section>
   )
 }

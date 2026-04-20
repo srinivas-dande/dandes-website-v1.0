@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from "next/navigation"
 
 export function BlogHeroSection() {
+  const router = useRouter()
   const [email, setEmail] = useState('')
 
   const handleSubscribe = (e) => {
@@ -10,6 +12,7 @@ export function BlogHeroSection() {
     // Handle subscription logic
     console.log('Subscribing:', email)
     setEmail('')
+    router.push('/thank-you')
   }
 
   return (

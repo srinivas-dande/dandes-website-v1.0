@@ -64,6 +64,15 @@ export function CountdownBanner() {
     return () => clearInterval(timer)
   }, [webinarTime])
 
+  const scrollToForm = () => {
+  const formSection = document.getElementById("webinar-registration-form")
+    if (formSection) {
+      formSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      })
+    }
+  }
     
 
   return (
@@ -94,7 +103,10 @@ export function CountdownBanner() {
           <CountdownUnit value={timeLeft.secs} label="SEC" />
         </div>
 
-        <button className="flex items-center gap-3 bg-white text-[#002B41] px-5 py-2.5 rounded text-sm font-medium hover:bg-gray-100 transition-colors">
+        <button
+          onClick={scrollToForm}
+          className="flex items-center gap-3 bg-white text-[#002B41] px-5 py-2.5 rounded text-sm font-medium hover:bg-gray-100 transition-colors"
+        >
           Register for FREE AI/ML Webinar
           <span className="bg-[var(--dandes-red)] rounded-full p-1">
             <ArrowRight className="size-3 text-white" />

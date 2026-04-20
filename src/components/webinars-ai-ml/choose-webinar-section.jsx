@@ -1,4 +1,6 @@
 "use client"
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 const webinars = [
   {
@@ -18,6 +20,8 @@ const webinars = [
 ]
 
 export default function ChooseWebinarSection() {
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -173,6 +177,8 @@ export default function ChooseWebinarSection() {
 
                 {/* Register button */}
                 <button
+                  onClick={() => setShowPopup(true)}
+
                   style={{
                     width: '100%',
                     backgroundColor: '#d12027',
@@ -202,6 +208,10 @@ export default function ChooseWebinarSection() {
           }
         }
       `}</style>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

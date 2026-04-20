@@ -1,3 +1,5 @@
+"use client"
+
 import { ArrowRight, CheckCircle2, Star } from "lucide-react"
 import { RegistrationForm } from "./registration-form"
 
@@ -9,6 +11,16 @@ const features = [
 ]
 
 export function HeroSection() {
+  const scrollToCourses = () => {
+  const courseSection = document.getElementById("courses-section")
+    if (courseSection) {
+      courseSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
   return (
     <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
       {/* Left side - Light background */}
@@ -29,7 +41,7 @@ export function HeroSection() {
         <div className="flex flex-col lg:flex-row justify-between items-start h-full">
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
+            <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
               Dandes Academy, Upskill With Live Classes, Projects, and Interview Prep
             </h1>
 
@@ -49,15 +61,13 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <button className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors">
+              <button 
+                onClick={scrollToCourses}
+                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors"
+              >
                 Get course details
               </button>
-              <button className="flex items-center gap-2 text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
-                Register for the free webinar
-                <span className="bg-[var(--dandes-red)] text-white rounded-full p-1.5">
-                  <ArrowRight className="size-4" />
-                </span>
-              </button>
+              
             </div>
 
             {/* Industry Tag */}
@@ -70,7 +80,10 @@ export function HeroSection() {
           </div>
 
           {/* Right Form */}
-          <div className="w-full lg:w-auto lg:shrink-0 lg:ml-8">
+          <div 
+            id="webinar-registration-form"
+            className="w-full lg:w-auto lg:shrink-0 lg:ml-8"
+          >
             <RegistrationForm />
           </div>
         </div>

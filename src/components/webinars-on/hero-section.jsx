@@ -1,4 +1,7 @@
-import { ArrowRight, CheckCircle2, Star } from "lucide-react"
+"use client"
+
+import Link from "next/link"
+import { CheckCircle2, Star } from "lucide-react"
 import { RegistrationForm } from "./registration-form"
 
 
@@ -50,15 +53,12 @@ export function WebinaronHeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <button className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors">
+              <Link
+                href = "/courses" 
+                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors">
                 Get course details
-              </button>
-              <button className="flex items-center gap-2 text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
-                Register for the free webinar
-                <span className="bg-[var(--dandes-red)] text-white rounded-full p-1.5">
-                  <ArrowRight className="size-4" />
-                </span>
-              </button>
+              </Link>
+              
             </div>
 
             {/* Industry Tag */}

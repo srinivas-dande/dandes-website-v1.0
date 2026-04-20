@@ -1,6 +1,12 @@
 "use client"
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 export default function ContactHero() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   const features = [
     'Real people on the other end',
     'Response within a few hours on most days',
@@ -129,7 +135,8 @@ export default function ContactHero() {
           }}
         >
           {/* Primary Button */}
-          <button
+          <Link
+          href="/courses"
             style={{
               backgroundColor: '#d12027',
               color: '#fff',
@@ -145,10 +152,12 @@ export default function ContactHero() {
             onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#d12027')}
           >
             Get course details
-          </button>
+          </Link>
 
           {/* Secondary Link */}
-          <a
+          <button
+            onClick={() => setShowPopup(true)}
+
             href="#"
             style={{
               display: 'flex',
@@ -186,7 +195,7 @@ export default function ContactHero() {
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </span>
-          </a>
+          </button>
         </div>
       </div>
 
@@ -207,6 +216,13 @@ export default function ContactHero() {
           }
         }
       `}</style>
+
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }

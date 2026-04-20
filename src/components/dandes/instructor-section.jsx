@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 const credentials = [
   "20+ years teaching engineers.",
   "Clear from basics to advanced.",
@@ -143,8 +145,9 @@ export function InstructorSection() {
 
             {/* CTAs */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
-              <button
+              <Link
                 style={{
+                  
                   backgroundColor: '#d12027',
                   color: '#fff',
                   padding: '14px 28px',
@@ -157,9 +160,11 @@ export function InstructorSection() {
                   alignItems: 'center',
                   gap: 8,
                 }}
+                href="/srinivas"
               >
-                Register for free webinar
-              </button>
+                
+                Know More
+              </Link>
 
               {/* Watch on YouTube */}
               <a

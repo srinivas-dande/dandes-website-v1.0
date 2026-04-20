@@ -1,3 +1,4 @@
+"use client"
 import { ArrowRight, CheckCircle2, Star } from "lucide-react"
 import { AimlRegistrationForm } from "./aiml-registration-form"
 
@@ -9,7 +10,19 @@ const features = [
   "Built for working professionals and serious learners.",
 ]
 
+
 export function AimlHeroSection() {
+  
+  const scrollToCourses = () => {
+    const courseSection = document.getElementById("courses")
+    if (courseSection) {
+      courseSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
   return (
     <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
       {/* Left side - Light background */}
@@ -50,7 +63,10 @@ export function AimlHeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <button className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors">
+              <button 
+                onClick={scrollToCourses}
+                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors"
+              >
                 Get course details
               </button>
               <button className="flex items-center gap-2 text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">

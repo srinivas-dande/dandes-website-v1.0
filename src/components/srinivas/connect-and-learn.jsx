@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link"
 
 export default function ConnectAndLearn() {
   return (
@@ -99,6 +99,7 @@ export default function ConnectAndLearn() {
               </div>
 
               <h3
+                
                 style={{
                   fontSize: 24,
                   fontWeight: 700,
@@ -120,8 +121,8 @@ export default function ConnectAndLearn() {
                 methodology in an interactive session.
               </p>
 
-              <a
-                href=""
+              <Link
+                href="/webinars"
                 style={{
                   display: 'inline-block',
                   backgroundColor: '#dc2626',
@@ -134,7 +135,7 @@ export default function ConnectAndLearn() {
                 }}
               >
                 Start with Webinar
-              </a>
+              </Link>
             </div>
 
             {/* Large Grid Icon */}

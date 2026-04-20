@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react"
+"use client"
 
 const coursesLinks = [
   { label: "AI/ML", href: "/ai-machine-learning-course" },
@@ -7,11 +7,11 @@ const coursesLinks = [
 ]
 
 const resourcesLinks = [
-  { label: "Testimonials", href: "#" },
+  { label: "Testimonials", href: "/testimonials" },
   { label: "Blogs", href: "/blogs" },
   { label: "Refund policy", href: "#" },
   { label: "Syllabus download", href: "#" },
-  { label: "Class videos", href: "#" },
+  { label: "Class videos", href: "/free-class-videos" },
 ]
 
 const companyLinks = [

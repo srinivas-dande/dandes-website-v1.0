@@ -1,4 +1,6 @@
 "use client"
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 const benefits = [
   "What AI engineering and ML roles actually expect in 2026",
@@ -9,6 +11,7 @@ const benefits = [
 ]
 
 function GreenCheckIcon() {
+
   return (
     <div
       style={{
@@ -30,6 +33,8 @@ function GreenCheckIcon() {
 }
 
 export default function WhatYouGetSection() {
+    const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -161,6 +166,8 @@ export default function WhatYouGetSection() {
 
             {/* CTA Button */}
             <button
+              onClick={() => setShowPopup(true)}
+
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -204,6 +211,10 @@ export default function WhatYouGetSection() {
           }
         }
       `}</style>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

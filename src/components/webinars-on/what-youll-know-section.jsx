@@ -1,4 +1,6 @@
 "use client"
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 const benefits = [
   "Which AI/ML role fits your background best",
@@ -13,6 +15,9 @@ const benefits = [
 ]
 
 export default function WhatYoullKnowSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -152,6 +157,8 @@ export default function WhatYoullKnowSection() {
 
             {/* CTA Button */}
             <button
+              onClick={() => setShowPopup(true)}
+
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -201,6 +208,12 @@ export default function WhatYoullKnowSection() {
           }
         }
       `}</style>
+      
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }

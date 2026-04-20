@@ -7,8 +7,8 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white border border-[#CECECE] h-[90px] relative z-50">
-      <div className="h-full px-4 md:px-[70px] flex items-center justify-between max-w-[1440px] mx-auto">
+    <header className="relative bg-white border border-[#CECECE] h-[90px]">
+      <div className="h-full px-4 md:px-[70px] flex items-center max-w-[1440px] mx-auto">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="bg-[var(--dandes-red)] text-white font-bold text-xl px-2.5 py-1.5 rounded">
@@ -21,7 +21,7 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-12">
+        <nav className="hidden md:flex items-center gap-12 ml-[250px]">
           <a href="/courses" className="text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
             Courses
           </a>
@@ -35,14 +35,11 @@ export function Header() {
           </button>
         </nav>
 
-        {/* Apply Now Button */}
-        <button className="hidden md:block bg-[#F5F5F5] text-[var(--dandes-red)] px-8 py-3 rounded font-medium hover:bg-gray-200 transition-colors">
-          Apply Now
-        </button>
+        
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="md:hidden p-2 ml-auto"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -52,8 +49,8 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="md:hidden absolute top-[90px] left-0 w-full bg-white border-t border-[#CECECE] px-4 py-4 flex flex-col gap-4 z-50 shadow-md">
-          <a href="#" className="text-[var(--dandes-dark)] font-medium py-2">
+        <nav className="md:hidden absolute top-[90px] left-0 w-full bg-white border-t border-[#CECECE] px-4 py-4 flex flex-col gap-4 shadow-md z-50">
+          <a href="/courses" className="text-[var(--dandes-dark)] font-medium py-2">
             Courses
           </a>
           <button className="flex items-center justify-between text-[var(--dandes-dark)] font-medium py-2">
@@ -64,9 +61,7 @@ export function Header() {
             Company
             <ChevronDown className="size-4" />
           </button>
-          <button className="bg-[#F5F5F5] text-[var(--dandes-red)] px-6 py-2 rounded font-medium w-full">
-            Apply Now
-          </button>
+          
         </nav>
       )}
     </header>

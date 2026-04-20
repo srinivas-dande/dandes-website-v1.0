@@ -1,6 +1,12 @@
 'use client'
 
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
+
 export default function FinalCtaSection() {
+  
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -114,6 +120,9 @@ export default function FinalCtaSection() {
               }}
             >
               <span
+
+                onClick={() => setShowPopup(true)}
+
                 style={{
                   fontSize: 16,
                   fontWeight: 600,
@@ -162,6 +171,12 @@ export default function FinalCtaSection() {
           }
         }
       `}</style>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
+
     </section>
   )
 }

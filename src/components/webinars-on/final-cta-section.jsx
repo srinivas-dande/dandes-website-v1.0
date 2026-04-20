@@ -1,6 +1,12 @@
 'use client'
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 export default function FinalCtaSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -115,7 +121,8 @@ export default function FinalCtaSection() {
                 marginBottom: 24,
               }}
             >
-              <button
+              <Link
+                href = "/free-class-videos"
                 style={{
                   backgroundColor: '#d12027',
                   color: '#fff',
@@ -128,7 +135,7 @@ export default function FinalCtaSection() {
                 }}
               >
                 Get course details
-              </button>
+              </Link>
 
               <div
                 style={{
@@ -140,7 +147,9 @@ export default function FinalCtaSection() {
                   gap: 12,
                 }}
               >
-                <span
+                <button
+                  onClick={() => setShowPopup(true)}
+
                   style={{
                     fontSize: 15,
                     fontWeight: 600,
@@ -148,7 +157,7 @@ export default function FinalCtaSection() {
                   }}
                 >
                   Register for the free webinar
-                </span>
+                </button>
                 <button
                   style={{
                     backgroundColor: '#d12027',
@@ -196,6 +205,11 @@ export default function FinalCtaSection() {
           }
         }
       `}</style>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }

@@ -1,15 +1,20 @@
 'use client'
-
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 const checkItems = [
-  'Clear roadmap with milestones, not random topics.',
-  'Live instructor-led classes with real-time Q and A.',
-  'Real projects that become portfolio proof.',
-  'Modern AI depth, ML, DL, GenAI, LLM workflows, Agentic AI, MLOps basics.',
-  'Outcome-focused learning you can explain in interviews.',
+  'Strong foundations in Python, data handling, and problem-solving.',
+  'Solid understanding of core Machine Learning, model evaluation, and practical decision making.',
+  'Hands-on project experience, including mini projects and an end-to-end capstone.',
+  'Exposure to modern industry areas like Deep Learning, NLP, Generative Al, LLMS, Agentic Al, and MLOps.',
+  'Career preparation through resume review, LinkedIn guidance, and mock interviews.',
+
 ]
 
-export function AimlStructuredSection() {
+export function StructuredSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section style={{ backgroundColor: '#fff', padding: '40px 0 80px' }}>
       <div style={{
@@ -32,7 +37,7 @@ export function AimlStructuredSection() {
             margin: '0 0 24px',
             maxWidth: 520,
           }}>
-            A Structured AI Program Built For Real Jobs, Not Just Certificates
+            What We Help You Build
           </h2>
 
           <p style={{
@@ -42,10 +47,7 @@ export function AimlStructuredSection() {
             margin: '0 0 32px',
             maxWidth: 560,
           }}>
-            A lot of AI courses either stay too theoretical or jump into tools without
-            building the fundamentals. That creates confusion later, especially during
-            projects and interviews. This program is designed to build strong foundations
-            first, then move into modern AI workflows that companies actually expect
+            Our goal is simple: you should be able to learn concepts, apply them in projects, and explain your work confidently in interviews.
           </p>
 
           <h3 style={{
@@ -83,6 +85,7 @@ export function AimlStructuredSection() {
           </ul>
 
           <button
+            onClick={() => setShowPopup(true)}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -127,6 +130,10 @@ export function AimlStructuredSection() {
         </div>
 
       </div>
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

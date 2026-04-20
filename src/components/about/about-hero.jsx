@@ -1,6 +1,13 @@
 'use client'
 
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal"
+
 export default function AboutHero() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -44,8 +51,8 @@ export default function AboutHero() {
         </p>
         
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 24, flexWrap: 'wrap' }}>
-          <a
-            href="#"
+          <Link
+            href="/courses"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -61,10 +68,11 @@ export default function AboutHero() {
             }}
           >
             Get course details
-          </a>
+          </Link>
           
           <a
-            href="#"
+            onClick={() => setShowPopup(true)}
+
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -94,6 +102,12 @@ export default function AboutHero() {
           </a>
         </div>
       </div>
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }

@@ -1,8 +1,12 @@
 "use client"
 
-import { CheckCircle2, ArrowRight } from "lucide-react"
+import { useState } from "react"
+import { CheckCircle2, ArrowRight} from "lucide-react"
+import { PopupFormModal } from "./popup-form-modal"
 
 const webinarPoints = [
+
+
   "A clear roadmap based on your goal, AI/ML, System Design, or interview prep.",
   "Common mistakes to avoid: scattered learning, weak projects, inconsistent practice.",
   "What outcomes to expect, plus effort and time commitment.",
@@ -10,6 +14,9 @@ const webinarPoints = [
 ]
 
 export function WebinarSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section className="relative py-16 md:py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
       {/* Background gradient */}
@@ -60,10 +67,20 @@ export function WebinarSection() {
             ))}
           </ul>
 
-          <button className="inline-flex items-center gap-2 bg-[#d12027] hover:bg-[#b91c22] text-white px-6 py-3 rounded-md font-medium transition-colors">
+          <button 
+            onClick={() => setShowPopup(true)}
+            className="inline-flex items-center gap-2 bg-[#d12027] hover:bg-[#b91c22] text-white px-6 py-3 rounded-md font-medium transition-colors"
+          >
             Register for free webinar
             <ArrowRight className="w-4 h-4" />
           </button>
+
+          <PopupFormModal
+            showPopup={showPopup}
+            setShowPopup={setShowPopup}
+          />
+
+          
         </div>
       </div>
     </section>

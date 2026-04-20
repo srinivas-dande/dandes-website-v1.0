@@ -2,6 +2,7 @@
 
 import { CheckCircle2, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const supportItems = [
   "Resume support that shows impact, not just tools.",
@@ -55,10 +56,13 @@ export function CareerSupportSection() {
               ))}
             </ul>
 
-            <button className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md font-medium transition-colors">
+            <Link
+              href="/courses" 
+              className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md font-medium transition-colors"
+            >
               Get course details
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

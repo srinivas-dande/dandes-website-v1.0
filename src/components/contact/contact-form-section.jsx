@@ -1,8 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function ContactFormSection() {
+
+  const router = useRouter()
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -23,6 +27,7 @@ export default function ContactFormSection() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
+    router.push('/thank-you')
   }
 
   return (

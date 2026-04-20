@@ -1,8 +1,14 @@
 "use client"
 
+import {useState} from "react"
 import { ArrowRight } from "lucide-react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
+import Link from "next/link"
 
 export function CourseCtaSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section className="py-5 md:py-9 px-4 relative">
       {/* Main container with mint background */}
@@ -36,20 +42,28 @@ export function CourseCtaSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <button 
+            <button
+              onClick={() => setShowPopup(true)} 
               className="bg-[#d12027] text-white px-8 py-4 rounded font-medium hover:bg-[#b81c22] transition-colors"
               style={{ minWidth: '200px' }}
             >
               Get course details
             </button>
 
-            <button className="flex items-center gap-3 text-gray-800 font-medium hover:text-gray-600 transition-colors">
+            
+
+
+            <Link 
+              href="/webinars"
+              className="flex items-center gap-3 text-gray-800 font-medium hover:text-gray-600 transition-colors">
               Register for the free webinar
               <span className="bg-[#d12027] rounded-full p-2">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
-            </button>
+            </Link>
           </div>
+
+          
 
           {/* Disclaimer */}
           <p className="text-sm text-gray-500 leading-relaxed">
@@ -58,6 +72,11 @@ export function CourseCtaSection() {
           </p>
         </div>
       </div>
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
     </section>
   )
 }

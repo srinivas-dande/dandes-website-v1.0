@@ -1,4 +1,6 @@
 'use client'
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 
 const checkItems = [
@@ -10,6 +12,9 @@ const checkItems = [
 ]
 
 export function AimlStructuredSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section style={{ backgroundColor: '#fff', padding: '80px 0' }}>
       <div style={{
@@ -83,6 +88,8 @@ export function AimlStructuredSection() {
           </ul>
 
           <button
+            onClick={() => setShowPopup(true)}
+
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -104,6 +111,12 @@ export function AimlStructuredSection() {
             </svg>
           </button>
         </div>
+
+        <PopupFormModal
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        />
+
 
         {/* Right Image */}
         <div style={{ flex: 1, minWidth: 320 }}>

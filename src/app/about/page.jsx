@@ -7,7 +7,7 @@ import WhatWeTeach from '@/components/about/what-we-teach'
 import FlexibilitySupport from '@/components/about/flexibility-support'
 import JoinTheJourney from '@/components/about/join-the-journey'
 import { AimlLearningFormat } from '@/components/ai-ml/aiml-learning-format'
-import { AimlStructuredSection } from '@/components/about/aiml-structured-section'
+import { StructuredSection } from '@/components/about/structured-section'
 
 import { InstructorSection } from "@/components/dandes/instructor-section"
 import { Footer } from "@/components/dandes/footer"
@@ -19,7 +19,7 @@ export default function AboutPage() {
       <Header />
       <AboutHero />
       <WhyDandesAcademy />
-      <AimlStructuredSection />
+      <StructuredSection />
       <WhatWeTeach />
       <AimlLearningFormat />
       <FlexibilitySupport />

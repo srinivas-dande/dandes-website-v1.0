@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 
 export default function InstructorSection() {
   return (
@@ -195,7 +196,8 @@ export default function InstructorSection() {
 
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
-            <button
+            <Link
+              href = "/srinivas"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -210,8 +212,8 @@ export default function InstructorSection() {
                 gap: 8,
               }}
             >
-              Register for free webinar
-            </button>
+              Know More
+            </Link>
 
             {/* Watch on YouTube */}
             <a

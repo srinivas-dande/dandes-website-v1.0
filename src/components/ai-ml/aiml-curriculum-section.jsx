@@ -64,6 +64,7 @@ function TopicCard({ num, text }) {
 export function AimlCurriculumSection() {
   return (
     <section
+      id="courses"
       style={{
         backgroundColor: '#f7f8fa',
         padding: '72px 0 80px',

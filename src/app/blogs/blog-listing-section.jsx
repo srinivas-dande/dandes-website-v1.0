@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { PopupFormModal } from "@/components/dandes/popup-form-modal"
+
 
 const tags = [
   { label: 'Live classes', bg: '#dbeafe', color: '#1e40af' },
@@ -33,6 +35,8 @@ const allBlogPosts = [
 ]
 
 export function BlogListingSection() {
+  const [showPopup, setShowPopup] = useState(false)
+
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
@@ -222,7 +226,10 @@ export function BlogListingSection() {
               }}>
                 Get a clear learning path, project guidance, and interview tips from industry mentors.
               </p>
-              <button style={{
+              <button 
+              
+              onClick={() => setShowPopup(true)}
+              style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: 10,
@@ -250,6 +257,11 @@ export function BlogListingSection() {
                   </svg>
                 </span>
               </button>
+              <PopupFormModal
+  showPopup={showPopup}
+  setShowPopup={setShowPopup}
+/>
+
             </div>
           </aside>
 

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 const faqItems = [
   {
@@ -30,6 +31,7 @@ const faqItems = [
 ]
 
 function FAQSection() {
+
   const [openIndex, setOpenIndex] = useState(0)
 
   return (
@@ -99,6 +101,9 @@ const recentBlogs = [
 ]
 
 export function BlogPostContent() {
+
+  const [showPopup, setShowPopup] = useState(false)
+  
   const [activeSection, setActiveSection] = useState('')
 
   const tableOfContents = [
@@ -657,19 +662,23 @@ export function BlogPostContent() {
                 Get a clear learning path, project guidance, and interview tips from industry mentors.
               </p>
               
-              <button style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 10,
-                padding: '12px 18px',
-                backgroundColor: '#fff',
-                border: '1px solid #e5e7eb',
-                borderRadius: 8,
-                fontSize: 14,
-                fontWeight: 600,
-                color: '#1a1a1a',
-                cursor: 'pointer',
-              }}>
+              <button 
+                onClick={() => setShowPopup(true)}
+
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 10,
+                  padding: '12px 18px',
+                  backgroundColor: '#fff',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: 8,
+                  fontSize: 14,
+                  fontWeight: 600,
+                  color: '#1a1a1a',
+                  cursor: 'pointer',
+                }}
+              >
                 Register Free Now
                 <span style={{
                   width: 24,
@@ -685,6 +694,7 @@ export function BlogPostContent() {
                   </svg>
                 </span>
               </button>
+              
             </div>
 
           </div>
@@ -797,6 +807,12 @@ export function BlogPostContent() {
           ))}
         </div>
       </div>
+      
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }

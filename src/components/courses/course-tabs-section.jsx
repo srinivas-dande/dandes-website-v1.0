@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react"
+import Link from "next/link"
 
 const coursesData = {
   aiml: {
@@ -10,6 +11,7 @@ const coursesData = {
     subtitle: "For Working Professionals And Students",
     description: "This program is built for learners who want a clear path into AI and ML with live teaching, hands-on projects, and interview preparation. You learn from foundations to modern AI workflows, so you can build real proof of skill and explain it confidently.",
     ctaText: "Get AI and ML course details",
+    url : "/ai-machine-learning-course",
     highlights: [
       "11 to 12-month structured roadmap",
       "Live online classes with LMS recordings",
@@ -23,6 +25,7 @@ const coursesData = {
     subtitle: "for working professionals and students",
     description: "System Design interviews test how you think, communicate trade-offs, and build scalable solutions. This program helps you learn the core concepts, common architectures, and a clear approach to answering system design questions with confidence.",
     ctaText: "Get System Design course details",
+    url : "",
     highlights: [
       "Live online classes with structured frameworks",
       "Real case studies and guided design practice",
@@ -36,6 +39,7 @@ const coursesData = {
     subtitle: "for working professionals and students",
     description: "If coding rounds feel inconsistent, the problem is usually structure and practice. This program helps you build strong DSA fundamentals, learn common patterns, and improve speed and accuracy through guided problem solving.",
     ctaText: "Get DSA course details", 
+    url : "/",
     highlights: [
       "Structured DSA roadmap and problem-solving patterns",
       "Practice focused learning, not just theory",
@@ -110,10 +114,13 @@ export function CourseTabsSection() {
               {currentCourse.description}
             </p>
 
-            <button className="bg-[#d12027] text-white px-6 py-3 rounded font-medium flex items-center gap-2 hover:bg-[#b81c22] transition-colors">
+            <Link 
+            href = {currentCourse.url}
+            className="inline-flex w-fit bg-[#d12027] text-white px-6 py-3 rounded font-medium items-center gap-2 hover:bg-[#b81c22] transition-colors"
+            >
               {currentCourse.ctaText}
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
 
           {/* Right Accordions */}

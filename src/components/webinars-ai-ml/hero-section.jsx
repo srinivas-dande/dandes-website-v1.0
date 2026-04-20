@@ -1,6 +1,13 @@
 'use client'
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal"
+
 
 export default function HeroSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   const benefits = [
     'Free to attend. No credit card. No catch.',
     'Live sessions, not pre-recorded replays',
@@ -122,7 +129,8 @@ export default function HeroSection() {
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
             {/* Red button */}
-            <button
+            <Link
+              href = "/ai-machine-learning-course"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -135,10 +143,12 @@ export default function HeroSection() {
               }}
             >
               Get course details
-            </button>
+            </Link>
 
             {/* Register for webinar */}
             <div
+              onClick={() => setShowPopup(true)}
+
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -149,9 +159,9 @@ export default function HeroSection() {
                 boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
               }}
             >
-              <span style={{ fontSize: 15, fontWeight: 500, color: '#111' }}>
+              <button style={{ fontSize: 15, fontWeight: 500, color: '#111' }}>
                 Register for the free AI/ML webinar
-              </span>
+              </button>
               <button
                 style={{
                   width: 40,
@@ -215,6 +225,13 @@ export default function HeroSection() {
           }
         }
       `}</style>
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
+
     </section>
   )
 }

@@ -1,6 +1,13 @@
 "use client"
 
+import { useState } from "react"
+import Link from "next/link"
+import { PopupFormModal } from "../dandes/popup-form-modal" 
+
 export default function NotReadyCommit() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <section
       style={{
@@ -117,8 +124,8 @@ export default function NotReadyCommit() {
               }}
             >
               {/* Primary Button */}
-              <a
-                href="#"
+              <Link
+                href="/free-class-videos"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -134,11 +141,12 @@ export default function NotReadyCommit() {
                 }}
               >
                 Watch free class videos
-              </a>
+              </Link>
 
               {/* Secondary Link */}
-              <a
-                href="#"
+              <button
+                onClick={() => setShowPopup(true)}
+                
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -174,7 +182,7 @@ export default function NotReadyCommit() {
                     <path d="M9 18l6-6-6-6" />
                   </svg>
                 </span>
-              </a>
+              </button>
             </div>
 
             {/* Footer Text */}
@@ -207,6 +215,12 @@ export default function NotReadyCommit() {
           }
         }
       `}</style>
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+      
     </section>
   )
 }

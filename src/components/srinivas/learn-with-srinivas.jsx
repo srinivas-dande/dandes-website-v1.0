@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 
 const features = [
   {
@@ -196,7 +197,8 @@ export default function LearnWithSrinivas() {
 
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
-            <button
+            <Link
+              href="/about"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -211,8 +213,8 @@ export default function LearnWithSrinivas() {
                 gap: 8,
               }}
             >
-              Register for free webinar
-            </button>
+              Know More
+            </Link>
 
             {/* Watch on YouTube */}
             <a
