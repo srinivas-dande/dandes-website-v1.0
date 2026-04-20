@@ -78,7 +78,7 @@ export default function SrinivasHero() {
                 textDecoration: 'none',
               }}
             >
-              Get course details
+              Watch Free Class Videos
             </Link>
 
             <button
