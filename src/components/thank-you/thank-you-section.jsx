@@ -137,10 +137,10 @@ export default function ThankYouSection() {
             textAlign: 'left',
             boxShadow: '0 4px 24px rgba(0, 0, 0, 0.06)',
             borderTop: '4px solid #DC2626',
-            marginTop: 60,
+            marginTop: 80,
             marginBottom: 60,
             maxWidth: 650,
-            margin: '60px auto',
+            margin: '80px auto 60px',
           }}
         >
           <p
