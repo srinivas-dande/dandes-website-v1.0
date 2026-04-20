@@ -69,12 +69,7 @@ export function AimlHeroSection() {
               >
                 Get course details
               </button>
-              <button className="flex items-center gap-2 text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
-                Register for the free webinar
-                <span className="bg-[var(--dandes-red)] text-white rounded-full p-1.5">
-                  <ArrowRight className="size-4" />
-                </span>
-              </button>
+              
             </div>
 
             {/* Industry Tag */}
