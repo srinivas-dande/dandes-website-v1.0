@@ -134,7 +134,7 @@ export default function FinalCtaSection() {
                   cursor: 'pointer',
                 }}
               >
-                Get course details
+                Watch Free Class Videos
               </Link>
 
               <div
