@@ -98,7 +98,7 @@ export default function FinalCtaSection() {
             }}
           >
             <a
-              href="#"
+              
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -171,6 +171,7 @@ export default function FinalCtaSection() {
           }
         }
       `}</style>
+
       <PopupFormModal
         showPopup={showPopup}
         setShowPopup={setShowPopup}
