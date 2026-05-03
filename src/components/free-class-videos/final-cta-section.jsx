@@ -97,32 +97,30 @@ export default function FinalCtaSection() {
               justifyContent: 'center',
             }}
           >
-            <a
-              
+            <button
+              onClick={() => setShowPopup(true)}
               style={{
-                display: 'inline-flex',
+                display: 'flex',
                 alignItems: 'center',
                 gap: 12,
                 backgroundColor: '#fff',
                 padding: '8px 8px 8px 24px',
                 borderRadius: 50,
-                textDecoration: 'none',
+                border: 'none',
+                cursor: 'pointer',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)';
+                e.currentTarget.style.transform = 'translateY(-2px)'
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)'
               }}
               onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)'
               }}
             >
               <span
-
-                onClick={() => setShowPopup(true)}
-
                 style={{
                   fontSize: 16,
                   fontWeight: 600,
@@ -131,7 +129,8 @@ export default function FinalCtaSection() {
               >
                 Register for the free webinar
               </span>
-              <span
+
+              <div
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -141,6 +140,7 @@ export default function FinalCtaSection() {
                   backgroundColor: '#dc2626',
                   borderRadius: 8,
                   color: '#fff',
+                  flexShrink: 0,
                 }}
               >
                 <svg
@@ -155,8 +155,8 @@ export default function FinalCtaSection() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </span>
-            </a>
+              </div>
+            </button>
           </div>
         </div>
       </div>

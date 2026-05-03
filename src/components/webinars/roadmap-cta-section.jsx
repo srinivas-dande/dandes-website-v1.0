@@ -125,34 +125,53 @@ export default function RoadmapCtaSection() {
                 gap: 12,
               }}
             >
+              
               <button
                 onClick={() => setShowPopup(true)}
-
                 style={{
-                  fontSize: 16,
-                  fontWeight: 600,
-                  color: '#111',
-                }}
-              >
-                Register for the free webinar
-              </button>
-              <button
-                style={{
-                  backgroundColor: '#c91c2b',
-                  color: '#fff',
-                  width: 40,
-                  height: 40,
-                  borderRadius: 8,
-                  border: 'none',
-                  cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  gap: 12,
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: 0,
                 }}
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
+                <span
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 600,
+                    color: '#111',
+                  }}
+                >
+                  Register for the free webinar
+                </span>
+
+                <div
+                  style={{
+                    backgroundColor: '#c91c2b',
+                    color: '#fff',
+                    width: 40,
+                    height: 40,
+                    borderRadius: 8,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </div>
               </button>
             </div>
           </div>

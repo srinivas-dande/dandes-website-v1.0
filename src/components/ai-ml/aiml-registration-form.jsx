@@ -194,7 +194,7 @@ export function AimlRegistrationForm() {
             <button
               type="button"
               onClick={handleNext}
-              className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2"
+              className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2 cursor-pointer"
             >
               Register for FREE AI/ML Webinar
               <ArrowRight className="size-4" />

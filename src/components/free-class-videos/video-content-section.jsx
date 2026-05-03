@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 function CategoryIcon({ src, bgColor, size = 40 }) {
   return (
@@ -19,6 +19,7 @@ function CategoryIcon({ src, bgColor, size = 40 }) {
       <img
         src={src}
         alt="category icon"
+        loading="lazy"
         style={{
           width: size * 12,
           height: size * 12,
@@ -113,9 +114,21 @@ const sections = [
           'Common patterns used in real projects',
         ],
         videos: [
-          { title: 'Functions in Python: Part 1', duration: '01:05:04', active: true },
-          { title: 'Functions in Python: Part 2', duration: '01:05:04', active: false },
-          { title: 'Functions in Python: Part 3', duration: '01:05:04', active: false },
+          {
+            title: 'Functions in Python: Part 1',
+            duration: '01:05:04',
+            youtubeLink: 'https://www.youtube.com/watch?v=XIxDpAhsV7s&t=3s'
+          },
+          {
+            title: 'Functions in Python: Part 2',
+            duration: '01:24:12',
+            youtubeLink: 'https://www.youtube.com/watch?v=gOCZMZ_S6V4&t=2s'
+          },
+          {
+            title: 'Functions in Python: Part 3',
+            duration: '01:22:28',
+            youtubeLink: 'https://www.youtube.com/watch?v=Hm8zyBC1QtQ&t=1s'
+          },
         ],
       },
       {
@@ -126,10 +139,23 @@ const sections = [
           'Iteration patterns and common list methods',
           'Problem-solving using lists',
         ],
+        
         videos: [
-          { title: 'Lists in Python: Part 1', duration: '01:12:17', active: false },
-          { title: 'Lists in Python: Part 2', duration: '01:25:07', active: false },
-          { title: 'Lists in Python: Part 3', duration: '01:12:18', active: false },
+          {
+            title: 'Lists in Python: Part 1',
+            duration: '01:12:17',
+            youtubeLink: 'https://www.youtube.com/watch?v=PV49QoN8clQ&t=2s'
+          },
+          {
+            title: 'Lists in Python: Part 2',
+            duration: '01:25:07',
+            youtubeLink: 'https://www.youtube.com/watch?v=TZTcWIcn4Os&t=2s'
+          },
+          {
+            title: 'Lists in Python: Part 3',
+            duration: '01:12:18',
+            youtubeLink: 'https://www.youtube.com/watch?v=faTinioXEr0&t=1s'
+          },
         ],
       },
     ],
@@ -150,11 +176,27 @@ const sections = [
           'Filtering, selecting, and transforming data',
           'Common patterns for cleaning and analysis',
         ],
+        
         videos: [
-          { title: 'Pandas Fundamentals: Part 1', duration: '01:07:49', active: false },
-          { title: 'Pandas Fundamentals: Part 2', duration: '01:14:37', active: false },
-          { title: 'Pandas Fundamentals: Part 3', duration: '01:19:56', active: false },
-        ],
+          {
+            title: 'Pandas Fundamentals: Part 1',
+            duration: '01:07:49',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=CAedba0swHc&t=2s'
+          },
+          {
+            title: 'Pandas Fundamentals: Part 2',
+            duration: '01:14:36',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=ACLf9h9NgrA&t=2s'
+          },
+          {
+            title: 'Pandas Fundamentals: Part 3',
+            duration: '01:19:56',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=Y0Q0vLwmOkw&t=1s'
+          },
+        ]
       },
       {
         title: 'Pandas Assignments (Hands-On Practice)',
@@ -164,10 +206,23 @@ const sections = [
           'Approaching multi-step analysis problems',
           'Improving accuracy for interviews and projects',
         ],
+        
         videos: [
-          { title: 'Pandas Assignment: Part 1', duration: '01:41:58', active: false },
-          { title: 'Pandas Assignment: Part 2', duration: '01:00:36', active: false },
-          { title: 'Pandas Assignment: Part 3', duration: '01:19:50', active: false },
+          {
+            title: 'Pandas Assignment: Part 1',
+            duration: '01:41:58',
+            youtubeLink: 'https://www.youtube.com/watch?v=8pgAsGkL7mI&t=14s'
+          },
+          {
+            title: 'Pandas Assignment: Part 2',
+            duration: '01:00:36',
+            youtubeLink: 'https://www.youtube.com/watch?v=gCcGDktBST0&t=3s'
+          },
+          {
+            title: 'Pandas Assignment: Part 3',
+            duration: '01:19:50',
+            youtubeLink: 'https://www.youtube.com/watch?v=G4Ww5lQUMWI&t=2s'
+          },
         ],
       },
     ],
@@ -184,10 +239,26 @@ const sections = [
         title: 'CAP, PACELC & Consistency Models',
         description: 'Understand the tradeoffs behind distributed systems and learn how to explain them clearly in interviews.',
         learnings: [],
+
         videos: [
-          { title: 'CAP Theorem Explained', duration: '01:24:43', active: false },
-          { title: 'PACELC Theorem for System De', duration: '01:16:06', active: false },
-          { title: 'Consistency Models Explained', duration: '01:21:07', active: false },
+          {
+            title: 'CAP Theorem Explained',
+            duration: '01:24:43',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=Oa1k50OKmaM&t=5s'
+          },
+          {
+            title: 'PACELC Theorem for System De',
+            duration: '01:16:07',
+           
+            youtubeLink: 'https://www.youtube.com/watch?v=2PvjrkfPOTE&t=4s'
+          },
+          {
+            title: 'Consistency Models Explained',
+            duration: '01:21:07',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=T6UwxVdZRHo&t=3s'
+          },
         ],
       },
     ],
@@ -204,10 +275,26 @@ const sections = [
         title: 'Self-Balancing BSTs (AVL & Red-Black Trees)',
         description: 'Strengthen your core CS fundamentals with rotations, balancing logic, and how these trees maintain performance guarantees.',
         learnings: [],
+        
         videos: [
-          { title: 'AVL Trees Explained', duration: '01:01:24', active: false },
-          { title: 'AVL Tree Rotations Explained', duration: '00:53:49', active: false },
-          { title: 'Red-Black Trees Explained', duration: '01:28:55', active: false },
+          {
+            title: 'AVL Trees Explained',
+            duration: '01:28:54',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=pHqwhMhyJv8&t=2s'
+          },
+          {
+            title: 'AVL Tree Rotations Explained',
+            duration: '00:53:50',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=Gmo4vF6DHIY&t=3s'
+          },
+          {
+            title: 'Red-Black Trees Explained',
+            duration: '01:01:24',
+            
+            youtubeLink: 'https://www.youtube.com/watch?v=4lyS4-dqAmo&t=4s'
+          },
         ],
       },
     ],
@@ -215,8 +302,36 @@ const sections = [
 ]
 
 export default function VideoContentSection() {
+  const [selectedVideo, setSelectedVideo] = useState(null)
+  const [lastPlayedVideo, setLastPlayedVideo] = useState(null)
   const [activeTab, setActiveTab] = useState('python')
   const sectionRefs = useRef({})
+
+
+  useEffect(() => {
+    const handleOpenFirstVideo = () => {
+      const firstVideo =
+        sections[0]?.topics[0]?.videos[0]?.youtubeLink
+
+      if (firstVideo) {
+        const section = document.getElementById("video-content-section")
+
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" })
+        }
+
+        setTimeout(() => {
+          setSelectedVideo(firstVideo)
+        }, 700)
+      }
+    }
+
+    window.addEventListener("openFirstVideo", handleOpenFirstVideo)
+
+    return () => {
+      window.removeEventListener("openFirstVideo", handleOpenFirstVideo)
+   }
+  }, [])
 
   const scrollToSection = (sectionId) => {
     setActiveTab(sectionId)
@@ -226,7 +341,10 @@ export default function VideoContentSection() {
   }
 
   return (
-    <section style={{ padding: '60px 20px 80px' }}>
+    <section 
+      id="video-content-section"
+      style={{ padding: '60px 20px 80px' }}
+    >
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         {/* Category Tabs */}
         <div
@@ -261,7 +379,7 @@ export default function VideoContentSection() {
                   color: '#111',
                   transition: 'all 0.2s ease',
                 }}
-              >
+              > 
                 <CategoryIcon
                   src={section.icon}
                   bgColor={section.bgColor}
@@ -410,6 +528,10 @@ export default function VideoContentSection() {
                     {topic.videos.map((video, videoIndex) => (
                       <div
                         key={videoIndex}
+                        onClick={() => {
+                          setSelectedVideo(video.youtubeLink)
+                          setLastPlayedVideo(video.youtubeLink)
+                        }}
                         style={{
                           display: 'flex',
                           alignItems: 'center',
@@ -423,7 +545,7 @@ export default function VideoContentSection() {
                           transition: 'all 0.2s ease',
                         }}
                       >
-                        <PlayIcon filled={video.active} />
+                        <PlayIcon filled={lastPlayedVideo === video.youtubeLink} />
                         <div style={{ minWidth: 0 }}>
                           <p
                             style={{
@@ -475,6 +597,67 @@ export default function VideoContentSection() {
           }
         `}</style>
       </div>
+      {selectedVideo && (
+        <div
+          onClick={() => setSelectedVideo(null)}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.8)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9999,
+            padding: 20,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              width: "90%",
+              maxWidth: 900,
+              background: "#fff",
+              borderRadius: 12,
+              overflow: "hidden",
+              position: "relative",
+            }}
+          >
+            <button
+              onClick={() => setSelectedVideo(null)}
+              style={{
+                position: "absolute",
+                top: 10,
+                right: 15,
+                background: "none",
+                border: "none",
+                fontSize: 28,
+                cursor: "pointer",
+                zIndex: 2,
+              }}
+            >
+              ×
+            </button>
+
+            <iframe
+              width="100%"
+              height="500"
+              src={
+                selectedVideo
+                  .replace("watch?v=", "embed/")
+                  .split("&")[0] + "?autoplay=1"
+              }
+              
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

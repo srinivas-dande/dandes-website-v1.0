@@ -1,39 +1,76 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
-import { PopupFormModal } from "../dandes/popup-form-modal" 
+import { PopupFormModal } from "../dandes/popup-form-modal"
 
 export default function SrinivasHero() {
-  
+
   const [showPopup, setShowPopup] = useState(false)
 
   return (
     <section
       style={{
         position: 'relative',
-        minHeight: '600px',
-        backgroundColor: '#f8f9fa',
-        backgroundImage: `
-          linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-          linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)
-        `,
-        backgroundSize: '60px 60px',
+        width: '100%',
         overflow: 'hidden',
-        
       }}
     >
+
+
+      {/* ✅ Mobile Image */}
+      <div className="block md:hidden">
+        <img
+          src="/srinivas/hero-bg-mobile-srinivas.png"
+          alt=""
+          style={{
+            width: '100%',
+            height: 'auto',
+            objectFit: 'cover',
+          }}
+        />
+      </div>
+
+      {/* Background Image */}
+      <div
+        className="hidden md:block"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+          pointerEvents: 'none', // ✅ IMPORTANT (avoid click issues)
+        }}
+      >
+        <img
+          src="/srinivas/hero-bg.png"
+          alt=""
+          style={{
+            width: '250%',
+            height: '100%',
+            objectFit: 'contain',
+            objectPosition: 'right center',
+            transform: 'scale(1.08) translateX(-3%)',
+          }}
+        />
+      </div>
+
+      {/* Content Overlay */}
       <div
         style={{
-          maxWidth: '100%',
-          padding: '80px 0 0 24px',
+          position: 'relative',
+          zIndex: 1,
+          maxWidth: 1200,
+          margin: '0 auto',
+          padding: '80px 32px',
+          minHeight: 420,
           display: 'flex',
           alignItems: 'center',
-          gap: 60,
         }}
       >
         {/* Left Content */}
-        <div style={{ flex: 1, maxWidth: 700 }}>
+        <div style={{ maxWidth: 700 }}>
           <h1
             style={{
               fontSize: 48,
@@ -41,6 +78,7 @@ export default function SrinivasHero() {
               color: '#1a1a1a',
               lineHeight: 1.15,
               marginBottom: 28,
+              margin: 0,
             }}
           >
             Srinivas Dande, Founder and Lead Instructor at Dandes Academy
@@ -51,20 +89,22 @@ export default function SrinivasHero() {
               fontSize: 18,
               color: '#4b5563',
               lineHeight: 1.7,
+              marginTop: 28,
               marginBottom: 40,
+              maxWidth: 620,
             }}
           >
-            Srinivas Dande is the Founder and Lead Instructor at Dandes Academy. 
-            With 20+ years of experience, he brings a blend of real-world engineering, 
-            system architecture, and structured teaching that helps learners build strong 
-            fundamentals, work on practical projects, and prepare confidently for 
+            Srinivas Dande is the Founder and Lead Instructor at Dandes Academy.
+            With 20+ years of experience, he brings a blend of real-world engineering,
+            system architecture, and structured teaching that helps learners build strong
+            fundamentals, work on practical projects, and prepare confidently for
             technical interviews.
           </p>
 
           {/* CTAs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-            <Link
-              href="/free-class-videos"
+          <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
+            <button
+              onClick={() => setShowPopup(true)}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -75,11 +115,12 @@ export default function SrinivasHero() {
                 fontSize: 16,
                 fontWeight: 600,
                 borderRadius: 8,
-                textDecoration: 'none',
+                border: 'none',
+                cursor: 'pointer',
               }}
             >
-              Watch Free Class Videos
-            </Link>
+              Get course details
+            </button>
 
             <button
               onClick={() => setShowPopup(true)}
@@ -90,7 +131,10 @@ export default function SrinivasHero() {
                 fontSize: 16,
                 fontWeight: 600,
                 color: '#1a1a1a',
-                textDecoration: 'none',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
               }}
             >
               Register for Free AI/ML Webinar
@@ -112,120 +156,28 @@ export default function SrinivasHero() {
             </button>
           </div>
         </div>
-
-        {/* Right - Image Section */}
-        <div
-          style={{
-            position: 'relative',
-            flex: 1,
-            minHeight: 520,
-          }}
-        >
-          {/* Red Circle Background - positioned top right, partially cut off */}
-          <img
-            src="/srinivas/red-circle.png"
-            alt="Red circle background"
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              right: 0,
-              width: 490,
-              height: 520,
-              objectFit: 'contain',
-              objectPosition: 'bottom right',
-              zIndex: 2,
-            }}
-          />
-
-          {/* Srinivas Image - positioned to overlap circle */}
-          <img
-            src="/srinivas/srinivas.png"
-            alt="Srinivas Dande - Founder and Lead Instructor at Dandes Academy"
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              right: 0,
-              width: 550,
-              height: 620,
-              objectFit: 'contain',
-              objectPosition: 'bottom right',
-              zIndex: 2,
-            }}
-          />
-
-          {/* Experience Badge - positioned at chest level to the left of Srinivas */}
-          <div
-            style={{
-              position: 'absolute',
-              bottom: 150,
-              right: 360,
-              backgroundColor: '#fff',
-              padding: '18px 26px',
-              borderRadius: 12,
-              boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-              zIndex: 3,
-              textAlign: 'center',
-            }}
-          >
-            <div
-              style={{
-                fontSize: 42,
-                fontWeight: 700,
-                color: '#d12027',
-                lineHeight: 1,
-              }}
-            >
-              20+
-            </div>
-            <div
-              style={{
-                fontSize: 12,
-                fontWeight: 600,
-                color: '#6b7280',
-                letterSpacing: 1.2,
-                marginTop: 6,
-              }}
-            >
-              YEARS EXPERIENCE
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Mobile Responsive Styles */}
       <style jsx>{`
         @media (max-width: 1024px) {
-          section > div {
-            flex-direction: column;
-            text-align: center;
-            padding: 60px 24px;
+          section > div:nth-child(2) {
+            padding: 60px 32px !important;
           }
-          section > div > div:first-child {
-            max-width: 100%;
-          }
-          section > div > div:first-child h1 {
-            font-size: 36px;
-          }
-          section > div > div:first-child > div {
-            justify-content: center;
-            flex-wrap: wrap;
-          }
-          section > div > div:last-child {
-            margin-top: 40px;
+          section > div:nth-child(2) > div h1 {
+            font-size: 36px !important;
           }
         }
         @media (max-width: 640px) {
-          section {
-            min-height: auto !important;
+          section > div:nth-child(2) {
+            padding: 40px 20px !important;
+            min-height: 480px !important;
           }
-
-          section > div {
-            padding: 40px 16px !important;
+          section > div:nth-child(2) > div h1 {
+            font-size: 28px !important;
           }
-
-          section > div > div:last-child {
-            min-height: auto !important;
-            display: none;
+          section > div:nth-child(2) > div p {
+            font-size: 16px !important;
           }
         }
       `}</style>

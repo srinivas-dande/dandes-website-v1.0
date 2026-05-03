@@ -52,6 +52,7 @@ export default function JoinTheJourney() {
                 fontWeight: 500,
                 borderRadius: 8,
                 textDecoration: 'none',
+                cursor: 'pointer',
               }}
             >
               Get course details

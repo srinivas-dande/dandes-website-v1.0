@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const phases = [
   {
@@ -54,6 +54,30 @@ function CheckIcon({ active }) {
 export function AimlJourneySection() {
   const [activePhase, setActivePhase] = useState(0)
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const phaseElements = document.querySelectorAll(".phase-block")
+      const scrollPosition = window.innerHeight / 2
+
+      phaseElements.forEach((element, index) => {
+        const rect = element.getBoundingClientRect()
+
+        if (
+          rect.top <= scrollPosition &&
+          rect.bottom >= scrollPosition
+        ) {
+          setActivePhase(index)
+        }
+      })
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
     <section style={{ backgroundColor: '#fff', padding: '80px 0 88px' }}>
       <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-10 md:gap-20 items-start">
@@ -88,7 +112,11 @@ export function AimlJourneySection() {
             {phases.map((phase, i) => {
               const isActive = i === activePhase
               return (
-              <div key={i} style={{ position: 'relative' }}>
+              <div
+                key={i}
+                className="phase-block"
+                style={{ position: 'relative' }}
+              >
                 {/* dot - clickable */}
                 <button
                   onClick={() => setActivePhase(i)}

@@ -114,32 +114,51 @@ export default function FinalCtaSection() {
               >
                 <button
                   onClick={() => setShowPopup(true)}
-
                   style={{
-                    fontSize: 16,
-                    fontWeight: 600,
-                    color: '#111',
-                  }}
-                >
-                  Register for the free AI/ML webinar
-                </button>
-                <button
-                  style={{
-                    backgroundColor: '#c8102e',
-                    color: '#fff',
-                    width: 40,
-                    height: 40,
-                    borderRadius: 6,
-                    border: 'none',
-                    cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    gap: 12,
+                    backgroundColor: '#fff',
+                    padding: '8px 8px 8px 24px',
+                    borderRadius: 8,
+                    border: 'none',
+                    cursor: 'pointer',
                   }}
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
+                  <span
+                    style={{
+                      fontSize: 16,
+                      fontWeight: 600,
+                      color: '#111',
+                    }}
+                  >
+                    Register for the free AI/ML webinar
+                  </span>
+
+                  <div
+                    style={{
+                      backgroundColor: '#c8102e',
+                      color: '#fff',
+                      width: 40,
+                      height: 40,
+                      borderRadius: 6,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </div>
                 </button>
               </div>
             </div>
@@ -153,6 +172,7 @@ export default function FinalCtaSection() {
                 maxWidth: 500,
                 lineHeight: 1.5,
                 margin: 0,
+                
               }}
             >
               Free. Live. No spam. Your details are only used to send webinar access.

@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, CheckCircle2, Star } from "lucide-react"
+import { CheckCircle2, Star } from "lucide-react"
 import { RegistrationForm } from "./registration-form"
 
 const features = [
@@ -12,7 +12,7 @@ const features = [
 
 export function HeroSection() {
   const scrollToCourses = () => {
-  const courseSection = document.getElementById("courses-section")
+    const courseSection = document.getElementById("courses-section")
     if (courseSection) {
       courseSection.scrollIntoView({
         behavior: "smooth",
@@ -23,18 +23,28 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
-      {/* Left side - Light background */}
-      <div className="absolute inset-y-0 left-0 w-full lg:w-[55%] bg-gradient-to-b from-slate-50 to-white" />
-      
-      {/* Right side - Background Image */}
-      <div 
-        className="absolute inset-y-0 right-0 w-full lg:w-[50%] bg-cover bg-center bg-no-repeat"
+      {/* Full Background Image */}
+      <div
         style={{
-          backgroundImage: `url('/images/hero-background.jpg')`,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
         }}
-      />
-      {/* Gradient overlay to blend the background */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] bg-gradient-to-r from-white via-white/50 to-transparent" />
+      >
+        <img
+          src="/images/dandes/hero-bg-home.png"
+          alt=""
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
+      </div>
 
       <div className="max-w-[1300px] 
       mx-auto px-4 lg:px-[70px] py-12 lg:py-16 relative z-10 min-h-[609px]">
@@ -61,13 +71,13 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <button 
+              <button
                 onClick={scrollToCourses}
-                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors"
+                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
                 Get course details
               </button>
-              
+
             </div>
 
             {/* Industry Tag */}
@@ -80,8 +90,8 @@ export function HeroSection() {
           </div>
 
           {/* Right Form */}
-          <div 
-            id="webinar-registration-form"
+          <div
+
             className="w-full lg:w-auto lg:shrink-0 lg:ml-8"
           >
             <RegistrationForm />

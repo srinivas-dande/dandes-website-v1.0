@@ -202,7 +202,7 @@ export function CoursesSection() {
         <div className="mt-8 flex justify-center">
           <button 
             onClick={() => setShowPopup(true)}
-            className="inline-flex items-center gap-2 rounded-md bg-[#dc2626] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b91c1c]"
+            className="inline-flex items-center gap-2 rounded-md bg-[#dc2626] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b91c1c] cursor-pointer"
           >
             Register for free webinar
             <ArrowRight className="h-4 w-4" />

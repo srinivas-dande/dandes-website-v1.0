@@ -25,7 +25,7 @@ export default function HeroSection() {
     >
       {/* Desktop image */}
       <img
-        src="/images/webinars-ai-ml/hero-bg.jpg"
+        src="/images/webinars-ai-ml/hero-bg-ml.png"
         alt=""
         aria-hidden="true"
         className="hero-bg-image desktop-image"
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
       {/* Mobile image */}
       <img
-        src="/images/webinars-ai-ml/hero-mobile-bg.jpg"
+        src="/images/webinars-ai-ml/hero-mobile-bg-ml.png"
         alt=""
         aria-hidden="true"
         className="hero-bg-image mobile-image"
@@ -159,7 +159,7 @@ export default function HeroSection() {
                 boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
               }}
             >
-              <button style={{ fontSize: 15, fontWeight: 500, color: '#111' }}>
+              <button style={{ fontSize: 15, fontWeight: 500, color: '#111', cursor: 'pointer', }}>
                 Register for the free AI/ML webinar
               </button>
               <button

@@ -44,7 +44,7 @@ export function CourseCtaSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <button
               onClick={() => setShowPopup(true)} 
-              className="bg-[#d12027] text-white px-8 py-4 rounded font-medium hover:bg-[#b81c22] transition-colors"
+              className="bg-[#d12027] text-white px-8 py-4 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               style={{ minWidth: '200px' }}
             >
               Get course details

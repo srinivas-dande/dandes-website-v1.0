@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const faqData = {
   general: {
@@ -160,6 +160,8 @@ const faqData = {
   }
 }
 
+
+
 const categories = [
   { id: 'general', label: 'General' },
   { id: 'aiml', label: 'AI/ML Course' },
@@ -264,6 +266,7 @@ function FaqAccordion({ category, data }) {
 }
 
 export default function FaqContentSection() {
+  
   const [activeCategory, setActiveCategory] = useState('general')
 
   const handleCategoryClick = (categoryId) => {
@@ -277,6 +280,32 @@ export default function FaqContentSection() {
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = categories
+        .map((category) => document.getElementById(category.id))
+        .filter(Boolean)
+
+      const scrollPosition = window.scrollY + 150
+
+      for (const section of sections) {
+        if (
+          section.offsetTop <= scrollPosition &&
+          section.offsetTop + section.offsetHeight > scrollPosition
+        ) {
+          setActiveCategory(section.id)
+          break
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <section
@@ -390,30 +419,16 @@ export default function FaqContentSection() {
         @media (max-width: 768px) {
           .faq-container {
             flex-direction: column !important;
-            gap: 30px !important;
+            gap: 20px !important;
           }
+
+          /* ❌ Hide sidebar completely */
           .faq-sidebar {
-            width: 100% !important;
-            position: relative !important;
-            top: 0 !important;
-          }
-          .faq-sidebar ul {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            gap: 8px !important;
-          }
-          .faq-sidebar li {
-            flex: none !important;
-          }
-          .faq-sidebar button {
-            padding: 8px 12px !important;
-            border: 1px solid #e5e7eb !important;
-            border-radius: 20px !important;
-            border-left: 1px solid #e5e7eb !important;
-            font-size: 13px !important;
+            display: none !important;
           }
         }
       `}</style>
+      
     </section>
   )
 }

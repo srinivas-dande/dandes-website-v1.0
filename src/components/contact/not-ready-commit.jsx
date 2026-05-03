@@ -155,6 +155,7 @@ export default function NotReadyCommit() {
                   fontSize: 16,
                   fontWeight: 600,
                   textDecoration: 'none',
+                  cursor: 'pointer',
                 }}
               >
                 Register for the free webinar

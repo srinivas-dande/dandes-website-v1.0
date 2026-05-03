@@ -1,18 +1,18 @@
 "use client"
-import { ArrowRight, CheckCircle2, Star } from "lucide-react"
+import { CheckCircle2, Star } from "lucide-react"
 import { AimlRegistrationForm } from "./aiml-registration-form"
 
 
 const features = [
-  "Live classes with doubt support.",
-  "Structured roadmap, not random videos.",
-  "Practice and assignments for real interviews.",
-  "Built for working professionals and serious learners.",
+  "Hosted live by Srinivas Dande. 20+ years experience, ex-Sun Microsystems.",
+  "Free to attend. No payment. No strings.",
+  "Live Q&A. Ask your specific questions, get honest answers.",
+  "Walk away with a clear roadmap you can start acting on the same week.",
 ]
 
 
 export function AimlHeroSection() {
-  
+
   const scrollToCourses = () => {
     const courseSection = document.getElementById("courses")
     if (courseSection) {
@@ -25,18 +25,28 @@ export function AimlHeroSection() {
 
   return (
     <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
-      {/* Left side - Light background */}
-      <div className="absolute inset-y-0 left-0 w-full lg:w-[55%] bg-gradient-to-b from-slate-50 to-white" />
-      
-      {/* Right side - Background Image */}
-      <div 
-        className="absolute inset-y-0 right-0 w-full lg:w-[50%] bg-cover bg-center bg-no-repeat"
+      {/* Full Background Image */}
+      <div
         style={{
-          backgroundImage: `url('/images/hero-background.jpg')`,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
         }}
-      />
-      {/* Gradient overlay to blend the background */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] bg-gradient-to-r from-white via-white/50 to-transparent" />
+      >
+        <img
+          src="/images/aiml/hero-bg-aiml.png"
+          alt=""
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
+      </div>
 
       <div className="max-w-[1300px] 
       mx-auto px-4 lg:px-[70px] py-12 lg:py-16 relative z-10 min-h-[609px]">
@@ -44,11 +54,11 @@ export function AimlHeroSection() {
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
-              Dandes Academy, Upskill With Live Classes, Projects, and Interview Prep
+              Free Webinar: How to Transition Into AI/ML Without Starting Over
             </h1>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              Learn with a structured roadmap, live instructor-led classes, hands-on assignments, and interview preparation. Choose from AI and Machine Learning, System Design, or Data Structures and Algorithms.
+              A live session for working tech professionals who want to move into Al and Machine Learning. Without quitting their job. Without starting from scratch. Without wasting months on the wrong resources.
             </p>
 
             {/* Feature List */}
@@ -63,13 +73,13 @@ export function AimlHeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
-              <button 
+              <button
                 onClick={scrollToCourses}
-                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors"
+                className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
                 Get course details
               </button>
-              
+
             </div>
 
             {/* Industry Tag */}
@@ -85,7 +95,7 @@ export function AimlHeroSection() {
           <div className="w-full lg:w-auto lg:shrink-0 lg:ml-8">
             <AimlRegistrationForm />
           </div>
-          
+
         </div>
       </div>
     </section>

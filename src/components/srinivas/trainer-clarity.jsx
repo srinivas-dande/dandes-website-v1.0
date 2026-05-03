@@ -68,7 +68,7 @@ export default function TrainerClarity() {
             {/* Icon */}
             <div style={{ marginBottom: 24 }}>
               <img
-                src="/srinivas/icons/problem-icon.png"
+                src="/icons/ai-course.png"
                 alt="Problem icon"
                 style={{
                   width: 48,
@@ -113,7 +113,7 @@ export default function TrainerClarity() {
             {/* Icon */}
             <div style={{ marginBottom: 24 }}>
             <img
-              src="/srinivas/icons/solution-icon.png"
+              src="/icons/system-design.png"
               alt="Solution icon"
                 style={{
                   width: 48,

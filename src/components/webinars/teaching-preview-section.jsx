@@ -7,8 +7,16 @@ export default function TeachingPreviewSection() {
   const [showPopup, setShowPopup] = useState(false)
 
   const benefits = [
-    'Taught by Srinivas Dande, the same instructor who leads the full program',
-    'Covers topics across the curriculum: Python, ML, Deep Learning, and more',
+    
+    <>
+      Taught by Srinivas Dande, the same instructor who leads the full <br />
+      program.
+    </>,
+    <>
+      Covers topics across the curriculum: Python, ML, <br />
+      Deep Learning, and more.
+    </>,
+    
     'No sign-up needed for most videos. Just watch.',
     'Want the full structured path? The webinar is your next step.',
   ]
@@ -24,7 +32,7 @@ export default function TeachingPreviewSection() {
 
       {/* Desktop image */}
       <img
-        src="/images/webinars/teaching-preview-bg.jpg"
+        src="/images/webinars/teaching-preview-bg.png"
         alt=""
         aria-hidden="true"
         className="hero-bg-image desktop-image"
@@ -42,7 +50,7 @@ export default function TeachingPreviewSection() {
 
       {/* Mobile image */}
       <img
-        src="/images/webinars/Mobile-teaching-preview.jpg"
+        src="/images/webinars/teaching-preview-bg-mobile.png"
         alt=""
         aria-hidden="true"
         className="hero-bg-image mobile-image"

@@ -55,7 +55,7 @@ export function CTASection() {
 
             <button 
               onClick={() => setShowPopup(true)}
-              className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors"
+              className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors cursor-pointer"
             >
               Register for the free webinar
               <span className="w-8 h-8 bg-[#d12027] rounded-full flex items-center justify-center">

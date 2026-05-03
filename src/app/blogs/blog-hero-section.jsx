@@ -18,24 +18,42 @@ export function BlogHeroSection() {
   return (
     <section
       style={{
-        backgroundColor: '#f9fafb',
-        backgroundImage: `
-          linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-          linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)
-        `,
-        backgroundSize: '48px 48px',
+        position: 'relative',
         padding: '100px 24px 120px',
         minHeight: '50vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
+      {/* Full Background Image */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+        }}
+      >
+        <img
+          src="/images/blog/hero-bg-blog.png"
+          alt=""
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
+      </div>
+      <div style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {/* Heading */}
         <h1
           style={{
-            fontSize: 'clamp(32px, 5vw, 48px)',
+            fontSize: 'clamp(28px, 4vw, 40px)',
             fontWeight: 800,
             color: '#1a1a1a',
             lineHeight: 1.2,

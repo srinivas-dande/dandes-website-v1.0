@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import { ArrowRight, ChevronDown } from "lucide-react"
+import { useRouter } from 'next/navigation'
+
 
 export function RegistrationForm() {
   const [step, setStep] = useState(1)
@@ -19,6 +21,8 @@ export function RegistrationForm() {
 
   const [successMsg, setSuccessMsg] = useState("")
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
+
 
   const handleNext = () => {
     if (step < 3) setStep(step + 1)
@@ -102,6 +106,7 @@ export function RegistrationForm() {
   } finally {
     setLoading(false)
   }
+  router.push('/thank-you')
 }
 
   return (
@@ -195,7 +200,7 @@ export function RegistrationForm() {
             <button
               type="button"
               onClick={handleNext}
-              className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2"
+              className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2 cursor-pointer"
             >
               Register for FREE AI/ML Webinar
               <ArrowRight className="size-4" />
@@ -274,7 +279,7 @@ export function RegistrationForm() {
             <button
               type="button"
               onClick={handleNext}
-              className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2"
+              className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2 cursor-pointer"
             >
               Register for FREE AI/ML Webinar
               <ArrowRight className="size-4" />
@@ -347,7 +352,7 @@ export function RegistrationForm() {
               type="submit"
               disabled={loading || !!successMsg}
               className={`bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2
-              ${loading ? "opacity-60 cursor-not-allowed" : ""}`}
+              ${loading ? "opacity-60 cursor-not-allowed" : "cursor-pointer"}`}
             >
               {loading ? "Submitting..." : "Send me details"}
               <ArrowRight className="size-4" />

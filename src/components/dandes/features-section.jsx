@@ -57,7 +57,7 @@ export function FeaturesSection() {
                 <Image
                   src={feature.image}
                   alt={feature.title}
-                  width={52}
+                  width={56}
                   height={5}
                 />
               </div>

@@ -78,27 +78,32 @@ export default function TermsContent() {
             position: 'sticky',
             top: 100,
             height: 'fit-content',
-            borderLeft: '3px solid #b91c1c',
-            paddingLeft: 20,
+           
+            paddingLeft: 0,
           }}
           className="terms-nav"
         >
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             {navItems.map((item) => (
-              <li key={item.id} style={{ marginBottom: 12 }}>
+              <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
                   style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '12px 16px',
+                    textAlign: 'left',
                     background: 'none',
                     border: 'none',
-                    padding: 0,
-                    fontSize: 14,
-                    color: activeSection === item.id ? '#b91c1c' : '#4b5563',
-                    fontWeight: activeSection === item.id ? 600 : 400,
+                    borderLeft:
+                      activeSection === item.id
+                        ? '3px solid #d12027'
+                        : '3px solid transparent',
                     cursor: 'pointer',
-                    textAlign: 'left',
-                    lineHeight: 1.5,
-                    transition: 'color 0.2s',
+                    fontSize: 14,
+                    color: activeSection === item.id ? '#111' : '#666',
+                    fontWeight: activeSection === item.id ? 500 : 400,
+                    transition: 'all 0.2s ease',
                   }}
                 >
                   {item.label}

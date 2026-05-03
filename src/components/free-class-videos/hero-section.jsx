@@ -81,6 +81,10 @@ export default function HeroSection() {
         >
           {/* Primary CTA */}
           <button
+           
+            onClick={() => {
+              window.dispatchEvent(new Event("openFirstVideo"))
+            }}
             style={{
               backgroundColor: '#C41E3A',
               color: 'white',
@@ -108,39 +112,53 @@ export default function HeroSection() {
           >
             <button
               onClick={() => setShowPopup(true)}
-
               style={{
-                fontSize: 16,
-                fontWeight: 600,
-                color: '#111',
-              }}
-            >
-              Join the free AI/ML webinar
-            </button>
-            <div
-              style={{
-                width: 40,
-                height: 40,
-                backgroundColor: '#C41E3A',
-                borderRadius: 8,
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                gap: 12,
+                backgroundColor: 'white',
+                padding: '8px 8px 8px 24px',
+                borderRadius: 50,
+                border: 'none',
+                cursor: 'pointer',
               }}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+              <span
+                style={{
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: '#111',
+                }}
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
+                Join the free AI/ML webinar
+              </span>
+
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  backgroundColor: '#C41E3A',
+                  borderRadius: 8,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
       </div>

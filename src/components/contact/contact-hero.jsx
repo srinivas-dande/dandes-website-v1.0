@@ -167,6 +167,7 @@ export default function ContactHero() {
               fontWeight: 600,
               color: '#1f2937',
               textDecoration: 'none',
+              cursor: 'pointer',
             }}
           >
             Register for the free webinar

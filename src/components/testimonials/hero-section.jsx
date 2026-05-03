@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       {/* Desktop image */}
       <img
-        src="/images/testimonials/hero-bg.jpg"
+        src="/images/testimonials/hero-bg-Testimonials.png"
         alt=""
         aria-hidden="true"
         className="hero-bg-image desktop-image"
@@ -38,7 +38,7 @@ export default function HeroSection() {
 
       {/* Mobile image */}
       <img
-        src="/images/testimonials/hero-mobile-bg.jpg"
+        src="/images/testimonials/hero-mobile-bg.png"
         alt=""
         aria-hidden="true"
         className="hero-bg-image mobile-image"
@@ -124,9 +124,9 @@ export default function HeroSection() {
                 boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
               }}
             >
-              <span style={{ fontSize: 15, fontWeight: 500, color: '#111' }}>
+              <button style={{ fontSize: 15, fontWeight: 500, color: '#111', cursor: 'pointer'}}>
                 Register for Free AI/ML Webinar
-              </span>
+              </button>
               <button
                 style={{
                   width: 40,

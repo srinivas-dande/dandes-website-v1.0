@@ -66,7 +66,7 @@ export function CourseAudienceSection() {
           <div className="flex">
             <button
               onClick={() => setActiveTab('professionals')}
-              className={`flex-1 py-4 px-6 text-sm font-medium transition-all relative ${
+              className={`flex-1 py-4 px-6 text-sm font-medium transition-all relative cursor-pointer ${
                 activeTab === 'professionals' ? 'text-[#1a1a1a] bg-white rounded-lg' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -77,7 +77,7 @@ export function CourseAudienceSection() {
             </button>
             <button
               onClick={() => setActiveTab('students')}
-              className={`flex-1 py-4 px-6 text-sm font-medium transition-all relative ${
+              className={`flex-1 py-4 px-6 text-sm font-medium transition-all relative cursor-pointer ${
                 activeTab === 'students' ? 'text-[#1a1a1a] bg-white rounded-lg' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -107,7 +107,7 @@ export function CourseAudienceSection() {
 
             <button 
               onClick={() => setShowPopup(true)}
-              className="bg-[#d12027] text-white py-3 px-6 rounded font-medium flex items-center gap-2 hover:bg-[#b81c22] transition-colors"
+              className="bg-[#d12027] text-white py-3 px-6 rounded font-medium flex items-center gap-2 hover:bg-[#b81c22] transition-colors cursor-pointer"
             >
               Register for free webinar
               <ArrowRight className="w-4 h-4" />

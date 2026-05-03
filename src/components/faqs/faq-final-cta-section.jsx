@@ -124,7 +124,7 @@ export default function FaqFinalCtaSection() {
                     borderRadius: 8,
                   }}
                 >
-                  <span style={{ fontSize: 16, fontWeight: 500, color: '#111' }}>
+                  <span style={{ fontSize: 16, fontWeight: 500, color: '#111' , cursor: 'pointer',}}>
                     Register for the free webinar
                   </span>
                   <a

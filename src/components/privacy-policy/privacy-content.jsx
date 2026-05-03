@@ -64,25 +64,31 @@ export default function PrivacyContent() {
             position: 'sticky',
             top: 100,
             height: 'fit-content',
-            borderLeft: '3px solid #c81e1e',
-            paddingLeft: 20,
+           
+            paddingLeft: 0,
           }}
         >
           <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
             {navItems.map((item) => (
-              <li key={item.id} style={{ marginBottom: 12 }}>
+              <li key={item.id}>
                 <button
                   onClick={() => scrollToSection(item.id)}
                   style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '12px 16px',
+                    textAlign: 'left',
                     background: 'none',
                     border: 'none',
-                    padding: 0,
+                    borderLeft:
+                      activeSection === item.id
+                        ? '3px solid #d12027'
+                        : '3px solid transparent',
                     cursor: 'pointer',
                     fontSize: 14,
-                    color: activeSection === item.id ? '#1f2937' : '#6b7280',
-                    fontWeight: activeSection === item.id ? 600 : 400,
-                    textAlign: 'left',
-                    transition: 'color 0.2s',
+                    color: activeSection === item.id ? '#111' : '#666',
+                    fontWeight: activeSection === item.id ? 500 : 400,
+                    transition: 'all 0.2s ease',
                   }}
                 >
                   {item.label}
@@ -317,6 +323,9 @@ export default function PrivacyContent() {
               laws.
             </p>
           </section>
+
+
+          
 
           {/* Cookies */}
           <section id="cookies" style={{ marginBottom: 48 }}>
