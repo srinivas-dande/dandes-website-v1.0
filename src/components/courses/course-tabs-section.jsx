@@ -25,7 +25,7 @@ const coursesData = {
     subtitle: "for working professionals and students",
     description: "System Design interviews test how you think, communicate trade-offs, and build scalable solutions. This program helps you learn the core concepts, common architectures, and a clear approach to answering system design questions with confidence.",
     ctaText: "Get System Design course details",
-    url : "",
+    url : "/system-design-course",
     highlights: [
       "Live online classes with structured frameworks",
       "Real case studies and guided design practice",
@@ -39,7 +39,7 @@ const coursesData = {
     subtitle: "for working professionals and students",
     description: "If coding rounds feel inconsistent, the problem is usually structure and practice. This program helps you build strong DSA fundamentals, learn common patterns, and improve speed and accuracy through guided problem solving.",
     ctaText: "Get DSA course details", 
-    url : "/",
+    url : "/data-structures-algorithms",
     highlights: [
       "Structured DSA roadmap and problem-solving patterns",
       "Practice focused learning, not just theory",

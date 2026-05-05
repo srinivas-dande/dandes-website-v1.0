@@ -27,7 +27,7 @@ const courses = [
     highlights: ["Foundations", "Real case studies", "Design patterns", "Interview practice"],
     highlightColor: "bg-red-50 text-red-600",
     ctaText: "View System Design course",
-    url: "/courses/ai-ml",
+    url: "/system-design-course",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const courses = [
     highlights: ["Core DSA", "Pattern recognition", "Interview focused prep"],
     highlightColor: "bg-emerald-50 text-emerald-700",
     ctaText: "View DSA course",
-    url: "/courses/ai-ml",
+    url: "/data-structures-algorithms",
   },
 ]
 
