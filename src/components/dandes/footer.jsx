@@ -74,7 +74,7 @@ export function Footer() {
                 />
               </a>
 
-              <a href="#" aria-label="X" className="relative w-6 h-6">
+              <a href="https://x.com/DandesAcademy" aria-label="X" className="relative w-6 h-6">
                 <img 
                   src="/images/dandes/icons/twitter.png" 
                   alt="Twitter" 

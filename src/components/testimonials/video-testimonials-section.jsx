@@ -12,35 +12,30 @@ export default function VideoTestimonialsSection() {
 
   const videos = [
     {
-      image: '/images/testimonials/video-1.jpg',
+      
       title: 'ML Engineer Offer at ₹18 LPA',
       subtitle: '4 yrs Backend Dev • Projects + Interview Prep',
+      videoId: '0tRrs7UXPSE',
     },
     {
-      image: '/images/testimonials/video-2.jpg',
+      
       title: 'Data Scientist Role Switch',
       subtitle: 'Fresher, CS Graduate • Fundamentals + Capstone',
+      videoId: 'rZmuHjNfEFE',
     },
     {
-      image: '/images/testimonials/video-3.jpg',
+      
       title: '₹35 → ₹55 LPA Architect Role',
       subtitle: '4 yrs Backend Dev • Projects + Interview Prep',
+      videoId: 'HByraJiYzcE',
     },
     {
-      image: '/images/testimonials/video-4.jpg',
+      
       title: 'Senior ML Engineer at Google',
       subtitle: '6 yrs Software Dev • Advanced ML + System Design',
+      videoId: 'M3xQPBnX5QI',
     },
-    {
-      image: '/images/testimonials/video-5.jpg',
-      title: 'AI Researcher at Microsoft',
-      subtitle: 'PhD Graduate • Deep Learning + Research',
-    },
-    {
-      image: '/images/testimonials/video-6.jpg',
-      title: 'Data Lead at Amazon',
-      subtitle: '8 yrs Analytics • Leadership + Strategy',
-    },
+    
   ]
 
   const nextSlide = () => {
@@ -52,6 +47,8 @@ export default function VideoTestimonialsSection() {
   }
 
   return (
+    
+  
     <section
       style={{
         padding: '80px 24px',
@@ -110,46 +107,20 @@ export default function VideoTestimonialsSection() {
             <div key={index}>
               {/* Video thumbnail */}
               <div
-                style={{
-                  position: 'relative',
-                  borderRadius: 12,
-                  overflow: 'hidden',
-                  aspectRatio: '4/5',
-                  marginBottom: 16,
-                  backgroundColor: '#e5e7eb',
-                }}
+                className="w-full md:w-80 h-64 md:h-80 rounded-xl overflow-hidden shadow-lg"
               >
-                <img
-                  src={video.image}
-                  alt={video.title}
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${video.videoId}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                   style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
+                    border: 'none',
                   }}
                 />
-                {/* Play button */}
-                <button
-                  style={{
-                    position: 'absolute',
-                    bottom: 20,
-                    left: 20,
-                    width: 56,
-                    height: 56,
-                    borderRadius: '50%',
-                    backgroundColor: '#DC2626',
-                    border: 'none',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '0 4px 12px rgba(220, 38, 38, 0.4)',
-                  }}
-                >
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
-                    <path d="M8 5v14l11-7L8 5z" />
-                  </svg>
-                </button>
               </div>
 
               {/* Video info */}
@@ -185,7 +156,7 @@ export default function VideoTestimonialsSection() {
             gap: 16,
             marginBottom: 48,
           }}
-        >
+        > 
           <button
             onClick={prevSlide}
             style={{

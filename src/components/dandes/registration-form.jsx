@@ -5,13 +5,15 @@ import { ArrowRight, ChevronDown } from "lucide-react"
 import { useRouter } from 'next/navigation'
 
 
+
 export function RegistrationForm() {
+  const [errors, setErrors] = useState({})
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    role: "Working professional",
+    role: "",
     currentJobRole: "",
     experience: "0 to 3",
     city: "",
@@ -25,12 +27,58 @@ export function RegistrationForm() {
 
 
   const handleNext = () => {
-    if (step < 3) setStep(step + 1)
+
+  if (step === 1) {
+
+    if (!formData.role) {
+      alert("Please select your profile")
+      return
+    }
+
+    if (!formData.currentJobRole.trim()) {
+      alert(
+        isStudentOrJobSeeker
+          ? "Please select qualification"
+          : "Please enter current job role"
+      )
+      return
+    }
+
+    if (!formData.experience) {
+      alert(
+        isStudentOrJobSeeker
+          ? "Please select passout year"
+          : "Please select years of experience"
+      )
+      return
+    }
   }
+
+  if (step === 2) {
+
+    if (!formData.goal) {
+      alert("Please select your goal")
+      return
+    }
+
+    if (!formData.batch) {
+      alert("Please select preferred batch")
+      return
+    }
+
+    if (!formData.city.trim()) {
+      alert("Please enter your city")
+      return
+    }
+  }
+
+  setStep(step + 1)
+}
 
   const handleSubmit = async (e) => {
   e.preventDefault()
   if (loading || successMsg) return
+  
 
   if (!formData.fullName || !formData.email || !formData.phone) {
     alert("Name, Email and Phone are required")
@@ -108,6 +156,8 @@ export function RegistrationForm() {
   }
   router.push('/thank-you')
 }
+  const isStudentOrJobSeeker =
+  formData.role === "Student" || formData.role === "Job seeker"
 
   return (
     <div 
@@ -147,6 +197,7 @@ export function RegistrationForm() {
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                   className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm text-gray-700 appearance-none focus:outline-none focus:border-[var(--dandes-red)] focus:ring-1 focus:ring-[var(--dandes-red)] bg-white"
                 >
+                  <option value="">--- Select ---</option>
                   <option value="Working professional">Working Professional</option>
                   <option value="Student">College Student</option>
                   <option value="Job seeker">Job Seeker</option>
@@ -159,42 +210,101 @@ export function RegistrationForm() {
 
             {/* Current Job Role Field */}
             <div>
-              <label className="block text-sm font-medium text-[var(--dandes-dark)] mb-2">
-                Current Job Role
-              </label>
-              <input
-                type="text"
-                placeholder="Enter your current job role"
-                value={formData.currentJobRole}
-                onChange={(e) =>
-                  setFormData({ ...formData, currentJobRole: e.target.value })
-                }
-                className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm placeholder:text-gray-400 focus:outline-none focus:border-[var(--dandes-red)] focus:ring-1 focus:ring-[var(--dandes-red)]"
-              />
-            </div>
+  <label className="block text-sm font-medium text-[var(--dandes-dark)] mb-2">
+    {isStudentOrJobSeeker ? "Qualification" : "Current Job Role"}
+  </label>
+
+  {isStudentOrJobSeeker ? (
+    <div className="relative">
+      <select
+        value={formData.currentJobRole}
+        onChange={(e) =>
+          setFormData({ ...formData, currentJobRole: e.target.value })
+        }
+        className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm text-gray-700 appearance-none bg-white"
+      >
+        <option value="">--- Select Qualification ---</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="BE">BE</option>
+        <option value="BCA">BCA</option>
+        <option value="MCA">MCA</option>
+        <option value="BSc">B.Sc</option>
+        <option value="MSc">M.Sc</option>
+        <option value="B.Com">B.Com</option>
+        <option value="M.Com">M.Com</option>
+        <option value="BA">BA</option>
+        <option value="MA">MA</option>
+        <option value="Diploma">Diploma</option>
+        <option value="ITI">ITI</option>
+        <option value="MBA">MBA</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Other">Other</option>
+      </select>
+      <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-gray-400 pointer-events-none" />
+    </div>
+  ) : (
+    <input
+      type="text"
+      placeholder="Enter your current job role"
+      value={formData.currentJobRole}
+      onChange={(e) =>
+        setFormData({ ...formData, currentJobRole: e.target.value })
+      }
+      className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm"
+    />
+  )}
+</div>
 
             {/* Years of experience - Pills */}
+            
             <div>
-              <label className="block text-sm font-medium text-[var(--dandes-dark)] mb-2">
-                Years of experience
-              </label>
-              <div className="flex gap-2">
-                {["0 to 3", "3 to 6", "6 to 10", "10+"].map((exp) => (
-                  <button
-                    key={exp}
-                    type="button"
-                    onClick={() => setFormData({ ...formData, experience: exp })}
-                    className={`px-4 py-2 rounded border text-sm font-medium transition-colors ${
-                      formData.experience === exp
-                        ? "border-[var(--dandes-red)] text-[var(--dandes-red)] bg-red-50"
-                        : "border-gray-200 text-gray-600 hover:border-gray-300"
-                    }`}
-                  >
-                    {exp}
-                  </button>
-                ))}
-              </div>
-            </div>
+  <label className="block text-sm font-medium text-[var(--dandes-dark)] mb-2">
+    {isStudentOrJobSeeker ? "Year of Passed Out" : "Years of Experience"}
+  </label>
+
+  {isStudentOrJobSeeker ? (
+    <div className="relative">
+      <select
+        value={formData.experience}
+        onChange={(e) =>
+          setFormData({ ...formData, experience: e.target.value })
+        }
+        className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm text-gray-700 appearance-none bg-white"
+      >
+        <option value="">--- Select Passout Year ---</option>
+        <option value="2028">2028</option>
+        <option value="2027">2027</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+        <option value="Before 2021">Before 2021</option>
+      </select>
+      <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-gray-400 pointer-events-none" />
+    </div>
+  ) : (
+    <div className="flex gap-2 flex-wrap">
+      {["0 to 3", "3 to 6", "6 to 10", "10 to 15", "15+"].map((value) => (
+        <button
+          key={value}
+          type="button"
+          onClick={() =>
+            setFormData({ ...formData, experience: value })
+          }
+          className={`px-4 py-2 rounded border text-sm font-medium ${
+            formData.experience === value
+              ? "border-[var(--dandes-red)] text-[var(--dandes-red)] bg-red-50"
+              : "border-gray-200 text-gray-600"
+          }`}
+        >
+          {value}
+        </button>
+      ))}
+    </div>
+  )}
+</div>
 
             {/* Next Button */}
             <button
@@ -240,8 +350,8 @@ export function RegistrationForm() {
               <label className="block text-sm font-medium text-[var(--dandes-dark)] mb-2">
                 Preferred batch
               </label>
-              <div className="flex gap-2">
-                {["Weekend", "Weekday Morning", "Weekday Evening"].map((batch) => (
+              <div className="grid grid-cols-2 flex gap-2">
+                {["Weekday Morning", "Weekday Evening", "Weekend Morning", "Weekend Evening"].map((batch) => (
                   <button
                     key={batch}
                     type="button"
@@ -296,6 +406,7 @@ export function RegistrationForm() {
                 Full Name
               </label>
               <input
+                required
                 type="text"
                 placeholder="Enter your full name"
                 value={formData.fullName}
@@ -312,6 +423,7 @@ export function RegistrationForm() {
               <input
                 type="email"
                 placeholder="Enter email"
+                required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm placeholder:text-gray-400 focus:outline-none focus:border-[var(--dandes-red)] focus:ring-1 focus:ring-[var(--dandes-red)]"
@@ -321,11 +433,12 @@ export function RegistrationForm() {
             
             <div>
               <label className="block text-sm font-medium text-[var(--dandes-dark)] mb-2">
-                WhatsApp no.
+                Phone No.
               </label>
               <input
                 type="tel"
                 placeholder="Enter 10 digit phone number"
+                required
                 value={formData.phone}
                 onChange={(e) => {
                   const onlyNums = e.target.value.replace(/\D/g, "")

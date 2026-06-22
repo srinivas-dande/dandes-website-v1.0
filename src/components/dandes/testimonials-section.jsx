@@ -9,24 +9,30 @@ const testimonials = [
     quote: "The program helped me move from understanding concepts in notebooks to confidently building real machine learning solutions. The structured teaching and hands-on projects made complex topics much easier to grasp.",
     name: "Rahul Mehta",
     role: "Senior Software Engineer",
+    videoId: "0tRrs7UXPSE",
+
+
   },
   {
     id: 2,
     quote: "What sets Dandes Academy apart is the focus on real interviews. The mock sessions and resume support were game-changers for my career transition into AI.",
     name: "Priya Sharma",
     role: "ML Engineer at Tech Corp",
+    videoId: "rZmuHjNfEFE",
   },
   {
     id: 3,
     quote: "The System Design course gave me clarity on how to approach complex architecture problems. I cleared interviews at multiple FAANG companies after completing the program.",
     name: "Amit Kumar",
     role: "Senior Engineer at Google",
+    videoId: "HByraJiYzcE",
   },
   {
     id: 4,
     quote: "As a working professional, the flexibility of recordings combined with live doubt sessions made it possible for me to upskill without affecting my job.",
     name: "Sneha Reddy",
     role: "Tech Lead at Startup",
+    videoId: "M3xQPBnX5QI",
   },
 ]
 
@@ -102,17 +108,20 @@ export function TestimonialsSection() {
                     />
                   ))}
                 </div>
-              </div>
+              </div> 
 
-              {/* Video Placeholder */}
-              <div className="w-full md:w-80 h-64 md:h-80 relative rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Video Placeholder</span>
-                <button className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors group">
-                  <span className="flex items-center gap-2 bg-black/50 text-white px-4 py-2 rounded-lg">
-                    <Play className="w-5 h-5" fill="white" />
-                    Play
-                  </span>
-                </button>
+              {/* YouTube Video */}
+              <div className="w-full md:w-80 h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${current.videoId}`}
+                  title={current.name}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-xl"
+                />
               </div>
             </div>
           </div>

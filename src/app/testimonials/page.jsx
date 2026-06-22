@@ -3,7 +3,6 @@ import { Header } from "@/components/dandes/header"
 import HeroSection from '@/components/testimonials/hero-section'
 import SkillsTestimonialsSection from '@/components/testimonials/skills-testimonials-section'
 import VideoTestimonialsSection from '@/components/testimonials/video-testimonials-section'
-import WrittenReviewsSection from '@/components/testimonials/written-reviews-section'
 import ExpectedOutcomesSection from '@/components/testimonials/expected-outcomes-section'
 import ShareExperienceSection from '@/components/testimonials/share-experience-section'
 import { Footer } from "@/components/dandes/footer"
@@ -21,7 +20,7 @@ export default function TestimonialsPage() {
       <HeroSection />
       <SkillsTestimonialsSection />
       <VideoTestimonialsSection />
-      <WrittenReviewsSection />
+      
       <ExpectedOutcomesSection />
       <ShareExperienceSection />
       <Footer />

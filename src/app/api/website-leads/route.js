@@ -88,7 +88,7 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: `"Webinar Lead" <${process.env.EMAIL_USER}>`,
-      to: [ "hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"],
+      //to: [ "hello@dandesacademy.com", "chaitanya@dandesacademy.com", "swetha@dandesacademy.com"],
       subject: "New AI/ML Webinar Registration",
       html: `
         <div style="font-family: Arial, sans-serif; background:#f5f7fa; padding:30px;">

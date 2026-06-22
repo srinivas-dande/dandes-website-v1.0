@@ -7,8 +7,8 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 export function BlogPostHero({
   heroImage = '/blogs/hero-bg-blogs-page.png',
   tags = ['Live classes', 'Structured curriculum'],
-  title = 'AI Engineer Vs ML Engineer Vs Data Scientist:',
-  subtitle = 'Roles, Skills And Roadmaps (2026 Guide)',
+  title = 'Why Most AI Learning Journeys Fail And How to Avoid It',
+  subtitle = 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.',
   author = 'Srinivas Dandes',
   date = '24 Jan 2026',
 }) {
