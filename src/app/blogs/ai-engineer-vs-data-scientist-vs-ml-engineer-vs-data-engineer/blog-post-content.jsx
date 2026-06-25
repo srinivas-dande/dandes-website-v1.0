@@ -230,19 +230,7 @@ export function BlogPostContent() {
             <p>If you've ever searched for AI jobs, you've seen all four titles in the same week — sometimes in the same company, sometimes for roles that look almost identical. The confusion is real, the overlap is genuine, and the differences matter enormously when you're deciding where to invest the next 6–9 months of your career.</p>
             <p>This article cuts through it completely. By the end, you'll know exactly which role aligns with your background, what each one pays, and the fastest path to get there.</p>
 
-            <div className="b4-founder-note" id="founder">
-              <div className="b4-fn-badge">👨‍🏫 From the Founder</div>
-              <h4>A Note From Srinivas Dande</h4>
-              <div className="b4-fn-body">
-                <p>In my 20+ years working across enterprise software and AI, the question I get asked most by experienced engineers is: <em style={{color:'#c4b5fd',fontStyle:'normal',fontWeight:600}}>"Which role should I target?"</em></p>
-                <p>The honest answer is that it depends entirely on your existing strengths. An experienced Java backend engineer and an experienced data warehouse engineer will take very different optimal paths into AI — and both paths are excellent.</p>
-                <p style={{marginBottom:0}}><strong style={{color:'#c4b5fd'}}>This guide helps you find your path, not a generic one.</strong></p>
-              </div>
-              <div className="b4-fn-sig">
-                <div className="b4-fn-avatar">SD</div>
-                <div><div className="b4-fn-name">Srinivas Dande</div><div className="b4-fn-title">Founder &amp; Lead Trainer, Dandes Academy</div></div>
-              </div>
-            </div>
+            
 
             <hr className="b4-divider" id="confusion" />
             <h2>Why These Roles Get Confused</h2>
@@ -403,6 +391,7 @@ export function BlogPostContent() {
                 { n:3, title:'AI Resume Screener', desc:'NLP-powered system that ranks candidates against job descriptions using embeddings.' },
                 { n:4, title:'Recommendation Engine', desc:'Collaborative filtering system deployed with a real-time inference API.' },
                 { n:5, title:'AI Agent for Customer Support', desc:'Autonomous agent with tool calling, MCP integration, and multi-step reasoning.' },
+                { n:6, title:'End-to-End MLOps Pipeline', desc:'Production ML system with experiment tracking, model versioning, CI/CD, automated deployment, monitoring, and cloud infrastructure.' },
               ].map(p => (
                 <div key={p.n} className="b4-proj-card">
                   <div className="b4-proj-num">{p.n}</div>
@@ -439,28 +428,18 @@ export function BlogPostContent() {
             </div>
           </div>
 
-          <div className="b4-cta-box">
-            <div className="b4-cta-eyebrow">🎯 Free Webinar</div>
-            <h2>AI Career Switch Blueprint</h2>
-            <div className="b4-cta-sub">Live session with Srinivas Dande — Founder, Dandes Academy</div>
-            <div className="b4-webinar-list">
-              {['Complete AI/ML Roadmap for Working Engineers','Which AI Role Fits Your Background','Required Skills & How to Build Them','Salary Trends & Career Opportunities','Live Q&A Session'].map(i => <div key={i} className="b4-webinar-item">{i}</div>)}
-            </div>
-            <br />
-            <button className="b4-cta-btn" onClick={() => setModalOpen(true)}>Register for Free Webinar →</button>
-            <div className="b4-cta-note">Free to attend · Limited seats · Recording available for registered attendees</div>
-          </div>
+          
 
           <div className="b4-author-box">
             <div className="b4-author-avatar">SD</div>
             <div className="b4-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b4-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 500+ working professionals in AI/ML. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
+              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
               <div className="b4-author-tags">
                 {['✓ 20+ Years Experience','✓ AI/ML Mentor','✓ System Design Trainer','✓ Mentor to Working Professionals'].map(t => <span key={t} className="b4-author-tag">{t}</span>)}
               </div>
-              <a href="#" className="b4-linkedin-btn">👤 Connect on LinkedIn</a>
+              
             </div>
           </div>
 
@@ -472,7 +451,7 @@ export function BlogPostContent() {
             <div className="b4-toc-box">
               <h3>In this article</h3>
               <ol>
-                {['A Note From Srinivas Dande|#founder','Why These Roles Get Confused|#confusion','The 30-Second Role Overview|#overview','Deep Dive: Each Role Explained|#deep','Side-by-Side Comparison|#comparison','Which Role Is Right for You?|#which','The Dandes 6-Step Roadmap|#roadmap','Recommended Portfolio Projects|#projects','Frequently Asked Questions|#faq'].map(item => {
+                {['Why These Roles Get Confused|#confusion','The 30-Second Role Overview|#overview','Deep Dive: Each Role Explained|#deep','Side-by-Side Comparison|#comparison','Which Role Is Right for You?|#which','The Dandes 6-Step Roadmap|#roadmap','Recommended Portfolio Projects|#projects','Frequently Asked Questions|#faq'].map(item => {
                   const [label, href] = item.split('|')
                   return <li key={href}><a href={href}>{label}</a></li>
                 })}

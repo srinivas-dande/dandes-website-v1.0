@@ -3,24 +3,24 @@
 export default function ExpectedOutcomesSection() {
   const outcomes = [
     {
-      label: 'Freshers / Entry-level',
+      label: 'ML Engineer · AI Engineer',
       title: 'Data Analyst, Data Scientist (entry), ML Engineer (junior)',
-      description: 'Strong fundamentals + projects build the foundation for a credible AI/ML start.',
+      description: 'Build strong AI/ML foundations through structured learning, hands-on projects, and interview preparation.',
     },
     {
-      label: '5–10 years of experience',
-      title: 'Advanced ML Roles · System-level Thinking',
-      description: 'Usually focus on advanced depth, real-world system thinking, and higher-responsibility ML roles.',
+      label: '2–5 Years Experience',
+      title: 'ML Engineer · AI Engineer · Senior ML Engineer · Senior AI Engineer ·',
+      description: 'Leverage your existing technical experience to transition into AI/ML roles with stronger project experience and interview readiness.',
     },
     {
-      label: '2–5 years of experience',
-      title: 'Cleaner AI/ML Transition + Stronger Interview Readiness',
-      description: 'Often aim for a cleaner AI/ML transition + stronger interview readiness and portfolio.',
+      label: '5–10 Years Experience',
+      title: 'Senior ML Engineer · Senior AI Engineer · Lead AI Engineer',
+      description: 'Develop expertise in production-grade AI systems, model deployment, MLOps, LLMs, and real-world AI applications.',
     },
     {
-      label: '10+ years of experience',
-      title: 'Data Analyst, Data Scientist (entry), ML Engineer (junior)',
-      description: 'Often align learning with architecture, leadership, and high-impact AI initiatives.',
+      label: '10+ Years Experience',
+      title: 'Lead AI Engineer · Principal ML Engineer · AI Solutions Architect · ML Architect · AI Product Manager',
+      description: 'Drive AI initiatives, architect scalable AI systems, and lead high-impact AI transformation projects.',
     },
   ]
 
@@ -48,7 +48,8 @@ export default function ExpectedOutcomesSection() {
             maxWidth: 600,
           }}
         >
-          Expected Outcomes By Experience, Freshers to Working Professionals
+          Expected Outcomes Based on Experience Freshers / Entry-Level
+
         </h2>
 
         {/* 2x2 Grid */}
@@ -119,7 +120,7 @@ export default function ExpectedOutcomesSection() {
             margin: 0,
           }}
         >
-          Exact outcomes depend on skills, effort, project work, and interview performance.
+          Career outcomes depend on prior experience, technical background, project execution, learning commitment, and interview performance.
         </p>
       </div>
 

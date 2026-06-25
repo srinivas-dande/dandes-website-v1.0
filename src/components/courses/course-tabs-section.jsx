@@ -13,7 +13,7 @@ const coursesData = {
     ctaText: "Get AI and ML course details",
     url : "/ai-machine-learning-course",
     highlights: [
-      "11 to 12-month structured roadmap",
+      "12-month structured roadmap",
       "Live online classes with LMS recordings",
       "Projects, mini projects, and a capstone",
       "Interview preparation support"

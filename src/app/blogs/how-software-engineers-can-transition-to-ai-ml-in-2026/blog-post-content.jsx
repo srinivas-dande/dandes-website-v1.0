@@ -441,13 +441,13 @@ export function BlogPostContent() {
 
         /* CALLOUT */
         .b3-callout {
-          background: #0e1e3d;
+          background: #6c8bc9;
           color: #fff;
           border-radius: 10px;
           padding: 28px 32px;
           margin: 36px 0;
         }
-        .b3-callout strong { color: #93b4f5; }
+        .b3-callout strong { color: #041a46; }
         .b3-callout p { color: rgba(255,255,255,0.82); margin-bottom: 0; }
 
         /* QUOTE */
@@ -787,27 +787,7 @@ export function BlogPostContent() {
             </p>
 
             {/* FOUNDER NOTE */}
-            <div className="b3-founder-note" id="founder">
-              <div className="b3-fn-badge">👨‍🏫 From the Founder</div>
-              <h4>A Note From Srinivas Dande</h4>
-              <div className="b3-fn-body">
-                <p>After 20+ years in software engineering, I have seen multiple technology shifts:</p>
-                <div className="b3-fn-waves">
-                  {['Web Applications', 'Mobile', 'Cloud', 'Microservices', 'AI'].map(w => (
-                    <span key={w} className="b3-wave">{w}</span>
-                  ))}
-                </div>
-                <p style={{ marginTop: 14 }}>AI is the next major shift. And the engineers who succeed are not always the smartest in the room.</p>
-                <p style={{ marginBottom: 0 }}><strong style={{ color: '#93b4f5' }}>They are the ones who adapt first.</strong></p>
-              </div>
-              <div className="b3-fn-sig">
-                <div className="b3-fn-avatar">SD</div>
-                <div>
-                  <div className="b3-fn-name">Srinivas Dande</div>
-                  <div className="b3-fn-title">Founder &amp; Lead Trainer, Dandes Academy</div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* WHY NOW */}
             <hr className="b3-divider" id="why-now" />
@@ -1055,27 +1035,7 @@ export function BlogPostContent() {
               <p><strong>The Dandes Difference:</strong> Our program is built for working professionals with 10+ years of experience. Weekend and evening batches mean you don't sacrifice your current income. Mentors who've made this exact transition guide every cohort from Step 1 to placement.</p>
             </div>
 
-            {/* TIMELINE */}
-            <hr className="b3-divider" id="timeline" />
-            <h2>Typical Transition Timeline by Background</h2>
-            <p>Your starting point determines how long the journey takes. Here's a realistic guide based on the engineers we've trained at Dandes Academy:</p>
-
-            <table className="b3-timeline-table">
-              <thead>
-                <tr>
-                  <th>Your Background</th>
-                  <th>Transition Time</th>
-                  <th>Speed</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>Data Engineer</td><td>4 – 6 Months</td><td><span className="b3-tl-badge b3-tl-fast">Fastest</span></td></tr>
-                <tr><td>DevOps / Platform Engineer</td><td>5 – 7 Months</td><td><span className="b3-tl-badge b3-tl-fast">Fast</span></td></tr>
-                <tr><td>Full Stack Developer</td><td>6 – 8 Months</td><td><span className="b3-tl-badge b3-tl-mid">Moderate</span></td></tr>
-                <tr><td>Java Developer</td><td>6 – 9 Months</td><td><span className="b3-tl-badge b3-tl-mid">Moderate</span></td></tr>
-                <tr><td>Frontend / Mobile Engineer</td><td>8 – 10 Months</td><td><span className="b3-tl-badge b3-tl-std">Standard</span></td></tr>
-              </tbody>
-            </table>
+            
 
             {/* PROJECTS */}
             <hr className="b3-divider" id="projects" />
@@ -1089,6 +1049,7 @@ export function BlogPostContent() {
                 { n: 3, title: 'AI Resume Screener', desc: 'NLP-powered system that ranks candidates against job descriptions using embeddings.' },
                 { n: 4, title: 'Recommendation Engine', desc: 'Collaborative filtering system deployed with a real-time inference API.' },
                 { n: 5, title: 'Customer Support AI Agent', desc: 'Autonomous agent with tool calling, MCP integration, and multi-step reasoning.' },
+                {n: 6, title: 'End-to-End MLOps Pipeline', desc: 'Production ML system with experiment tracking, model versioning, CI/CD, automated deployment, monitoring, and cloud infrastructure.' },
               ].map(p => (
                 <div key={p.n} className="b3-proj-card">
                   <div className="b3-proj-num">{p.n}</div>
@@ -1177,21 +1138,7 @@ export function BlogPostContent() {
           </div>
 
           {/* CTA */}
-          <div className="b3-cta-box">
-            <div className="b3-cta-eyebrow">🎯 Free Webinar</div>
-            <h2>AI Career Switch Blueprint</h2>
-            <div className="b3-cta-sub">Live session with Srinivas Dande — Founder, Dandes Academy</div>
-            <div className="b3-webinar-list">
-              {['The Complete AI Career Roadmap', 'Skills Required for AI Roles in 2026', 'Career Opportunities & Role Breakdown', 'Salary Trends & Market Demand', 'Live Q&A with the Founder'].map(item => (
-                <div key={item} className="b3-webinar-item">{item}</div>
-              ))}
-            </div>
-            <br />
-            <button className="b3-cta-btn" onClick={() => setModalOpen(true)}>
-              Register Now →
-            </button>
-            <div className="b3-cta-note">Free to attend · Limited seats · Recording available for registered attendees</div>
-          </div>
+          
 
           {/* AUTHOR */}
           <div className="b3-author-box">
@@ -1199,7 +1146,7 @@ export function BlogPostContent() {
             <div className="b3-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b3-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 500+ working professionals in AI/ML. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
+              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
               <div className="b3-author-tags">
                 <span className="b3-author-tag">✓ 20+ Years Experience</span>
                 <span className="b3-author-tag">✓ AI/ML Mentor</span>
@@ -1219,12 +1166,12 @@ export function BlogPostContent() {
   <div className="b3-toc-box">
     <h3>In this article</h3>
     <ol>
-      <li><a href="#founder">A Note From Srinivas Dande</a></li>
+      
       <li><a href="#why-now">Why Engineers Are Moving to AI</a></li>
       <li><a href="#what-changes">What Actually Changes — And What Doesn't</a></li>
       <li><a href="#roles">Which AI Role Is Right for You?</a></li>
       <li><a href="#roadmap">The Dandes 6-Step AI/ML Roadmap</a></li>
-      <li><a href="#timeline">Typical Transition Timeline by Background</a></li>
+      
       <li><a href="#projects">Recommended AI Portfolio Projects</a></li>
       <li><a href="#mistakes">5 Mistakes Engineers Make During Transition</a></li>
       <li><a href="#skills">Your Skills Audit: Keep vs Learn</a></li>

@@ -139,7 +139,7 @@ export function BlogPostContent() {
         .b6-proj-card h5 { font-size:15px; font-weight:600; color:#0f0f0f; margin-bottom:4px; }
         .b6-proj-card p { font-size:13px; color:#888; margin-bottom:0; }
         /* CALLOUT */
-        .b6-callout { background:#042f2e; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
+        .b6-callout { background:#0f766e; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
         .b6-callout strong { color:#5eead4; }
         .b6-callout p { color:rgba(255,255,255,0.85); margin-bottom:0; }
         /* QUOTE */
@@ -206,22 +206,7 @@ export function BlogPostContent() {
             <p>This isn't a talent problem. It's a pattern problem. And patterns can be identified, understood, and avoided.</p>
 
             {/* FOUNDER NOTE */}
-            <div className="b6-founder-note" id="founder">
-              <div className="b6-fn-badge">👨‍🏫 From the Founder</div>
-              <h4>A Note From Srinivas Dande</h4>
-              <div className="b6-fn-body">
-                <p>After mentoring hundreds of working professionals through AI transitions, I have watched the same failure patterns repeat themselves with remarkable consistency.</p>
-                <p>The engineers who fail are not less intelligent or less dedicated than the ones who succeed. They are simply making predictable, avoidable mistakes — usually because nobody told them what success actually looks like before they started.</p>
-                <p style={{ marginBottom: 0 }}><strong style={{ color: '#5eead4' }}>This blog is that honest conversation. The one most learning platforms are too afraid to have with you.</strong></p>
-              </div>
-              <div className="b6-fn-sig">
-                <div className="b6-fn-avatar">SD</div>
-                <div>
-                  <div className="b6-fn-name">Srinivas Dande</div>
-                  <div className="b6-fn-title">Founder &amp; Lead Trainer, Dandes Academy</div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* HARD TRUTH */}
             <hr className="b6-divider" id="reality" />
@@ -397,6 +382,7 @@ export function BlogPostContent() {
                 { n: 3, title: 'AI Resume Screener', desc: 'NLP-powered candidate ranking system using embeddings and similarity search, with a working API.' },
                 { n: 4, title: 'Recommendation Engine', desc: 'Collaborative filtering system with real-time inference API. Shows end-to-end ML thinking.' },
                 { n: 5, title: 'AI Agent for Customer Support', desc: 'Autonomous agent with MCP tool integration, multi-step reasoning, and full deployment.' },
+                { n: 6, title: 'End-to-End MLOps Pipeline', desc: 'Production ML system with experiment tracking, model versioning, CI/CD, automated deployment, monitoring, and cloud infrastructure.' },
               ].map(p => (
                 <div key={p.n} className="b6-proj-card">
                   <div className="b6-proj-num">{p.n}</div>
@@ -437,21 +423,7 @@ export function BlogPostContent() {
           </div>
 
           {/* CTA */}
-          <div className="b6-cta-box">
-            <div className="b6-cta-eyebrow">🎯 Free Webinar</div>
-            <h2>AI Career Switch Blueprint</h2>
-            <div className="b6-cta-sub">Live session with Srinivas Dande — Founder, Dandes Academy</div>
-            <div className="b6-webinar-list">
-              {['The Complete AI Career Roadmap', 'How to Avoid the Most Common Failure Patterns', 'Portfolio Projects That Get You Hired', 'Salary Trends & Career Opportunities', 'Live Q&A Session'].map(i => (
-                <div key={i} className="b6-webinar-item">{i}</div>
-              ))}
-            </div>
-            <br />
-            <button className="b6-cta-btn" onClick={() => setModalOpen(true)}>
-              Register for Free Webinar →
-            </button>
-            <div className="b6-cta-note">Free to attend · Limited seats · Recording available for registered attendees</div>
-          </div>
+          
 
           {/* AUTHOR */}
           <div className="b6-author-box">
@@ -459,13 +431,13 @@ export function BlogPostContent() {
             <div className="b6-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b6-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 500+ working professionals in AI/ML. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
+              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
               <div className="b6-author-tags">
                 {['✓ 20+ Years Experience', '✓ AI/ML Mentor', '✓ System Design Trainer', '✓ Mentor to Working Professionals'].map(t => (
                   <span key={t} className="b6-author-tag">{t}</span>
                 ))}
               </div>
-              <a href="#" className="b6-linkedin-btn">👤 Connect on LinkedIn</a>
+              
             </div>
           </div>
 
@@ -481,7 +453,7 @@ export function BlogPostContent() {
             <h3>In this article</h3>
             <ol>
               {[
-                ['A Note From Srinivas Dande', '#founder'],
+                
                 ['The Hard Truth About AI Learning', '#reality'],
                 ['8 Failure Patterns We See Every Month', '#failures'],
                 ['The Failing Journey vs The Successful Journey', '#compare'],

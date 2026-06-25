@@ -153,7 +153,7 @@ export function BlogPostContent() {
         .b5-callout { background:#3d1f00; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
         .b5-callout strong { color:#fcd34d; }
         .b5-callout p { color:rgba(255,255,255,0.85); margin-bottom:0; }
-        .b5-quote-block { border-left:4px solid #b45309; padding:18px 24px; margin:36px 0; background:#fff; border-radius:0 8px 8px 0; }
+        .b5-quote-block { border-left:4px solid #c08659; padding:18px 24px; margin:36px 0; background:#fff; border-radius:0 8px 8px 0; }
         .b5-quote-block p { font-family:'Playfair Display',serif; font-size:20px; font-style:italic; color:#0f0f0f; margin-bottom:6px; }
         .b5-quote-block cite { font-size:13px; color:#888; }
         .b5-internal-links { background:#fef9f0; border-radius:10px; padding:22px 26px; margin:28px 0; }
@@ -209,19 +209,7 @@ export function BlogPostContent() {
             <p>Search YouTube for "how to become an AI engineer" and the top results will tell you: <em>learn Python.</em> So you learn Python. You complete the course. You write loops and functions and maybe a pandas dataframe. And then you apply for AI jobs and hear… nothing.</p>
             <p>The problem isn't your Python. <strong>Python is a tool. And knowing how to hold a hammer does not make you an architect.</strong></p>
 
-            <div className="b5-founder-note" id="founder">
-              <div className="b5-fn-badge">👨‍🏫 From the Founder</div>
-              <h4>A Note From Srinivas Dande</h4>
-              <div className="b5-fn-body">
-                <p>I see this pattern every month. An experienced engineer spends 3 months on a Python course, finishes it feeling confident, then discovers that AI job descriptions ask for statistics, ML algorithms, deep learning, LLMs, RAG, and MLOps — none of which were in the Python course.</p>
-                <p>Python is Step 1 of a 6-step journey. <em style={{color:'#fcd34d'}}>Treating it as the destination is the single most common reason talented engineers waste months going in circles.</em></p>
-                <p style={{marginBottom:0}}><strong style={{color:'#fcd34d'}}>This blog exists to fix that misunderstanding once and for all.</strong></p>
-              </div>
-              <div className="b5-fn-sig">
-                <div className="b5-fn-avatar">SD</div>
-                <div><div className="b5-fn-name">Srinivas Dande</div><div className="b5-fn-title">Founder &amp; Lead Trainer, Dandes Academy</div></div>
-              </div>
-            </div>
+            
 
             <hr className="b5-divider" id="myth" />
             <h2>The Python Myth That Is Costing Engineers Months</h2>
@@ -377,6 +365,7 @@ export function BlogPostContent() {
                 { n:3, title:'AI Resume Screener', desc:'Requires NLP, embeddings, similarity search, and a deployable scoring API.' },
                 { n:4, title:'Recommendation Engine', desc:'Requires collaborative filtering, model serving, and real-time inference pipeline.' },
                 { n:5, title:'AI Agent for Customer Support', desc:'Requires agent architecture, MCP tool integration, multi-step reasoning, and deployment.' },
+                { n:6, title:'End-to-End MLOps Pipeline', desc:'Production ML system with experiment tracking, model versioning, CI/CD, automated deployment, monitoring, and cloud infrastructure.' },
               ].map(p => (
                 <div key={p.n} className="b5-proj-card">
                   <div className="b5-proj-num">{p.n}</div>
@@ -411,28 +400,18 @@ export function BlogPostContent() {
             </div>
           </div>
 
-          <div className="b5-cta-box">
-            <div className="b5-cta-eyebrow">🎯 Free Webinar</div>
-            <h2>AI Career Switch Blueprint</h2>
-            <div className="b5-cta-sub">Live session with Srinivas Dande — Founder, Dandes Academy</div>
-            <div className="b5-webinar-list">
-              {['The Complete AI Career Roadmap','Skills Required Beyond Python','Portfolio Projects That Get You Hired','Career Opportunities & Salary Trends','Live Q&A Session'].map(i => <div key={i} className="b5-webinar-item">{i}</div>)}
-            </div>
-            <br />
-            <button className="b5-cta-btn" onClick={() => setModalOpen(true)}>Register for Free Webinar →</button>
-            <div className="b5-cta-note">Free to attend · Limited seats · Recording available for registered attendees</div>
-          </div>
+          
 
           <div className="b5-author-box">
             <div className="b5-author-avatar">SD</div>
             <div className="b5-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b5-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 500+ working professionals in AI/ML. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
+              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
               <div className="b5-author-tags">
                 {['✓ 20+ Years Experience','✓ AI/ML Mentor','✓ System Design Trainer','✓ Mentor to Working Professionals'].map(t => <span key={t} className="b5-author-tag">{t}</span>)}
               </div>
-              <a href="#" className="b5-linkedin-btn">👤 Connect on LinkedIn</a>
+              
             </div>
           </div>
           <div className="b5-tags-row">
@@ -445,7 +424,7 @@ export function BlogPostContent() {
           <div className="b5-toc-box">
             <h3>In this article</h3>
             <ol>
-              {[['A Note From Srinivas Dande','#founder'],['The Python Myth That Is Costing Engineers Months','#myth'],["What Python Does (and Doesn't) Give You",'#gives'],['The Real AI Skill Pyramid','#pyramid'],['5 Mistakes Engineers Make Learning AI','#mistakes'],['What You Actually Need to Become an AI Engineer','#need'],['The Dandes 6-Step AI/ML Roadmap','#roadmap'],['Recommended Portfolio Projects','#projects'],['Frequently Asked Questions','#faq']].map(([l,h]) => (
+              {[['The Python Myth That Is Costing Engineers Months','#myth'],["What Python Does (and Doesn't) Give You",'#gives'],['The Real AI Skill Pyramid','#pyramid'],['5 Mistakes Engineers Make Learning AI','#mistakes'],['What You Actually Need to Become an AI Engineer','#need'],['The Dandes 6-Step AI/ML Roadmap','#roadmap'],['Recommended Portfolio Projects','#projects'],['Frequently Asked Questions','#faq']].map(([l,h]) => (
                 <li key={h}><a href={h}>{l}</a></li>
               ))}
             </ol>

@@ -55,7 +55,7 @@ export function TestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Trusted by <span className="text-[#d12027]">20 thousand+ learners</span>, here is what they share
+            Trusted by <span className="text-[#d12027]">25 thousand+ learners</span>, here is what they share
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Choosing the right AI and Machine Learning course takes more than reading a curriculum. You want proof that learners understood the concepts, completed projects, remained consistent, and felt confident during interviews. Here are reviews from learners from diverse backgrounds, working professionals, and placement-focused students.

@@ -1,17 +1,16 @@
-import { Monitor, Users, Clock, Presentation, Settings } from "lucide-react"
 import Image from "next/image"
 
 const features = [
   {
     image: "/icons/experience.png",
     iconBg: "bg-orange-100",
-    title: "10 plus years",
+    title: "20 plus years",
     description: "of experience, Friendly transition track",
   },
   {
     image: "/icons/duration.png",
     iconBg: "bg-blue-100",
-    title: "11 to 12 Months",
+    title: "12 Months",
     description: "Pace you can sustain",
   },
   {
@@ -29,7 +28,7 @@ const features = [
   {
     image: "/icons/students.png",
     iconBg: "bg-cyan-100",
-    title: "20,000 plus Trained",
+    title: "25,000 plus Trained",
     description: "learners Proof of delivery",
   },
 ]

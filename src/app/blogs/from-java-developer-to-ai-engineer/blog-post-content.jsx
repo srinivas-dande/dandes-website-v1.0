@@ -489,13 +489,13 @@ export function BlogPostContent() {
 
         /* CALLOUT */
         .b2-callout {
-          background: #0d2d1a;
+          background: #1bb057;
           color: #fff;
           border-radius: 10px;
           padding: 28px 32px;
           margin: 36px 0;
         }
-        .b2-callout strong { color: #7ecfa0; }
+        .b2-callout strong { color: #dbd826; }
         .b2-callout p { color: rgba(255,255,255,0.82); margin-bottom: 0; }
 
         /* QUOTE */
@@ -774,19 +774,7 @@ export function BlogPostContent() {
           padding: 3px 12px;
           border-radius: 20px;
         }
-        .b2-linkedin-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          background: #0a66c2;
-          color: #fff;
-          font-size: 13px; font-weight: 600;
-          padding: 6px 16px;
-          border-radius: 6px;
-          text-decoration: none;
-          margin-top: 12px;
-        }
-        .b2-linkedin-btn:hover { background: #085299; }
+        
 
         /* TAGS */
         .b2-tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 36px 0 20px; }
@@ -833,23 +821,7 @@ export function BlogPostContent() {
             <p>The good news? <strong>You are far closer to that AI engineer role than you think.</strong></p>
 
             {/* FOUNDER NOTE */}
-            <div className="b2-founder-note" id="founder">
-              <div className="b2-fn-badge">👨‍🏫 From the Founder</div>
-              <h4>A Note From Srinivas Dande</h4>
-              <div className="b2-fn-body">
-                <p>After mentoring hundreds of software engineers and working in the software industry for more than 20 years, I noticed something interesting.</p>
-                <p>The engineers who transition fastest into AI are <em>not beginners</em>.</p>
-                <p>They are experienced backend and full-stack developers who already understand systems, scalability, and production environments.</p>
-                <p style={{ marginBottom: 0 }}><strong style={{ color: '#7ecfa0' }}>This roadmap is built specifically for them.</strong></p>
-              </div>
-              <div className="b2-fn-sig">
-                <div className="b2-fn-avatar">SD</div>
-                <div>
-                  <div className="b2-fn-name">Srinivas Dande</div>
-                  <div className="b2-fn-title">Founder &amp; Lead Trainer, Dandes Academy</div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* CAREER SHIFT */}
             <hr className="b2-divider" id="shift" />
@@ -1147,7 +1119,7 @@ export function BlogPostContent() {
             {/* PORTFOLIO PROJECTS */}
             <hr className="b2-divider" id="projects" />
             <h2>Recommended AI Portfolio Projects</h2>
-            <p>Certifications get you past ATS. Projects get you hired. Here are the 5 portfolio projects that consistently impress AI engineering hiring managers:</p>
+            <p>Certifications get you past ATS. Projects get you hired. Here are the 6 portfolio projects that consistently impress AI engineering hiring managers:</p>
 
             <div className="b2-projects-grid">
               {[
@@ -1156,6 +1128,7 @@ export function BlogPostContent() {
                 { n: 3, title: 'AI Resume Screener', desc: 'NLP-powered system that ranks candidates against job descriptions using embeddings.' },
                 { n: 4, title: 'Recommendation System', desc: 'Collaborative filtering system deployed with real-time inference API — familiar territory for Java devs.' },
                 { n: 5, title: 'AI Agent for Customer Support', desc: 'Autonomous agent with tool calling, MCP integration, and multi-step reasoning.' },
+                { n: 6, title: 'End-to-End MLOps Pipeline', desc: 'Production ML system with experiment tracking, model versioning, CI/CD, automated deployment, monitoring, and cloud infrastructure.' },
               ].map(p => (
                 <div key={p.n} className="b2-proj-card">
                   <div className="b2-proj-num">{p.n}</div>
@@ -1167,42 +1140,7 @@ export function BlogPostContent() {
               ))}
             </div>
 
-            {/* TIMELINE TABLE */}
-            <hr className="b2-divider" id="timeline" />
-            <h2>Typical Transition Timeline</h2>
-            <p>Based on the engineers we've trained at Dandes Academy, here's a realistic guide for part-time study (weekends and evenings) while working full-time:</p>
-
-            <table className="b2-timeline-table">
-              <thead>
-                <tr>
-                  <th>Background</th>
-                  <th>Transition Time</th>
-                  <th>Why</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Java Developer (10+ years)</td>
-                  <td>6 – 9 Months</td>
-                  <td><span className="b2-tl-badge b2-tl-mid">Strong foundation in systems</span></td>
-                </tr>
-                <tr>
-                  <td>Full Stack Java Developer</td>
-                  <td>6 – 8 Months</td>
-                  <td><span className="b2-tl-badge b2-tl-mid">API &amp; frontend experience helps</span></td>
-                </tr>
-                <tr>
-                  <td>Java + DevOps Engineer</td>
-                  <td>5 – 7 Months</td>
-                  <td><span className="b2-tl-badge b2-tl-fast">MLOps step is near-complete</span></td>
-                </tr>
-                <tr>
-                  <td>Java + Data Engineering</td>
-                  <td>4 – 6 Months</td>
-                  <td><span className="b2-tl-badge b2-tl-fast">Fastest path to ML pipelines</span></td>
-                </tr>
-              </tbody>
-            </table>
+            
 
             {/* MISTAKES */}
             <hr className="b2-divider" />
@@ -1272,27 +1210,7 @@ export function BlogPostContent() {
           </div>
 
           {/* CTA */}
-          <div className="b2-cta-box">
-            <div className="b2-cta-eyebrow">🎯 Free Webinar</div>
-            <h2>AI Career Switch Blueprint</h2>
-            <div className="b2-cta-sub">Live session with Srinivas Dande — Founder, Dandes Academy</div>
-            <div className="b2-webinar-list">
-              {[
-                'Complete AI/ML Roadmap for Java Developers',
-                'Required Skills & How to Build Them',
-                'Portfolio Projects That Get You Hired',
-                'Career Opportunities & Salary Trends',
-                'Live Q&A Session',
-              ].map(item => (
-                <div key={item} className="b2-webinar-item">{item}</div>
-              ))}
-            </div>
-            <br />
-            <button className="b2-cta-btn" onClick={() => setModalOpen(true)}>
-              Register for Free Webinar →
-            </button>
-            <div className="b2-cta-note">Free to attend · Limited seats · Recording available for registered attendees</div>
-          </div>
+          
 
           {/* AUTHOR */}
           <div className="b2-author-box">
@@ -1300,14 +1218,14 @@ export function BlogPostContent() {
             <div className="b2-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b2-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 500+ working professionals in AI/ML. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
+              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
               <div className="b2-author-tags">
                 <span className="b2-author-tag">✓ 20+ Years Experience</span>
                 <span className="b2-author-tag">✓ AI/ML Mentor</span>
                 <span className="b2-author-tag">✓ System Design Trainer</span>
                 <span className="b2-author-tag">✓ Mentor to Working Professionals</span>
               </div>
-              <a href="#" className="b2-linkedin-btn">👤 Connect on LinkedIn</a>
+              
             </div>
           </div>
 
@@ -1324,14 +1242,14 @@ export function BlogPostContent() {
           <div className="b2-toc-box">
             <h3>In this article</h3>
             <ol>
-              <li><a href="#founder">A Note From Srinivas Dande</a></li>
+              
               <li><a href="#shift">The AI Career Shift Has Already Started</a></li>
               <li><a href="#advantage">Why Java Developers Have an Advantage</a></li>
               <li><a href="#transfer">Your Java Skills — Mapped to AI</a></li>
               <li><a href="#roadmap">The Dandes 6-Step AI/ML Roadmap</a></li>
               <li><a href="#usecases">Where Java Developers Use AI</a></li>
               <li><a href="#projects">Recommended AI Portfolio Projects</a></li>
-              <li><a href="#timeline">Typical Transition Timeline</a></li>
+              
               <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
               <li><a href="#roles">AI Career Roles &amp; Salaries</a></li>
               <li><a href="#faq">Frequently Asked Questions</a></li>

@@ -39,8 +39,7 @@ export function BlogListingSection() {
 
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState([])
-  const [currentPage, setCurrentPage] = useState(1)
-  const postsPerPage = 9
+  
 
   const toggleTag = (label) => {
     setSelectedTags(prev => 
@@ -61,11 +60,8 @@ export function BlogListingSection() {
   })
 
   // Paginate filtered posts
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
-  const paginatedPosts = filteredPosts.slice(
-    (currentPage - 1) * postsPerPage,
-    currentPage * postsPerPage
-  )
+  
+  
 
   return (
     <section style={{ backgroundColor: '#fff', padding: '48px 0 80px' }}>
@@ -108,7 +104,7 @@ export function BlogListingSection() {
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value)
-                  setCurrentPage(1)
+                  
                 }}
                 style={{
                   border: 'none',
@@ -139,7 +135,7 @@ export function BlogListingSection() {
                     key={i}
                     onClick={() => {
                       toggleTag(tag.label)
-                      setCurrentPage(1)
+                      
                     }}
                     style={{
                       padding: '6px 12px',
@@ -277,36 +273,33 @@ export function BlogListingSection() {
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gap: 24,
               rowGap: '35px',
             }}>
-              {paginatedPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <article key={post.id} style={{ display: 'flex', flexDirection: 'column' }}>
                   {/* Image */}
-                  <div style={{
-                    width: '100%',
-                    aspectRatio: '16/10',
-                    backgroundColor: '#e5e7eb',
-                    borderRadius: 8,
-                    marginBottom: 12,
-                    overflow: 'hidden',
-                  }}>
-                    {post.image && (
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                        }}
-                        onError={(e) => {
-                          e.target.style.display = 'none'
-                        }}
-                      />
-                    )}
-                  </div>
+                  <div
+  style={{
+    width: '100%',
+    aspectRatio: '16/10',
+    borderRadius: 8,
+    marginBottom: 12,
+    overflow: 'hidden',
+    backgroundColor: '#fff',
+  }}
+>
+  <img
+    src={post.image}
+    alt={post.title}
+    style={{
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain',
+    }}
+  />
+</div>
 
                   {/* Tags */}
                   <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
@@ -397,60 +390,13 @@ export function BlogListingSection() {
             </div>
 
             {/* No results */}
-            {paginatedPosts.length === 0 && (
+            {filteredPosts.length === 0 && (
               <div style={{ textAlign: 'center', padding: '60px 0', color: '#6b7280' }}>
                 <p style={{ fontSize: 16 }}>No posts found matching your criteria.</p>
               </div>
             )}
 
-            {/* Pagination - Left aligned */}
-            {filteredPosts.length > 0 && (
-              <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: 8,
-                marginTop: 48,
-              }}>
-                {Array.from({ length: Math.max(totalPages, 4) }, (_, i) => i + 1).slice(0, 4).map(page => (
-                  <button
-                    key={page}
-                    onClick={() => setCurrentPage(page)}
-                    style={{
-                      width: 40,
-                      height: 40,
-                      borderRadius: 6,
-                      border: '1px solid #e5e7eb',
-                      backgroundColor: '#fff',
-                      color: '#1a1a1a',
-                      fontSize: 14,
-                      cursor: 'pointer',
-                      fontWeight: currentPage === page ? 600 : 400,
-                    }}
-                  >
-                    {page}
-                  </button>
-                ))}
-                <button
-                  onClick={() => setCurrentPage(p => Math.min(p + 1, totalPages || 1))}
-                  style={{
-                    width: 40,
-                    height: 40,
-                    borderRadius: 6,
-                    border: 'none',
-                    backgroundColor: '#d12027',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                  }}
-                >
-                  <svg width={12} height={12} fill="none" stroke="#fff" strokeWidth={2.5}>
-                    <path d="M4 2 L9 6 L4 10" />
-                  </svg>
-                </button>
-              </div>
-            )}
+            
           </div>
         </div>
       </div>

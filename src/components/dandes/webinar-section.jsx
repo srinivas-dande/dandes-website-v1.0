@@ -71,7 +71,7 @@ export function WebinarSection() {
             onClick={() => setShowPopup(true)}
             className="inline-flex items-center gap-2 bg-[#d12027] hover:bg-[#b91c22] text-white px-6 py-3 rounded-md font-medium transition-colors cursor-pointer"
           >
-            Register for free webinar
+            Register for free Demo
             <ArrowRight className="w-4 h-4" />
           </button>
 

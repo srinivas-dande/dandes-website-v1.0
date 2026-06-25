@@ -4,7 +4,6 @@ import HeroSection from '@/components/testimonials/hero-section'
 import SkillsTestimonialsSection from '@/components/testimonials/skills-testimonials-section'
 import VideoTestimonialsSection from '@/components/testimonials/video-testimonials-section'
 import ExpectedOutcomesSection from '@/components/testimonials/expected-outcomes-section'
-import ShareExperienceSection from '@/components/testimonials/share-experience-section'
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
@@ -22,7 +21,7 @@ export default function TestimonialsPage() {
       <VideoTestimonialsSection />
       
       <ExpectedOutcomesSection />
-      <ShareExperienceSection />
+      
       <Footer />
     </main>
   )

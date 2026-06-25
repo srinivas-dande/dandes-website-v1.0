@@ -421,13 +421,13 @@ export function BlogPostContent() {
 
         /* CALLOUT */
         .b-callout {
-          background: #1a3a5c;
+          background: #3b87d8;
           color: #fff;
           border-radius: 10px;
           padding: 28px 32px;
           margin: 36px 0;
         }
-        .b-callout strong { color: #f5a97f; }
+        .b-callout strong { color: #f57f7f; }
         .b-callout p { color: rgba(255,255,255,0.85); margin-bottom: 0; }
 
         /* QUOTE */
@@ -659,29 +659,7 @@ export function BlogPostContent() {
             <p>Let's cut through the noise. Here's an honest answer from someone who has been in the industry for over two decades.</p>
 
             {/* FOUNDER NOTE */}
-            <div className="b-founder-note" id="founder">
-              <div className="b-fn-badge">👨‍🏫 From the Founder</div>
-              <h4>A Note From Srinivas Dande</h4>
-              <div className="b-fn-body">
-                <p>After spending more than 20 years in software engineering, I have witnessed multiple technology shifts:</p>
-                <div className="b-fn-waves">
-                  {['Mainframes', 'Web Applications', 'Mobile', 'Cloud', 'Microservices', 'AI'].map(w => (
-                    <span key={w} className="b-wave">{w}</span>
-                  ))}
-                </div>
-                <p style={{ marginTop: 14 }}>Each wave changed <em>how</em> engineers worked. None eliminated the <em>need</em> for engineers.</p>
-                <p style={{ marginBottom: 0 }}>
-                  <strong style={{ color: '#f5a97f' }}>AI is no different. The engineers who adapt will thrive.</strong>
-                </p>
-              </div>
-              <div className="b-fn-sig">
-                <div className="b-fn-avatar">SD</div>
-                <div>
-                  <div className="b-fn-name">Srinivas Dande</div>
-                  <div className="b-fn-title">Founder &amp; Lead Trainer, Dandes Academy</div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* REALITY CHECK */}
             <hr className="b-divider" id="reality" />
@@ -796,12 +774,12 @@ export function BlogPostContent() {
             <div className="b-timeline-wrap">
               <div className="b-tl-grid">
                 {[
-                  { month: 'Month 1–2', title: 'Python + Statistics', desc: 'Foundation layer. Python as a second language. Math for ML intuition.' },
-                  { month: 'Month 3–4', title: 'Machine Learning', desc: 'Core ML algorithms, model evaluation, feature engineering.' },
-                  { month: 'Month 5', title: 'Deep Learning', desc: 'Neural networks, CNNs, advanced architectures.' },
-                  { month: 'Month 6', title: 'LLMs + RAG', desc: 'Large language models, prompt engineering, retrieval-augmented generation.' },
-                  { month: 'Month 7', title: 'AI Agents + MCP', desc: 'Autonomous agents, tool calling, Model Context Protocol.' },
-                  { month: 'Month 8–9', title: 'MLOps + Projects', desc: 'Production deployment, CI/CD for ML, capstone portfolio project.' },
+                  { month: 'Phase 1–2', title: 'Python + Statistics', desc: 'Foundation layer. Python as a second language. Math for ML intuition.' },
+                  { month: 'Phase 3–4', title: 'Machine Learning', desc: 'Core ML algorithms, model evaluation, feature engineering.' },
+                  { month: 'Phase 5', title: 'Deep Learning', desc: 'Neural networks, CNNs, advanced architectures.' },
+                  { month: 'Phase 6', title: 'LLMs + RAG', desc: 'Large language models, prompt engineering, retrieval-augmented generation.' },
+                  { month: 'Phase 7', title: 'AI Agents + MCP', desc: 'Autonomous agents, tool calling, Model Context Protocol.' },
+                  { month: 'Phase 8–9', title: 'MLOps + Projects', desc: 'Production deployment, CI/CD for ML, capstone portfolio project.' },
                 ].map(card => (
                   <div key={card.month} className="b-tl-card">
                     <div className="b-tl-month">{card.month}</div>
@@ -816,7 +794,7 @@ export function BlogPostContent() {
             <hr className="b-divider" id="projects" />
             <h2>Recommended AI Portfolio Projects</h2>
             <p>
-              Certifications get you past ATS. Projects get you hired. Here are the 5 portfolio projects that consistently
+              Certifications get you past ATS. Projects get you hired. Here are the 6 portfolio projects that consistently
               impress AI engineering hiring managers:
             </p>
 
@@ -827,6 +805,7 @@ export function BlogPostContent() {
                 { n: 3, title: 'AI Resume Screener', desc: 'NLP-powered system that ranks candidates against job descriptions using embeddings.' },
                 { n: 4, title: 'Recommendation Engine', desc: 'Collaborative filtering or content-based system deployed with real-time inference API.' },
                 { n: 5, title: 'Customer Support AI Agent', desc: 'Autonomous agent with tool calling, MCP integration, and multi-step reasoning.' },
+                { n: 6, title: 'End-to-End MLOps Pipeline', desc: 'Production ML system with experiment tracking, model versioning, CI/CD, automated deployment, monitoring, and cloud infrastructure.' },
               ].map(p => (
                 <div key={p.n} className="b-proj-card">
                   <div className="b-proj-num">{p.n}</div>
@@ -855,7 +834,7 @@ export function BlogPostContent() {
 
             <div className="b-callout">
               <p>
-                At <strong>Dandes Academy</strong>, our AI/ML program is designed specifically for engineers with 10+ years of
+                At <strong>Dandes Academy</strong>, our AI/ML program is designed specifically for engineers with 3+ years of
                 experience. We skip what you already know, go deep where it matters, and have you building real AI projects
                 within weeks — not months.
               </p>
@@ -902,7 +881,7 @@ export function BlogPostContent() {
                 },
                 {
                   q: 'How long does it take to learn AI?',
-                  a: 'For an experienced software engineer studying part-time (weekends and evenings), the Dandes 6-step roadmap takes approximately 8–9 months to complete. Some engineers with strong CS fundamentals complete it in 6 months. Full-time study can compress this to 4–5 months.',
+                  a: 'For an experienced software engineer studying part-time (weekends and evenings), the Dandes 6-step roadmap takes approximately 12 months to complete. Some engineers with strong CS fundamentals complete it in 9 months. Full-time study can compress this to 6 months.',
                 },
                 {
                   q: 'Do I need Mathematics for AI?',
@@ -918,30 +897,7 @@ export function BlogPostContent() {
           </div>
 
           {/* WEBINAR CTA */}
-          <div className="b-cta-box">
-            <div className="b-cta-eyebrow">🎯 Free Webinar</div>
-            <h2>AI Career Switch Blueprint</h2>
-            <div className="b-cta-sub">Live session with Srinivas Dande — Founder, Dandes Academy</div>
-            <div className="b-webinar-list">
-              {[
-                'Will AI Replace Software Engineers?',
-                'Skills Required for AI Roles in 2026',
-                'The Complete AI Career Roadmap',
-                'Salary Trends & Role Comparisons',
-                'Live Q&A with the Founder',
-              ].map(item => (
-                <div key={item} className="b-webinar-item">{item}</div>
-              ))}
-            </div>
-            <br />
-            <button
-              className="b-cta-btn"
-              onClick={() => setModalOpen(true)}
-            >
-              Register Now →
-            </button>
-            <div className="b-cta-note">Free to attend · Limited seats · Recording available for registered attendees</div>
-          </div>
+          
 
           {/* AUTHOR BOX */}
           <div className="b-author-box">
@@ -950,8 +906,8 @@ export function BlogPostContent() {
               <h4>Srinivas Dande</h4>
               <div className="b-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
               <p>
-                20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 500+ working
-                professionals in AI/ML. Specialises in helping experienced engineers make structured, high-ROI career transitions
+                20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working
+                professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions
                 into AI roles.
               </p>
               <div className="b-author-tags">
@@ -974,7 +930,7 @@ export function BlogPostContent() {
             <div className="b-toc-box">
               <h3>In this article</h3>
               <ol>
-                <li><a href="#founder">A Note From Srinivas Dande</a></li>
+                
                 <li><a href="#reality">AI Today: Reality Check</a></li>
                 <li><a href="#automate">What AI Can and Cannot Automate</a></li>
                 <li><a href="#sysdesign">Why System Design Matters More Than Ever</a></li>
