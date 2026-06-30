@@ -29,9 +29,7 @@ const allBlogPosts = [
   { id: 4, slug: 'ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer', image: '/blog/post-4.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer', description: 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.' },
   { id: 5, slug: 'why-learning-python-alone-will-not-make-you-an-ai-engineer', image: '/blog/post-5.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'Why Learning Python Alone Will Not Make You an AI Engineer', description: 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.' },
   { id: 6, slug: 'why-most-ai-learning-journeys-fail-and-how-to-avoid-it', image: '/blog/post-6.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'Why Most AI Learning Journeys Fail And How to Avoid It', description: 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.' },
-  { id: 7, slug: '', image: '/blog/post-7.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: '', description: '' },
-  { id: 8, slug: '', image: '/blog/post-8.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: '', description: '' },
-  { id: 9, slug: '', image: '/blog/post-9.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: '', description: '' },
+ 
 ]
 
 export function BlogListingSection() {
