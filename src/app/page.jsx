@@ -13,7 +13,7 @@ import { TestimonialsSection } from "@/components/dandes/testimonials-section"
 import { FAQSection } from "@/components/dandes/faq-section"
 import { CTASection } from "@/components/dandes/cta-section"
 import { Footer } from "@/components/dandes/footer"
-
+ 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">

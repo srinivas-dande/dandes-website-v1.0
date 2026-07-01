@@ -9,7 +9,7 @@ export function BlogPostHero({
   tags = ['Live classes', 'Structured curriculum'],
   title = 'Why Learning Python Alone Will Not Make You an AI Engineer',
   subtitle = 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.',
-  author = 'Srinivas Dandes',
+  author = 'Srinivas Dande',
   date = '24 Jan 2026',
 }) {
 
@@ -242,7 +242,7 @@ export function BlogPostHero({
             fontWeight: 500,
             cursor: 'pointer',
           }}>
-            Join the Free Webinar
+            Join the Free Demo
           </span>
           <button
             onClick={() => setShowPopup(true)}

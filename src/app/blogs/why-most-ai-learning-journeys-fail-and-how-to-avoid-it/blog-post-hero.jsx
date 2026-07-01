@@ -9,7 +9,7 @@ export function BlogPostHero({
   tags = ['Live classes', 'Structured curriculum'],
   title = 'Why Most AI Learning Journeys Fail And How to Avoid It',
   subtitle = 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.',
-  author = 'Srinivas Dandes',
+  author = 'Srinivas Dande',
   date = '24 Jan 2026',
 }) {
 
@@ -242,7 +242,7 @@ export function BlogPostHero({
             fontWeight: 500,
             cursor: 'pointer',
           }}>
-            Join the Free Webinar
+            Join the Free Demo
           </span>
           <button
             onClick={() => setShowPopup(true)}

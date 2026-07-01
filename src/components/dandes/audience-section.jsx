@@ -5,15 +5,15 @@ import { CheckCircle2 } from "lucide-react"
 
 const tabContent = {
   professionals: {
-    headline: "mid to senior engineers",
-    subheadline: "who want a clear upgrade path",
+    headline: "Working Professionals",
+    subheadline: "Ready to Level Up Their Careers",
     description:
-      "If you are already working in tech and want to grow into stronger roles, these programs are built to fit real schedules and real career goals. You learn through live classes, recordings when you miss a session, and a paced roadmap that focuses on long-term mastery.",
+      "Designed for busy professionals, our flexible learning approach combines live classes, recordings, and structured roadmaps so you can upskill without leaving your job.",
     benefits: [
-      "Upskill without quitting your job.",
-      "Break stagnation with skills that matter in interviews and real work.",
-      "Follow one structured roadmap, not scattered resources.",
-      "Build confidence through guided practice and projects.",
+      "Upskill without leaving your job",
+      "Build skills for real-world projects and interviews",
+      "Follow one structured roadmap instead of scattered resources",
+      "Learn consistently with mentor guidance and practice",
     ],
     tracks: [
       "AI and Machine Learning for a portfolio and modern specialization.",
@@ -23,19 +23,18 @@ const tabContent = {
   },
   students: {
     headline: "students and fresh graduates",
-    subheadline: "who want to land their first tech job",
+    subheadline: "who want to Land Your First Tech Job with Confidence",
     description:
-      "If you are preparing for placements, internships, or your first job in tech, these programs give you the structure and practice needed to stand out. You learn fundamentals properly, build projects, and prepare for real interviews.",
+      "Build strong foundations, complete real projects, and prepare for placements through structured learning designed for students and fresh graduates.",
     benefits: [
-      "Get placement-ready with structured preparation.",
-      "Build a strong portfolio with real projects.",
-      "Master DSA and coding interviews step by step.",
-      "Gain confidence through mock interviews and feedback.",
+      "Become placement-ready with structured preparation",
+      "Build a portfolio through real-world projects",
+      "Master DSA and coding interviews",
+      "Gain confidence through mock interviews",
     ],
     tracks: [
+      "AI and Machine Learning for a portfolio and modern specialization.",
       "DSA for placements and coding interviews.",
-      "AI and Machine Learning for modern tech roles.",
-      "Full-stack development for versatile job opportunities.",
     ],
   },
 }
@@ -50,14 +49,11 @@ export function AudienceSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-            Made for working <span className="text-[#d12027]">professionals</span> and{" "}
-            <span className="text-[#d12027]">serious learners</span>
+            Built for Working<span className="text-[#d12027]">professionals,</span> and{" "}
+            <span className="text-[#d12027]">Freshers &  Students</span>
           </h2>
           <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Dandes Academy is designed for people who want a clear learning path, consistent support, and practical work
-            that improves real outcomes. Whether you are aiming for an AI transition, preparing for senior engineering
-            interviews, or building strong fundamentals for placements, the structure helps you stay consistent and
-            confident.
+            Whether you're starting your career or advancing to the next level, our structured programs combine live classes, practical projects, and continuous support to help you achieve your goals with confidence.
           </p>
         </div>
 
@@ -115,7 +111,7 @@ export function AudienceSection() {
 
           {/* Recommended Tracks Card */}
           <div className="bg-white rounded-xl border border-gray-200 p-6 md:p-8">
-            <h4 className="text-lg font-bold text-foreground mb-6">Recommended tracks:</h4>
+            <h4 className="text-lg font-bold text-foreground mb-6">Recommended Programs:</h4>
             <ul className="space-y-4">
               {content.tracks.map((track, index) => (
                 <li key={index} className="flex items-start gap-3">

@@ -12,7 +12,7 @@ const faqData = [
   },
   {
     q: '3. How long is the AI and ML course?',
-    a: 'The program runs for approximately 6 months, covering foundational to advanced topics with hands-on projects throughout.',
+    a: 'The program runs for approximately 12 months, covering foundational to advanced topics with hands-on projects throughout.',
   },
   {
     q: '4. Will I get projects and a capstone?',
@@ -48,7 +48,7 @@ const faqData = [
   },
   {
     q: '12. What is the best first step before enrolling?',
-    a: 'Attend a free webinar or book a counseling call to understand the program structure and see if it fits your goals.',
+    a: 'Book a counseling call to understand the program structure and see if it fits your goals.',
   },
 ]
 

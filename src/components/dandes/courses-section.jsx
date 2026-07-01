@@ -12,8 +12,8 @@ const courses = [
     image: "/icons/ai-course.png",
     title: "AI and Machine Learning Course",
     description:
-      "A structured program to build strong foundations and real project skills in Machine Learning, Deep Learning, NLP, and modern GenAI workflows. Designed for learners who want clarity, depth, and interview readiness.",
-    highlights: ["Live classes", "Structured curriculum", "Hands-on projects", "Interview preparation."],
+      "Master AI & Machine Learning from fundamentals to advanced topics, including Deep Learning, Generative AI, Agentic AI, and MLOps through live classes, real projects, and interview-focused learning.",
+    highlights: ["Live Instructor-Led Classes", "Structured Roadmap", "Real Industry Projects", "Interview Preparation"],
     highlightColor: "bg-cyan-50 text-cyan-700",
     ctaText: "View AI/ML course",
     url: "/ai-machine-learning-course",
@@ -23,8 +23,8 @@ const courses = [
     image: "/icons/system-design.png",
     title: "System Design Course",
     description:
-      "Learn how to design scalable systems the way real teams build them. This course focuses on core concepts, practical architectures, trade-offs, and interview-ready system design thinking.",
-    highlights: ["Foundations", "Real case studies", "Design patterns", "Interview practice"],
+      "Master scalable system design through real-world architectures, design patterns, trade-offs, and case studies used in technical interviews and modern software engineering.",
+    highlights: ["High-Level Design", "Low-Level Design", "Scalable Systems", "System Design Problems"],
     highlightColor: "bg-red-50 text-red-600",
     ctaText: "View System Design course",
     url: "/system-design-course",
@@ -32,10 +32,10 @@ const courses = [
   {
     id: 3,
     image: "/icons/dsa.png",
-    title: "Data Structure & Algorithm",
+    title: "DSA Course",
     description:
-      "Build strong problem solving skills through structured learning, practice, and pattern recognition, strengthening your core computer science fundamentals.",
-    highlights: ["Core DSA", "Pattern recognition", "Interview focused prep"],
+      "Strengthen your problem-solving skills through structured learning, coding practice, algorithms, and interview-focused preparation for top product companies.",
+    highlights: ["Core DSA", "Advanced DSA", "Coding Practice", "Problem Solving"],
     highlightColor: "bg-emerald-50 text-emerald-700",
     ctaText: "View DSA course",
     url: "/data-structures-algorithms",
@@ -142,9 +142,10 @@ export function CoursesSection() {
             <span className="text-[#dc2626]">interview readiness</span>{" "}
             not just completion
           </h2>
+
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            Pick the program that matches your goal, career transition,
-            interview preparation, or stronger fundamentals.
+            Each Course follows a structured roadmap with live classes, hands-on projects, 
+            and interview preparation to help you achieve your career goals.
           </p>
         </div>
 

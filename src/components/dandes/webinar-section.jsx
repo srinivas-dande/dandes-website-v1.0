@@ -7,10 +7,10 @@ import { PopupFormModal } from "./popup-form-modal"
 const webinarPoints = [
 
 
-  "A clear roadmap based on your goal, AI/ML, System Design, or interview prep.",
-  "Common mistakes to avoid: scattered learning, weak projects, inconsistent practice.",
-  "What outcomes to expect, plus effort and time commitment.",
-  "Live Q and A on batches, curriculum, and learning format.",
+  "Understand the roadmap for AI/ML, System Design, or DSA.",
+  "Learn the common mistakes that slow down learning and how to avoid them.",
+  "Understand the skills, projects, career opportunities, and time commitment.",
+  "Ask your questions live about the curriculum, batches, and learning approach.",
 ]
 
 export function WebinarSection() {
@@ -55,8 +55,12 @@ export function WebinarSection() {
       <div className="relative max-w-7xl mx-auto">
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-            <span className="text-[#d12027]">Free webinar,</span> get a clear roadmap before you enroll
+            Attend a <span className="text-[#d12027]">Free Live Demo</span> Before You Enroll
           </h2>
+
+          <p className="text-gray-600 mb-6 leading-relaxed">
+               Experience our teaching style, explore the curriculum, and get a clear understanding of the learning roadmap before joining any program.
+            </p>
 
           <ul className="space-y-4 mb-10">
             {webinarPoints.map((point, index) => (

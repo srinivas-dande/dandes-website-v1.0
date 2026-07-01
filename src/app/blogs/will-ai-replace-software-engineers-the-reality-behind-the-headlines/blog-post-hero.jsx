@@ -9,7 +9,7 @@ export function BlogPostHero({
   tags = ['Live classes', 'Structured curriculum'],
   title = 'Will AI Replace Software Engineers? The Reality Behind the Headlines',
   subtitle = 'AI is writing code, debugging, and reviewing PRs. But is it actually replacing you — or just changing what you do?',
-  author = 'Srinivas Dandes',
+  author = 'Srinivas Dande',
   date = '24 Jan 2026',
 }) {
 
@@ -242,7 +242,7 @@ export function BlogPostHero({
             fontWeight: 500,
             cursor: 'pointer',
           }}>
-            Join the Free Webinar
+            Join the Free Demo
           </span>
           <button
             onClick={() => setShowPopup(true)}

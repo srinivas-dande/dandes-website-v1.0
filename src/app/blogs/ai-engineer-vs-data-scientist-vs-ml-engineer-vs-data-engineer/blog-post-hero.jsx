@@ -9,7 +9,7 @@ export function BlogPostHero({
   tags = ['Live classes', 'Structured curriculum'],
   title = 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer',
   subtitle = 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.',
-  author = 'Srinivas Dandes',
+  author = 'Srinivas Dande',
   date = '24 Jan 2026',
 }) {
 
@@ -242,7 +242,7 @@ export function BlogPostHero({
             fontWeight: 500,
             cursor: 'pointer',
           }}>
-            Join the Free Webinar
+            Join the Free Demo
           </span>
           <button
             onClick={() => setShowPopup(true)}

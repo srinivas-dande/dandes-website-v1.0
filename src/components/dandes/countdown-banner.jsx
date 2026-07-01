@@ -80,7 +80,7 @@ export function CountdownBanner() {
     <div className="bg-[#002B41] py-4 px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-center gap-4 lg:gap-8">
         <p className="text-white text-sm font-medium text-center">
-          NEXT WEBINAR: {" "}
+          NEXT DEMO: {" "}
 
           <span className="text-white text-sm font-medium text-center">
                 {webinarTime

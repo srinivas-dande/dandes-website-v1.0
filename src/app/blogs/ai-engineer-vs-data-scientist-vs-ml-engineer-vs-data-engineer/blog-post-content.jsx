@@ -6,10 +6,19 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 export function BlogPostContent() {
   const [modalOpen, setModalOpen] = useState(false)
 
+  const tagColors = [
+  { bg: '#DBEAFE', color: '#1D4ED8' }, // Blue
+  { bg: '#DCFCE7', color: '#15803D' }, // Green
+  { bg: '#FEE2E2', color: '#DC2626' }, // Red
+  { bg: '#FEF3C7', color: '#D97706' }, // Orange
+  { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
+  { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
   return (
     <>
       <style>{`
-        .b4-root { font-family:'DM Sans',sans-serif; background:#f6f4f0; color:#0f0f0f; line-height:1.75; font-size:17px; }
+        .b4-root { font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif; background:#f6f4f0; color:#0f0f0f; line-height:1.75; font-size:17px; }
         .b4-root * { box-sizing:border-box; margin:0; padding:0; }
         /* HERO */
         .b4-hero { background:#2d1a4a; color:#fff; padding:80px 0 64px; position:relative; overflow:hidden; }
@@ -164,9 +173,9 @@ export function BlogPostContent() {
         .b4-proj-card h5 { font-size:15px; font-weight:600; color:#0f0f0f; margin-bottom:4px; }
         .b4-proj-card p { font-size:13px; color:#888; margin-bottom:0; }
         /* CALLOUT */
-        .b4-callout { background:#2d1a4a; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
-        .b4-callout strong { color:#c4b5fd; }
-        .b4-callout p { color:rgba(255,255,255,0.82); margin-bottom:0; }
+        .b4-callout { background:#f5f0ff; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
+        .b4-callout strong { color:#7c3aed; }
+        .b4-callout p { color:#2d1a4a; margin-bottom:0; }
         /* QUOTE */
         .b4-quote-block { border-left:4px solid #7c3aed; padding:18px 24px; margin:36px 0; background:#fff; border-radius:0 8px 8px 0; }
         .b4-quote-block p { font-family:'Playfair Display',serif; font-size:20px; font-style:italic; color:#0f0f0f; margin-bottom:6px; }
@@ -196,11 +205,11 @@ export function BlogPostContent() {
         .b4-cta-btn:hover { background:#6d28d9; }
         .b4-cta-note { font-size:12px; color:rgba(255,255,255,0.4); margin-top:12px; }
         /* AUTHOR */
-        .b4-author-box { background:#fff; border:1px solid #e2daf0; border-radius:12px; padding:28px 32px; margin:48px 0; display:flex; gap:24px; align-items:flex-start; }
+        .b4-author-box { background:#f5f0ff; border:1px solid #e2daf0; border-radius:12px; padding:28px 32px; margin:48px 0; display:flex; gap:24px; align-items:flex-start; }
         .b4-author-avatar { width:64px; height:64px; border-radius:50%; background:#2d1a4a; color:#fff; font-family:'Playfair Display',serif; font-size:22px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
         .b4-author-info h4 { font-size:17px; font-weight:700; color:#0f0f0f; margin-bottom:2px; }
         .b4-author-title { font-size:14px; color:#7c3aed; font-weight:600; margin-bottom:10px; }
-        .b4-author-info p { font-size:14px; color:#4a4a4a; margin-bottom:0; }
+        .b4-author-info p { font-size:14px; color:#2d1a4a; margin-bottom:0; }
         .b4-author-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
         .b4-author-tag { background:#f5f0ff; border:1px solid #c4b5fd; color:#2d1a4a; font-size:13px; font-weight:600; padding:3px 12px; border-radius:20px; }
         .b4-linkedin-btn { display:inline-flex; align-items:center; gap:6px; background:#0a66c2; color:#fff; font-size:13px; font-weight:600; padding:6px 16px; border-radius:6px; text-decoration:none; margin-top:12px; }
@@ -378,7 +387,7 @@ export function BlogPostContent() {
             </div>
 
             <div className="b4-callout">
-              <p><strong>The Dandes Difference:</strong> We help you choose the right role for your background before you start — then tailor the learning path to get you there fastest. Weekend and evening batches for working professionals.</p>
+              <p>At <strong>Dandes Academy</strong>, our AI & Machine Learning Career Program is built for everyone—from freshers to engineers with 20 years of experience. Starting from the fundamentals, we guide you step by step through Machine Learning, Deep Learning, Generative AI, Agentic AI, and MLOps in a structured 12-month journey, backed by real industry projects that prepare you for AI careers.</p>
             </div>
 
             <hr className="b4-divider" id="projects" />
@@ -435,16 +444,42 @@ export function BlogPostContent() {
             <div className="b4-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b4-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
-              <div className="b4-author-tags">
-                {['✓ 20+ Years Experience','✓ AI/ML Mentor','✓ System Design Trainer','✓ Mentor to Working Professionals'].map(t => <span key={t} className="b4-author-tag">{t}</span>)}
-              </div>
+              <p>With over 20 years of training experience, Srinivas has trained 25,000+ engineers and students since 2005 across Java, Full Stack Development, Microservices, Angular, React, AWS, DevOps, Data Structures & Algorithms, and System Design. In recent years, he has also trained 500+ learners in AI & Machine Learning, helping them transition into modern AI careers through a structured, project-based learning approach.</p>
+              
               
             </div>
           </div>
 
           <div className="b4-tags-row">
-            {['#AIEngineer','#DataScientist','#MLEngineer','#DataEngineer','#AICareer2026','#DandesAcademy'].map(t => <span key={t} className="b4-kw-tag">{t}</span>)}
+           {[
+  'AI Engineer',
+  'Data Scientist',
+  'Machine Learning Engineer',
+  'Data Engineer',
+  'AI Careers',
+  'AI Career Comparison',
+  'AI Engineer vs Data Scientist',
+  'Machine Learning Careers',
+  'Data Engineering',
+  'Career Roadmap',
+  'Artificial Intelligence',
+  'Dandes Academy'
+].map((tag, index) => {
+  const tagStyle = tagColors[index % tagColors.length];
+
+  return (
+    <span
+      key={tag}
+      className="b4-kw-tag"
+      style={{
+        backgroundColor: tagStyle.bg,
+        color: tagStyle.color,
+      }}
+    >
+      {tag}
+    </span>
+  );
+})}
           </div>
         </div>
           <div className="b4-sidebar">

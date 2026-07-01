@@ -29,7 +29,7 @@ export default function AiMlPage() {
       <AimlCurriculumSection />
       <AimlAudienceSection />
       <AimlLearningFormat />
-      <WebinarSection />
+      
       <AimlJourneySection />
       <AimlStructuredSection />
       <InstructorSection />

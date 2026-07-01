@@ -13,26 +13,26 @@ export default function VideoTestimonialsSection() {
   const videos = [
     {
       
-      title: 'ML Engineer Offer at ₹18 LPA',
-      subtitle: '4 yrs Backend Dev • Projects + Interview Prep',
+      title: 'Anek Kumar Singh | SDE-3 at JP Morgan Chase ',
+      subtitle: 'AI/ML Program Testimonial',
       videoId: '0tRrs7UXPSE',
     },
     {
       
-      title: 'Data Scientist Role Switch',
-      subtitle: 'Fresher, CS Graduate • Fundamentals + Capstone',
+      title: 'Rupesh Kumar | Solution Architect at Worldline Global Services ',
+      subtitle: 'AI/ML Program Testimonial',
       videoId: 'rZmuHjNfEFE',
     },
     {
       
-      title: '₹35 → ₹55 LPA Architect Role',
-      subtitle: '4 yrs Backend Dev • Projects + Interview Prep',
+      title: 'Sasi Kumar | Principal Engineer at Akshaya Inc, USA ',
+      subtitle: 'AI/ML Program Testimonial',
       videoId: 'HByraJiYzcE',
     },
     {
       
-      title: 'Senior ML Engineer at Google',
-      subtitle: '6 yrs Software Dev • Advanced ML + System Design',
+      title: 'Rajkeshwar Prasad | Tech Lead at HCLTech, Germany ',
+      subtitle: 'AI/ML Program Testimonial',
       videoId: 'M3xQPBnX5QI',
     },
     

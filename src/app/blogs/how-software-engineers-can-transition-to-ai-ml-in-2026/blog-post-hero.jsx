@@ -9,7 +9,7 @@ export function BlogPostHero({
   tags = ['Live classes', 'Structured curriculum'],
   title = 'How Software Engineers Can Transition to AI/ML in 2026',
   subtitle = 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.',
-  author = 'Srinivas Dandes',
+  author = 'Srinivas Dande',
   date = '24 Jan 2026',
 }) {
 
@@ -242,7 +242,7 @@ export function BlogPostHero({
             fontWeight: 500,
             cursor: 'pointer',
           }}>
-            Join the Free Webinar
+            Join the Free Demo
           </span>
           <button
             onClick={() => setShowPopup(true)}

@@ -5,11 +5,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 const supportItems = [
-  "Resume support that shows impact, not just tools.",
-  "LinkedIn positioning for your target role.",
-  "Mock interviews with feedback.",
-  "Help explain projects clearly in interviews.",
-  "Guidance on roles to target and what interviews expect.",
+  "Resume Review & Optimization",
+  "LinkedIn Profile Optimization",
+  "Mock Interviews with Expert Feedback",
+  "Project Presentation & Interview Guidance",
+  "Career Guidance & Job Search Support",
 ]
 
 export function CareerSupportSection() {
@@ -33,18 +33,16 @@ export function CareerSupportSection() {
           {/* Content */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Career-focused learning, built for{" "}
-              <span className="text-[#d12027]">real interviews</span>
+              Build Skills. Build Your Profile.{" "}
+              <span className="text-[#d12027]">Crack Interviews</span>
             </h2>
             
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Learning matters, but how you present your skills is what gets you shortlisted 
-              and helps you perform in interviews. At Dandes Academy, support goes beyond 
-              classes, helping you turn your learning into a stronger profile and clearer answers.
+              Learning is only part of the journey. We help you present your skills with a strong resume, optimized LinkedIn profile, mock interviews, and project guidance so you're better prepared for real hiring processes.
             </p>
 
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              What you get support with:
+              You'll Receive Support With:
             </h3>
 
             <ul className="space-y-3 mb-8">

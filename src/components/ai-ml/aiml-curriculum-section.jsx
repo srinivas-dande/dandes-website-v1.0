@@ -13,7 +13,7 @@ const rightTopics = [
   { num: 7, text: 'Generative AI, LLM concepts, and fine-tuning workflows.' },
   { num: 8, text: 'Natural Language Processing and Computer Vision.' },
   { num: 9, text: 'Agentic AI workflows for modern applications.' },
-  { num: 10, text: 'MLOps basics, deployment mindset, and production considerations.' },
+  { num: 10, text: 'MLOps, deployment mindset, and production considerations.' },
 ]
 
 function TopicCard({ num, text }) {

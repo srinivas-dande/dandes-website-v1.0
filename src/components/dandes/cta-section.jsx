@@ -37,11 +37,15 @@ export function CTASection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Ready to start, choose your course and get the details
+            Ready to Take the Next Step?
           </h2>
 
           <p className="text-gray-600 mb-8">
-            Choose the course you are interested in, share your goal, and we will send you the syllabus, fee details, and next batch schedule. If you are unsure whether to start with AI and ML, System Design, or DSA, our team will guide you based on your background and target role.
+            Choose Your Program and Get the Complete Details
+          </p>
+
+          <p className="text-gray-600 mb-8">
+            Tell us which program you're interested in, and we'll share the complete curriculum, course fee, upcoming batch schedule, and learning roadmap. If you're unsure which program is right for you, our team will help you choose based on your background and career goals.
           </p>
 
           {/* CTAs */}
@@ -57,7 +61,7 @@ export function CTASection() {
               onClick={() => setShowPopup(true)}
               className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors cursor-pointer"
             >
-              Register for the free webinar
+              Register for the free Live Demo
               <span className="w-8 h-8 bg-[#d12027] rounded-full flex items-center justify-center">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
@@ -68,7 +72,7 @@ export function CTASection() {
           
 
           <p className="text-sm text-gray-500">
-            Live online classes with LMS recordings. No spam, your details are used only to share course information and contact you about your inquiry.
+            Live Instructor-Led Classes • 5-Year LMS Access • No Spam — We'll only contact you regarding your enquiry.
           </p>
         </div>
 

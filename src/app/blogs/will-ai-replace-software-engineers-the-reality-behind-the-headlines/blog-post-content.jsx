@@ -6,6 +6,15 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 export function BlogPostContent() {
   const [modalOpen, setModalOpen] = useState(false)
 
+  const tagColors = [
+  { bg: '#DBEAFE', color: '#1D4ED8' }, // Blue
+  { bg: '#DCFCE7', color: '#15803D' }, // Green
+  { bg: '#FEE2E2', color: '#DC2626' }, // Red
+  { bg: '#FEF3C7', color: '#D97706' }, // Orange
+  { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
+  { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
   return (
     <>
       <style>{`
@@ -14,7 +23,7 @@ export function BlogPostContent() {
         }
 
         .blog-root {
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif;
           background: #faf9f6;
           color: #0f0f0f;
           line-height: 1.75;
@@ -421,14 +430,14 @@ export function BlogPostContent() {
 
         /* CALLOUT */
         .b-callout {
-          background: #3b87d8;
-          color: #fff;
+          background: #fff8e7;
+          color: #0d4a22;
           border-radius: 10px;
           padding: 28px 32px;
           margin: 36px 0;
         }
-        .b-callout strong { color: #f57f7f; }
-        .b-callout p { color: rgba(255,255,255,0.85); margin-bottom: 0; }
+        .b-callout strong { color: #c84b2f; }
+        .b-callout p { color: #1a3a5c; margin-bottom: 0; }
 
         /* QUOTE */
         .b-quote-block {
@@ -578,7 +587,7 @@ export function BlogPostContent() {
 
         /* AUTHOR BOX */
         .b-author-box {
-          background: #fff;
+          background: #fff8e7;
           border: 1px solid #e5e2da;
           border-radius: 12px;
           padding: 28px 32px;
@@ -608,7 +617,7 @@ export function BlogPostContent() {
           padding: 3px 12px;
           border-radius: 20px;
         }
-        .b-author-info p { font-size: 14px; color: #4a4a4a; margin-bottom: 0; }
+        .b-author-info p { font-size: 14px; color: #1a3a5c; margin-bottom: 0; }
 
         /* TAGS ROW */
         .b-tags-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 36px 0 20px; }
@@ -834,9 +843,7 @@ export function BlogPostContent() {
 
             <div className="b-callout">
               <p>
-                At <strong>Dandes Academy</strong>, our AI/ML program is designed specifically for engineers with 3+ years of
-                experience. We skip what you already know, go deep where it matters, and have you building real AI projects
-                within weeks — not months.
+                At <strong>Dandes Academy</strong>, our AI & Machine Learning Career Program is built for everyone—from freshers to engineers with 20 years of experience. Starting from the fundamentals, we guide you step by step through Machine Learning, Deep Learning, NLP, Generative AI, Agentic AI, and MLOps in a structured 12-month journey, backed by real industry projects that prepare you for AI careers.
               </p>
             </div>
 
@@ -906,23 +913,41 @@ export function BlogPostContent() {
               <h4>Srinivas Dande</h4>
               <div className="b-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
               <p>
-                20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working
-                professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions
-                into AI roles.
+                With over 20 years of training experience, Srinivas has trained 25,000+ engineers and students since 2005 across Java, Full Stack Development, Microservices, Angular, React, AWS, DevOps, Data Structures & Algorithms, and System Design. In recent years, he has also trained 500+ learners in AI & Machine Learning, helping them transition into modern AI careers through a structured, project-based learning approach.
               </p>
-              <div className="b-author-tags">
-                <span className="b-author-tag">✓ 20+ Years Experience</span>
-                <span className="b-author-tag">✓ AI/ML Mentor</span>
-                <span className="b-author-tag">✓ System Design Trainer</span>
-              </div>
+              
             </div>
           </div>
 
           <div className="b-tags-row">
-            {['#AICareerSwitch', '#SoftwareEngineerToAI', '#AICareerRoadmap', '#MachineLearning2026', '#FutureOfSoftwareEngineering', '#DandesAcademy'].map(tag => (
-              <span key={tag} className="b-kw-tag">{tag}</span>
-            ))}
-          </div>
+  {[
+    'Will AI Replace Software Engineers',
+    'AI Career Switch',
+    'Software Engineer to AI Engineer',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Generative AI',
+    'Agentic AI',
+    'Future of Software Engineering',
+    'Career Growth',
+    'Dandes Academy'
+  ].map((tag, index) => {
+    const tagStyle = tagColors[index % tagColors.length];
+
+    return (
+      <span
+        key={tag}
+        className="b-kw-tag"
+        style={{
+          backgroundColor: tagStyle.bg,
+          color: tagStyle.color,
+        }}
+      >
+        {tag}
+      </span>
+    );
+  })}
+</div>
         </div>   {/* closes b-container */}
         
         {/* Left Sticky TOC */}

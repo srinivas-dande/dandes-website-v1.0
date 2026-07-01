@@ -4,44 +4,54 @@ import { Check, X } from "lucide-react"
 
 const comparisonData = [
   {
-    criteria: "Learning format",
-    dandes: "Live online classes with instructor-led teaching",
-    typical: "Mostly recorded content, limited live interaction",
+    criteria: "Learning Continuity",
+    dandes: "One lead trainer throughout the entire program for a consistent teaching style, pace, and mentorship.",
+    typical: "Different trainers across modules, resulting in varying teaching styles and learning experiences.",
   },
   {
-    criteria: "Learning structure",
-    dandes: "Clear roadmap from fundamentals to advanced",
-    typical: "Topic-wise learning, often with less guided sequencing",
+    criteria: "Learning Format",
+    dandes: "Live instructor-led classes with real-time interaction and doubt resolution.",
+    typical: "Mostly recorded videos with limited live interaction.",
   },
   {
-    criteria: "Practice approach",
-    dandes: "Projects, case studies, and problem sets are built into the journey",
-    typical: "Practice is optional or left to the learner",
+    criteria: "Learning Roadmap",
+    dandes: "Structured roadmap from fundamentals to advanced AI topics.",
+    typical: "Topic-based learning with less guided progression.",
   },
   {
-    criteria: "Doubt support",
-    dandes: "Doubt support and guidance to keep you moving",
-    typical: "Support varies, often slower or less personal",
+    criteria: "Projects",
+    dandes: "Real industry projects that build practical, job-ready skills.",
+    typical: "Basic practice projects or guided demos.",
   },
   {
-    criteria: "Interview readiness",
-    dandes: "Interview-focused prep, resume, and mock interviews",
-    typical: "Usually content-heavy, limited interview coaching",
+    criteria: "Mentor Support",
+    dandes: "Live mentor guidance, doubt resolution, and continuous learning support.",
+    typical: "Limited support, often through forums or delayed responses.",
   },
   {
-    criteria: "Flexibility",
-    dandes: "LMS access and recordings to catch up and revise",
-    typical: "Recordings are available, but less accountability",
+    criteria: "Interview Preparation",
+    dandes: "Resume review, LinkedIn guidance, mock interviews, and project discussions.",
+    typical: "Limited interview preparation and career guidance.",
   },
   {
-    criteria: "Fit for schedules",
-    dandes: "Designed for working professionals and serious learners",
-    typical: "Works for self-paced learners; consistency is on you",
+    criteria: "Career Focus",
+    dandes: "Designed to prepare you for real AI/ML roles and technical interviews.",
+    typical: "Primarily focused on course completion.",
   },
   {
-    criteria: "Goal alignment",
-    dandes: "AI/ML, System Design, and DSA paths built for real interviews",
-    typical: "Often broad, less targeted to interview outcomes",
+    criteria: "Modern AI Coverage",
+    dandes: "Covers Generative AI, LLMs, RAG, Agentic AI, and MLOps.",
+    typical: "Coverage varies and often excludes newer AI topics.",
+  },
+  {
+    criteria: "Learning Journey",
+    dandes: "Structured 12-month program with clear milestones.",
+    typical: "Usually self-paced with no fixed learning path.",
+  },
+  {
+    criteria: "End Goal",
+    dandes: "Build production-ready AI skills and a strong project portfolio.",
+    typical: "Earn a course completion certificate.",
   },
 ]
 
@@ -52,7 +62,7 @@ export function ComparisonSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Live learning vs recorded learning
+            Dandes Academy <span className="text-[#d12027]">AI & Machine Learning Program</span> vs Typical AI Courses
           </h2>
           <p className="text-muted-foreground">The real difference</p>
         </div>
@@ -64,19 +74,11 @@ export function ComparisonSection() {
             <div className="py-4 px-4">
               <h3 className="font-semibold text-foreground">What matters</h3>
             </div>
-            <div className="py-4 px-4 bg-white rounded-t-lg border-t border-l border-r border-gray-100">
-              <div className="flex items-center gap-2">
-                <div className="flex items-center justify-center w-8 h-8 bg-[#d12027] rounded">
-                  <span className="text-white font-bold text-sm">DA</span>
-                </div>
-                <div>
-                  <span className="font-bold text-foreground">Dandes</span>
-                  <span className="text-[#d12027] font-bold text-sm block leading-none">Academy</span>
-                </div>
-              </div>
+            <div className="py-4 px-4">
+              <h3 className="font-semibold text-foreground">Dandes Academy AI Program</h3>
             </div>
             <div className="py-4 px-4">
-              <h3 className="font-semibold text-foreground">Typical online course</h3>
+              <h3 className="font-semibold text-foreground">Typical AI Courses</h3>
             </div>
           </div>
 

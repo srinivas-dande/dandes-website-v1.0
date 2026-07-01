@@ -6,11 +6,20 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 export function BlogPostContent() {
   const [modalOpen, setModalOpen] = useState(false)
 
+  const tagColors = [
+  { bg: '#DBEAFE', color: '#1D4ED8' }, // Blue
+  { bg: '#DCFCE7', color: '#15803D' }, // Green
+  { bg: '#FEE2E2', color: '#DC2626' }, // Red
+  { bg: '#FEF3C7', color: '#D97706' }, // Orange
+  { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
+  { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
   return (
     <>
       <style>{`
         .b2-root {
-          font-family: 'DM Sans', sans-serif;
+          font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif;
           background: #f4f6f2;
           color: #0f0f0f;
           line-height: 1.75;
@@ -214,7 +223,7 @@ export function BlogPostContent() {
 
         /* CAREER SHIFT BOX */
         .b2-shift-box {
-          background: #1a3a5c;
+          background: #3d6da0;
           color: #fff;
           border-radius: 12px;
           padding: 32px 36px;
@@ -228,7 +237,7 @@ export function BlogPostContent() {
           margin: 22px 0;
         }
         .b2-shift-col {
-          background: rgba(255,255,255,0.08);
+          background: rgba(0, 0, 0, 0.08);
           border-radius: 10px;
           padding: 18px 20px;
           text-align: center;
@@ -242,10 +251,10 @@ export function BlogPostContent() {
         }
         .b2-shift-col p { font-size: 14px; color: rgba(255,255,255,0.82); margin-bottom: 0; line-height: 1.5; }
         .b2-shift-col p strong { color: #fff; }
-        .b2-shift-arrow { font-size: 28px; color: rgba(255,255,255,0.4); text-align: center; }
+        .b2-shift-arrow { font-size: 28px; color: rgba(0, 0, 0, 0.4); text-align: center; }
         .b2-shift-conclusion {
           font-size: 15px;
-          color: rgba(255,255,255,0.85);
+          color: rgba(0, 0, 0, 0.85);
           text-align: center;
           margin-top: 6px;
           font-style: italic;
@@ -489,14 +498,14 @@ export function BlogPostContent() {
 
         /* CALLOUT */
         .b2-callout {
-          background: #1bb057;
+          background: #f0f7ec;
           color: #fff;
           border-radius: 10px;
           padding: 28px 32px;
           margin: 36px 0;
         }
-        .b2-callout strong { color: #dbd826; }
-        .b2-callout p { color: rgba(255,255,255,0.82); margin-bottom: 0; }
+        .b2-callout strong { color: #1a6b3c; }
+        .b2-callout p { color: #0d2d1a; margin-bottom: 0; }
 
         /* QUOTE */
         .b2-quote-block {
@@ -743,7 +752,7 @@ export function BlogPostContent() {
 
         /* AUTHOR */
         .b2-author-box {
-          background: #fff;
+          background: #f0f7ec;
           border: 1px solid #dde5d8;
           border-radius: 12px;
           padding: 28px 32px;
@@ -764,7 +773,7 @@ export function BlogPostContent() {
         }
         .b2-author-info h4 { font-size: 17px; font-weight: 700; color: #0f0f0f; margin-bottom: 2px; }
         .b2-author-title { font-size: 14px; color: #1a6b3c; font-weight: 600; margin-bottom: 10px; }
-        .b2-author-info p { font-size: 14px; color: #4a4a4a; margin-bottom: 0; }
+        .b2-author-info p { font-size: 14px; color: #0d2d1a; margin-bottom: 0; }
         .b2-author-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
         .b2-author-tag {
           background: #f0f7ec;
@@ -1091,7 +1100,7 @@ export function BlogPostContent() {
             </div>
 
             <div className="b2-callout">
-              <p><strong>The Dandes Difference:</strong> Weekend and evening batches — you don't quit your job, you level up while keeping your income. Every cohort is mentored by engineers who've made this exact transition themselves.</p>
+              <p>At <strong>Dandes Academy</strong>, our AI & Machine Learning Career Program is built for everyone—from freshers to engineers with 20 years of experience. Starting from the fundamentals, we guide you step by step through Machine Learning, Deep Learning, Generative AI, Agentic AI, and MLOps in a structured 12-month journey, backed by real industry projects that prepare you for AI careers.</p>
             </div>
 
             {/* INDUSTRY USE CASES */}
@@ -1218,21 +1227,41 @@ export function BlogPostContent() {
             <div className="b2-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b2-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
-              <div className="b2-author-tags">
-                <span className="b2-author-tag">✓ 20+ Years Experience</span>
-                <span className="b2-author-tag">✓ AI/ML Mentor</span>
-                <span className="b2-author-tag">✓ System Design Trainer</span>
-                <span className="b2-author-tag">✓ Mentor to Working Professionals</span>
-              </div>
+              <p>With over 20 years of training experience, Srinivas has trained 25,000+ engineers and students since 2005 across Java, Full Stack Development, Microservices, Angular, React, AWS, DevOps, Data Structures & Algorithms, and System Design. In recent years, he has also trained 500+ learners in AI & Machine Learning, helping them transition into modern AI careers through a structured, project-based learning approach.</p>
               
             </div>
           </div>
 
           <div className="b2-tags-row">
-            {['#JavaToAI', '#AICareerSwitch', '#MLEngineer', '#MCPProtocol', '#AIAgents2026', '#DandesAcademy'].map(tag => (
-              <span key={tag} className="b2-kw-tag">{tag}</span>
-            ))}
+            {[
+  'Java Developer',
+  'AI Engineer',
+  'From Java Developer to AI Engineer',
+  'Java to AI',
+  'AI Career Switch',
+  'Software Engineer to AI Engineer',
+  'Machine Learning',
+  'Generative AI',
+  'Agentic AI',
+  'AI Career Roadmap',
+  'Career Transition',
+  'Dandes Academy'
+].map((tag, index) => {
+  const tagStyle = tagColors[index % tagColors.length];
+
+  return (
+    <span
+      key={tag}
+      className="b2-kw-tag"
+      style={{
+        backgroundColor: tagStyle.bg,
+        color: tagStyle.color,
+      }}
+    >
+      {tag}
+    </span>
+  );
+})}
           </div>
 
         </div>

@@ -1,9 +1,10 @@
 'use client'
-
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function SkillsTestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
+ 
 
   const testimonials = [
     {
@@ -175,6 +176,13 @@ export default function SkillsTestimonialsSection() {
     },
   ]
 
+  useEffect(() => {
+    testimonials.forEach((item) => {
+      const img = new window.Image()
+      img.src = item.image
+    })
+  }, []) 
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 2 >= testimonials.length ? 0 : prev + 2))
   }
@@ -266,15 +274,18 @@ export default function SkillsTestimonialsSection() {
                       backgroundColor: '#f3f4f6',
                     }}
                   >
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                      }}
-                    />
+                    <Image
+  src={testimonial.image}
+  alt={testimonial.name}
+  width={64}
+  height={74}
+  loading="eager"
+  style={{
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  }}
+/>
                   </div>
                   <div>
                     <h3

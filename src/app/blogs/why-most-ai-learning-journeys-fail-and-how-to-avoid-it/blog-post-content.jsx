@@ -6,10 +6,19 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 export function BlogPostContent() {
   const [modalOpen, setModalOpen] = useState(false)
 
+  const tagColors = [
+  { bg: '#DBEAFE', color: '#1D4ED8' }, // Blue
+  { bg: '#DCFCE7', color: '#15803D' }, // Green
+  { bg: '#FEE2E2', color: '#DC2626' }, // Red
+  { bg: '#FEF3C7', color: '#D97706' }, // Orange
+  { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
+  { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
   return (
-    <>
+    <> 
       <style>{`
-        .b6-root { font-family:'DM Sans',sans-serif; background:#f4f4f6; color:#0f0f0f; line-height:1.75; font-size:17px; }
+        .b6-root { font-family: 'Geist', 'Geist Fallback', system-ui, sans-serif; background:#f4f4f6; color:#0f0f0f; line-height:1.75; font-size:17px; }
         .b6-root * { box-sizing:border-box; margin:0; padding:0; }
         /* HERO */
         .b6-hero { background:#042f2e; color:#fff; padding:80px 0 64px; position:relative; overflow:hidden; }
@@ -55,7 +64,7 @@ export function BlogPostContent() {
         .b6-hero-meta { display:flex; align-items:center; gap:18px; font-size:13px; color:rgba(255,255,255,0.5); flex-wrap:wrap; }
         .b6-read-time { background:rgba(255,255,255,0.12); padding:4px 12px; border-radius:20px; font-weight:500; color:rgba(255,255,255,0.8); }
         /* TOC */
-        .b6-toc-box { background:#f0fdf9; border-left:4px solid #0f766e; border-radius:0 6px 6px 0; padding:24px 28px; margin:40px 0; }
+        .b6-toc-box { background:#f0fdf9; border-left:4px c; border-radius:0 6px 6px 0; padding:24px 28px; margin:40px 0; }
         .b6-toc-box h3 { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#0f766e; margin-bottom:14px; }
         .b6-toc-box ol { padding-left:18px; }
         .b6-toc-box li { font-size:15px; color:#042f2e; margin-bottom:8px; font-weight:500; }
@@ -139,9 +148,9 @@ export function BlogPostContent() {
         .b6-proj-card h5 { font-size:15px; font-weight:600; color:#0f0f0f; margin-bottom:4px; }
         .b6-proj-card p { font-size:13px; color:#888; margin-bottom:0; }
         /* CALLOUT */
-        .b6-callout { background:#0f766e; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
-        .b6-callout strong { color:#5eead4; }
-        .b6-callout p { color:rgba(255,255,255,0.85); margin-bottom:0; }
+        .b6-callout { background:#f0fdf9; color:#fff; border-radius:10px; padding:28px 32px; margin:36px 0; }
+        .b6-callout strong { color:#0f766e; }
+        .b6-callout p { color:#042f2e; margin-bottom:0; }
         /* QUOTE */
         .b6-quote-block { border-left:4px solid #0f766e; padding:18px 24px; margin:36px 0; background:#fff; border-radius:0 8px 8px 0; }
         .b6-quote-block p { font-family:'Playfair Display',serif; font-size:20px; font-style:italic; color:#0f0f0f; margin-bottom:6px; }
@@ -171,11 +180,11 @@ export function BlogPostContent() {
         .b6-cta-btn:hover { background:#0d9488; }
         .b6-cta-note { font-size:12px; color:rgba(255,255,255,0.4); margin-top:12px; }
         /* AUTHOR */
-        .b6-author-box { background:#fff; border:1px solid #d5e8e6; border-radius:12px; padding:28px 32px; margin:48px 0; display:flex; gap:24px; align-items:flex-start; }
+        .b6-author-box { background:#f0fdf9; border:1px solid #d5e8e6; border-radius:12px; padding:28px 32px; margin:48px 0; display:flex; gap:24px; align-items:flex-start; }
         .b6-author-avatar { width:64px; height:64px; border-radius:50%; background:#042f2e; color:#fff; font-family:'Playfair Display',serif; font-size:22px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
         .b6-author-info h4 { font-size:17px; font-weight:700; color:#0f0f0f; margin-bottom:2px; }
         .b6-author-title { font-size:14px; color:#0f766e; font-weight:600; margin-bottom:10px; }
-        .b6-author-info p { font-size:14px; color:#4a4a4a; margin-bottom:0; }
+        .b6-author-info p { font-size:14px; color:#042f2e; margin-bottom:0; }
         .b6-author-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
         .b6-author-tag { background:#f0fdf9; border:1px solid #99f6e4; color:#042f2e; font-size:13px; font-weight:600; padding:3px 12px; border-radius:20px; }
         .b6-linkedin-btn { display:inline-flex; align-items:center; gap:6px; background:#0a66c2; color:#fff; font-size:13px; font-weight:600; padding:6px 16px; border-radius:6px; text-decoration:none; margin-top:12px; }
@@ -316,7 +325,7 @@ export function BlogPostContent() {
             </div>
 
             <div className="b6-callout">
-              <p><strong>The Dandes Difference:</strong> Every one of these success traits is built into our program by design. Structured 6-step roadmap. Mentors who made the transition. Production-grade capstone projects. Weekend cohorts for accountability. You don't have to assemble these yourself — they come together.</p>
+              <p>At <strong>Dandes Academy</strong>, our AI & Machine Learning Career Program is built for everyone—from freshers to engineers with 20 years of experience. Starting from the fundamentals, we guide you step by step through Machine Learning, Deep Learning, Generative AI, Agentic AI, and MLOps in a structured 12-month journey, backed by real industry projects that prepare you for AI careers.</p>
             </div>
 
             {/* ROADMAP */}
@@ -431,24 +440,45 @@ export function BlogPostContent() {
             <div className="b6-author-info">
               <h4>Srinivas Dande</h4>
               <div className="b6-author-title">Founder &amp; Lead Trainer — Dandes Academy</div>
-              <p>20+ years in software engineering across enterprise systems, cloud architecture, and AI. Trained 25000+ working professionals. Specialises in helping experienced engineers make structured, high-ROI career transitions into AI roles.</p>
-              <div className="b6-author-tags">
-                {['✓ 20+ Years Experience', '✓ AI/ML Mentor', '✓ System Design Trainer', '✓ Mentor to Working Professionals'].map(t => (
-                  <span key={t} className="b6-author-tag">{t}</span>
-                ))}
-              </div>
+              <p>With over 20 years of training experience, Srinivas has trained 25,000+ engineers and students since 2005 across Java, Full Stack Development, Microservices, Angular, React, AWS, DevOps, Data Structures & Algorithms, and System Design. In recent years, he has also trained 500+ learners in AI & Machine Learning, helping them transition into modern AI careers through a structured, project-based learning approach.</p>
+              
               
             </div>
           </div>
 
           <div className="b6-tags-row">
-            {['#AILearning', '#AICareerSwitch', '#LearnAI2026', '#MLEngineer', '#AIRoadmap', '#DandesAcademy'].map(t => (
-              <span key={t} className="b6-kw-tag">{t}</span>
-            ))}
+            {[
+  'AI Learning',
+  'AI Career',
+  'AI Career Roadmap',
+  'AI Engineer',
+  'Machine Learning',
+  'Generative AI',
+  'Agentic AI',
+  'AI Skills',
+  'Career Growth',
+  'Artificial Intelligence',
+  'Dandes Academy'
+].map((tag, index) => {
+  const tagStyle = tagColors[index % tagColors.length];
+
+  return (
+    <span
+      key={tag}
+      className="b6-kw-tag"
+      style={{
+        backgroundColor: tagStyle.bg,
+        color: tagStyle.color,
+      }}
+    >
+      {tag}
+    </span>
+  );
+})}
           </div>
 
         </div>
-
+       <div className="b6-sidebar">
         <div className="b6-toc-box">
             <h3>In this article</h3>
             <ol>
@@ -467,6 +497,7 @@ export function BlogPostContent() {
             </ol>
           </div>
 
+        </div>
         </div>
       </div>
 

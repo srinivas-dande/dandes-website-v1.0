@@ -3,8 +3,8 @@
 export default function ExpectedOutcomesSection() {
   const outcomes = [
     {
-      label: 'ML Engineer · AI Engineer',
-      title: 'Data Analyst, Data Scientist (entry), ML Engineer (junior)',
+      label: '0–2 Years Experience',
+      title: 'ML Engineer · AI Engineer',
       description: 'Build strong AI/ML foundations through structured learning, hands-on projects, and interview preparation.',
     },
     {
@@ -48,7 +48,7 @@ export default function ExpectedOutcomesSection() {
             maxWidth: 600,
           }}
         >
-          Expected Outcomes Based on Experience Freshers / Entry-Level
+          Expected Outcomes Based on Experience
 
         </h2>
 

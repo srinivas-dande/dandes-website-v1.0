@@ -4,10 +4,12 @@ import { AimlRegistrationForm } from "./aiml-registration-form"
 
 
 const features = [
-  "Hosted live by Srinivas Dande. 20+ years experience, ex-Sun Microsystems.",
-  "Free to attend. No payment. No strings.",
-  "Live Q&A. Ask your specific questions, get honest answers.",
-  "Walk away with a clear roadmap you can start acting on the same week.",
+  
+  "Live Online Classes + LMS Access",
+  "Mini Projects & End-to-End Capstone",
+  "ML, DL, NLP, GenAI/LLMs, Agentic AI & MLOps",
+  "Resume Review, Mock Interviews & Career Guidance",
+  "25,000+ Students Trained | 20+ Years of Experience",
 ]
 
 
@@ -53,12 +55,23 @@ export function AimlHeroSection() {
         <div className="flex flex-col lg:flex-row justify-between items-start h-full">
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
-              Free Webinar: How to Transition Into AI/ML Without Starting Over
+            <h1
+              className="font-bold leading-tight mb-6"
+              style={{ color: "#000000" }}
+            >
+              <span className=" text #d12027 block text-3xl sm:text-4xl lg:text-5xl " style={{ color:"#AD1612" }}>
+                SWITCH TO
+              </span>
+
+              <span
+                className="block font-bold text-[2rem] sm:text-[2.3rem] lg:text-[2.7rem] leading-tight"
+              >
+                HIGH-PAYING AI/ML ROLES
+              </span>
             </h1>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              A live session for working tech professionals who want to move into Al and Machine Learning. Without quitting their job. Without starting from scratch. Without wasting months on the wrong resources.
+              A mentor-led AI/ML Career Program designed for working professionals and Job Seekers who want to transition into Artificial Intelligence and Machine Learning.
             </p>
 
             {/* Feature List */}

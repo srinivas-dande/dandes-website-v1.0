@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link';
 import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
@@ -16,19 +17,35 @@ const tags = [
 ]
 
 const topPosts = [
-  'AI Engineer vs ML Engineer vs Data Scientist: Roles, Skills & Roadmaps (2026 Guide)',
-  'Top 10 AI/ML Projects That Actually Impress Recruiters (With What to Include on GitHub)',
-  'GenAI Starter Pack: What to Learn to Build LLM Apps (RAG, Vector DBs, Agents)',
-  'ML Interview Prep: 30 Must-Know Questions (ML, Stats, Python, and Model Debugging)',
-]
+  {
+    title: 'Will AI Replace Software Engineers? The Reality Behind the Headlines',
+    slug: 'will-ai-replace-software-engineers-the-reality-behind-the-headlines',
+  },
+  {
+    title: 'From Java Developer to AI Engineer',
+    slug: 'from-java-developer-to-ai-engineer',
+  },
+  {
+    title: 'How Software Engineers Can Transition to AI/ML in 2026',
+    slug: 'how-software-engineers-can-transition-to-ai-ml-in-2026',
+  },
+  {
+    title: 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer',
+    slug: 'ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer',
+  },
+  {
+    title: 'Why Learning Python Alone Will Not Make You an AI Engineer',
+    slug: 'why-learning-python-alone-will-not-make-you-an-ai-engineer',
+  },
+];
  
 const allBlogPosts = [
-  { id: 1, slug: 'will-ai-replace-software-engineers-the-reality-behind-the-headlines', image: '/blog/post-1.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'Will AI Replace Software Engineers? The Reality Behind the Headlines', description: 'AI is writing code, debugging, and reviewing PRs. But is it actually replacing you — or just changing what you do?' },
-  { id: 2, slug: 'from-java-developer-to-ai-engineer', image: '/blog/post-2.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'From Java Developer to AI Engineer', description: 'You spent years mastering Java, Spring Boot and Microservices. Dont throw those skills away. Learn how to turn them into a high-paying AI career.' },
-  { id: 3, slug: 'how-software-engineers-can-transition-to-ai-ml-in-2026', image: '/blog/post-3.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'How Software Engineers Can Transition to AI/ML in 2026', description: 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.' },
-  { id: 4, slug: 'ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer', image: '/blog/post-4.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer', description: 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.' },
-  { id: 5, slug: 'why-learning-python-alone-will-not-make-you-an-ai-engineer', image: '/blog/post-5.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'Why Learning Python Alone Will Not Make You an AI Engineer', description: 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.' },
-  { id: 6, slug: 'why-most-ai-learning-journeys-fail-and-how-to-avoid-it', image: '/blog/post-6.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dandes', date: '24 Jan 2026', title: 'Why Most AI Learning Journeys Fail And How to Avoid It', description: 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.' },
+  { id: 1, slug: 'will-ai-replace-software-engineers-the-reality-behind-the-headlines', image: '/blog/post-1.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Will AI Replace Software Engineers? The Reality Behind the Headlines', description: 'AI is writing code, debugging, and reviewing PRs. But is it actually replacing you — or just changing what you do?' },
+  { id: 2, slug: 'from-java-developer-to-ai-engineer', image: '/blog/post-2.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'From Java Developer to AI Engineer', description: 'You spent years mastering Java, Spring Boot and Microservices. Dont throw those skills away. Learn how to turn them into a high-paying AI career.' },
+  { id: 3, slug: 'how-software-engineers-can-transition-to-ai-ml-in-2026', image: '/blog/post-3.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'How Software Engineers Can Transition to AI/ML in 2026', description: 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.' },
+  { id: 4, slug: 'ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer', image: '/blog/post-4.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer', description: 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.' },
+  { id: 5, slug: 'why-learning-python-alone-will-not-make-you-an-ai-engineer', image: '/blog/post-5.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Why Learning Python Alone Will Not Make You an AI Engineer', description: 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.' },
+  { id: 6, slug: 'why-most-ai-learning-journeys-fail-and-how-to-avoid-it', image: '/blog/post-6.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Why Most AI Learning Journeys Fail And How to Avoid It', description: 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.' },
  
 ]
 
@@ -127,7 +144,7 @@ export function BlogListingSection() {
               marginBottom: 32,
             }}>
               <h3 style={{ fontSize: 20, fontWeight: 700, color: '#1a1a1a', marginBottom: 16 }}>Tags</h3>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 {tags.map((tag, i) => (
                   <button
                     key={i}
@@ -162,26 +179,26 @@ export function BlogListingSection() {
               <h3 style={{ fontSize: 18, fontWeight: 700, color: '#1a1a1a', marginBottom: 20 }}>Top 5 Blog Posts</h3>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 {topPosts.map((post, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'flex-start',
-                      gap: 12,
-                      textDecoration: 'none',
-                      padding: '16px 0',
-                      borderBottom: i < topPosts.length - 1 ? '1px solid #e5e7eb' : 'none',
-                    }}
-                  >
+                  <Link
+  key={i}
+  href={`/blogs/${post.slug}`}
+  style={{
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: 12,
+    textDecoration: 'none',
+    padding: '16px 0',
+    borderBottom: i < topPosts.length - 1 ? '1px solid #e5e7eb' : 'none',
+  }}
+>
                     <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.5 }}>
-                      {i + 1}. {post}
+                      {i + 1}. {post.title}
                     </span>
                     <svg width={16} height={16} fill="none" stroke="#f87171" strokeWidth={2.5} style={{ flexShrink: 0, marginTop: 2 }}>
                       <path d="M6 4 L10 8 L6 12" />
                     </svg>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -201,7 +218,7 @@ export function BlogListingSection() {
                 marginBottom: 4,
                 
               }}>
-                Free Webinar:
+                Free Demo:
               </p>
               <h4 style={{ 
                 fontSize: 22, 
@@ -236,7 +253,7 @@ export function BlogListingSection() {
                 color: '#1a1a1a',
                 cursor: 'pointer',
               }}>
-                Register Free Now
+                Register Free Demo
                 <span style={{
                   width: 24,
                   height: 24,

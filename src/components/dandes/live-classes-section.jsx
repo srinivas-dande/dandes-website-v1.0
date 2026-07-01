@@ -6,23 +6,23 @@ export function LiveClassesSection() {
   {
     image: "/icons/liveclass.png",
     iconBg: "bg-emerald-50",
-    title: "Live classes with real interaction",
+    title: "Live Instructor-Led Classes",
     description:
-      "You learn in live sessions where concepts are explained step by step, and questions are addressed in real time."
+      "Learn directly from experienced instructors through interactive live sessions, where concepts are explained step by step and your questions are answered in real time."
   },
   {
     image: "/icons/lms-recording.png",
     iconBg: "bg-orange-50",
-    title: "Recordings and LMS access",
+    title: "5-Year LMS & Class Recordings",
     description:
-      "If you miss a session, you can catch up through recorded classes on the LMS and stay consistent."
+      "Never miss your learning. Rewatch recorded sessions anytime and access course materials through our LMS for up to 5 years."
   },
   {
     image: "/icons/practice-skill.png",
     iconBg: "bg-purple-50",
-    title: "Practice that builds real skill",
+    title: "Hands-On Practice & Assignments",
     description:
-      "Assignments and guided practice help you build interview-ready confidence instead of passive knowledge."
+      "Strengthen your skills through practical assignments, guided exercises, and real-world projects that prepare you for technical interviews and industry work."
   }
 ]
 
@@ -30,7 +30,7 @@ export function LiveClassesSection() {
     <section className="py-8 md:py-12 bg-gradient-to-b from-sky-50/50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-foreground mb-12">
-          Live online classes, practice, and support
+          Learn Live. Practice Consistently. Build Real Skills.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

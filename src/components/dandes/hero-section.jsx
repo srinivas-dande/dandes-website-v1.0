@@ -4,10 +4,10 @@ import { CheckCircle2, Star } from "lucide-react"
 import { RegistrationForm } from "./registration-form"
 
 const features = [
-  "Live classes with doubt support.",
-  "Structured roadmap, not random videos.",
-  "Practice and assignments for real interviews.",
-  "Built for working professionals and serious learners.",
+  "Live Classes with Expert Mentor Support",
+  "Structured Roadmaps from Fundamentals to Advanced",
+  "Real Projects & Practical Assignments",
+  "Interview Preparation for Career Growth",
 ]
 
 export function HeroSection() {
@@ -52,11 +52,11 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
             <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
-              Dandes Academy, Upskill With Live Classes, Projects, and Interview Prep
+              Build In-Demand Tech Skills with Live, Project-Based Training
             </h1>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              Learn with a structured roadmap, live instructor-led classes, hands-on assignments, and interview preparation. Choose from AI and Machine Learning, System Design, or Data Structures and Algorithms.
+              At Dandes Academy, we help students and professionals master AI & Machine Learning, System Design, and Data Structures & Algorithms through live classes, structured learning, real-world projects, and career-focused interview preparation.
             </p>
 
             {/* Feature List */}
@@ -84,7 +84,7 @@ export function HeroSection() {
             <div className="flex items-start gap-3 text-sm text-gray-600">
               <Star className="size-5 text-amber-400 fill-amber-400 shrink-0" />
               <p>
-                Industry-focused training with live learning, practical assignments, and career support.
+                Trusted by 25,000+ Students Since 2005 • 20+ Years of Training Excellence
               </p>
             </div>
           </div>
