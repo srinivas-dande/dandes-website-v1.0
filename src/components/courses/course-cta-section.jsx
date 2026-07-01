@@ -37,7 +37,7 @@ export function CourseCtaSection() {
           </h2>
 
           <p className="text-gray-600 mb-10 leading-relaxed">
-            Choose the course you are interested in, AI/ML, System Design, or DSA, and share your goal. We will send you the syllabus, fee details, and next batch schedule on WhatsApp or email, and guide you to the right learning path.
+            Select the course you're interested in, and we'll share the complete syllabus, fee structure, upcoming batch schedule, and help you choose the right learning path based on your goals.
           </p>
 
           {/* CTA Buttons */}
@@ -56,7 +56,7 @@ export function CourseCtaSection() {
             <Link 
               href="/webinars"
               className="flex items-center gap-3 text-gray-800 font-medium hover:text-gray-600 transition-colors">
-              Register for the free webinar
+              Register for the Free Demo
               <span className="bg-[#d12027] rounded-full p-2">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
@@ -67,8 +67,7 @@ export function CourseCtaSection() {
 
           {/* Disclaimer */}
           <p className="text-sm text-gray-500 leading-relaxed">
-            No spam. Your details are used only to share course information and contact you<br className="hidden sm:block" />
-            about your inquiry.
+            No spam. Your information is used only to share course details and assist you with your learning journey.
           </p>
         </div>
       </div>

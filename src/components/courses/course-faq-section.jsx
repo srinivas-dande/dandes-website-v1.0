@@ -7,49 +7,61 @@ const faqs = [
     id: 1,
     question: "1: Which course should I choose",
     answer:
-      "If your goal is AI roles, choose AI and Machine Learning. If you are preparing for senior engineering interviews, choose System Design. If you want to improve coding rounds and placements, choose Data Structures and Algorithms. If you are unsure, share your background in the inquiry form, and we will guide you.",
+      "If your goal is to build a career in AI, choose the AI & Machine Learning Course. If you are preparing for senior software engineering roles, choose the System Design Course. If you want to strengthen your coding skills for placements or technical interviews, choose the Data Structures & Algorithms Course. If you're unsure, share your background in the inquiry form, and our team will help you choose the right program.",
   },
   {
     id: 2,
     question: "2: Are the classes live or recorded",
     answer:
-      "All classes are live, instructor-led sessions. Recordings are uploaded to the LMS within 24 hours so you can revisit any session you miss or want to review.",
+      "All classes are live, instructor-led sessions. Every session is recorded and uploaded to the LMS within 24 hours, allowing you to revisit concepts or catch up on any classes you miss.",
   },
   {
     id: 3,
     question: "3: Can I learn while working full-time or managing college",
     answer:
-      "Yes. Batches are scheduled on weekends and weekday evenings specifically for working professionals and students with busy schedules.",
+      "Yes. Our programs are designed for working professionals and students. With weekday evening and weekend batches, you can learn without disrupting your work or academic schedule.",
   },
   {
     id: 4,
     question: "4: Do you provide interview preparation support",
     answer:
-      "Yes. Interview preparation is built into every program through mock interviews, resume reviews, LinkedIn optimization, and focused practice sessions.",
+      "Yes. Every program includes interview preparation through mock interviews, resume reviews, LinkedIn profile optimization, portfolio guidance, and career mentoring.",
   },
   {
     id: 5,
     question: "5: Do you guarantee placements",
     answer:
-      "We do not guarantee placements, but we prepare you thoroughly for interviews with structured practice, real projects, and career support guidance.",
+      "We do not guarantee placements. However, we prepare you thoroughly with structured learning, real-world projects, interview preparation, and career guidance to help you become job-ready.",
   },
   {
     id: 6,
-    question: "6: How do I get the syllabus, fees, and next batch timings",
+    question: "6: How do I get the syllabus, fees, and next batch schedule",
     answer:
-      "Fill out the inquiry form on this page or register for the free webinar. We will share the complete syllabus, fee structure, and upcoming batch schedule with you directly.",
+      "Simply fill out the inquiry form on this page. We'll share the complete syllabus, fee structure, and upcoming batch schedule with you. You can also attend our free live demo to learn more about the program.",
   },
   {
     id: 7,
-    question: "7: Is there a free webinar before enrolling",
+    question: "7: Is there a free demo before enrolling",
     answer:
-      "Yes. We run a free webinar where the instructor walks through the curriculum, format, and answers your questions. You can register using the button on this page.",
+      "Yes. We conduct a free live demo where the instructor explains the course roadmap, teaching approach, projects, and career opportunities, followed by a live Q&A session.",
   },
   {
     id: 8,
     question: "8: What if I miss classes or my schedule changes",
     answer:
-      "All live sessions are recorded and available on the LMS. You can catch up at your own pace without missing any content.",
+      "No problem. Every live session is recorded and uploaded to the LMS within 24 hours, so you can continue learning at your own pace whenever your schedule allows.",
+  },
+  {
+    id: 9,
+    question: "9: Do I need prior experience to join?",
+    answer:
+      "No. Our programs follow a structured learning path that starts from the fundamentals and gradually progresses to advanced topics. The prerequisites vary by course, and our team will help you determine the best fit based on your background.",
+  },
+  {
+    id: 10,
+    question: "10: Will I receive a certificate after completing the course?",
+    answer:
+      "Yes. Upon successfully completing the program and meeting the course requirements, you'll receive a Course Completion Certificate from Dandes Academy.",
   },
 ]
 

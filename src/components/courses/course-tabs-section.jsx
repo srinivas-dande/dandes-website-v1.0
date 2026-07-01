@@ -6,54 +6,108 @@ import Link from "next/link"
 
 const coursesData = {
   aiml: {
-    title: "AI And ML Training Program",
-    titleHighlight: "AI And ML Training Program",
+    title: "AI & Machine Learning Course",
+    titleHighlight: "AI & Machine Learning Course",
     subtitle: "For Working Professionals And Students",
-    description: "This program is built for learners who want a clear path into AI and ML with live teaching, hands-on projects, and interview preparation. You learn from foundations to modern AI workflows, so you can build real proof of skill and explain it confidently.",
+    description: "Build a strong foundation in AI & Machine Learning through live instructor-led classes, hands-on projects, and industry-relevant tools. Follow a structured roadmap from Python and Machine Learning to Deep Learning, Generative AI, Agentic AI, and MLOps, while building a portfolio that prepares you for AI careers.",
     ctaText: "Get AI and ML course details",
     url : "/ai-machine-learning-course",
     highlights: [
-      "12-month structured roadmap",
-      "Live online classes with LMS recordings",
-      "Projects, mini projects, and a capstone",
-      "Interview preparation support"
+      "12-Month Structured Learning Roadmap",
+      "Live Instructor-Led Classes with Recordings",
+      "6 Real-World AI Projects & Capstone",
+      "Interview Preparation & Career Support"
+    ],
+    learn: [
+      "Python Programming & Data Analysis",
+      "Machine Learning & Deep Learning",
+      "Generative AI, LLMs & Agentic AI",
+      "MLOps, Deployment & Cloud"
+    ],
+    program: [
+      "Live Online Classes",
+      "Hands-on Assignments & Projects",
+      "Weekly Mentor Support",
+      "Recorded Sessions on LMS"
+    ],
+    takeaway: [
+      "Production-Ready AI Portfolio",
+      "Industry-Relevant Technical Skills",
+      "Interview & Resume Preparation",
+      "Confidence to Build Real AI Applications"
     ]
   },
   systemDesign: {
     title: "System Design course",
-    titleHighlight: "System Design course",
-    subtitle: "for working professionals and students",
-    description: "System Design interviews test how you think, communicate trade-offs, and build scalable solutions. This program helps you learn the core concepts, common architectures, and a clear approach to answering system design questions with confidence.",
-    ctaText: "Get System Design course details",
+    titleHighlight: "System Design Course",
+    subtitle: "For Software Engineers & Experienced Developers",
+    description: "Master the concepts and practical skills required to design scalable, reliable, and high-performance software systems. Learn High-Level Design (HLD), Low-Level Design (LLD), microservices, distributed systems, and architecture patterns through live classes, case studies, and real-world design exercises.",
+    ctaText: "Get System Design Course Details",
     url : "/system-design-course",
     highlights: [
-      "Live online classes with structured frameworks",
-      "Real case studies and guided design practice",
-      "Architecture thinking, trade-offs, and clarity",
-      "Interview-focused preparation"
+      "Structured Roadmap from Fundamentals to Advanced",
+      "Live Instructor-Led Classes with Recordings",
+      "Real-World System Design Case Studies",
+      "Interview Preparation for Senior Engineering Roles"
+    ],
+    learn: [
+      "High-Level & Low-Level Design",
+      "Distributed Systems & Microservices",
+      "Scalability, Caching & Messaging",
+      "Design Patterns & Architecture Principles"
+    ],
+    program: [
+      "Live Online Classes",
+      "Hands-on Design Exercises",
+      "Weekly Mentor Support",
+      "Recorded Sessions on LMS"
+    ],
+    takeaway: [
+      "Strong System Design Fundamentals",
+      "Confidence in HLD & LLD Interviews",
+      "Real-World Design Thinking",
+      "Skills for Senior Engineering Roles"
     ]
+    
   },
   dsa: {
     title: "Data Structures and Algorithms Course",
-    titleHighlight: "Data Structures and Algorithms Course",
-    subtitle: "for working professionals and students",
-    description: "If coding rounds feel inconsistent, the problem is usually structure and practice. This program helps you build strong DSA fundamentals, learn common patterns, and improve speed and accuracy through guided problem solving.",
-    ctaText: "Get DSA course details", 
+    titleHighlight: "Data Structures & Algorithms Course",
+    subtitle: "For Students & Software Engineers Preparing for Coding Interviews",
+    description: "Build a strong foundation in Data Structures and Algorithms through structured learning, live coding sessions, and intensive problem-solving practice. Master coding interview techniques and improve your analytical thinking with industry-standard questions.",
+    ctaText: "Get DSA Course Details", 
     url : "/data-structures-algorithms",
     highlights: [
-      "Structured DSA roadmap and problem-solving patterns",
-      "Practice focused learning, not just theory",
-      "Placement and coding interview preparation",
-      "Placement and coding interview preparation",
-      "Guidance to improve speed and confidence"
+      "Structured Learning Roadmap",
+      "Live Instructor-Led Coding Sessions",
+      "Extensive Coding Practice & Assignments",
+      "Interview Preparation for Top Product Companies"
+    ],
+    learn: [
+      "Arrays, Strings, Linked Lists & Trees",
+      "Stacks, Queues, Graphs & Heaps",
+      "Recursion, Backtracking & Dynamic Programming",
+      "Problem-Solving & Interview Strategies"
+    ],
+    program: [
+      "Live Online Classes",
+      "Daily Coding Practice",
+      "Weekly Problem-Solving Sessions",
+      "Recorded Sessions on LMS"
+    ],
+    takeaway: [
+      "Strong Problem-Solving Skills",
+      "Confidence in Coding Interviews",
+      "Improved Algorithmic Thinking",
+      "Preparation for Product-Based Company Interviews"
     ]
   }
 }
 
 const tabs = [
-  { id: "aiml", label: "AI and ML training program" },
-  { id: "systemDesign", label: "System Design course" },
-  { id: "dsa", label: "Data Structures and Algorithms" }
+  { id: "aiml", label: "AI and Machine Learning Course" },
+  { id: "systemDesign", label: "System Design Course" },
+  { id: "dsa", label: "DSA Course" }
 ]
 
 const accordionSections = [
@@ -144,28 +198,22 @@ export function CourseTabsSection() {
                   )}
                 </button>
                 
-                {openAccordion === section.id && section.id === "highlights" && (
-                  <div className="px-6 pb-5">
-                    <ul className="space-y-3">
-                      {currentCourse.highlights.map((item, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <span 
-                            className="w-2.5 h-2.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"
-                          />
-                          <span className="text-gray-700">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                
 
-                {openAccordion === section.id && section.id !== "highlights" && (
-                  <div className="px-6 pb-5">
-                    <p className="text-gray-600">
-                      Content for {section.title} will be displayed here.
-                    </p>
-                  </div>
-                )}
+                {openAccordion === section.id && (
+  <div className="px-6 pb-5">
+    <ul className="space-y-3">
+      {currentCourse[section.id]?.map((item, index) => (
+        <li key={index} className="flex items-start gap-3">
+          <span
+            className="w-2.5 h-2.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"
+          />
+          <span className="text-gray-700">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
               </div>
             ))}
           </div>

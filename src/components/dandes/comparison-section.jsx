@@ -53,6 +53,11 @@ const comparisonData = [
     dandes: "Build production-ready AI skills and a strong project portfolio.",
     typical: "Earn a course completion certificate.",
   },
+  {
+    criteria: "Trust and legacy",
+    dandes: "Known as Dande's Course, with JLC legacy recall",
+    typical: "Depends on platform or marketing",
+  },
 ]
 
 export function ComparisonSection() {

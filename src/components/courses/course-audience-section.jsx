@@ -1,152 +1,125 @@
 "use client"
 
-import { useState } from 'react'
-import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { PopupFormModal } from "../dandes/popup-form-modal"
+import { useState } from "react"
+import { CheckCircle2 } from "lucide-react"
 
-const audienceData = {
+const tabContent = {
   professionals: {
-    headline: "Mid To Senior Engineers",
-    headlineSuffix: "Who Want A Clear Upgrade Path",
-    description: "If you have work experience in software development and want to move into stronger roles, these programs fit real schedules with live classes, recordings, and structured practice.",
+    headline: "Working Professionals",
+    subheadline: "Ready to Level Up Their Careers",
+    description:
+      "Designed for busy professionals, our flexible learning approach combines live classes, recordings, and structured roadmaps so you can upskill without leaving your job.",
     benefits: [
-      "Upskill without quitting your job.",
-      "Break stagnation with skills that show in interviews and real work.",
-      "Follow one roadmap instead of scattered resources.",
-      "Build confidence through guided practice and feedback."
+      "Upskill without leaving your job",
+      "Build skills for real-world projects and interviews",
+      "Follow one structured roadmap instead of scattered resources",
+      "Learn consistently with mentor guidance and practice",
     ],
-    recommendations: [
-      "AI and Machine Learning for career transitions and future-proof skills.",
-      "System Design for senior interviews and architecture clarity.",
-      "DSA for coding rounds and problem-solving speed."
-    ]
+    tracks: [
+      "AI and Machine Learning for a portfolio and modern specialization.",
+      "DSA for placements and coding interviews.",
+      "System Design for stronger interview discussions and role clarity.",
+    ],
   },
   students: {
-    headline: "Students And Fresh Graduates",
-    headlineSuffix: "Who Want To Land Strong Roles",
-    description: "If you are preparing for placements or want to build job-ready skills early, these programs give you structure, practice, and interview preparation to stand out.",
+    headline: "students and fresh graduates",
+    subheadline: "who want to Land Your First Tech Job with Confidence",
+    description:
+      "Build strong foundations, complete real projects, and prepare for placements through structured learning designed for students and fresh graduates.",
     benefits: [
-      "Build strong foundations before entering the job market.",
-      "Get placement-ready with structured interview prep.",
-      "Learn with guidance instead of random tutorials.",
-      "Gain confidence through real projects and practice."
+      "Become placement-ready with structured preparation",
+      "Build a portfolio through real-world projects",
+      "Master DSA and coding interviews",
+      "Gain confidence through mock interviews",
     ],
-    recommendations: [
-      "DSA for cracking coding interviews and placement rounds.",
-      "AI and Machine Learning for cutting-edge skills employers want.",
-      "System Design basics for senior-level thinking early on."
-    ]
-  }
+    tracks: [
+      "AI and Machine Learning for a portfolio and modern specialization.",
+      "DSA for placements and coding interviews.",
+    ],
+  },
 }
 
 export function CourseAudienceSection() {
-  const [showPopup, setShowPopup] = useState(false)
-
-  const [activeTab, setActiveTab] = useState('professionals')
-  const data = audienceData[activeTab]
+  const [activeTab, setActiveTab] = useState("professionals")
+  const content = tabContent[activeTab]
 
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-[1300px] mx-auto px-4 lg:px-[70px]">
-        {/* Main Headline */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-          <span className="text-[#d12027]">Built For Working</span>{' '}
-          <span className="text-[#1a1a1a]">Professionals And Career-Focused Learners</span>
-        </h2>
-
-        {/* Description */}
-        <p className="text-gray-600 text-center max-w-4xl mx-auto mb-12">
-          Dandes Academy programs are built for people who want a clear learning path, consistent support, and practical
-          preparation for interviews. Whether you are upgrading your skills while working, switching roles, or preparing for
-          placements, the structure helps you stay consistent and build confidence.
-        </p>
+    <section className="py-9 md:py-12 bg-gradient-to-b from-sky-50/50 to-white">
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
+            Built for Working<span className="text-[#d12027]"> professionals,</span> and{" "}
+            <span className="text-[#d12027]">Freshers &  Students</span>
+          </h2>
+          <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Whether you're starting your career or advancing to the next level, our structured programs combine live classes, practical projects, and continuous support to help you achieve your goals with confidence.
+          </p>
+        </div>
 
         {/* Tabs */}
-        <div className="bg-slate-50 rounded-lg p-1 mb-12">
-          <div className="flex">
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex border-b border-gray-200">
             <button
-              onClick={() => setActiveTab('professionals')}
-              className={`flex-1 py-4 px-6 text-sm font-medium transition-all relative cursor-pointer ${
-                activeTab === 'professionals' ? 'text-[#1a1a1a] bg-white rounded-lg' : 'text-gray-500 hover:text-gray-700'
+              onClick={() => setActiveTab("professionals")}
+              className={`px-8 py-4 text-sm font-medium transition-all relative ${
+                activeTab === "professionals" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               For working professionals
-              {activeTab === 'professionals' && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-0.5 bg-[#d12027]" />
+              {activeTab === "professionals" && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#d12027]" />
               )}
             </button>
             <button
-              onClick={() => setActiveTab('students')}
-              className={`flex-1 py-4 px-6 text-sm font-medium transition-all relative cursor-pointer ${
-                activeTab === 'students' ? 'text-[#1a1a1a] bg-white rounded-lg' : 'text-gray-500 hover:text-gray-700'
+              onClick={() => setActiveTab("students")}
+              className={`px-8 py-4 text-sm font-medium transition-all relative ${
+                activeTab === "students" ? "text-foreground" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               For students and job seekers
-              {activeTab === 'students' && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-0.5 bg-[#d12027]" />
+              {activeTab === "students" && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#d12027]" />
               )}
             </button>
           </div>
         </div>
 
         {/* Content */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-          {/* Left Content */}
-          <div className="flex-1">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              <span className="text-[#1a1a1a]">For </span>
-              <span className="text-[#d12027]">{data.headline}</span>
-              <span className="text-[#1a1a1a]"> {data.headlineSuffix}</span>
-            </h3>
+        <div className="text-center mb-10">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+            For <span className="text-[#d12027] underline decoration-[#d12027]">{content.headline}</span>{" "}
+            {content.subheadline}
+          </h3>
+          <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed">{content.description}</p>
+        </div>
 
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              {data.description}
-            </p>
-
-            <p className="text-gray-700 mb-4">Not sure which course fits your goal.</p>
-
-            <button 
-              onClick={() => setShowPopup(true)}
-              className="bg-[#d12027] text-white py-3 px-6 rounded font-medium flex items-center gap-2 hover:bg-[#b81c22] transition-colors cursor-pointer"
-            >
-              Register for free webinar
-              <ArrowRight className="w-4 h-4" />
-            </button>
-
-            <PopupFormModal
-              showPopup={showPopup}
-              setShowPopup={setShowPopup}
-            />
-
+        {/* Two Column Cards */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Benefits Card */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6 md:p-8">
+            <h4 className="text-lg font-bold text-foreground mb-6">You will benefit if you want to:</h4>
+            <ul className="space-y-4">
+              {content.benefits.map((benefit, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-muted-foreground">{benefit}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Right Cards */}
-          <div className="flex-1 flex flex-col gap-6">
-            {/* Best if you want to Card */}
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h4 className="text-lg font-bold text-[#1a1a1a] mb-4">Best if you want to:</h4>
-              <ul className="space-y-3">
-                {data.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Recommended flow Card */}
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h4 className="text-lg font-bold text-[#1a1a1a] mb-4">Recommended flow:</h4>
-              <ul className="space-y-4">
-                {data.recommendations.map((rec, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0 mt-2" />
-                    <span className="text-gray-700 text-sm">{rec}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Recommended Tracks Card */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6 md:p-8">
+            <h4 className="text-lg font-bold text-foreground mb-6">Recommended Programs:</h4>
+            <ul className="space-y-4">
+              {content.tracks.map((track, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <span className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
+                  <span className="text-muted-foreground">{track}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

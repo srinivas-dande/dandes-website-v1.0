@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react"
 import { CheckCircle2 } from 'lucide-react'
-import { TechStackDiagram } from './tech-stack-diagram'
 import { PopupFormModal } from "../dandes/popup-form-modal"
 
 
@@ -10,10 +9,10 @@ export function CourseHeroSection() {
   const [showPopup, setShowPopup] = useState(false)
 
   const features = [
-    'Live online classes with LMS recordings.',
-    'Structured roadmaps, not random videos.',
-    'Projects and practice for real interviews.',
-    'Built for working professionals and students.',
+    'Live Instructor-Led Classes with Expert Mentor Support',
+    'Structured Learning Roadmaps from Fundamentals to Advanced',
+    'Build Real-World Projects & Hands-on Assignments',
+    'Interview Preparation & Career Support',
   ]
 
   return (
@@ -42,10 +41,10 @@ export function CourseHeroSection() {
           <div className="flex flex-col gap-8">
             <div>
               <h1 className="text-4xl md:text-4xl font-bold text-[#1a1a1a] leading-tight mb-6">
-                Build Skills You Can Prove, AI/ML, System Design, and DSA Courses
+                Become Job-Ready with Live AI/ML, System Design & DSA Programs
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Choose your learning path with live instructor-led classes, structured practice, and interview preparation. Get the syllabus, fees, and next batch schedule in one inquiry.
+                Whether you're a student, software engineer, or career switcher, our live programs help you build real projects, prepare for interviews, and become job-ready.
               </p>
             </div>
 
@@ -65,7 +64,7 @@ export function CourseHeroSection() {
                 onClick={() => setShowPopup(true)}
                 className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
-                Register for the free webinar
+                Register for the Free Demo
               </button>
 
             </div>
