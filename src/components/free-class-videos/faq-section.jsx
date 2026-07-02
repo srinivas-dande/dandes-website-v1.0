@@ -1,24 +1,32 @@
-'use client'
+"use client"
 
 import { useState } from 'react'
 
-const faqData = [
+const faqs = [
   {
-    question: 'Are these videos completely free?',
-    answer: 'Yes. This page is a free library of full-length classes across Python, Pandas, DSA, and system design topics.',
+    question: "Are these real class recordings or promotional content?",
+    answer: "Real class recordings. These are actual sessions from the AI/ML program, not edited highlights or marketing videos. What you see is how Srinivas teaches."
   },
   {
-    question: 'What is the best order to watch the videos?',
-    answer: 'We recommend starting with Python foundations, then moving to Pandas for data analysis, followed by System Design interview prep, and finally DSA deep dives.',
+    question: "Do I need to sign up or pay anything to watch?",
+    answer: "No sign up or payment required. All free videos are available to watch immediately without any registration or payment."
   },
   {
-    question: 'Do I need to sign up to watch the videos?',
-    answer: 'No sign-up is required. All videos are freely accessible on this page without any registration.',
+    question: "Can I learn the full AI/ML curriculum from these videos?",
+    answer: "These free videos cover selected topics from the curriculum. For the complete structured learning path, you would need to enroll in the full program."
   },
   {
-    question: 'Who are these videos for?',
-    answer: 'These videos are for engineers and students who want to build strong fundamentals in Python, Pandas, System Design, and Data Structures & Algorithms.',
+    question: "What should I watch if I'm a complete beginner?",
+    answer: "Start with the Python fundamentals session, then move to Machine Learning core concepts. These will give you a solid foundation before exploring advanced topics."
   },
+  {
+    question: "What should I watch if I'm an experienced engineer?",
+    answer: "Jump directly to Deep Learning, Generative AI and LLM concepts, or the real-world project walkthroughs to see the depth and practical focus of the teaching."
+  },
+  {
+    question: "What's the next step after watching?",
+    answer: "Register for the free webinar to get the full roadmap, understand the program structure, and see if it's the right fit for your learning goals."
+  }
 ]
 
 export default function FaqSection() {
@@ -31,7 +39,7 @@ export default function FaqSection() {
   return (
     <section
       style={{
-        padding: '80px 20px',
+        padding: '80px 0',
         backgroundColor: '#fff',
       }}
     >
@@ -39,6 +47,7 @@ export default function FaqSection() {
         style={{
           maxWidth: 900,
           margin: '0 auto',
+          padding: '0 24px',
         }}
       >
         {/* Heading */}
@@ -46,12 +55,13 @@ export default function FaqSection() {
           style={{
             fontSize: 36,
             fontWeight: 700,
-            color: '#111',
             textAlign: 'center',
             marginBottom: 16,
+            color: '#111',
           }}
         >
-          FAQ
+          Frequently Asked{' '}
+          <span style={{ color: '#d12027' }}>Questions</span>
         </h2>
 
         {/* Subtitle */}
@@ -74,24 +84,24 @@ export default function FaqSection() {
             gap: 16,
           }}
         >
-          {faqData.map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div
               key={index}
               style={{
-                border: '1px solid #e5e5e5',
+                border: '1px solid #e5e7eb',
                 borderRadius: 12,
                 overflow: 'hidden',
-                transition: 'all 0.3s ease',
               }}
             >
+              {/* Question */}
               <button
                 onClick={() => toggleFaq(index)}
                 style={{
                   width: '100%',
-                  padding: '24px 28px',
                   display: 'flex',
-                  justifyContent: 'space-between',
                   alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '20px 24px',
                   backgroundColor: '#fff',
                   border: 'none',
                   cursor: 'pointer',
@@ -105,14 +115,15 @@ export default function FaqSection() {
                     color: '#111',
                   }}
                 >
-                  {index + 1}. {faq.question}
+                  {index + 1}: {faq.question}
                 </span>
                 <span
                   style={{
                     fontSize: 24,
-                    fontWeight: 300,
-                    color: openIndex === index ? '#111' : '#c8102e',
-                    transition: 'color 0.3s ease',
+                    fontWeight: 400,
+                    color: openIndex === index ? '#111' : '#d12027',
+                    flexShrink: 0,
+                    marginLeft: 16,
                   }}
                 >
                   {openIndex === index ? '−' : '+'}
@@ -120,29 +131,41 @@ export default function FaqSection() {
               </button>
 
               {/* Answer */}
-              <div
-                style={{
-                  maxHeight: openIndex === index ? 200 : 0,
-                  overflow: 'hidden',
-                  transition: 'max-height 0.3s ease',
-                }}
-              >
-                <p
+              {openIndex === index && (
+                <div
                   style={{
-                    padding: '0 28px 24px 28px',
-                    fontSize: 15,
-                    color: '#555',
-                    lineHeight: 1.6,
-                    margin: 0,
+                    padding: '0 24px 20px 24px',
+                    backgroundColor: '#fff',
                   }}
                 >
-                  {faq.answer}
-                </p>
-              </div>
+                  <p
+                    style={{
+                      fontSize: 15,
+                      color: '#555',
+                      lineHeight: 1.6,
+                      margin: 0,
+                    }}
+                  >
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
+
+      {/* Responsive styles */}
+      <style jsx>{`
+        @media (max-width: 640px) {
+          h2 {
+            font-size: 28px !important;
+          }
+          button span:first-child {
+            font-size: 16px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

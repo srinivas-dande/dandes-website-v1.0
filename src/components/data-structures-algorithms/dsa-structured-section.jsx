@@ -4,10 +4,11 @@ import { PopupFormModal } from "../dandes/popup-form-modal"
 
 
 const checkItems = [
-  'Clear roadmap so you always know what to focus on next',
-  'Concepts taught for understanding, not just memorization',
-  'Focus on problem-solving patterns used in real interviews',
-  'Designed to help you perform under interview pressure',
+  'Structured roadmap from fundamentals to advanced problem solving',
+  'Learn concepts through understanding, not memorization',
+  'Focus on coding patterns used in real technical interviews',
+  'Regular coding practice with guided solutions',
+  'Interview-focused preparation with problem-solving strategies',
   
 ]
 
@@ -37,7 +38,7 @@ export function DsaStructuredSection() {
             margin: '0 0 24px',
             maxWidth: 520,
           }}>
-            A structured System Design program built for real engineering roles
+            A Structured DSA Course Built for Coding Interviews
           </h2>
 
           <p style={{
@@ -47,7 +48,7 @@ export function DsaStructuredSection() {
             margin: '0 0 32px',
             maxWidth: 560,
           }}>
-            Many learners practice a lot but do not improve.
+            Many learners solve hundreds of coding problems but struggle to improve. This course helps you build a strong foundation, recognize problem-solving patterns, and develop the confidence to solve coding challenges independently.
 
           </p>
 
@@ -57,7 +58,7 @@ export function DsaStructuredSection() {
             color: '#1a1a1a',
             margin: '0 0 20px',
           }}>
-            What sets this program apart
+            What Sets This Course Apart
           </h3>
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px' }}>
@@ -102,7 +103,7 @@ export function DsaStructuredSection() {
               cursor: 'pointer',
             }}
           >
-            Get course details
+            Get DSA Course Details
             <svg width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
               <line x1={4} y1={9} x2={14} y2={9} />
               <polyline points="10,5 14,9 10,13" />

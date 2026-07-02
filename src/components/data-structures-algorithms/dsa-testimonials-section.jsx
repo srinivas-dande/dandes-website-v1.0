@@ -6,27 +6,37 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    quote: "The program helped me move from understanding concepts in notebooks to confidently building real machine learning solutions. The structured teaching and hands-on projects made complex topics much easier to grasp.",
-    name: "Rahul Mehta",
-    role: "Senior Software Engineer",
+    quote: "This course gave me a complete roadmap. I am now confident about my transition into AI/ML. Dande Sir explains every concept with so much clarity and patience. This course gave me real confidence to move into AI/M",
+    name: "Anek Kumar Singh",
+    role: "Software Development Engineer III",
+    company: "JPMorgan Chase, Bangalore",
+    videoId: "0tRrs7UXPSE",
+
+
   },
   {
     id: 2,
-    quote: "What sets Dandes Academy apart is the focus on real interviews. The mock sessions and resume support were game-changers for my career transition into AI.",
-    name: "Priya Sharma",
-    role: "ML Engineer at Tech Corp",
+    quote: "The biggest value for me was clarity. Instead of jumping between random resources, I had a step-by-step learning path and continuous mentor support.",
+    name: "Sasi Kumar",
+    role: "Principal Engineer",
+    company: "Akshaya Inc, USA",
+    videoId: "HByraJiYzcE",
   },
   {
     id: 3,
-    quote: "The System Design course gave me clarity on how to approach complex architecture problems. I cleared interviews at multiple FAANG companies after completing the program.",
-    name: "Amit Kumar",
-    role: "Senior Engineer at Google",
+    quote: "What I liked most was the practical approach. The assignments, mini projects, and capstone project helped me gain real confidence in applying AI/ML concepts.",
+    name: "Rupesh Kumar",
+    role: "Solution Architect",
+    company: "Worldline Global Services, Bangalore",
+    videoId: "rZmuHjNfEFE",
   },
   {
     id: 4,
-    quote: "As a working professional, the flexibility of recordings combined with live doubt sessions made it possible for me to upskill without affecting my job.",
-    name: "Sneha Reddy",
-    role: "Tech Lead at Startup",
+    quote: "Dande Sir has a unique way of simplifying complex topics. Even difficult concepts in Machine Learning and Deep Learning became easy to understand.",
+    name: "Rajkeshwar Prasad",
+    role: "Tech Lead",
+    company: "HCL Tech, Germany",
+    videoId: "M3xQPBnX5QI",
   },
 ]
 
@@ -49,10 +59,10 @@ export function DsaTestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Trusted by <span className="text-[#d12027]">thousands of learners</span>, here is what they share
+            Hear from <span className="text-[#d12027]">Learners Who Started Their AI</span> Journey with Dandes Academy
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Choosing the right AI and Machine Learning course takes more than reading a curriculum. You want proof that learners understood the concepts, completed projects, remained consistent, and felt confident during interviews. Here are reviews from learners from diverse backgrounds, working professionals, and placement-focused students.
+            Choosing the right AI & Machine Learning program takes more than reading a curriculum. You want to know if learners understand the concepts, build real projects, stay consistent, and enjoy the learning experience. Hear from engineers, working professionals, and students who have started their AI journey with Dandes Academy.
           </p>
         </div>
 
@@ -87,6 +97,7 @@ export function DsaTestimonialsSection() {
                 <div className="mb-6">
                   <p className="font-semibold text-foreground">~ {current.name}</p>
                   <p className="text-gray-500 text-sm">{current.role}</p>
+                  <p className="text-sm text-gray-500">{current.company}</p>
                 </div>
 
                 {/* Pagination dots */}
@@ -102,17 +113,20 @@ export function DsaTestimonialsSection() {
                     />
                   ))}
                 </div>
-              </div>
+              </div> 
 
-              {/* Video Placeholder */}
-              <div className="w-full md:w-80 h-64 md:h-80 relative rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Video Placeholder</span>
-                <button className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors group">
-                  <span className="flex items-center gap-2 bg-black/50 text-white px-4 py-2 rounded-lg">
-                    <Play className="w-5 h-5" fill="white" />
-                    Play
-                  </span>
-                </button>
+              {/* YouTube Video */}
+              <div className="w-full md:w-80 h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${current.videoId}`}
+                  title={current.name}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-xl"
+                />
               </div>
             </div>
           </div>

@@ -38,11 +38,11 @@ export function DsaCTASection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Ready to learn System Design with clarity and structure
+            Ready to Crack Coding Interviews with Confidence?
           </h2>
 
           <p className="text-gray-600 mb-8">
-            If you want to move beyond coding and start thinking like an engineer who designs systems.
+            Develop strong problem-solving skills, master Data Structures & Algorithms, and prepare for technical interviews through live instructor-led classes and structured practice.
           </p>
 
           {/* CTAs */}
@@ -52,14 +52,14 @@ export function DsaCTASection() {
               onClick={() => setShowPopup(true)}
               className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
             >
-              Get course details
+              Get DSA Course Details
             </button>
 
             <Link 
               href="/webinars"              
               className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors"
             >
-              Register for the free webinar
+              Register for Free Demo
               <span className="w-8 h-8 bg-[#d12027] rounded-full flex items-center justify-center">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
@@ -70,7 +70,8 @@ export function DsaCTASection() {
           
 
           <p className="text-sm text-gray-500">
-            Live online classes with LMS recordings. No spam, your details are used only to share course information and contact you about your inquiry.
+            Live instructor-led classes • LMS recordings • Coding interview preparation • Career guidance
+
           </p>
         </div>
 

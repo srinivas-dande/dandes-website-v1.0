@@ -3,11 +3,11 @@
 import Link from "next/link"
 
 const credentials = [
-  "20+ years of experience",
-  "Focus on fundamentals and clarity",
-  "Teaches step-by-step problem solving",
-  "Connects learning to interviews",
-  "Trusted by thousands of learners"
+  "20+ Years of Training Excellence",
+  "25,000+ Engineers & Students Trained Since 2005",
+  "500+ AI & Machine Learning Learners Trained",
+  "Clear, Practical & Interview-Focused Teaching",
+  "Strong Fundamentals with Real-World Applications"
 ]
 
 export function DsaInstructorSection() {
@@ -94,15 +94,18 @@ export function DsaInstructorSection() {
             {/* Name */}
             <h2
               style={{
-                fontSize: 34,
+                fontSize: 48,
                 fontWeight: 700,
                 color: '#111',
-                marginBottom: 20,
+                marginBottom: 6,
                 lineHeight: 1.1,
               }}
             >
-              Learn from an Industry-Experienced Instructor
+              Srinivas Dande
             </h2>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Founder & Lead Trainer, Dandes Academy
+            </h3>
 
             {/* Description */}
             <p
@@ -113,10 +116,12 @@ export function DsaInstructorSection() {
                 marginBottom: 28,
               }}
             >
-              The program is led by Srinivas Dande.
+              With over 20 years of training experience, Srinivas has trained 25,000+ engineers and students since 2005 across Java, Full Stack Development, Microservices, Angular, React, AWS, DevOps, Data Structures & Algorithms, and System Design. In recent years, he has also trained 500+ learners in AI & Machine Learning, helping them transition into modern AI careers through structured, project-based learning.
             </p>
 
-            
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Why Students Learn with Srinivas:
+            </h3>
 
             {/* Credentials list */}
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: 32 }}>
@@ -143,18 +148,6 @@ export function DsaInstructorSection() {
                 </li>
               ))}
             </ul>
-
-            <h2
-              style={{
-                fontSize: 14,
-                fontWeight: 700,
-                color: '#111',
-                marginBottom: 20,
-                lineHeight: 1.1,
-              }}
-            >
-              Watch free class videos to understand the <br/> teaching style.
-            </h2>
 
             {/* CTAs */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>

@@ -1,16 +1,26 @@
 'use client'
 
 const leftTopics = [
-  { num: 1, text: 'Arrays and strings' },
-  { num: 2, text: 'Linked lists' },
-  { num: 3, text: 'Stacks and queues' },
-  { num: 4, text: 'Trees and graphs' },
+  { num: 1, text: 'Arrays' },
+  { num: 2, text: 'Strings' },
+  { num: 3, text: 'Linked Lists' },
+  { num: 4, text: 'Stacks' },
+  { num: 5, text: 'Queues' },
+  { num: 6, text: 'Hashing' },
+  { num: 7, text: 'Trees' },
+  { num: 8, text: 'Binary Search Trees' },
+  
 ]
 
 const rightTopics = [
-  { num: 5, text: 'Recursion and backtracking' },
-  { num: 6, text: 'Sliding window and two pointers' },
-  { num: 7, text: 'Dynamic programming' },
+  { num: 9, text: 'Heaps & Priority Queues' },
+  { num: 10, text: 'Graphs' },
+  { num: 11, text: 'Searching Algorithms' },
+  { num: 12, text: 'Sorting Algorithms' },
+  { num: 13, text: 'Recursion & Backtracking' },
+  { num: 14, text: 'Sliding Window & Two Pointers' },
+  { num: 15, text: 'Greedy Algorithms' },
+  { num: 16, text: 'Dynamic Programming' },
  
 ]
 
@@ -86,8 +96,8 @@ export function DsaCurriculumSection() {
               lineHeight: '1.2',
             }}
           >
-            What you learn in this{' '}
-            <span style={{ color: '#d12027' }}>DSA</span>{' '}
+            What You'll Learn in This{' '}
+            <span style={{ color: '#d12027' }}>Data Structures & Algorithms</span>{' '}
             {' '}
             <span style={{ color: '#d12027' }}>Course</span>{' '}
             
@@ -100,9 +110,9 @@ export function DsaCurriculumSection() {
               lineHeight: '1.6',
             }}
           >
-            You cover the complete learning path that companies 
+            Build a strong foundation in Data Structures, Algorithms, and problem-solving techniques through structured learning,
             <br />
-            expect in real AI and ML roles.
+            coding practice, and interview-focused preparation.
           </p>
         </div>
 
@@ -115,7 +125,7 @@ export function DsaCurriculumSection() {
             marginBottom: '20px',
           }}
         >
-          Core topics include
+          Core Topics Include
         </p>
 
         {/* 2-column grid of topic cards */}
@@ -162,9 +172,9 @@ export function DsaCurriculumSection() {
       lineHeight: '1.3',
     }}
   >
-    Built Around Structured Practice So You {' '}
+    Build Strong Problem-Solving Skills {' '}
     <span style={{ color: '#d12027' }}>
-      Improve Consistently
+      Through Structured Practice
     </span>
   </h3>
 
@@ -177,7 +187,7 @@ export function DsaCurriculumSection() {
       lineHeight: '1.7',
     }}
   >
-    Throughout the course, you work on real system design problems and case studies.
+    Learn to solve coding problems with confidence by understanding problem-solving patterns, choosing the right approach, and writing optimized solutions through consistent practice and interview-focused exercises.
   </p>
 
   {/* Subheading */}
@@ -190,15 +200,18 @@ export function DsaCurriculumSection() {
       color: '#374151',
     }}
   >
-    You design systems like:
+    You'll Learn To:
   </h4>
 
   {/* List */}
   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
     {[
-      'How to approach problems',
-      'How to identify patterns',
-      'How to optimize solutions',
+      'Analyze & Break Down Problems',
+      'Identify Common Problem Patterns',
+      'Choose the Right Data Structure & Algorithm',
+      'Optimize Time & Space Complexity',
+      'Write Clean & Efficient Code',
+      'Solve Coding Interviews with Confidence',
       
     ].map((item, index) => (
       <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -235,6 +248,7 @@ export function DsaCurriculumSection() {
     }}
   >
     This helps you solve independently instead of memorizing.
+
   </p>
 </div>
 </div>

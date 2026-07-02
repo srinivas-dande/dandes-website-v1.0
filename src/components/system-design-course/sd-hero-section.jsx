@@ -4,10 +4,10 @@ import { AimlRegistrationForm } from "./sd-registration-form"
 
 
 const features = [
-  "Real-world system design case studies and breakdowns",
-  "Live classes with LMS recordings and doubt support",
-  "Step-by-step approach from fundamentals to advanced thinking",
-  "Interview-focused system design preparation",
+  "Learn High-Level Design (HLD) & Low-Level Design (LLD)",
+  "Solve Real-World System Design Case Studies",
+  "Live Instructor-Led Classes with LMS Recordings",
+  "Interview Preparation for Senior Engineering Roles",
 ]
 
 
@@ -54,11 +54,11 @@ export function SdHeroSection() {
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
-              Learn System Design with Live Online Classes
+              Master System Design for Modern Software Engineering Roles
             </h1>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              A structured program to help you move from writing code to designing scalable systems. Learn how real-world architectures work, how to break down complex systems, and how to approach system design interviews with clarity.
+               Master the principles of scalable system design through live instructor-led classes, real-world architecture case studies, and interview-focused learning. Build the skills to design distributed systems with confidence and succeed in senior engineering interviews.
             </p>
 
             {/* Feature List */}
@@ -77,18 +77,13 @@ export function SdHeroSection() {
                 onClick={scrollToCourses}
                 className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
-                Get course details
+                Get System Design Course Details
               </button>
 
             </div>
 
             {/* Industry Tag */}
-            <div className="flex items-start gap-3 text-sm text-gray-600">
-              <Star className="size-5 text-amber-400 fill-amber-400 shrink-0" />
-              <p>
-                5-year LMS access, batch switching, and a 30-day refund policy, as per terms.
-              </p>
-            </div>
+            
           </div>
 
           {/* Right Form */}

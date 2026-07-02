@@ -1,24 +1,28 @@
 import { CountdownBanner } from "@/components/dandes/countdown-banner"
 import { Header } from "@/components/dandes/header"
-import HeroSection from '@/components/free-class-videos/hero-section'
-import VideoContentSection from '@/components/free-class-videos/video-content-section'
-import FinalCtaSection from '@/components/free-class-videos/final-cta-section'
+import TeachingPreviewSection from '@/components/free-class-videos/teaching-preview-section'
+import WebinarsInstructorSection from '@/components/free-class-videos/webinars-instructor-section'
+import FreeVideosSection from '@/components/free-class-videos/free-videos-section'
+import StartingPointSection from '@/components/free-class-videos/starting-point-section'
+import RoadmapCtaSection from '@/components/free-class-videos/roadmap-cta-section'
 import FaqSection from '@/components/free-class-videos/faq-section'
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'Free Class Videos | Dandes Academy',
-  description: 'Watch free full-length video sessions on Python, Pandas, System Design, and DSA. Build strong fundamentals with Dandes Academy.',
+  title: 'Webinars | Dandes Academy',
+  description: 'Watch free webinars taught by Srinivas Dande. Learn AI, ML, and engineering concepts with 20+ years of teaching experience.',
 }
 
-export default function FreeClassVideosPage() {
+export default function WebinarsPage() {
   return (
     <main>
       <CountdownBanner />
       <Header />
-      <HeroSection />
-      <VideoContentSection />
-      <FinalCtaSection />
+      <TeachingPreviewSection />
+      <WebinarsInstructorSection />
+      <FreeVideosSection />
+      <StartingPointSection />
+      <RoadmapCtaSection />
       <FaqSection />
       <Footer />
     </main>

@@ -4,11 +4,11 @@ import { PopupFormModal } from "../dandes/popup-form-modal"
 
 
 const checkItems = [
-  'Clear roadmap with structured learning',
-  'Live instructor-led classes with interaction',
-  'Real system design case studies',
-  'Focus on how systems work in real scenarios',
-  'Interview-focused preparation',
+  'Structured roadmap covering HLD, LLD, and real-world case studies',
+  'Live instructor-led classes with interactive discussions',
+  'Learn through real-world system design problems',
+  'Understand architecture, scalability, and engineering trade-offs',
+  'IInterview-focused preparation with practical design exercises',
 ]
 
 export function SdStructuredSection() {
@@ -37,7 +37,7 @@ export function SdStructuredSection() {
             margin: '0 0 24px',
             maxWidth: 520,
           }}>
-            A structured System Design program built for real engineering roles
+            Go Beyond Writing Code. Learn to Design Scalable Systems.
           </h2>
 
           <p style={{
@@ -47,7 +47,7 @@ export function SdStructuredSection() {
             margin: '0 0 32px',
             maxWidth: 560,
           }}>
-            Many courses stay theoretical or focus only on diagrams. This program focuses on clarity and real-world thinking.
+            Many developers know how to write code, but few know how to design scalable software systems. This course helps you build the architectural thinking required to design reliable, high-performance applications and confidently solve System Design interview problems.
           </p>
 
           <h3 style={{
@@ -56,7 +56,7 @@ export function SdStructuredSection() {
             color: '#1a1a1a',
             margin: '0 0 20px',
           }}>
-            What sets this program apart
+            What Makes This Course Different
           </h3>
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px' }}>
@@ -101,7 +101,7 @@ export function SdStructuredSection() {
               cursor: 'pointer',
             }}
           >
-            Get course details
+            Get System Design Course Details
             <svg width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
               <line x1={4} y1={9} x2={14} y2={9} />
               <polyline points="10,5 14,9 10,13" />

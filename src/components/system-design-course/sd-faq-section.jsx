@@ -3,47 +3,46 @@ import { useState } from 'react'
 
 const faqData = [
   {
-    q: '1. Do I need prior system design experience?',
-    a: 'No. The program is structured to start with foundations and build up step by step. Basic coding familiarity helps, but you do not need prior AI experience.',
+    q: '1. Do I need prior System Design experience?',
+    a: 'No. The course starts with the fundamentals and gradually progresses to advanced System Design concepts. Basic programming knowledge is recommended, but prior System Design experience is not required.',
   },
   {
     q: '2. Is this course suitable for working professionals?',
-    a: 'Yes. The course is designed with flexible schedules, recorded sessions, and weekend live classes to accommodate working professionals.',
+    a: 'Yes. The course is designed for working professionals with weekday evening and weekend live classes. All sessions are recorded and available on the LMS for flexible learning.',
   },
   {
-    q: '3. Will this help in interviews?',
-    a: 'The program runs for approximately 6 months, covering foundational to advanced topics with hands-on projects throughout.',
+    q: '3. Will this help me prepare for System Design interviews?',
+    a: 'Yes. The course includes High-Level Design (HLD), Low-Level Design (LLD), real-world case studies, architecture discussions, and interview-focused practice to help you perform confidently in System Design interviews.',
   },
   {
     q: '4. How long is the course?',
-    a: 'Yes. You will work on multiple mini-projects and one comprehensive capstone project that you can showcase in your portfolio.',
+    a: 'The System Design Course is a 6-month structured program covering High-Level Design, Low-Level Design, real-world case studies, and interview preparation.',
   },
   {
-    q: '5. Will I work on real systems?',
-    a: 'Topics include Python, SQL, Math for ML, Machine Learning, Deep Learning, NLP, Computer Vision, Generative AI, LLMs, Agentic AI, and MLOps.',
+    q: '5. Will I work on real-world System Design problems?',
+    a: "Yes. Throughout the course, you'll design systems such as BookMyShow, Amazon, Swiggy, Uber, WhatsApp, Netflix, URL Shortener, Parking Lot, and more to gain practical experience.",
   },
   {
-    q: '6. Is the course live or recorded?',
-    a: 'The course includes live instructor-led sessions with recordings available on the LMS for revision and catch-up.',
+    q: '6. Are the classes live or recorded?',
+    a: 'All classes are live, instructor-led sessions. Every session is recorded and uploaded to the LMS, allowing you to revisit concepts or catch up on missed classes.',
   },
   {
-    q: '7. Can I switch batches?',
-    a: 'No. Math concepts are taught in a practical, applied manner as part of the curriculum. You do not need advanced math background.',
+    q: '7. Can I switch to another batch if needed?',
+    a: 'Yes. If your schedule changes, you can request a batch transfer, subject to the availability of seats in upcoming batches.',
   },
   {
-    q: '8. What is the course fee?',
-    a: 'We provide placement support including resume building, interview preparation, and job referrals. We do not guarantee placement.',
+    q: '8. Do you provide interview preparation support?',
+    a: 'Yes. The course includes System Design interview preparation, mock interviews, resume guidance, and career support to help you prepare for senior software engineering roles.',
   },
   {
-    q: '9. Is there a refund policy?',
-    a: 'Yes. You can request a batch switch if your schedule changes, subject to availability.',
+    q: '9. What is the course fee?',
+    a: 'Please contact our team or submit the inquiry form to receive the latest fee structure, available offers, and EMI options.',
   },
   {
-    q: '10. What is the best first step?',
-    a: 'Please contact our team for current pricing. Yes, EMI options are available to make the program more accessible.',
+    q: '10. Is there a free demo before enrolling?',
+    a: 'Yes. You can attend our free live demo to understand the course structure, teaching methodology, curriculum, and ask questions before enrolling.',
   },
-  
-]
+];
 
 export function SdFaqSection() {
   const [openIndex, setOpenIndex] = useState(0)
@@ -55,7 +54,7 @@ export function SdFaqSection() {
         {/* Heading */}
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <h2 style={{ fontSize: 28, fontWeight: 800, color: '#1a1a1a', margin: '0 0 12px' }}>
-            Questions to ask before joining an AI and ML course
+            Frequently Asked Questions About the System Design Course
           </h2>
           <p style={{ color: '#6b7280', fontSize: '0.95rem', margin: 0 }}>
             Quick answers to common queries about batches, recordings, and career support.

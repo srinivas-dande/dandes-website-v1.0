@@ -4,13 +4,13 @@ const features = [
   {
     image: "/icons/experience.png",
     iconBg: "bg-orange-100",
-    title: "10 plus years",
+    title: "20 plus years",
     description: "of experience, Friendly transition track",
   },
   {
     image: "/icons/duration.png",
     iconBg: "bg-blue-100",
-    title: "11 to 12 Months",
+    title: "12 Months",
     description: "Pace you can sustain",
   },
   {
@@ -28,7 +28,7 @@ const features = [
   {
     image: "/icons/students.png",
     iconBg: "bg-cyan-100",
-    title: "20,000 plus Trained",
+    title: "25,000 plus Trained",
     description: "learners Proof of delivery",
   },
 ]
@@ -39,8 +39,8 @@ export function SdFeaturesSection() {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">
-          Made for <span className="text-[#d12027]">Engineers </span>
-          <br className="hidden md:block" /> Who Want to Grow Beyond Coding
+          Made for <span className="text-[#d12027]">Working Professionals</span> and
+          <br className="hidden md:block" /> Career-Focused Students
         </h2>
 
         {/* Feature Cards */}

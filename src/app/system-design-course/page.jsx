@@ -5,7 +5,6 @@ import { SdFeaturesSection } from "@/components/system-design-course/sd-features
 import { SdCurriculumSection } from '@/components/system-design-course/sd-curriculum-section'
 import { SdAudienceSection } from '@/components/system-design-course/sd-audience-section'
 import { SdLearningFormat } from '@/components/system-design-course/sd-learning-format'
-import { SdWebinarSection } from "@/components/system-design-course/sd-webinar-section"
 import { SdJourneySection } from '@/components/system-design-course/sd-journey-section'
 import { SdStructuredSection } from '@/components/system-design-course/sd-structured-section'
 import { SdInstructorSection } from "@/components/system-design-course/sd-instructor-section"
@@ -29,7 +28,6 @@ export default function SDPage() {
       <SdCurriculumSection />
       <SdAudienceSection />
       <SdLearningFormat />
-      <SdWebinarSection />
       <SdJourneySection />
       <SdStructuredSection />
       <SdInstructorSection />

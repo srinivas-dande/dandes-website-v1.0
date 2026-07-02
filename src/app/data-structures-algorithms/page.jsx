@@ -5,7 +5,6 @@ import { DsaFeaturesSection } from "@/components/data-structures-algorithms/dsa-
 import { DsaCurriculumSection } from '@/components/data-structures-algorithms/dsa-curriculum-section'
 import { DsaAudienceSection } from '@/components/data-structures-algorithms/dsa-audience-section'
 import { DsaLearningFormat } from '@/components/data-structures-algorithms/dsa-learning-format'
-import { DsaWebinarSection } from "@/components/data-structures-algorithms/dsa-webinar-section"
 import { DsaJourneySection } from '@/components/data-structures-algorithms/dsa-journey-section'
 import { DsaStructuredSection } from '@/components/data-structures-algorithms/dsa-structured-section'
 import { DsaInstructorSection } from "@/components/data-structures-algorithms/dsa-instructor-section"
@@ -29,7 +28,7 @@ export default function SDPage() {
       <DsaCurriculumSection />
       <DsaAudienceSection />
       <DsaLearningFormat />
-      <DsaWebinarSection />
+      
       <DsaJourneySection />
       <DsaStructuredSection />
       <DsaInstructorSection />

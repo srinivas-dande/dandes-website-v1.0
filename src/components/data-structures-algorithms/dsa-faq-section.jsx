@@ -3,40 +3,38 @@ import { useState } from 'react'
 
 const faqData = [
   {
-    q: '1. Do I need prior coding experience?',
-    a: 'Basic familiarity helps but we start from fundamentals.',
+    q: '1. Do I need prior coding experience?',
+    a: 'Basic programming knowledge is helpful, but the course starts from the fundamentals and gradually progresses to advanced Data Structures & Algorithms concepts.',
   },
   {
     q: '2. How long is the course?',
-    a: 'Yes. The course is designed with flexible schedules, recorded sessions, and weekend live classes to accommodate working professionals.',
+    a: 'The Data Structures & Algorithms Course is a 6-month structured program covering core data structures, algorithms, problem-solving techniques, and coding interview preparation.',
   },
   {
-    q: '3. Will this help in interviews?',
-    a: 'The program runs for approximately 6 months, covering foundational to advanced topics with hands-on projects throughout.',
+    q: '3. Will this help me prepare for coding interviews?',
+    a: 'Yes. The course focuses on coding interview preparation through structured learning, problem-solving patterns, coding practice, and interview-focused discussions.',
   },
   {
-    q: '4. Is it live or recorded?',
-    a: 'Yes. You will work on multiple mini-projects and one comprehensive capstone project that you can showcase in your portfolio.',
+    q: '4. Are the classes live or recorded?',
+    a: 'All classes are live, instructor-led sessions. Every session is recorded and uploaded to the LMS, allowing you to revisit concepts or catch up on missed classes.',
   },
   {
-    q: '5. Can I switch batches?',
-    a: 'Topics include Python, SQL, Math for ML, Machine Learning, Deep Learning, NLP, Computer Vision, Generative AI, LLMs, Agentic AI, and MLOps.',
+    q: '5. Can I switch to another batch if needed?',
+    a: 'Yes. If your schedule changes, you can request a batch transfer, subject to the availability of seats in upcoming batches.',
   },
   {
-    q: '6. What is the fee?',
-    a: 'The course includes live instructor-led sessions with recordings available on the LMS for revision and catch-up.',
+    q: '6. What is the course fee?',
+    a: 'Please contact our team or submit the inquiry form to receive the latest fee structure, available offers, and EMI options.',
   },
   {
-    q: '7. Is there a refund policy?',
-    a: 'No. Math concepts are taught in a practical, applied manner as part of the curriculum. You do not need advanced math background.',
+    q: '7. Do you provide interview preparation support?',
+    a: 'Yes. The course includes coding interview preparation, resume guidance, mock interview support, and career guidance to help you prepare for technical interviews.',
   },
   {
-    q: '8. What is the best first step?',
-    a: 'We provide placement support including resume building, interview preparation, and job referrals. We do not guarantee placement.',
+    q: '8. Is there a free demo before enrolling?',
+    a: 'Yes. You can attend our free live demo to understand the course structure, teaching methodology, curriculum, and ask your questions before enrolling.',
   },
-  
-  
-]
+];
 
 export function DsaFaqSection() {
   const [openIndex, setOpenIndex] = useState(0)
@@ -48,10 +46,10 @@ export function DsaFaqSection() {
         {/* Heading */}
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <h2 style={{ fontSize: 28, fontWeight: 800, color: '#1a1a1a', margin: '0 0 12px' }}>
-            Questions to ask before joining an AI and ML course
+            Frequently Asked Questions About the Data Structures & Algorithms Course
           </h2>
           <p style={{ color: '#6b7280', fontSize: '0.95rem', margin: 0 }}>
-            Quick answers to common queries about batches, recordings, and career support.
+            Find answers to the most common questions about the DSA Course, including batches, live classes, recordings, interview preparation, and enrollment.
           </p>
         </div>
 

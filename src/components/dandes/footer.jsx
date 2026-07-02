@@ -8,7 +8,7 @@ const coursesLinks = [
 
 const resourcesLinks = [
   { label: "Free Class videos", href: "/free-class-videos" },
-  { label: "Webinars", href: "/webinars" },
+ 
   { label: "Blogs", href: "/blogs" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQs", href: "/faqs" },

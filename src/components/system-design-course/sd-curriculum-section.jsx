@@ -1,17 +1,20 @@
 'use client'
 
 const leftTopics = [
-  { num: 1, text: 'Scalability fundamentals, load balancing, caching' },
-  { num: 2, text: 'Database design and storage decisions' },
-  { num: 3, text: 'API design and system components' },
-  
+  { num: 1, text: 'Networking Fundamentals' },
+  { num: 2, text: 'DNS' },
+  { num: 3, text: 'Load Balancer' },
+  { num: 4, text: 'API Gateway' },
+  { num: 5, text: 'Caching' },
 ]
 
 const rightTopics = [
-  { num: 4, text: 'CAP theorem and distributed systems basics' },
-  { num: 5, text: 'Microservices and monolith architecture' },
-  { num: 6, text: 'Event-driven systems and messaging' },
- 
+  
+  { num: 6, text: 'CDN' },
+  { num: 7, text: 'Databases' },
+  { num: 8, text: 'Distributed Systems' },
+  { num: 9, text: 'Systems Architectures' },
+  { num: 10, text: 'System Design – Trade-Offs' },
 ]
 
 function TopicCard({ num, text }) {
@@ -86,10 +89,10 @@ export function SdCurriculumSection() {
               lineHeight: '1.2',
             }}
           >
-            What you learn in this{' '}
-            <span style={{ color: '#d12027' }}>System Design</span>{' '}
+            System Design Foundation{' '}
+            <span style={{ color: '#d12027' }}>Requirements Gathering and Analysis</span>{' '}
             {' '}
-            <span style={{ color: '#d12027' }}>Course</span>{' '}
+            <span style={{ color: '#d12027' }}></span>{' '}
             
           </h2>
           <p
@@ -102,7 +105,7 @@ export function SdCurriculumSection() {
           >
             You cover the complete learning path that companies
             <br />
-            expect in real AI and ML roles.
+            expect in real System Design roles.
           </p>
         </div>
 
@@ -115,7 +118,7 @@ export function SdCurriculumSection() {
             marginBottom: '20px',
           }}
         >
-          Core topics include
+          Core Components
         </p>
 
         {/* 2-column grid of topic cards */}
@@ -162,9 +165,9 @@ export function SdCurriculumSection() {
       lineHeight: '1.3',
     }}
   >
-    Built Around Real Systems{' '}
+    What You'll Learn in This{' '}
     <span style={{ color: '#d12027' }}>
-      So You Can Apply What You Learn
+      System Design Course
     </span>
   </h3>
 
@@ -177,53 +180,124 @@ export function SdCurriculumSection() {
       lineHeight: '1.7',
     }}
   >
-    Throughout the course, you work on real system design problems and case studies.
+    Master both High-Level Design (HLD) and Low-Level Design (LLD) concepts through a structured learning roadmap covering scalable architectures, distributed systems, design patterns, and real-world engineering case studies.
   </p>
 
-  {/* Subheading */}
-  <h4
-    style={{
-      marginTop: '20px',
-      marginBottom: '12px',
-      fontSize: '16px',
-      fontWeight: '700',
-      color: '#374151',
-    }}
-  >
-    You design systems like:
-  </h4>
+  
 
   {/* List */}
-  <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-    {[
-      'URL shortener',
-      'Chat applications',
-      'Notification systems',
-      'Scalable backend APIs',
-    ].map((item, index) => (
-      <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        {/* Green check circle */}
-        <div
-          style={{
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            border: '2px solid #22c55e',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#22c55e',
-            fontSize: '12px',
-            fontWeight: 'bold',
-          }}
-        >
-          ✓
-        </div>
+  {/* HLD & LLD List */}
+<div
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: '24px',
+    marginTop: '20px',
+  }}
+  className="hld-lld-grid"
+>
+  {/* HLD */}
+  <div>
+    <h4
+      style={{
+        fontSize: '18px',
+        fontWeight: '800',
+        color: '#d12027',
+        marginBottom: '16px',
+      }}
+    >
+      High-Level Design (HLD)
+    </h4>
 
-        <span style={{ fontSize: '14px', color: '#374151' }}>{item}</span>
-      </div>
-    ))}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      {[
+        'Scalability & Performance',
+        'Load Balancing, Caching & CDNs',
+        'Database Design & Storage Systems',
+        'Distributed Systems & CAP Theorem',
+        'Microservices Architecture and Patterns',
+        'Event-Driven Architecture and Patterns',
+      ].map((item, index) => (
+        <div
+          key={index}
+          style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
+        >
+          <div
+            style={{
+              width: '20px',
+              height: '20px',
+              borderRadius: '50%',
+              border: '2px solid #22c55e',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#22c55e',
+              fontSize: '12px',
+              fontWeight: 'bold',
+            }}
+          >
+            ✓
+          </div>
+
+          <span style={{ fontSize: '14px', color: '#374151' }}>
+            {item}
+          </span>
+        </div>
+      ))}
+    </div>
   </div>
+
+  {/* LLD */}
+  <div>
+    <h4
+      style={{
+        fontSize: '18px',
+        fontWeight: '800',
+        color: '#d12027',
+        marginBottom: '16px',
+      }}
+    >
+      Low-Level Design (LLD)
+    </h4>
+
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      {[
+        'SOLID Principles',
+        'Design Patterns',
+        'Object-Oriented Design',
+        'Class Design & Object Modeling',
+        'Concurrency & Multithreading',
+        'Real-World LLD Case Studies',
+      ].map((item, index) => (
+        <div
+          key={index}
+          style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
+        >
+          <div
+            style={{
+              width: '20px',
+              height: '20px',
+              borderRadius: '50%',
+              border: '2px solid #22c55e',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#22c55e',
+              fontSize: '12px',
+              fontWeight: 'bold',
+            }}
+          >
+            ✓
+          </div>
+
+          <span style={{ fontSize: '14px', color: '#374151' }}>
+            {item}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
 
   {/* Footer text */}
   <p

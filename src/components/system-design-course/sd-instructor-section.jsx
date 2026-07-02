@@ -3,11 +3,11 @@
 import Link from "next/link"
 
 const credentials = [
-  "20+ years teaching engineers.",
-  "Step-by-step teaching focused on clarity",
-  "Strong fundamentals with real-world application",
-  "Focus on how systems work in real scenarios",
-  "Trusted by thousands of learners"
+  "20+ Years of Training Excellence",
+  "25,000+ Engineers & Students Trained Since 2005",
+  "500+ AI & Machine Learning Learners Trained",
+  "Clear, Practical & Interview-Focused Teaching",
+  "Strong Fundamentals with Real-World Applications"
 ]
 
 export function SdInstructorSection() {
@@ -94,15 +94,18 @@ export function SdInstructorSection() {
             {/* Name */}
             <h2
               style={{
-                fontSize: 34,
+                fontSize: 48,
                 fontWeight: 700,
                 color: '#111',
-                marginBottom: 20,
+                marginBottom: 6,
                 lineHeight: 1.1,
               }}
             >
-              Live System Design Classes Led by an Industry-Experienced Instructor
+              Srinivas Dande
             </h2>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Founder & Lead Trainer, Dandes Academy
+            </h3>
 
             {/* Description */}
             <p
@@ -113,10 +116,12 @@ export function SdInstructorSection() {
                 marginBottom: 28,
               }}
             >
-              The program is led by Srinivas Dande, Founder and Lead Instructor at Dandes Academy, widely known as Dande's Course, formerly JLC.
+              With over 20 years of training experience, Srinivas has trained 25,000+ engineers and students since 2005 across Java, Full Stack Development, Microservices, Angular, React, AWS, DevOps, Data Structures & Algorithms, and System Design. In recent years, he has also trained 500+ learners in AI & Machine Learning, helping them transition into modern AI careers through structured, project-based learning.
             </p>
 
-            
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Why Students Learn with Srinivas:
+            </h3>
 
             {/* Credentials list */}
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: 32 }}>
@@ -143,18 +148,6 @@ export function SdInstructorSection() {
                 </li>
               ))}
             </ul>
-
-            <h2
-              style={{
-                fontSize: 14,
-                fontWeight: 700,
-                color: '#111',
-                marginBottom: 20,
-                lineHeight: 1.1,
-              }}
-            >
-              Want to see the teaching style before enrolling? <br/> Watch the free class videos.
-            </h2>
 
             {/* CTAs */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>

@@ -4,33 +4,38 @@ import { useState, useEffect } from 'react'
 const phases = [
   {
     label: 'Phase 1',
-    title: 'Foundations',
+    title: 'Fundamentals',
     items: [
-      'Learn core system design concepts clearly',
-      'Understand scalability basics and system behavior',
-      'Databases, caching, and storage fundamentals',
+      'Arrays & Strings',
+      'Linked Lists',
+      'Stacks & Queues',
+      'Searching & Sorting',
+      'Hashing',
     ],
   },
   {
     label: 'Phase 2',
-    title: 'Patterns',
+    title: 'Core Data Structures',
     items: [
-      'APIs, components, and architecture patterns explained',
-      'Microservices and monolith design approaches compared',
-      'Distributed systems basics and real-world use',
+      'Trees & Binary Search Trees',
+      'Heaps & Priority Queues',
+      'Graphs',
+      'Recursion & Backtracking',
+      'Sliding Window & Two Pointers',
     ],
   },
   {
     label: 'Phase 3',
-    title: 'Advanced',
+    title: 'Advanced Problem Solving',
     items: [
-      'Solve real-world system design case studies',
-      'Learn trade-offs and decision-making in systems',
-      'Practice interview-style system design discussions',
+      'Greedy Algorithms',
+      'Dynamic Programming',
+      'Interview Coding Patterns',
+      'Problem-Solving Strategies',
+      'Coding Interview Preparation',
     ],
   },
-  
-]
+];
 
 function CheckIcon({ active }) {
   const color = active ? '#22c55e' : '#d1d5db'
@@ -80,7 +85,7 @@ export function DsaJourneySection() {
             <span style={{ color: '#d12027' }}></span> 
           </h2>
           <p style={{ fontSize: 15, color: '#555', lineHeight: 1.75, margin: '0 0 24px' }}>
-            You do not jump straight into complex system design problems and feel lost. You start with the fundamentals, understand how systems actually work, and then build up step by step. As you progress, you learn how to think through trade-offs, structure your answers, and explain your decisions clearly. By the end, you are not just learning concepts, you are ready to handle real interview scenarios with confidence.
+            Build your problem-solving skills through a structured roadmap that starts with the fundamentals of Data Structures & Algorithms and progresses to advanced problem-solving techniques commonly tested in coding interviews.
           </p>
           <p style={{ fontSize: 15, color: '#555', lineHeight: 1.75, margin: 0 }}>
             

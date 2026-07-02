@@ -4,32 +4,45 @@ import { useState, useEffect } from 'react'
 const phases = [
   {
     label: 'Phase 1',
-    title: 'Foundations',
+    title: 'High-Level Design (HLD)',
     items: [
-      'Core system design concepts.',
-      'Scalability basics.',
-      'Databases and caching.',
+      'System Design Fundamentals',
+      'Scalability & Performance',
+      'Load Balancing, Caching & CDNs',
+      'Database Design & Storage Systems',
+      'Distributed Systems & CAP Theorem',
+      'Microservices Architecture and Patterns',
+      'Event-Driven Architecture and Patterns',
     ],
   },
   {
     label: 'Phase 2',
-    title: 'Components and patterns',
+    title: 'Low-Level Design (LLD)',
     items: [
-      'APIs and load balancing',
-      'Microservices and architecture patterns',
-      'Distributed systems basics',
+      'SOLID Principles',
+      'Design Patterns',
+      'Object-Oriented Design',
+      'Class Design & Object Modeling',
+      'Concurrency & Multithreading',
+      'Real-World LLD Case Studies',
     ],
   },
   {
     label: 'Phase 3',
-    title: 'Case studies and interviews',
+    title: 'Real-World System Design Problems',
     items: [
-      'Real system design problems.',
-      'Trade-offs and decision-making.',
-      'Interview-style discussions.',
+      'URL Shortener',
+      'Parking Lot System',
+      'BookMyShow',
+      'Amazon / Flipkart',
+      'Swiggy / Zomato',
+      'PhonePe / Google Pay',
+      'Uber / Ola',
+      'WhatsApp',
+      'Netflix / YouTube',
+      'Twitter Feed System',
     ],
   },
-  
 ]
 
 function CheckIcon({ active }) {
@@ -80,7 +93,7 @@ export function SdJourneySection() {
             <span style={{ color: '#d12027' }}>System</span> Thinking
           </h2>
           <p style={{ fontSize: 15, color: '#555', lineHeight: 1.75, margin: '0 0 24px' }}>
-            This program follows a clear progression so you always know what to focus on next.
+            Follow a structured roadmap that takes you from the fundamentals of System Design to solving real-world architecture problems and interview case studies with confidence.
           </p>
           <p style={{ fontSize: 15, color: '#555', lineHeight: 1.75, margin: 0 }}>
             

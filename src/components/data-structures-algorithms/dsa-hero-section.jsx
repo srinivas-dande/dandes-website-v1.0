@@ -4,10 +4,10 @@ import { DsaRegistrationForm } from "./dsa-registration-form"
 
 
 const features = [
-  "Structured learning instead of random practice",
-  "Live classes with LMS recordings",
-  "Step-by-step problem-solving approach",
-  "Interview preparation and guidance",
+  "Structured Learning Roadmap from Fundamentals to Advanced",
+  "Live Instructor-Led Classes with LMS Recordings",
+  "Step-by-Step Problem-Solving Approach",
+  "Coding Interview Preparation & Career Guidance",
 ]
 
 
@@ -54,11 +54,11 @@ export function DsaHeroSection() {
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
-              Learn Data Structures and Algorithms the Right Way
+              Master Data Structures & Algorithms for Coding Interviews
             </h1>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              A structured program to build strong problem-solving skills for coding interviews and real development work.
+              Build strong problem-solving skills through a structured learning roadmap, live instructor-led classes, and extensive coding practice. Learn how to solve coding problems efficiently and confidently crack technical interviews at product and service-based companies.
             </p>
 
             {/* Feature List */}
@@ -77,18 +77,13 @@ export function DsaHeroSection() {
                 onClick={scrollToCourses}
                 className="bg-[var(--dandes-red)] text-white px-6 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
-                Get course details
+                Get DSA Course Details
               </button>
 
             </div>
 
             {/* Industry Tag */}
-            <div className="flex items-start gap-3 text-sm text-gray-600">
-              <Star className="size-5 text-amber-400 fill-amber-400 shrink-0" />
-              <p>
-                5-year LMS access, batch switching, and a 30-day refund policy, as per terms.
-              </p>
-            </div>
+            
           </div>
 
           {/* Right Form */}
