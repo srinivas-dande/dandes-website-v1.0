@@ -145,7 +145,7 @@ export default function RoadmapCtaSection() {
                     color: '#111',
                   }}
                 >
-                  Register for the free webinar
+                  Register For Demo
                 </span>
 
                 <div

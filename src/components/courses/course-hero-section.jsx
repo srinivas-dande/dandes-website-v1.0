@@ -64,7 +64,7 @@ export function CourseHeroSection() {
                 onClick={() => setShowPopup(true)}
                 className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
-                Register for the Free Demo
+                Register For Demo
               </button>
 
             </div>

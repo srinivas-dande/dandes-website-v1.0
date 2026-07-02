@@ -125,7 +125,7 @@ export default function HeroSection() {
               }}
             >
               <button style={{ fontSize: 15, fontWeight: 500, color: '#111', cursor: 'pointer'}}>
-                Register for Free Demo
+                Register For Demo
               </button>
               <button
                 style={{

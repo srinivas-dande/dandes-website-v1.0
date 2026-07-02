@@ -158,7 +158,7 @@ export default function NotReadyCommit() {
                   cursor: 'pointer',
                 }}
               >
-                Register for the free webinar
+                Register For Demo
                 <span
                   style={{
                     display: 'flex',

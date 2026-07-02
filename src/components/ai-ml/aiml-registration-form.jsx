@@ -196,7 +196,7 @@ export function AimlRegistrationForm() {
               onClick={handleNext}
               className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2 cursor-pointer"
             >
-              Register for Free AI/ML Demo
+              Register For AI/ML Demo
               <ArrowRight className="size-4" />
             </button>
           </>
@@ -275,7 +275,7 @@ export function AimlRegistrationForm() {
               onClick={handleNext}
               className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2"
             >
-              Register for Free AI/ML Demo
+              Register For AI/ML Demo
               <ArrowRight className="size-4" />
             </button>
           </>

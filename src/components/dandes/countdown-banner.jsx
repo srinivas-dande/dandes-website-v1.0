@@ -107,7 +107,7 @@ export function CountdownBanner() {
           href = "/webinars-on"
           className="flex items-center gap-3 bg-white text-[#002B41] px-5 py-2.5 rounded text-sm font-medium hover:bg-gray-100 transition-colors cursor-pointer"
         >
-          Register for FREE AI/ML Webinar
+          Register For AI/ML Demo
           <span className="bg-[var(--dandes-red)] rounded-full p-1">
             <ArrowRight className="size-3 text-white" />
           </span>

@@ -242,7 +242,7 @@ export function BlogPostHero({
             fontWeight: 500,
             cursor: 'pointer',
           }}>
-            Join the Free Demo
+            Join the Demo
           </span>
           <button
             onClick={() => setShowPopup(true)}

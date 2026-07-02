@@ -218,7 +218,7 @@ export function BlogListingSection() {
                 marginBottom: 4,
                 
               }}>
-                Free Demo:
+                Register For Demo:
               </p>
               <h4 style={{ 
                 fontSize: 22, 
@@ -253,7 +253,7 @@ export function BlogListingSection() {
                 color: '#1a1a1a',
                 cursor: 'pointer',
               }}>
-                Register Free Demo
+                Register For Demo
                 <span style={{
                   width: 24,
                   height: 24,

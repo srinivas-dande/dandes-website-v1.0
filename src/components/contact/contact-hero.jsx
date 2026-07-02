@@ -170,7 +170,7 @@ export default function ContactHero() {
               cursor: 'pointer',
             }}
           >
-            Register for the free webinar
+            Register For Demo
             <span
               style={{
                 display: 'flex',

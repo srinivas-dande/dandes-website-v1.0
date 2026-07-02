@@ -56,7 +56,7 @@ export function CourseCtaSection() {
             <Link 
               href="/webinars"
               className="flex items-center gap-3 text-gray-800 font-medium hover:text-gray-600 transition-colors">
-              Register for the Free Demo
+              Register For Demo
               <span className="bg-[#d12027] rounded-full p-2">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>

@@ -137,7 +137,7 @@ export default function SrinivasHero() {
                 padding: 0,
               }}
             >
-              Register for Free AI/ML Webinar
+              Register For AI/ML Demo
               <span
                 style={{
                   width: 36,

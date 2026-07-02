@@ -9,7 +9,7 @@ export default function ThankYouSection() {
     },
     {
       icon: "/images/thank-you/webinar.png",
-      title: 'View Upcoming Webinars',
+      title: 'View Upcoming Demo',
       description: 'Register for live sessions with our industry-leading instructors.',
     },
     {
