@@ -4,6 +4,12 @@ import { ChevronDown, Menu, X } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 
+const coursesLinks = [
+  { label: "AI/ML", href: "/ai-machine-learning-course" },
+  { label: "System Design", href: "/system-design-course" },
+  { label: "Data Structure & Algorithm", href: "/data-structures-algorithms" },
+]
+ 
 const resourcesLinks = [
   { label: "Free Class videos", href: "/free-class-videos" },
   
@@ -14,7 +20,7 @@ const resourcesLinks = [
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Srinivas", href: "/srinivas" },
+  { label: "Srinivas Dande", href: "/srinivas-dande" },
   { label: "Contact Us", href: "/contact" },
 ]
 
@@ -24,12 +30,23 @@ export function Header() {
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false)
   const [companyOpen, setCompanyOpen] = useState(false)
   const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false)
+  const [coursesOpen, setCoursesOpen] = useState(false)
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false)
 
+  const coursesRef = useRef(null)
   const resourcesRef = useRef(null)
   const companyRef = useRef(null)
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+
+      if (
+        coursesRef.current &&
+        !coursesRef.current.contains(event.target)
+      ) {
+        setCoursesOpen(false)
+      } 
+
       if (
         resourcesRef.current &&
         !resourcesRef.current.contains(event.target)
@@ -67,9 +84,84 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-12 ml-[280px]">
-          <a href="/courses" className="text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors">
-            Courses
-          </a>
+          <div className="relative" ref={coursesRef}>
+  <button
+    onClick={() => setCoursesOpen(!coursesOpen)}
+    className="flex items-center gap-1 text-[var(--dandes-dark)] font-medium hover:text-[var(--dandes-red)] transition-colors cursor-pointer"
+  >
+    Courses
+    <ChevronDown className="size-4" />
+  </button>
+
+  {coursesOpen && (
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[300px] z-50">
+      <div
+        style={{
+          position: "absolute",
+          top: -8,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: 0,
+          height: 0,
+          borderLeft: "10px solid transparent",
+          borderRight: "10px solid transparent",
+          borderBottom: "10px solid #fff",
+          filter: "drop-shadow(0 -2px 2px rgba(0,0,0,0.05))",
+        }}
+      />
+
+      <div
+        style={{
+          backgroundColor: "#fff",
+          borderRadius: 16,
+          boxShadow: "0 8px 40px rgba(0,0,0,0.12)",
+          padding: "16px",
+          overflow: "hidden",
+        }}
+      >
+        {coursesLinks.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "14px 20px",
+              fontSize: 16,
+              fontWeight: 500,
+              color: "#1a1a1a",
+              textDecoration: "none",
+              borderRadius: 8,
+              transition: "background-color 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor =
+                "rgba(209, 32, 39, 0.05)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = "transparent";
+            }}
+          >
+            {item.label}
+            <svg
+              width={16}
+              height={16}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#d12027"
+              strokeWidth={2.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
           <div className="relative" ref={resourcesRef}>
             <button
               onClick={() => setResourcesOpen(!resourcesOpen)}
@@ -106,7 +198,7 @@ export function Header() {
                   }}
                 >
                   {resourcesLinks.map((item, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={item.href}
                       style={{
@@ -133,7 +225,7 @@ export function Header() {
                       <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="#d12027" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -175,7 +267,7 @@ export function Header() {
                   }}
                 >
                   {companyLinks.map((item, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={item.href}
                       style={{
@@ -202,7 +294,7 @@ export function Header() {
                       <svg width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="#d12027" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                       </svg>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -225,9 +317,29 @@ export function Header() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <nav className="md:hidden absolute top-[90px] left-0 w-full bg-white border-t border-[#CECECE] px-4 py-4 flex flex-col gap-4 shadow-md z-50">
-          <a href="/courses" className="text-[var(--dandes-dark)] font-medium py-2">
-            Courses
-          </a>
+          <div>
+  <button
+    onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)}
+    className="flex items-center justify-between w-full text-[var(--dandes-dark)] font-medium py-2"
+  >
+    Courses
+    <ChevronDown className="size-4" />
+  </button>
+
+  {mobileCoursesOpen && (
+    <div className="pl-4 flex flex-col gap-2 mt-2">
+      {coursesLinks.map((item, index) => (
+        <Link
+          key={index}
+          href={item.href}
+          className="text-sm text-[var(--dandes-dark)] hover:text-[var(--dandes-red)] py-1"
+        >
+          {item.label}
+        </Link>
+      ))}
+    </div>
+  )}
+</div>
           <div>
             <button
               onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
@@ -240,13 +352,13 @@ export function Header() {
             {mobileResourcesOpen && (
               <div className="pl-4 flex flex-col gap-2 mt-2">
                 {resourcesLinks.map((item, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={item.href}
                     className="text-sm text-[var(--dandes-dark)] hover:text-[var(--dandes-red)] py-1"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -263,13 +375,13 @@ export function Header() {
             {mobileCompanyOpen && (
               <div className="pl-4 flex flex-col gap-2 mt-2">
                 {companyLinks.map((item, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={item.href}
                     className="text-sm text-[var(--dandes-dark)] hover:text-[var(--dandes-red)] py-1"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}

@@ -125,7 +125,7 @@ export default function FaqFinalCtaSection() {
                   }}
                 >
                   <span style={{ fontSize: 16, fontWeight: 500, color: '#111' , cursor: 'pointer',}}>
-                    Register for the free webinar
+                    Register For Demo
                   </span>
                   <a
                     href="#"

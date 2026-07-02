@@ -107,7 +107,7 @@ export default function ConnectAndLearn() {
                   marginBottom: 12,
                 }}
               >
-                Start with Webinar
+                Start with Demo
               </h3>
               <p
                 style={{
@@ -134,7 +134,7 @@ export default function ConnectAndLearn() {
                   textDecoration: 'none',
                 }}
               >
-                Start with Webinar
+                Start with Demo
               </Link>
             </div>
 

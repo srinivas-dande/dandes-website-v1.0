@@ -16,7 +16,7 @@ const resourcesLinks = [
  
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Srinivas", href: "/srinivas" },
+  { label: "Srinivas Dande", href: "/srinivas-dande" },
   { label: "Contact Us", href: "/contact" },
 ]
 
