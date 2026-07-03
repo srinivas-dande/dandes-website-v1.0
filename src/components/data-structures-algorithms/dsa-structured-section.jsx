@@ -103,7 +103,7 @@ export function DsaStructuredSection() {
               cursor: 'pointer',
             }}
           >
-            Get DSA Course Details
+            Register For Live Demo
             <svg width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
               <line x1={4} y1={9} x2={14} y2={9} />
               <polyline points="10,5 14,9 10,13" />

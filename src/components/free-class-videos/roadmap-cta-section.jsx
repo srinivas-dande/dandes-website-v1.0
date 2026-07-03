@@ -1,9 +1,19 @@
 "use client"
 import { useState } from "react"
-import Link from "next/link"
 import { PopupFormModal } from "../dandes/popup-form-modal"
 
 export default function RoadmapCtaSection() {
+
+  const scrollToCourses = () => {
+  const courseSection = document.getElementById("free")
+    if (courseSection) {
+      courseSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
 
   const [showPopup, setShowPopup] = useState(false)
 
@@ -101,8 +111,8 @@ export default function RoadmapCtaSection() {
             }}
           >
             {/* Primary button */}
-            <Link
-             href = "/free-class-videos"
+            <button
+             onClick={scrollToCourses}
               style={{
                 backgroundColor: '#c91c2b',
                 color: '#fff',
@@ -115,7 +125,7 @@ export default function RoadmapCtaSection() {
               }}
             >
               Watch Free class videos
-            </Link>
+            </button>
 
             {/* Secondary button with arrow */}
             <div
@@ -145,7 +155,7 @@ export default function RoadmapCtaSection() {
                     color: '#111',
                   }}
                 >
-                  Register For Demo
+                  Register For Live Demo
                 </span>
 
                 <div

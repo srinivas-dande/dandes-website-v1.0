@@ -16,7 +16,8 @@ export function CourseHeroSection() {
   ]
 
   return (
-    <section className="py-9 md:py-14 relative overflow-hidden">
+    <section id="course-hero" className="py-9 md:py-14 relative overflow-hidden">
+      
       <div className="block md:hidden">
     <img
       src="/images/courses/hero-bg-course-mobile.png"
@@ -64,7 +65,7 @@ export function CourseHeroSection() {
                 onClick={() => setShowPopup(true)}
                 className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               >
-                Register For Demo
+                Register For Live Demo
               </button>
 
             </div>

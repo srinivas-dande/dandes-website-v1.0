@@ -24,7 +24,7 @@ export function SdHeroSection() {
   }
 
   return (
-    <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
+    <section id="sd-courses" className="relative min-h-[calc(100vh-140px)] overflow-hidden">
       {/* Full Background Image */}
       <div
         style={{

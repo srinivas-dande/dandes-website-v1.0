@@ -140,7 +140,7 @@ export default function FaqFinalCtaSection() {
       color: '#111',
     }}
   >
-    Register For Demo
+    Register For Live Demo
   </span>
 
   <div

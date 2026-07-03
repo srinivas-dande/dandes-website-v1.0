@@ -1,9 +1,9 @@
 "use client"
 
 const coursesLinks = [
-  { label: "AI/ML", href: "/ai-machine-learning-course" },
-  { label: "System Design", href: "/system-design-course" },
-  { label: "Data Structure & Algorithm", href: "/data-structures-algorithms" },
+  { label: "AI/ML Course", href: "/ai-machine-learning-course" },
+  { label: "System Design Course", href: "/system-design-course" },
+  { label: "DSA Course", href: "/dsa-course" },
 ]
 
 const resourcesLinks = [

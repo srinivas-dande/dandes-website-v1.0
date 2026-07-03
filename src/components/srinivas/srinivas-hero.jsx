@@ -138,7 +138,7 @@ export default function SrinivasHero() {
                 padding: 0,
               }}
             >
-              Register For Demo
+              Register For Live Demo
               <span
                 style={{
                   width: 36,

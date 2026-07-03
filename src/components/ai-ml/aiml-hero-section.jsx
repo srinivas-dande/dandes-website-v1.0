@@ -26,7 +26,7 @@ export function AimlHeroSection() {
   }
 
   return (
-    <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
+    <section id="ai-courses" className="relative min-h-[calc(100vh-140px)] overflow-hidden">
       {/* Full Background Image */}
       <div
         style={{

@@ -141,7 +141,7 @@ export default function ConnectAndLearn() {
     cursor: 'pointer',
   }}
 >
-  Register For Demo
+  Register For Live Demo
 </button>
             </div>
 

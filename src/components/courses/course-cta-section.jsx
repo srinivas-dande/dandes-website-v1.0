@@ -3,11 +3,21 @@
 import {useState} from "react"
 import { ArrowRight } from "lucide-react"
 import { PopupFormModal } from "../dandes/popup-form-modal"
-import Link from "next/link"
 
 export function CourseCtaSection() {
 
   const [showPopup, setShowPopup] = useState(false)
+
+  const scrollToCourseHero = () => {
+  const section = document.getElementById("course-hero")
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+}
 
   return (
     <section className="py-5 md:py-9 px-4 relative">
@@ -43,7 +53,7 @@ export function CourseCtaSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <button
-              onClick={() => setShowPopup(true)} 
+              onClick={scrollToCourseHero}
               className="bg-[#d12027] text-white px-8 py-4 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
               style={{ minWidth: '200px' }}
             >
@@ -53,14 +63,14 @@ export function CourseCtaSection() {
             
 
 
-            <Link 
-              href="/webinars"
+            <button
+              onClick={() => setShowPopup(true)}
               className="flex items-center gap-3 text-gray-800 font-medium hover:text-gray-600 transition-colors">
-              Register For Demo
+              Register For Live Demo
               <span className="bg-[#d12027] rounded-full p-2">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
-            </Link>
+            </button>
           </div>
 
           

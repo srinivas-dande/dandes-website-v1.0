@@ -6,16 +6,20 @@ const leftTopics = [
   { num: 3, text: 'Load Balancer' },
   { num: 4, text: 'API Gateway' },
   { num: 5, text: 'Caching' },
+  { num: 6, text: 'CDN' },
+  { num: 7, text: 'Databases' },
 ]
 
 const rightTopics = [
-  
-  { num: 6, text: 'CDN' },
-  { num: 7, text: 'Databases' },
   { num: 8, text: 'Distributed Systems' },
   { num: 9, text: 'Systems Architectures' },
   { num: 10, text: 'System Design – Trade-Offs' },
+  { num: 11, text: 'SOLID Principles' },
+  { num: 12, text: 'Design Patterns' },
+  { num: 13, text: 'Object-Oriented Design' },
+  { num: 14, text: 'Concurrency & Multithreading' },
 ]
+
 
 function TopicCard({ num, text }) {
   return (

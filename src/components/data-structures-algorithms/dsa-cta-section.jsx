@@ -2,11 +2,21 @@
 
 import { useState } from "react"
 import { ArrowRight, X } from "lucide-react"
-import Link from "next/link"
 import { PopupFormModal } from "../dandes/popup-form-modal"
 
 
 export function DsaCTASection() {
+
+  const scrollToCourses = () => {
+  const courseSection = document.getElementById("dsa-courses")
+    if (courseSection) {
+      courseSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
 
   const [showPopup, setShowPopup] = useState(false)
 
@@ -49,21 +59,21 @@ export function DsaCTASection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <button 
               
-              onClick={() => setShowPopup(true)}
+              onClick={scrollToCourses}
               className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
             >
               Get DSA Course Details
             </button>
 
-            <Link 
-              href="/webinars"              
-              className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors"
+            <button 
+              onClick={() => setShowPopup(true)}              
+              className="flex items-center gap-3 border border-gray-300 bg-white px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors cursor-pointer"
             >
-              Register For Demo
+              Register For Live Demo
               <span className="w-8 h-8 bg-[#d12027] rounded-full flex items-center justify-center">
                 <ArrowRight className="w-4 h-4 text-white" />
               </span>
-            </Link>
+            </button>
 
           </div>
 

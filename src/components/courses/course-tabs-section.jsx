@@ -76,7 +76,7 @@ const coursesData = {
     subtitle: "For Students & Software Engineers Preparing for Coding Interviews",
     description: "Build a strong foundation in Data Structures and Algorithms through structured learning, live coding sessions, and intensive problem-solving practice. Master coding interview techniques and improve your analytical thinking with industry-standard questions.",
     ctaText: "Get DSA Course Details", 
-    url : "/data-structures-algorithms",
+    url : "/dsa-course",
     highlights: [
       "Structured Learning Roadmap",
       "Live Instructor-Led Coding Sessions",

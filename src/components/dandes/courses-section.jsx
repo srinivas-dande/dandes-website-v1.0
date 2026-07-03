@@ -38,7 +38,7 @@ const courses = [
     highlights: ["Core DSA", "Advanced DSA", "Coding Practice", "Problem Solving"],
     highlightColor: "bg-emerald-50 text-emerald-700",
     ctaText: "View DSA course",
-    url: "/data-structures-algorithms",
+    url: "/dsa-course",
   },
 ]
 
@@ -205,7 +205,7 @@ export function CoursesSection() {
             onClick={() => setShowPopup(true)}
             className="inline-flex items-center gap-2 rounded-md bg-[#dc2626] px-6 py-3 font-medium text-white transition-colors hover:bg-[#b91c1c] cursor-pointer"
           >
-            Register For Demo
+            Register For Live Demo
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>

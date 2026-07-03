@@ -1,10 +1,8 @@
 'use client'
-import { useState } from "react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
+import Link from "next/link"
 
 export default function TeachingPreviewSection() {
 
-  const [showPopup, setShowPopup] = useState(false)
 
   const benefits = [
     
@@ -22,7 +20,7 @@ export default function TeachingPreviewSection() {
   ]
 
   return (
-    <section
+    <section id="free"
       style={{
         position: 'relative',
         overflow: 'hidden',
@@ -136,8 +134,8 @@ export default function TeachingPreviewSection() {
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
             {/* Red button */}
-            <button
-              onClick={() => setShowPopup(true)}
+            <Link
+              href="/courses"
 
               style={{
                 backgroundColor: '#d12027',
@@ -151,7 +149,7 @@ export default function TeachingPreviewSection() {
               }}
             >
               Get course details
-            </button>
+            </Link>
 
             
           </div>
@@ -198,10 +196,7 @@ export default function TeachingPreviewSection() {
           }
         }
       `}</style>
-      <PopupFormModal
-        showPopup={showPopup}
-        setShowPopup={setShowPopup}
-      />
+      
     </section>
   )
 }

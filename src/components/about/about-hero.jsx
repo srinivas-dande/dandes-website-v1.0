@@ -103,7 +103,7 @@ export default function AboutHero() {
               cursor: 'pointer',
             }}
           >
-            Register For Demo
+            Register For Live Demo
             <span
               style={{
                 width: 32,
