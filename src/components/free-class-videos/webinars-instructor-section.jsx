@@ -204,7 +204,7 @@ export default function WebinarsInstructorSection() {
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
             <Link
-              href = "/srinivas"
+              href = "/srinivas-dande"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',

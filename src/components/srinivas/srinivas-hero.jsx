@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { PopupFormModal } from "../dandes/popup-form-modal"
+import Link from "next/link"
 
 export default function SrinivasHero() {
 
@@ -103,8 +104,8 @@ export default function SrinivasHero() {
 
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
-            <button
-              onClick={() => setShowPopup(true)}
+            <Link
+              href="/courses"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -120,7 +121,7 @@ export default function SrinivasHero() {
               }}
             >
               Get course details
-            </button>
+            </Link>
 
             <button
               onClick={() => setShowPopup(true)}
@@ -137,7 +138,7 @@ export default function SrinivasHero() {
                 padding: 0,
               }}
             >
-              Register For AI/ML Demo
+              Register For Demo
               <span
                 style={{
                   width: 36,

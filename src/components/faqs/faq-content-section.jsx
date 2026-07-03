@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 const faqData = {
   general: {
@@ -466,7 +467,8 @@ export default function FaqContentSection() {
             >
               {"Can't find the answer you're looking for? Please reach out to our team."}
             </p>
-            <button
+            <Link
+              href="/contact"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',
@@ -482,7 +484,7 @@ export default function FaqContentSection() {
               }}
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

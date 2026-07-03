@@ -1,5 +1,12 @@
 'use client'
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
+
 export default function FaqFinalCtaSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
+
   return (
     <>
       <style jsx>{`
@@ -96,7 +103,7 @@ export default function FaqFinalCtaSection() {
                 }}
               >
                 <a
-                  href="#"
+                  href="/contact"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -115,45 +122,52 @@ export default function FaqFinalCtaSection() {
                 </a>
 
                 <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 12,
-                    backgroundColor: '#fff',
-                    padding: '8px 8px 8px 20px',
-                    borderRadius: 8,
-                  }}
-                >
-                  <span style={{ fontSize: 16, fontWeight: 500, color: '#111' , cursor: 'pointer',}}>
-                    Register For Demo
-                  </span>
-                  <a
-                    href="#"
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: 40,
-                      height: 40,
-                      backgroundColor: '#c53030',
-                      borderRadius: 6,
-                      textDecoration: 'none',
-                    }}
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#fff"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
+  onClick={() => setShowPopup(true)}
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: '#fff',
+    padding: '8px 8px 8px 20px',
+    borderRadius: 8,
+    cursor: 'pointer',
+  }}
+>
+  <span
+    style={{
+      fontSize: 16,
+      fontWeight: 500,
+      color: '#111',
+    }}
+  >
+    Register For Demo
+  </span>
+
+  <div
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      width: 40,
+      height: 40,
+      backgroundColor: '#c53030',
+      borderRadius: 6,
+    }}
+  >
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#fff"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+  </div>
+</div>
               </div>
 
               {/* Disclaimer */}
@@ -171,6 +185,11 @@ export default function FaqFinalCtaSection() {
             </div>
           </div>
         </div>
+        <PopupFormModal
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        />
+
       </section>
     </>
   )

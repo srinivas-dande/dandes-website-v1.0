@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react"
-import { PopupFormModal } from "../dandes/popup-form-modal"  
+import Link from "next/link"
 
 export default function JoinTheJourney() {
 
@@ -39,8 +39,8 @@ export default function JoinTheJourney() {
               <p style={{ fontSize: 18, fontWeight: 500, color: '#1a1a1a' }}>Bangalore, India</p>
             </div>
             
-            <button
-              onClick={() => setShowPopup(true)}
+            <Link
+              href="/courses"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -59,7 +59,7 @@ export default function JoinTheJourney() {
               <svg width={16} height={16} fill="none" stroke="currentColor" strokeWidth={2}>
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
-            </button>
+            </Link>
           </div>
 
           {/* Right Image */}
@@ -85,10 +85,7 @@ export default function JoinTheJourney() {
           </div>
         </div>
       </div>
-      <PopupFormModal
-        showPopup={showPopup}
-        setShowPopup={setShowPopup}
-      />
+      
     </section>
   )
 }

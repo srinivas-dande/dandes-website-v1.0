@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
+import Link from "next/link"
 
 const checkItems = [
   'Strong foundations in Python, data handling, and problem-solving.',
@@ -84,8 +84,8 @@ export function StructuredSection() {
             ))}
           </ul>
 
-          <button
-            onClick={() => setShowPopup(true)}
+          <Link
+            href = "/courses" 
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -105,7 +105,7 @@ export function StructuredSection() {
               <line x1={4} y1={9} x2={14} y2={9} />
               <polyline points="10,5 14,9 10,13" />
             </svg>
-          </button>
+          </Link>
         </div>
 
         {/* Right Image */}
@@ -130,10 +130,7 @@ export function StructuredSection() {
         </div>
 
       </div>
-      <PopupFormModal
-        showPopup={showPopup}
-        setShowPopup={setShowPopup}
-      />
+      
     </section>
   )
 }

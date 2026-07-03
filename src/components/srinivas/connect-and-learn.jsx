@@ -1,7 +1,13 @@
 "use client"
-import Link from "next/link"
+import { useState } from "react"
+import { PopupFormModal } from "../dandes/popup-form-modal"
+
 
 export default function ConnectAndLearn() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
+
   return (
     <section
       style={{
@@ -35,8 +41,8 @@ export default function ConnectAndLearn() {
               lineHeight: 1.7,
             }}
           >
-            If you want to understand the roadmap before enrolling, start with the webinar
-            and see how the program is structured. You can also connect on LinkedIn and
+            If you want to understand the roadmap before enrolling, start with the Demo
+            and see how the Live Classes are conducted. You can also connect on LinkedIn and
             explore YouTube content to learn about learning styles and teaching approaches.
           </p>
         </header>
@@ -121,21 +127,22 @@ export default function ConnectAndLearn() {
                 methodology in an interactive session.
               </p>
 
-              <Link
-                href="/webinars"
-                style={{
-                  display: 'inline-block',
-                  backgroundColor: '#dc2626',
-                  color: '#fff',
-                  padding: '14px 28px',
-                  borderRadius: 8,
-                  fontSize: 15,
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                }}
-              >
-                Start with Demo
-              </Link>
+              <button
+  onClick={() => setShowPopup(true)}
+  style={{
+    display: 'inline-block',
+    backgroundColor: '#dc2626',
+    color: '#fff',
+    padding: '14px 28px',
+    borderRadius: 8,
+    fontSize: 15,
+    fontWeight: 600,
+    border: 'none',
+    cursor: 'pointer',
+  }}
+>
+  Register For Demo
+</button>
             </div>
 
             {/* Large Grid Icon */}
@@ -351,6 +358,12 @@ export default function ConnectAndLearn() {
           }
         }
       `}</style>
+
+      <PopupFormModal
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   )
 }
