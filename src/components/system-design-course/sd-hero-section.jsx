@@ -1,6 +1,6 @@
 "use client"
 import { CheckCircle2, Star } from "lucide-react"
-import { AimlRegistrationForm } from "./sd-registration-form"
+import { SdRegistrationForm } from "./sd-registration-form"
 
 
 const features = [
@@ -88,7 +88,7 @@ export function SdHeroSection() {
 
           {/* Right Form */}
           <div className="w-full lg:w-auto lg:shrink-0 lg:ml-8">
-            <AimlRegistrationForm />
+            <SdRegistrationForm />
           </div>
 
         </div>

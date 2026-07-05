@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
-
+import { AimlPopupFormModal } from "@/components/ai-ml/aiml-popup-form-modal"
 
 const checkItems = [
   'Clear roadmap with milestones, not random topics.',
@@ -112,11 +111,12 @@ export function AimlStructuredSection() {
           </button>
         </div>
 
-        <PopupFormModal
+        <AimlPopupFormModal
           showPopup={showPopup}
           setShowPopup={setShowPopup}
         />
 
+ 
 
         {/* Right Image */}
         <div style={{ flex: 1, minWidth: 320 }}>

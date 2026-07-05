@@ -80,7 +80,13 @@ export function BlogListingSection() {
 
   return (
     <section style={{ backgroundColor: '#fff', padding: '48px 0 80px' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
+      <div
+  style={{
+    maxWidth: 1200,
+    margin: '0 auto',
+    padding: '0 clamp(16px, 4vw, 24px)',
+  }}
+>
         <div
         
           style={{
@@ -95,12 +101,12 @@ export function BlogListingSection() {
           
           {/* Left Sidebar */}
           <aside
-            style={{
-              flex: '1 1 280px',
-              maxWidth: 280,
-              
-            }}
-          >
+  className="blog-sidebar"
+  style={{
+    flex: '1 1 280px',
+    maxWidth: 280,
+  }}
+>
             
             {/* Search - Working */}
             <div style={{
@@ -415,6 +421,8 @@ export function BlogListingSection() {
           </div>
         </div>
       </div>
+      
     </section>
+    
   )
 }

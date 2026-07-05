@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, X } from "lucide-react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
+import { DsaPopupFormModal } from "@/components/data-structures-algorithms/dsa-popup-form-modal"
 
 
 export function DsaCTASection() {
@@ -87,7 +87,7 @@ export function DsaCTASection() {
 
 
       </div>
-        <PopupFormModal
+        <DsaPopupFormModal
           showPopup={showPopup}
           setShowPopup={setShowPopup}
         />

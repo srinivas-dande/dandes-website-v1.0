@@ -647,6 +647,26 @@ export function BlogPostContent() {
         @media (max-width: 400px) {
           .b-tl-grid { grid-template-columns: 1fr; }
         }
+        @media (max-width: 768px) {
+  .blog-layout {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .b-sidebar {
+    order: -1;
+    width: 100%;
+    position: static;
+    margin-bottom: 30px;
+  }
+
+  .b-container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+
       `}</style>
 
       <div className="blog-root">       

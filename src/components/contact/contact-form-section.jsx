@@ -2,10 +2,40 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { isValidPhoneNumber } from "libphonenumber-js";
+
+
+const countries = [
+  { code: "IN", dial: "+91" },
+  { code: "US", dial: "+1" },
+  { code: "CA", dial: "+1" },
+  { code: "GB", dial: "+44" },
+  { code: "AU", dial: "+61" },
+  { code: "AE", dial: "+971" },
+  { code: "SG", dial: "+65" },
+  { code: "DE", dial: "+49" },
+  { code: "FR", dial: "+33" },
+  { code: "NL", dial: "+31" },
+  { code: "IE", dial: "+353" },
+  { code: "NZ", dial: "+64" },
+  { code: "SA", dial: "+966" },
+  { code: "QA", dial: "+974" },
+  { code: "KW", dial: "+965" },
+  { code: "OM", dial: "+968" },
+  { code: "BH", dial: "+973" },
+  { code: "ZA", dial: "+27" },
+  { code: "MY", dial: "+60" },
+  { code: "JP", dial: "+81" },
+];
+
 
 export default function ContactFormSection() {
 
   const router = useRouter()
+
+  const [countryCode, setCountryCode] = useState("+91");
+  const [phoneError, setPhoneError] = useState("");
+  const [errors, setErrors] = useState({});
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -24,11 +54,86 @@ export default function ContactFormSection() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    router.push('/thank-you')
+
+    setErrors({});
+
+const newErrors = {};
+
+if (!formData.fullName.trim()) {
+  newErrors.fullName = "Please enter your name";
+}
+
+if (!formData.email.trim()) {
+  newErrors.email = "Please enter your email";
+}
+
+if (!formData.message.trim()) {
+  newErrors.message = "Please enter your message";
+}
+
+if (Object.keys(newErrors).length > 0) {
+  setErrors(newErrors);
+  return;
+}
+
+
+    setPhoneError("");
+
+     const fullPhone =
+  `${countryCode}${formData.phone}`;
+
+if (!isValidPhoneNumber(fullPhone)) {
+  setPhoneError(
+    "Please enter a valid phone number"
+  );
+  return;
+}
+
+const payload = {
+  fullName: formData.fullName,
+  email: formData.email,
+  phone: fullPhone,
+  inquiryType: formData.inquiryType,
+  message: formData.message,
+  consent: formData.consent,
+};
+
+
+try {
+  const response = await fetch(
+    "/api/contact-messages",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type":
+          "application/json",
+      },
+      body: JSON.stringify(payload),
+    }
+  );
+
+  const data = await response.json();
+
+  if (data.success) {
+    router.push("/thank-you");
+  } else {
+    setErrors({
+  form: data.message,
+});
   }
+} catch (error) {
+  console.error(error);
+  setErrors({
+  form: "Something went wrong. Please try again.",
+});
+}
+
+   
+  }
+
+ 
 
   return (
     <section
@@ -116,6 +221,17 @@ export default function ContactFormSection() {
                     outline: 'none',
                   }}
                 />
+                {errors.fullName && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 12,
+      marginTop: 6,
+    }}
+  >
+    {errors.fullName}
+  </p>
+)}
               </div>
               <div style={{ flex: 1, minWidth: 200 }}>
                 <label
@@ -148,6 +264,17 @@ export default function ContactFormSection() {
                     outline: 'none',
                   }}
                 />
+                {errors.email && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 12,
+      marginTop: 6,
+    }}
+  >
+    {errors.email}
+  </p>
+)}
               </div>
             </div>
 
@@ -173,24 +300,65 @@ export default function ContactFormSection() {
                 >
                   Phone / WhatsApp number
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="+91 00000 00000"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  style={{
-                    width: '100%',
-                    padding: '14px 16px',
-                    fontSize: 14,
-                    border: '1px solid #e5e7eb',
-                    borderRadius: 8,
-                    backgroundColor: '#fff',
-                    color: '#1a1a1a',
-                    outline: 'none',
-                  }}
-                />
+                <div
+  style={{
+    display: "flex",
+    gap: 8,
+  }}
+>
+  <select
+    value={countryCode}
+    onChange={(e) => setCountryCode(e.target.value)}
+    style={{
+      width: 110,
+      padding: "14px 10px",
+      border: "1px solid #e5e7eb",
+      borderRadius: 8,
+      backgroundColor: "#fff",
+    }}
+  >
+    {countries.map((country) => (
+      <option
+        key={country.code}
+        value={country.dial}
+      >
+        {country.code} {country.dial}
+      </option>
+    ))}
+  </select>
+
+  <input
+    type="tel"
+    placeholder="Phone Number"
+    value={formData.phone}
+    onChange={(e) => {
+      setPhoneError("");
+
+      setFormData((prev) => ({
+        ...prev,
+        phone: e.target.value.replace(/\D/g, ""),
+      }));
+    }}
+    style={{
+      flex: 1,
+      padding: "14px 16px",
+      border: "1px solid #e5e7eb",
+      borderRadius: 8,
+    }}
+  />
+</div>
+
+{phoneError && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 12,
+      marginTop: 6,
+    }}
+  >
+    {phoneError}
+  </p>
+)}
               </div>
               <div style={{ flex: 1, minWidth: 200 }}>
                 <label
@@ -225,8 +393,9 @@ export default function ContactFormSection() {
                     }}
                   >
                     <option value="AI/ML Course">AI/ML Course</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="System Design Course">System Design Course</option>
+                    <option value="DSA Cource">DSA Cource</option>
+                    <option value="Corporate Training">Corporate Training</option>
                     <option value="Other">Other</option>
                   </select>
                   <svg
@@ -284,6 +453,17 @@ export default function ContactFormSection() {
                   minHeight: 150,
                 }}
               />
+              {errors.message && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 12,
+      marginTop: 6,
+    }}
+  >
+    {errors.message}
+  </p>
+)}
             </div>
 
             {/* Consent Checkbox */}
@@ -321,6 +501,18 @@ export default function ContactFormSection() {
                 By submitting, you agree to be contacted via WhatsApp, email, or phone.
               </label>
             </div>
+
+            {errors.form && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 14,
+      marginBottom: 16,
+    }}
+  >
+    {errors.form}
+  </p>
+)}
 
             {/* Submit Button */}
             <button

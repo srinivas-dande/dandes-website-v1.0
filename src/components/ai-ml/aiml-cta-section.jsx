@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import { ArrowRight, X } from "lucide-react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
+import { AimlPopupFormModal } from "@/components/ai-ml/aiml-popup-form-modal"
 
-
+ 
 export function AimlCTASection() {
 
   const scrollToCourses = () => {
@@ -86,7 +86,7 @@ export function AimlCTASection() {
 
 
       </div>
-        <PopupFormModal
+        <AimlPopupFormModal
           showPopup={showPopup}
           setShowPopup={setShowPopup}
         />

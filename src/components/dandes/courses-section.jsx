@@ -119,6 +119,8 @@ export function CoursesSection() {
     }
   }, [currentIndex])
 
+  
+
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? courses.length - 1 : prev - 1))
   }

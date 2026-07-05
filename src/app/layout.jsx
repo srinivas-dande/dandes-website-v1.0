@@ -3,6 +3,7 @@ import './globals.css'
 
 const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
+import LeadSourceProvider from "@/components/LeadSourceProvider";
 
 export const metadata = {
   title: 'Dandes Academy - Upskill With Live Classes, Projects & Interview Prep',
@@ -12,8 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body className="font-sans antialiased">
-        {children}
+        <LeadSourceProvider>
+          {children}
+        </LeadSourceProvider>
       </body>
     </html>
   )

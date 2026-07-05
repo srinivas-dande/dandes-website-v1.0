@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
+import { SdPopupFormModal } from "@/components/system-design-course/sd-popup-form-modal"
+
 
 
 const checkItems = [
@@ -108,12 +109,12 @@ export function SdStructuredSection() {
             </svg>
           </button>
         </div>
-
-        <PopupFormModal
+ 
+        <SdPopupFormModal
           showPopup={showPopup}
           setShowPopup={setShowPopup}
         />
-
+ 
 
         {/* Right Image */}
         <div style={{ flex: 1, minWidth: 320 }}>

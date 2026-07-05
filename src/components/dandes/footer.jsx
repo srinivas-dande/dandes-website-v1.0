@@ -1,4 +1,7 @@
 "use client"
+import { useState } from "react";
+
+
 
 const coursesLinks = [
   { label: "AI/ML Course", href: "/ai-machine-learning-course" },
@@ -21,6 +24,60 @@ const companyLinks = [
 ]
 
 export function Footer() {
+
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubscribe = async () => {
+  setMessage("");
+  setError("");
+
+  if (!email.trim()) {
+    setError("Please enter your email.");
+    return;
+  }
+
+  try {
+    setLoading(true);
+
+    const response = await fetch(
+      "/api/email-subscriptions",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/json",
+        },
+        body: JSON.stringify({
+          email,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.success) {
+      setMessage(
+        "Thank you for subscribing!"
+      );
+      setEmail("");
+    } else {
+      setError(data.message);
+    }
+  } catch (error) {
+    console.error(error);
+
+    setError(
+      "Something went wrong. Please try again."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
+
+
   return (
     <footer className="bg-[#002B41] text-white">
       <div className="container mx-auto px-4 py-12">
@@ -44,12 +101,33 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
+                value={email}
+                onChange={(e) =>
+                  setEmail(e.target.value)
+                }
                 className="flex-1 bg-transparent border border-gray-600 rounded px-4 py-2.5 text-white placeholder:text-gray-400 focus:outline-none focus:border-gray-400"
               />
-              <button className="bg-[#d12027] text-white px-6 py-2.5 rounded font-medium hover:bg-[#b81c22] transition-colors">
-                Subscribe
+
+              <button
+                onClick={handleSubscribe}
+                disabled={loading}
+                className="bg-[#d12027] text-white px-6 py-2.5 rounded font-medium hover:bg-[#b81c22] transition-colors"
+              >
+                {loading ? "Subscribing..." : "Subscribe"}
               </button>
             </div>
+
+            {error && (
+  <p className="text-red-400 text-sm mt-2">
+    {error}
+  </p>
+)}
+
+{message && (
+  <p className="text-green-400 text-sm mt-2">
+    {message}
+  </p>
+)}
 
             <p className="text-xs text-gray-400 mb-6">
               By subscribing you agree to our Privacy Policy and consent to receive updates from Dandes Academy

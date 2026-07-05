@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight, X } from "lucide-react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
-
+import { SdPopupFormModal } from "@/components/system-design-course/sd-popup-form-modal"
 
 export function SdCTASection() {
 
@@ -86,7 +85,7 @@ export function SdCTASection() {
 
 
       </div>
-        <PopupFormModal
+        <SdPopupFormModal
           showPopup={showPopup}
           setShowPopup={setShowPopup}
         />

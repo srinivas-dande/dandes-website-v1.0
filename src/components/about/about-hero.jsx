@@ -41,28 +41,29 @@ export default function AboutHero() {
 
       <div style={{ maxWidth: 1000, margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         <h1
-          style={{
-            fontSize: 42,
-            fontWeight: 700,
-            color: '#1a1a1a',
-            lineHeight: 1.2,
-            marginBottom: 28,
-          }}
-        >
-          About Dandes Academy, Practical Training
-          <br />
-          In AI And Machine Learning
-        </h1>
+  style={{
+    fontSize: 'clamp(26px, 6vw, 42px)',
+    fontWeight: 700,
+    color: '#1a1a1a',
+    lineHeight: 1.3,
+    margin: '0 auto 28px',
+    maxWidth: '700px',
+  }}
+>
+  About Dandes Academy, Practical Training In AI And Machine Learning
+</h1>
         
         <p
-          style={{
-            fontSize: 18,
-            color: '#4b5563',
-            lineHeight: 1.7,
-            maxWidth: 900,
-            margin: '0 auto 40px',
-          }}
-        >
+  style={{
+    fontSize: 18,
+    color: '#4b5563',
+    lineHeight: 1.7,
+    maxWidth: 900,
+    margin: '0 auto 40px',
+    textAlign: 'justify',
+    textJustify: 'inter-word',
+  }}
+>
           Dandes Academy is an industry-focused training platform built to help learners master AI and Machine
           Learning with strong fundamentals, hands-on projects, and interview-ready preparation. We run live online
           classes, supported by recordings, doubt support, and a structured learning roadmap that takes you from
@@ -91,7 +92,7 @@ export default function AboutHero() {
           
           <a
             onClick={() => setShowPopup(true)}
-
+            
             style={{
               display: 'inline-flex',
               alignItems: 'center',

@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react"
-import { PopupFormModal } from "../dandes/popup-form-modal"
-
+import { DsaPopupFormModal } from "@/components/data-structures-algorithms/dsa-popup-form-modal"
 
 const checkItems = [
   'Structured roadmap from fundamentals to advanced problem solving',
@@ -9,7 +8,7 @@ const checkItems = [
   'Focus on coding patterns used in real technical interviews',
   'Regular coding practice with guided solutions',
   'Interview-focused preparation with problem-solving strategies',
-  
+   
 ]
 
 export function DsaStructuredSection() {
@@ -111,10 +110,11 @@ export function DsaStructuredSection() {
           </button>
         </div>
 
-        <PopupFormModal
+        <DsaPopupFormModal
           showPopup={showPopup}
           setShowPopup={setShowPopup}
         />
+
 
 
         {/* Right Image */}
