@@ -9,8 +9,28 @@ import FaqSection from '@/components/free-class-videos/faq-section'
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'Webinars | Dandes Academy',
-  description: 'Watch free webinars taught by Srinivas Dande. Learn AI, ML, and engineering concepts with 20+ years of teaching experience.',
+  title: 'Free Class Videos | Python, DSA, System Design | Dandes',
+  description: 'Watch free class videos from Dandes Academy on Python, Pandas, System Design, CAP, PACELC, consistency models, AVL trees, and Red-Black trees.',
+  keywords: [
+  'free coding class videos',
+  'free Python classes',
+  'free Pandas tutorials',
+  'free system design videos',
+  'free DSA videos',
+  'CAP theorem tutorial',
+  'PACELC theorem tutorial',
+  'AVL tree tutorial',
+  'Red-Black tree tutorial',
+  'free machine learning tutorials',
+  'free AI tutorials',
+  'Python programming tutorials',
+  'data structures tutorials',
+  'algorithms tutorials',
+  'coding interview preparation videos',
+  'software engineering tutorials',
+  'Dandes Academy free classes',
+  'Dandes Academy',
+],
 }
 
 export default function WebinarsPage() {

@@ -16,7 +16,7 @@ const courses = [
     highlights: ["Live Instructor-Led Classes", "Structured Roadmap", "Real Industry Projects", "Interview Preparation"],
     highlightColor: "bg-cyan-50 text-cyan-700",
     ctaText: "View AI/ML course",
-    url: "/ai-machine-learning-course",
+    url: "/courses/ai-machine-learning-course",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const courses = [
     highlights: ["High-Level Design", "Low-Level Design", "Scalable Systems", "System Design Problems"],
     highlightColor: "bg-red-50 text-red-600",
     ctaText: "View System Design course",
-    url: "/system-design-course",
+    url: "/courses/system-design-course",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const courses = [
     highlights: ["Core DSA", "Advanced DSA", "Coding Practice", "Problem Solving"],
     highlightColor: "bg-emerald-50 text-emerald-700",
     ctaText: "View DSA course",
-    url: "/dsa-course",
+    url: "/courses/dsa-course",
   },
 ]
 

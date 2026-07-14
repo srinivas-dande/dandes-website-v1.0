@@ -198,7 +198,7 @@ export default function LearnWithSrinivas() {
           {/* CTAs */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
             <Link
-              href="/about"
+              href="/about-us"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',

@@ -387,7 +387,7 @@ if (!isValidPhoneNumber(fullPhone)) {
                 >
                   <option value="">--- Select ---</option>
                   <option value="Working professional">Working Professional</option>
-                  <option value="Student">College Student</option>
+                  <option value="College Student">College Student</option>
                   <option value="Job seeker">Job Seeker</option>
                   <option value="Freelancer">Freelancer</option>
                   <option value="Entrepreneur">Entrepreneur / Business Owner</option>

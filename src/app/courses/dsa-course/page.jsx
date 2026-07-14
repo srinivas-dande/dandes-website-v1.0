@@ -14,9 +14,29 @@ import { DsaCTASection } from "@/components/data-structures-algorithms/dsa-cta-s
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI and ML Training Program | Dandes Academy',
-  description: 'Learn the complete AI and ML path with live instructor-led classes, structured practice, and interview preparation.',
-}
+  title: 'DSA Course: Data Structures & Algorithms | Dandes Academy',
+  description: 'Build DSA problem-solving skills with arrays, strings, hashing, stacks, queues, trees, graphs, recursion, DP, and guided coding interview practice.',
+  keywords: [
+  'DSA course',
+  'data structures and algorithms course',
+  'DSA course online',
+  'coding interview preparation course',
+  'data structures training',
+  'algorithms course',
+  'DSA for software engineers',
+  'coding interview practice',
+  'live DSA classes',
+  'DSA with Java',
+  'DSA with Python',
+  'problem solving course',
+  'competitive programming course',
+  'technical interview preparation',
+  'software engineer interview preparation',
+  'coding skills development',
+  'online DSA training',
+  'Dandes Academy',
+],
+};
 
 export default function SDPage() {
   return (

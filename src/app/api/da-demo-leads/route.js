@@ -2,6 +2,12 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { isValidPhoneNumber } from "libphonenumber-js";
 
+const WORKING_WEBHOOK =
+  "https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTY5MDYzMDA0MzY1MjY0NTUzZDUxMzAi_pc";
+
+const STUDENT_WEBHOOK =
+  "https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTY5MDYzMDA0MzY1MjY0NTUzZDUxMzEi_pc";
+
 export async function POST(req) {
   try {
     const body = await req.json();
@@ -50,6 +56,7 @@ export async function POST(req) {
       ? forwarded.split(",")[0]
       : "Unknown";
 
+    
     const lead = await prisma.daDemoLead.create({
       data: {
         full_name: fullName,
@@ -77,6 +84,75 @@ export async function POST(req) {
         lead_status: "New",
       },
     });
+
+    
+    try {
+      let webhookUrl = "";
+      let webhookPayload = {};
+
+      const studentCandidateTypes = [
+        "College Student",
+        "Job Seeker",
+      ];
+
+      if (studentCandidateTypes.includes(candidateType)) {
+        
+        webhookUrl = STUDENT_WEBHOOK;
+
+        webhookPayload = {
+          fullName,
+          email,
+          phone,
+          candidateType,
+          qualification,
+          yearOfPassout,
+          careerGoal,
+          preferredBatch,
+          city,
+          leadSource,
+          leadSubSource,
+          pageUrl,
+          courseInterested,
+        };
+      } else {
+        
+        webhookUrl = WORKING_WEBHOOK;
+
+        webhookPayload = {
+          fullName,
+          email,
+          phone,
+          candidateType,
+          currentJobRole,
+          experienceRange,
+          careerGoal,
+          preferredBatch,
+          city,
+          leadSource,
+          leadSubSource,
+          pageUrl,
+          courseInterested,
+        };
+      }
+
+      const webhookResponse = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(webhookPayload),
+      });
+
+      if (!webhookResponse.ok) {
+        console.error(
+          "Webhook failed:",
+          webhookResponse.status,
+          await webhookResponse.text()
+        );
+      }
+    } catch (webhookError) {
+      console.error("Webhook Error:", webhookError);
+    }
 
     return NextResponse.json({
       success: true,

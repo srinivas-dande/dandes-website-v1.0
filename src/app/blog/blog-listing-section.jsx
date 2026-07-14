@@ -187,7 +187,7 @@ export function BlogListingSection() {
                 {topPosts.map((post, i) => (
                   <Link
   key={i}
-  href={`/blogs/${post.slug}`}
+  href={`/blog/${post.slug}`}
   style={{
     display: 'flex',
     justifyContent: 'space-between',
@@ -377,7 +377,7 @@ export function BlogListingSection() {
 
                   {/* Read More */}
                   <a
-                    href={`/blogs/${post.slug}`}
+                    href={`/blog/${post.slug}`}
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',

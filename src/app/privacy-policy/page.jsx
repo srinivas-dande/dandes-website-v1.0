@@ -6,7 +6,25 @@ import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
   title: 'Privacy Policy | Dandes Academy',
-  description: 'Privacy Policy for Dandes Academy. Learn what data we collect, why we collect it, and how we use it.',
+  description: 'Read Dandes Academy’s Privacy Policy to understand how personal information is collected, used, protected, and managed for courses, webinars, and support.',
+  keywords: [
+  'Dandes Academy privacy policy',
+  'online course privacy policy',
+  'student data privacy',
+  'personal information policy',
+  'website privacy practices',
+  'data protection policy',
+  'user privacy policy',
+  'information security policy',
+  'online learning privacy',
+  'cookie policy',
+  'data collection practices',
+  'student information security',
+  'website data protection',
+  'privacy compliance',
+  'Dandes Academy data policy',
+  'Dandes Academy',
+],
 }
 
 export default function PrivacyPolicyPage() {

@@ -7,9 +7,29 @@ import ExpectedOutcomesSection from '@/components/testimonials/expected-outcomes
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'Testimonials | Dandes Academy',
-  description: 'Real outcomes from Dandes Academy learners. Reviews, role transitions, and salary growth from students who built AI/ML skills with hands-on projects.',
-}
+  title: 'Student Reviews & Success Stories | Dandes Academy',
+  description: 'Read student reviews and success stories from Dandes Academy learners who improved tech skills, prepared for interviews, and grew their careers.',
+  keywords: [
+  'Dandes Academy reviews',
+  'Dandes Academy testimonials',
+  'student reviews',
+  'online course success stories',
+  'AI ML course reviews',
+  'system design course reviews',
+  'DSA course reviews',
+  'learner success stories',
+  'student testimonials',
+  'AI course success stories',
+  'software engineering course reviews',
+  'placement success stories',
+  'career transformation stories',
+  'online learning reviews',
+  'tech course testimonials',
+  'coding course reviews',
+  'Dandes Academy student feedback',
+  'Dandes Academy',
+],
+};
 
 export default function TestimonialsPage() {
   return (

@@ -5,7 +5,11 @@ import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
   title: 'Thank You | Dandes Academy',
-  description: 'Thank you for registering with Dandes Academy. We have received your details and will contact you shortly.',
+  description: 'Thanks for contacting Dandes Academy. We’ve received your details and will reach out soon with course information and next steps.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function ThankYouPage() {

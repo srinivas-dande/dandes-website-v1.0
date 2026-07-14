@@ -11,9 +11,28 @@ import ConnectAndLearn from '@/components/srinivas/connect-and-learn'
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'Srinivas Dande - Founder & Lead Instructor | Dandes Academy',
-  description: 'Meet Srinivas Dande, Founder and Lead Instructor at Dandes Academy with 20+ years of experience in AI, ML, and Data Science training.',
-}
+  title: 'Srinivas Dande | Founder of Dandes Academy',
+  description: 'Meet Srinivas Dande, founder and lead trainer of Dandes Academy, with 20+ years of experience in software development, System Design, DSA, and AI/ML.',
+  keywords: [
+  'Srinivas Dande',
+  'Dandes Academy founder',
+  'system design trainer',
+  'DSA trainer',
+  'AI ML trainer',
+  'software engineering mentor',
+  'coding interview coach',
+  'technology instructor',
+  'AI and machine learning mentor',
+  'system design mentor',
+  'technical interview coach',
+  'software architecture trainer',
+  'programming instructor',
+  'software engineering educator',
+  'technology career mentor',
+  'online coding trainer',
+  'Dandes Academy',
+],
+};
 
 export default function SrinivasPage() {
   return (

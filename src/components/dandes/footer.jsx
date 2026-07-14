@@ -4,23 +4,23 @@ import { useState } from "react";
 
 
 const coursesLinks = [
-  { label: "AI/ML Course", href: "/ai-machine-learning-course" },
-  { label: "System Design Course", href: "/system-design-course" },
-  { label: "DSA Course", href: "/dsa-course" },
+  { label: "AI/ML Course", href: "/courses/ai-machine-learning-course" },
+  { label: "System Design Course", href: "/courses/system-design-course" },
+  { label: "DSA Course", href: "/courses/dsa-course" },
 ]
 
 const resourcesLinks = [
   { label: "Free Class videos", href: "/free-class-videos" },
  
-  { label: "Blogs", href: "/blogs" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Blogs", href: "/blog" },
+  { label: "Testimonials", href: "/resources/testimonials" },
   { label: "FAQs", href: "/faqs" },
 ]
  
 const companyLinks = [
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "/about-us" },
   { label: "Srinivas Dande", href: "/srinivas-dande" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact Us", href: "/contact-us" },
 ]
 
 export function Footer() {
@@ -233,7 +233,7 @@ export function Footer() {
             <a href="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors underline">
               Privacy policy
             </a>
-            <a href="/terms-conditions" className="text-gray-400 text-sm hover:text-white transition-colors underline">
+            <a href="/terms-and-conditions" className="text-gray-400 text-sm hover:text-white transition-colors underline">
               Terms of service
             </a>
             

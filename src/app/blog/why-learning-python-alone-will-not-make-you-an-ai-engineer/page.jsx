@@ -1,7 +1,7 @@
 import { CountdownBanner } from "@/components/dandes/countdown-banner"
 import { Header } from "@/components/dandes/header"
-import { BlogHeroSection } from "@/app/blogs/blog-hero-section"
-import { BlogListingSection } from "@/app/blogs/blog-listing-section"
+import { BlogPostHero } from "@/app/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer/blog-post-hero"
+import { BlogPostContent } from "@/app/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer/blog-post-content"
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
@@ -14,8 +14,8 @@ export default function BlogPage() {
     <main style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
         <CountdownBanner />
         <Header />
-        <BlogHeroSection />
-        <BlogListingSection/>
+        <BlogPostHero />
+        <BlogPostContent />
         <Footer />
     </main>
   )

@@ -1,7 +1,7 @@
 import { CountdownBanner } from "@/components/dandes/countdown-banner"
 import { Header } from "@/components/dandes/header"
-import { BlogPostHero } from "@/app/blogs/will-ai-replace-software-engineers-the-reality-behind-the-headlines/blog-post-hero"
-import { BlogPostContent } from "@/app/blogs/will-ai-replace-software-engineers-the-reality-behind-the-headlines/blog-post-content"
+import { BlogPostHero } from "@/app/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it/blog-post-hero"
+import { BlogPostContent } from "@/app/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it/blog-post-content"
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {

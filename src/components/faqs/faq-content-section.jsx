@@ -468,7 +468,7 @@ export default function FaqContentSection() {
               {"Can't find the answer you're looking for? Please reach out to our team."}
             </p>
             <Link
-              href="/contact"
+              href="/contact-us"
               style={{
                 backgroundColor: '#d12027',
                 color: '#fff',

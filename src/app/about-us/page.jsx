@@ -1,4 +1,3 @@
-'use client'
 import { CountdownBanner } from "@/components/dandes/countdown-banner"
 import { Header } from "@/components/dandes/header"
 import AboutHero from '@/components/about/about-hero'
@@ -11,6 +10,32 @@ import { StructuredSection } from '@/components/about/structured-section'
 
 import { InstructorSection } from "@/components/dandes/instructor-section"
 import { Footer } from "@/components/dandes/footer"
+
+
+export const metadata = {
+  title: "About Dandes Academy | Mission, Vision & Mentors",
+  description: "Learn about Dandes Academy’s mission, founder-led teaching, and commitment to practical AI/ML, System Design, and DSA training for professionals.",
+  keywords: [
+  'about Dandes Academy',
+  'online technology training academy',
+  'AI ML training institute',
+  'system design training academy',
+  'DSA training institute',
+  'software engineering mentors',
+  'live online tech education',
+  'AI and machine learning institute',
+  'online software engineering academy',
+  'technology upskilling platform',
+  'coding education platform',
+  'career-focused tech training',
+  'professional software development training',
+  'live online coding academy',
+  'industry expert mentors',
+  'technology learning platform',
+  'Dandes Academy',
+],
+};
+
 
 export default function AboutPage() {
   return (

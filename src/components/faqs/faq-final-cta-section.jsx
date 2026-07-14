@@ -103,7 +103,7 @@ export default function FaqFinalCtaSection() {
                 }}
               >
                 <a
-                  href="/contact"
+                  href="/contact-us"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',

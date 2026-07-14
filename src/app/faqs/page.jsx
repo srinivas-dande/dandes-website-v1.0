@@ -7,9 +7,28 @@ import FaqFinalCtaSection from '@/components/faqs/faq-final-cta-section'
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'FAQs | Dandes Academy',
-  description: 'Frequently asked questions about Dandes Academy courses, learning format, fees, payment options, and career support.',
-}
+  title: 'FAQs | Dandes Academy Courses, Batches & Support',
+  description: 'Get answers about Dandes Academy courses, live classes, LMS recordings, projects, fees, batches, placement assistance, refunds, and learner support.',
+  keywords: [
+  'Dandes Academy FAQs',
+  'online course FAQs',
+  'AI ML course fees',
+  'system design course fees',
+  'DSA course fees',
+  'live class schedule',
+  'LMS recordings',
+  'placement assistance',
+  'course refund policy',
+  'AI ML course duration',
+  'system design course duration',
+  'DSA course duration',
+  'online learning platform',
+  'course certification',
+  'career support',
+  'technical mentorship',
+  'Dandes Academy',
+],
+};
 
 export default function FaqsPage() {
   return (

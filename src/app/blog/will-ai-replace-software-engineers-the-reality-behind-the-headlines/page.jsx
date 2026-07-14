@@ -1,7 +1,7 @@
 import { CountdownBanner } from "@/components/dandes/countdown-banner"
 import { Header } from "@/components/dandes/header"
-import { BlogPostHero } from "@/app/blogs/from-java-developer-to-ai-engineer/blog-post-hero"
-import { BlogPostContent } from "@/app/blogs/from-java-developer-to-ai-engineer/blog-post-content"
+import { BlogPostHero } from "@/app/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines/blog-post-hero"
+import { BlogPostContent } from "@/app/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines/blog-post-content"
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
@@ -20,4 +20,3 @@ export default function BlogPage() {
     </main>
   )
 }
-

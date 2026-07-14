@@ -14,9 +14,29 @@ import { SdCTASection } from "@/components/system-design-course/sd-cta-section"
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI and ML Training Program | Dandes Academy',
-  description: 'Learn the complete AI and ML path with live instructor-led classes, structured practice, and interview preparation.',
-}
+  title: 'System Design Course (HLD/LLD) | Dandes Academy',
+  description: 'Learn HLD, LLD, CAP/PACELC, caching, databases, messaging, APIs, scalability, and real-world design cases with live online training.',
+  keywords: [
+  'system design course',
+  'system design course online',
+  'HLD and LLD course',
+  'system design interview preparation',
+  'high level design course',
+  'low level design course',
+  'software architecture course',
+  'scalable system design training',
+  'system design for software engineers',
+  'distributed systems course',
+  'microservices architecture course',
+  'backend system design',
+  'software design interview course',
+  'advanced system design',
+  'live system design classes',
+  'system design certification',
+  'software engineering design course',
+  'Dandes Academy',
+],
+};
 
 export default function SDPage() {
   return (

@@ -11,7 +11,7 @@ const coursesData = {
     subtitle: "For Working Professionals And Students",
     description: "Build a strong foundation in AI & Machine Learning through live instructor-led classes, hands-on projects, and industry-relevant tools. Follow a structured roadmap from Python and Machine Learning to Deep Learning, Generative AI, Agentic AI, and MLOps, while building a portfolio that prepares you for AI careers.",
     ctaText: "Get AI and ML course details",
-    url : "/ai-machine-learning-course",
+    url : "/courses/ai-machine-learning-course",
     highlights: [
       "12-Month Structured Learning Roadmap",
       "Live Instructor-Led Classes with Recordings",
@@ -43,7 +43,7 @@ const coursesData = {
     subtitle: "For Software Engineers & Experienced Developers",
     description: "Master the concepts and practical skills required to design scalable, reliable, and high-performance software systems. Learn High-Level Design (HLD), Low-Level Design (LLD), microservices, distributed systems, and architecture patterns through live classes, case studies, and real-world design exercises.",
     ctaText: "Get System Design Course Details",
-    url : "/system-design-course",
+    url : "/courses/system-design-course",
     highlights: [
       "Structured Roadmap from Fundamentals to Advanced",
       "Live Instructor-Led Classes with Recordings",
@@ -76,7 +76,7 @@ const coursesData = {
     subtitle: "For Students & Software Engineers Preparing for Coding Interviews",
     description: "Build a strong foundation in Data Structures and Algorithms through structured learning, live coding sessions, and intensive problem-solving practice. Master coding interview techniques and improve your analytical thinking with industry-standard questions.",
     ctaText: "Get DSA Course Details", 
-    url : "/dsa-course",
+    url : "/courses/dsa-course",
     highlights: [
       "Structured Learning Roadmap",
       "Live Instructor-Led Coding Sessions",
