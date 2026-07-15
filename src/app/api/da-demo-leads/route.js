@@ -62,6 +62,15 @@ export async function POST(req) {
       : "Unknown";
 
     
+      console.log("DATABASE_URL:", process.env.DATABASE_URL?.replace(/\/\/.*@/, "//****:****@"));
+
+const result = await prisma.$queryRawUnsafe(`
+  SELECT current_database() AS database,
+         current_schema() AS schema;
+`);
+
+console.log(result);
+
     const lead = await prisma.daDemoLead.create({
       data: {
         full_name: fullName,
