@@ -91,7 +91,7 @@ export async function POST(req) {
       let webhookPayload = {};
 
       const studentCandidateTypes = [
-        "College Student",
+        "Student",
         "Job Seeker",
       ];
 
