@@ -10,6 +10,11 @@ const STUDENT_WEBHOOK =
 
 export async function POST(req) {
   try {
+
+    console.log(
+      "DATABASE_URL:",
+      process.env.DATABASE_URL?.replace(/\/\/.*@/, "//****:****@")
+    );
     const body = await req.json();
 
     const {
