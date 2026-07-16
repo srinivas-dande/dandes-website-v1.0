@@ -2,6 +2,8 @@
 
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
+import { ArrowRight } from "lucide-react"
+
 import Link from "next/link"
 
 const coursesLinks = [
@@ -300,6 +302,19 @@ export function Header() {
               </div>
             )}
           </div>
+
+          <Link
+          href="https://lms.dandesacademy.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 bg-white text-[#002B41] px-5 py-2.5 rounded text-sm font-medium hover:bg-gray-100 transition-colors cursor-pointer"
+        >
+          LMS Login
+          <span className="bg-[var(--dandes-red)] rounded-full p-1">
+            <ArrowRight className="size-3 text-white" />
+          </span>
+        </Link>
+
         </nav>
 
 
@@ -386,6 +401,18 @@ export function Header() {
               </div>
             )}
           </div>
+
+          <Link
+          href="https://lms.dandesacademy.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 bg-white text-[#002B41] px-5 py-2.5 rounded text-sm font-medium hover:bg-gray-100 transition-colors cursor-pointer"
+        >
+          LMS Login
+          <span className="bg-[var(--dandes-red)] rounded-full p-1">
+            <ArrowRight className="size-3 text-white" />
+          </span>
+        </Link>
 
         </nav>
       )}

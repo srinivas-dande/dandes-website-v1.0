@@ -41,7 +41,7 @@ export default function ContactFormSection() {
     fullName: '',
     email: '',
     phone: '',
-    inquiryType: 'AI/ML Course',
+    inquiryType: '',
     message: '',
     consent: false,
   })
@@ -56,13 +56,16 @@ export default function ContactFormSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+  
     setErrors({});
 
 const newErrors = {};
 
 if (!formData.fullName.trim()) {
   newErrors.fullName = "Please enter your name";
+} else if (!/^[A-Za-z ]+$/.test(formData.fullName.trim())) {
+  newErrors.fullName =
+    "Full name can contain only alphabets and spaces";
 }
 
 if (!formData.email.trim()) {
@@ -71,6 +74,14 @@ if (!formData.email.trim()) {
 
 if (!formData.message.trim()) {
   newErrors.message = "Please enter your message";
+}
+
+if (!formData.inquiryType) {
+  newErrors.inquiryType = "Please select an inquiry type";
+}
+
+if (!formData.consent) {
+  newErrors.consent = "Please accept the terms to continue";
 }
 
 if (Object.keys(newErrors).length > 0) {
@@ -209,7 +220,19 @@ try {
                   name="fullName"
                   placeholder="Name"
                   value={formData.fullName}
-                  onChange={handleChange}
+                  onChange={(e) => {
+  const value = e.target.value.replace(/[^A-Za-z ]/g, "");
+
+  setFormData((prev) => ({
+    ...prev,
+    fullName: value,
+  }));
+
+  setErrors((prev) => ({
+    ...prev,
+    fullName: "",
+  }));
+}}
                   style={{
                     width: '100%',
                     padding: '14px 16px',
@@ -392,9 +415,12 @@ try {
                       cursor: 'pointer',
                     }}
                   >
+                    <option value="" disabled>
+  Select Type
+</option>
                     <option value="AI/ML Course">AI/ML Course</option>
                     <option value="System Design Course">System Design Course</option>
-                    <option value="DSA Cource">DSA Course</option>
+                    <option value="DSA Course">DSA Course</option>
                     <option value="Corporate Training">Corporate Training</option>
                     <option value="Other">Other</option>
                   </select>
@@ -416,6 +442,17 @@ try {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </div>
+                {errors.inquiryType && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 12,
+      marginTop: 6,
+    }}
+  >
+    {errors.inquiryType}
+  </p>
+)}
               </div>
             </div>
 
@@ -501,6 +538,19 @@ try {
                 By submitting, you agree to be contacted via WhatsApp, email, or phone.
               </label>
             </div>
+            {errors.consent && (
+  <p
+    style={{
+      color: "#ef4444",
+      fontSize: 12,
+      marginTop: -20,
+      marginBottom: 20,
+      marginLeft: 32,
+    }}
+  >
+    {errors.consent}
+  </p>
+)}
 
             {errors.form && (
   <p

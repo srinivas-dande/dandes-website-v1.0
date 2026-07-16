@@ -60,7 +60,10 @@ export function DsaRegistrationForm() {
     const newErrors = {}
 
 if (!formData.fullName.trim()) {
-  newErrors.fullName = "Please enter your name"
+  newErrors.fullName = "Please enter your name";
+} else if (!/^[A-Za-z ]+$/.test(formData.fullName.trim())) {
+  newErrors.fullName =
+    "Full name can contain only alphabets and spaces";
 }
 
 if (!formData.email.trim()) {
@@ -126,7 +129,9 @@ if (!formData.batch) {
 }
 
 if (!formData.city.trim()) {
-  newErrors.city = "Please enter your city"
+  newErrors.city = "Please enter your city";
+} else if (!/^[A-Za-z ]+$/.test(formData.city.trim())) {
+  newErrors.city = "City can contain only alphabets and spaces";
 }
 
 if (Object.keys(newErrors).length > 0) {
@@ -261,7 +266,18 @@ if (!isValidPhoneNumber(fullPhone)) {
                 type="text"
                 placeholder="Enter your full name"
                 value={formData.fullName}
-                onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                onChange={(e) => {
+  const value = e.target.value.replace(/[^A-Za-z ]/g, "");
+  setFormData({
+    ...formData,
+    fullName: value, 
+  });
+
+  setErrors((prev) => ({
+    ...prev,
+    fullName: "",
+  }));
+}}
                 className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm placeholder:text-gray-400 focus:outline-none focus:border-[var(--dandes-red)] focus:ring-1 focus:ring-[var(--dandes-red)]"
               />
               {errors.fullName && (
@@ -643,15 +659,17 @@ if (!isValidPhoneNumber(fullPhone)) {
                 placeholder="Enter your current City"
                 value={formData.city}
                 onChange={(e) => {
+  const value = e.target.value.replace(/[^A-Za-z ]/g, "");
+
   setFormData({
     ...formData,
-    city: e.target.value,
-  })
+    city: value,
+  });
 
   setErrors((prev) => ({
     ...prev,
     city: "",
-  }))
+  }));
 }}
                 className="w-full border border-gray-200 rounded px-3 py-2.5 text-sm placeholder:text-gray-400 focus:outline-none focus:border-[var(--dandes-red)] focus:ring-1 focus:ring-[var(--dandes-red)]"
               />
