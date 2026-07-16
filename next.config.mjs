@@ -3,6 +3,46 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
 
-export default nextConfig
+  async redirects() {
+    return [
+      {
+        source: "/testimonials",
+        destination: "/resources/testimonials",
+        permanent: true,
+      },
+      {
+        source: "/terms",
+        destination: "/terms-and-conditions",
+        permanent: true,
+      },
+      {
+        source: "/privacy",
+        destination: "/privacy-policy",
+        permanent: true,
+      },
+      {
+        source: "/webinar",
+        destination: "/courses/ai-machine-learning-course",
+        permanent: true,
+      },
+      {
+        source: "/webinars/software-engineers-switch-to-ai-career",
+        destination: "/courses/ai-machine-learning-course",
+        permanent: true,
+      },
+      {
+        source: "/webinars/how-to-become-an-ai-engineer-or-ml-engineer",
+        destination: "/courses/ai-machine-learning-course",
+        permanent: true,
+      },
+      {
+        source: "/faqs",
+        destination: "/faq",
+        permanent: true,
+      },
+    ];
+  },
+};
+
+export default nextConfig;
