@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from "next/link";
 import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 export function BlogPostContent() {
@@ -13,6 +14,29 @@ export function BlogPostContent() {
   { bg: '#FEF3C7', color: '#D97706' }, // Orange
   { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
   { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
+const relatedArticles = [
+  {
+    title: "From Java Developer to AI Engineer",
+    href: "/blog/from-java-developer-to-ai-engineer",
+  },
+  {
+    title: "Why Learning Python Alone Will Not Make You an AI Engineer",
+    href: "/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer",
+  },
+  {
+    title: "AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer",
+    href: "/blog/ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer",
+  },
+  {
+    title: "Will AI Replace Software Engineers? The Reality Behind the Headlines",
+    href: "/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines",
+  },
+  {
+    title: "Why Most AI Learning Journeys Fail And How to Avoid It",
+    href: "/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it",
+  },
 ];
 
   return (
@@ -1117,13 +1141,20 @@ export function BlogPostContent() {
 
             {/* INTERNAL LINKS */}
             <div className="b3-internal-links">
-              <h4>Continue Reading</h4>
-              <div className="b3-il-grid">
-                {['Will AI Replace Software Engineers?', 'Java Developer to AI Engineer', 'AI Engineer Roadmap', 'RAG Explained for Engineers', 'MCP Explained', 'AI Engineer vs Data Scientist'].map(link => (
-                  <a key={link} href="#" className="b3-il-link">{link}</a>
-                ))}
-              </div>
-            </div>
+  <h4>Related AI Career Articles</h4>
+
+  <div className="b3-il-grid">
+    {relatedArticles.map((article) => (
+      <Link
+        key={article.href}
+        href={article.href}
+        className="b3-il-link"
+      >
+        {article.title}
+      </Link>
+    ))}
+  </div>
+</div>
 
             {/* FAQ */}
             <hr className="b3-divider" id="faq" />

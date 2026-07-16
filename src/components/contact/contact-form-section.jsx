@@ -394,7 +394,7 @@ try {
                   >
                     <option value="AI/ML Course">AI/ML Course</option>
                     <option value="System Design Course">System Design Course</option>
-                    <option value="DSA Cource">DSA Cource</option>
+                    <option value="DSA Cource">DSA Course</option>
                     <option value="Corporate Training">Corporate Training</option>
                     <option value="Other">Other</option>
                   </select>
@@ -633,15 +633,19 @@ try {
                   >
                     WhatsApp
                   </p>
-                  <p
-                    style={{
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: '#1a1a1a',
-                    }}
-                  >
-                    +91 7090366699
-                  </p>
+                  <a
+  href="https://wa.me/917090366699"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    fontSize: 15,
+    fontWeight: 600,
+    color: "#1a1a1a",
+    textDecoration: "none",
+  }}
+>
+  +91 7090366699
+</a>
                 </div>
               </div>
 
@@ -681,15 +685,17 @@ try {
                   >
                     Email
                   </p>
-                  <p
-                    style={{
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: '#1a1a1a',
-                    }}
-                  >
-                    hello@dandesacademy.com
-                  </p>
+                  <a
+  href="mailto:hello@dandesacademy.com"
+  style={{
+    fontSize: 15,
+    fontWeight: 600,
+    color: "#1a1a1a",
+    textDecoration: "none",
+  }}
+>
+  hello@dandesacademy.com
+</a>
                 </div>
               </div>
 

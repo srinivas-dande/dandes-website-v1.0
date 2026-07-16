@@ -29,11 +29,11 @@ export function SdAudienceSection() {
         {/* Heading */}
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '2rem', fontWeight: '800', color: '#1a1a2e', lineHeight: '1.25', marginBottom: '20px' }}>
-            Who Should Join This {' '}
-            <span style={{ color: '#c0392b' }}>System Design</span>
-            {' '}{' '}
-            <span style={{ color: '#c0392b' }}>Course?</span>
-            {' '}
+            Who Should Join This 
+            <span style={{ color: '#c0392b' }}> System Design</span>
+            
+            <span style={{ color: '#c0392b' }}> Course?</span>
+            
           </h2>
           <p style={{ color: '#555', fontSize: '1rem', maxWidth: '660px', margin: '0 auto', lineHeight: '1.7' }}>
             This course is designed for aspiring and experienced software engineers who want to build strong system design skills, understand how scalable software systems are built, and prepare for technical interviews with confidence.

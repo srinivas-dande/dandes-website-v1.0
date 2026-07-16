@@ -5,8 +5,10 @@ import { BlogPostContent } from "@/app/blog/from-java-developer-to-ai-engineer/b
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI & ML Blog | Dandes Academy',
-  description: 'Practical guides, project walkthroughs, and interview-ready tips for AI and Machine Learning careers.',
+  title:
+    "From Java Developer to AI Engineer | Dandes Academy",
+  description:
+    "Learn how Java developers can successfully move into AI Engineering by building practical AI skills, real-world projects, and industry experience.",
 }
 
 export default function BlogPage() {

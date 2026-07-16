@@ -4,7 +4,7 @@ const topics = [
   'Python fundamentals, and Python for ML and DS',
   'Deep Learning, Computer Vision, and NLP.',
   'SQL, advanced SQL, and data modeling.',
-  'Generative AI, LLMs and fine-tuning, Agentic AI.',
+  'Generative AI, LLMS and fine-tuning, Agentic AI.',
   'Mathematics, statistics, and EDA.',
   'MLOps, deployment mindset, and an end-to-end AI and ML project.',
   'Machine Learning, advanced Machine Learning.',

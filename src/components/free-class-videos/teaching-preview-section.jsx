@@ -31,7 +31,7 @@ export default function TeachingPreviewSection() {
       {/* Desktop image */}
       <img
         src="/images/webinars/teaching-preview-bg.png"
-        alt=""
+        alt="Desktop image background"
         aria-hidden="true"
         className="hero-bg-image desktop-image"
         style={{
@@ -49,7 +49,7 @@ export default function TeachingPreviewSection() {
       {/* Mobile image */}
       <img
         src="/images/webinars/teaching-preview-bg-mobile.png"
-        alt=""
+        alt="Mobile view image"
         aria-hidden="true"
         className="hero-bg-image mobile-image"
         style={{
@@ -77,7 +77,7 @@ export default function TeachingPreviewSection() {
         {/* Left - Content */}
         <div style={{ maxWidth: 580 }} className="teaching-content">
           {/* Heading */}
-          <h2
+          <h1
             style={{
               fontSize: 40,
               fontWeight: 700,
@@ -87,7 +87,7 @@ export default function TeachingPreviewSection() {
             }}
           >
             See the Teaching Before You Decide
-          </h2>
+          </h1>
 
           {/* Description paragraph */}
           <p

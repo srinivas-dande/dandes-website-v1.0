@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { initializeLeadSource } from "@/lib/lead-source";
-
+import { initializeLeadSource } from "../lib/lead-source";
 export default function LeadSourceProvider({ children }) {
   useEffect(() => {
     initializeLeadSource();

@@ -9,7 +9,7 @@ const checkItems = [
   'Live instructor-led classes with interactive discussions',
   'Learn through real-world system design problems',
   'Understand architecture, scalability, and engineering trade-offs',
-  'IInterview-focused preparation with practical design exercises',
+  'Interview-focused preparation with practical design exercises',
 ]
 
 export function SdStructuredSection() {

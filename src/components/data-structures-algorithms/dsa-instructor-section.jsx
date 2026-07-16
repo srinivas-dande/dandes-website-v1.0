@@ -22,7 +22,7 @@ export function DsaInstructorSection() {
       {/* Full section background image */}
       <img
         src="/images/instructor-bg.png"
-        alt=""
+        alt="Full section background image"
         aria-hidden="true"
         style={{
           position: 'absolute',

@@ -2,8 +2,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import Script from "next/script";
 import './globals.css'
 
-import LeadSourceProvider from "@/components/LeadSourceProvider";
-
+import LeadSourceProvider from "../components/LeadSourceProvider";
 const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 

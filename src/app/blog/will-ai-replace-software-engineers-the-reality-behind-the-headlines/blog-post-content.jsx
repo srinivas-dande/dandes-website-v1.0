@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from "next/link";
 import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 export function BlogPostContent() {
@@ -13,6 +14,29 @@ export function BlogPostContent() {
   { bg: '#FEF3C7', color: '#D97706' }, // Orange
   { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
   { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
+const relatedArticles = [
+  {
+    title: "From Java Developer to AI Engineer",
+    href: "/blog/from-java-developer-to-ai-engineer",
+  },
+  {
+    title: "How Software Engineers Can Transition to AI/ML in 2026",
+    href: "/blog/how-software-engineers-can-transition-to-ai-ml-in-2026",
+  },
+  {
+    title: "Why Learning Python Alone Will Not Make You an AI Engineer",
+    href: "/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer",
+  },
+  {
+    title: "Why Most AI Learning Journeys Fail (And How to Avoid It)",
+    href: "/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it",
+  },
+  {
+    title: "AI Engineer vs Data Scientist vs ML Engineer",
+    href: "/blog/ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer",
+  },
 ];
 
   return (
@@ -789,7 +813,19 @@ export function BlogPostContent() {
                 A Java engineer who adds AI/ML to their toolkit doesn't become a different kind of engineer — they become a
                 significantly more valuable one.
               </p>
-              <p>🔗 Read our detailed guide: <a href="#">From Java Developer to AI Engineer →</a></p>
+              <p>
+  🔗 Read our detailed guide:{" "}
+  <Link
+    href="/blog/from-java-developer-to-ai-engineer"
+    style={{
+      color: "#0d4a22",
+      fontWeight: 600,
+      textDecoration: "none",
+    }}
+  >
+    From Java Developer to AI Engineer →
+  </Link>
+</p>
             </div>
 
             {/* TIMELINE */}
@@ -869,20 +905,20 @@ export function BlogPostContent() {
 
             {/* INTERNAL LINKS */}
             <div className="b-internal-links">
-              <h4>Continue Reading</h4>
-              <div className="b-il-grid">
-                {[
-                  'Java Developer to AI Engineer',
-                  'AI Engineer Roadmap',
-                  'RAG Explained for Engineers',
-                  'MCP Explained',
-                  'AI Agents Explained',
-                  'AI Engineer vs Data Scientist',
-                ].map(link => (
-                  <a key={link} href="#" className="b-il-link">{link}</a>
-                ))}
-              </div>
-            </div>
+  <h4>Related AI & Machine Learning Articles</h4>
+
+  <div className="b-il-grid">
+    {relatedArticles.map((article) => (
+      <Link
+        key={article.href}
+        href={article.href}
+        className="b-il-link"
+      >
+        {article.title}
+      </Link>
+    ))}
+  </div>
+</div>
 
             {/* FAQ */}
             <hr className="b-divider" id="faq" />

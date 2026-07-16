@@ -44,7 +44,7 @@ export default function ThankYouSection() {
       >
         <img
           src="/images/thank-you/decorative-bg.png"
-          alt=""
+          alt="thank you"
           aria-hidden="true"
           style={{
             width: '100%',

@@ -94,9 +94,9 @@ export function SdCurriculumSection() {
             }}
           >
             System Design Foundation{' '}
-            <span style={{ color: '#d12027' }}>Requirements Gathering and Analysis</span>{' '}
-            {' '}
-            <span style={{ color: '#d12027' }}></span>{' '}
+            <span style={{ color: '#d12027' }}>Requirements Gathering and Analysis</span>
+            
+            <span style={{ color: '#d12027' }}></span>
             
           </h2>
           <p

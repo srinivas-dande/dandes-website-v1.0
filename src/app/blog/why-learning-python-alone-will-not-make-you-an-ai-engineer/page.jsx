@@ -5,10 +5,11 @@ import { BlogPostContent } from "@/app/blog/why-learning-python-alone-will-not-m
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI & ML Blog | Dandes Academy',
-  description: 'Practical guides, project walkthroughs, and interview-ready tips for AI and Machine Learning careers.',
+  title:
+    "Why Python Alone Won't Make You an AI Engineer | Dandes Academy",
+  description:
+    "Python is only the beginning. Learn the essential AI, Machine Learning, mathematics, and project skills required to become an AI Engineer.",
 }
-
 export default function BlogPage() {
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#fff' }}>

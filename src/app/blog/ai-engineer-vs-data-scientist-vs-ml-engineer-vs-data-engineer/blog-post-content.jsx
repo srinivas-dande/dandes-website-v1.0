@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from "next/link";
 import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 export function BlogPostContent() {
@@ -13,6 +14,29 @@ export function BlogPostContent() {
   { bg: '#FEF3C7', color: '#D97706' }, // Orange
   { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
   { bg: '#CCFBF1', color: '#0F766E' }, // Teal
+];
+
+const relatedArticles = [
+  {
+    title: "From Java Developer to AI Engineer",
+    href: "/blog/from-java-developer-to-ai-engineer",
+  },
+  {
+    title: "Why Learning Python Alone Will Not Make You an AI Engineer",
+    href: "/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer",
+  },
+  {
+    title: "How Software Engineers Can Transition to AI/ML in 2026",
+    href: "/blog/how-software-engineers-can-transition-to-ai-ml-in-2026",
+  },
+  {
+    title: "Will AI Replace Software Engineers? The Reality Behind the Headlines",
+    href: "/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines",
+  },
+  {
+    title: "Why Most AI Learning Journeys Fail And How to Avoid It",
+    href: "/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it",
+  },
 ];
 
   return (
@@ -410,13 +434,20 @@ export function BlogPostContent() {
             </div>
 
             <div className="b4-internal-links">
-              <h4>Continue Reading</h4>
-              <div className="b4-il-grid">
-                {['Will AI Replace Software Engineers?','Java Developer to AI Engineer','AI Engineer Roadmap','RAG Explained for Engineers','MCP Explained','Software Engineer to AI/ML'].map(l => (
-                  <a key={l} href="#" className="b4-il-link">{l}</a>
-                ))}
-              </div>
-            </div>
+  <h4>Continue Reading</h4>
+
+  <div className="b4-il-grid">
+    {relatedArticles.map((article) => (
+      <Link
+        key={article.href}
+        href={article.href}
+        className="b4-il-link"
+      >
+        {article.title}
+      </Link>
+    ))}
+  </div>
+</div>
 
             <hr className="b4-divider" id="faq" />
             <h2>Frequently Asked Questions</h2>

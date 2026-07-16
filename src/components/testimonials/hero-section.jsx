@@ -20,7 +20,7 @@ export default function HeroSection() {
       {/* Desktop image */}
       <img
         src="/images/testimonials/hero-bg-Testimonials.png"
-        alt=""
+        alt="Desktop image of testimonials"
         aria-hidden="true"
         className="hero-bg-image desktop-image"
         style={{
@@ -39,7 +39,7 @@ export default function HeroSection() {
       {/* Mobile image */}
       <img
         src="/images/testimonials/hero-mobile-bg.png"
-        alt=""
+        alt="Mobile view image of testimonials"
         aria-hidden="true"
         className="hero-bg-image mobile-image"
         style={{

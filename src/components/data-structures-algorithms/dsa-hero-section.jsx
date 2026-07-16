@@ -38,7 +38,7 @@ export function DsaHeroSection() {
       >
         <img
           src="/images/aiml/hero-bg-aiml.png"
-          alt=""
+          alt="ai ml hero section"
           style={{
             width: '100%',
             height: '100%',

@@ -5,8 +5,10 @@ import { BlogPostContent } from "@/app/blog/will-ai-replace-software-engineers-t
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI & ML Blog | Dandes Academy',
-  description: 'Practical guides, project walkthroughs, and interview-ready tips for AI and Machine Learning careers.',
+  title:
+    "Will AI Replace Software Engineers? | Dandes Academy",
+  description:
+    "Will AI replace software engineers? Learn how AI is transforming software development, which skills remain essential, and how developers can stay ahead.",
 }
 
 export default function BlogPage() {

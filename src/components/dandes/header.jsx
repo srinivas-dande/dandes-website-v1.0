@@ -69,7 +69,7 @@ export function Header() {
     }
   }, [])
 
-
+ 
   return (
     <header className="relative bg-white border border-[#CECECE] h-[90px]">
       <div className="h-full px-4 md:px-[70px] flex items-center max-w-[1440px] mx-auto">

@@ -38,7 +38,7 @@ export function SdHeroSection() {
       >
         <img
           src="/images/aiml/hero-bg-aiml.png"
-          alt=""
+          alt="hero background image of aiml"
           style={{
             width: '100%',
             height: '100%',

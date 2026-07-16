@@ -40,7 +40,7 @@ export function AimlHeroSection() {
       >
         <img
           src="/images/aiml/hero-bg-aiml.png"
-          alt=""
+          alt="ai ml hero section background"
           style={{
             width: '100%',
             height: '100%',

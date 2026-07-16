@@ -5,8 +5,10 @@ import { BlogPostContent } from "@/app/blog/why-most-ai-learning-journeys-fail-a
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI & ML Blog | Dandes Academy',
-  description: 'Practical guides, project walkthroughs, and interview-ready tips for AI and Machine Learning careers.',
+  title:
+    "Why Most AI Learning Journeys Fail | Dandes Academy",
+  description:
+    "Discover why many AI learners struggle to make progress and learn a practical roadmap to build job-ready AI and Machine Learning skills.",
 }
 
 export default function BlogPage() {

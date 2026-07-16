@@ -1,5 +1,7 @@
 "use client"
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -85,13 +87,19 @@ export function Footer() {
           {/* Left Column - Logo & Newsletter */}
           <div className="lg:col-span-2">
             {/* Logo */}
-            <div className="flex items-center mb-6">
-              <img
-                src="/images/DAFooter.png"
-                alt="Dandes Academy Logo"
-                className="h-[55px] w-auto object-contain"
-              />
-            </div>
+            <Link
+  href="/"
+  aria-label="Go to Dandes Academy Home"
+  className="flex items-center mb-6"
+>
+  <Image
+    src="/images/DAFooter.png"
+    alt="Dandes Academy Logo"
+    width={180}
+    height={55}
+    className="h-[55px] w-auto object-contain"
+  />
+</Link>
             <p className="text-gray-300 mb-6">
               Stay informed on new courses and industry insights.
             </p>
@@ -136,42 +144,52 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex gap-3">
 
-              <a href="https://www.facebook.com/DandesAcademy" aria-label="Facebook" className="relative w-6 h-6">
-                <img 
+              <a href="https://www.facebook.com/DandesAcademy" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="relative w-6 h-6">
+                <Image
                   src="/images/dandes/icons/facebook.png" 
                   alt="Facebook" 
+                  width={20}
+                  height={20}
                   style={{ width: 20, height: 20, position: "absolute", top: "2.24px", left: "2px" }}
                 />
               </a>
 
-              <a href="https://www.instagram.com/dandesacademy?igsh=cjRkZWpmbWJubjFl" aria-label="Instagram" className="relative w-6 h-6">
-                <img 
+              <a href="https://www.instagram.com/dandesacademy?igsh=cjRkZWpmbWJubjFl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="relative w-6 h-6">
+                <Image
                   src="/images/dandes/icons/instagram.png" 
                   alt="Instagram" 
+                  width={20}
+                  height={20}
                   style={{ width: 18, height: 18, position: "absolute", top: "3.24px", left: "3px" }} 
                 />
               </a>
 
-              <a href="https://x.com/DandesAcademy" aria-label="X" className="relative w-6 h-6">
-                <img 
+              <a href="https://x.com/DandesAcademy" target="_blank" rel="noopener noreferrer" aria-label="X" className="relative w-6 h-6">
+                <Image
                   src="/images/dandes/icons/twitter.png" 
                   alt="Twitter" 
+                  width={20}
+                  height={20}
                   style={{ width: 18, height: 16, position: "absolute", top: "4.24px", left: "3px" }} 
                 />
               </a>
 
-              <a href="https://www.linkedin.com/in/srinivasdande/" aria-label="LinkedIn" className="relative w-6 h-6">
-                <img 
+              <a href="https://www.linkedin.com/in/srinivasdande/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="relative w-6 h-6">
+                <Image
                   src="/images/dandes/icons/linkedin.png" 
                   alt="LinkedIn" 
+                  width={20}
+                  height={20}
                   style={{ width: 18, height: 18, position: "absolute", top: "3.24px", left: "3px" }}
                 />
               </a>
 
-              <a href="https://www.youtube.com/@DandesAcademy" aria-label="YouTube" className="relative w-6 h-6">
-                <img 
+              <a href="https://www.youtube.com/@DandesAcademy" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="relative w-6 h-6">
+                <Image
                   src="/images/dandes/icons/youtube.png" 
                   alt="YouTube" 
+                  width={20}
+                  height={20}
                   style={{ width: 20, height: 14, position: "absolute", top: "5px", left: "2px" }} 
                 />
               </a>

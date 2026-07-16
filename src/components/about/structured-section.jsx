@@ -6,7 +6,7 @@ const checkItems = [
   'Strong foundations in Python, data handling, and problem-solving.',
   'Solid understanding of core Machine Learning, model evaluation, and practical decision making.',
   'Hands-on project experience, including mini projects and an end-to-end capstone.',
-  'Exposure to modern industry areas like Deep Learning, NLP, Generative Al, LLMS, Agentic Al, and MLOps.',
+  'Exposure to modern industry areas like Deep Learning, NLP, Generative AI, LLMS, Agentic AI, and MLOps.',
   'Career preparation through resume review, LinkedIn guidance, and mock interviews.',
 
 ]

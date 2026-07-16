@@ -29,27 +29,14 @@ export function DsaAudienceSection() {
         {/* Heading */}
         <div style={{ textAlign: 'center', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '2rem', fontWeight: '800', color: '#1a1a2e', lineHeight: '1.25', marginBottom: '20px' }}>
-            Who Should Join This {' '}
-            <span style={{ color: '#c0392b' }}>DSA</span>
-            {' '}{' '}
-            <span style={{ color: '#c0392b' }}>Course?</span>
-            {' '}
+            Who Should Join This  
+            <span style={{ color: '#c0392b' }}> DSA</span>
+            
+            <span style={{ color: '#c0392b' }}> Course?</span>
+            
           </h2>
           <p style={{ color: '#555', fontSize: '1rem', maxWidth: '660px', margin: '0 auto', lineHeight: '1.7' }}>
             This course is designed for students, graduates, and software engineers who want to build strong problem-solving skills, master Data Structures & Algorithms, and prepare confidently for coding interviews.
-          </p>
-        </div>
-
-        {/* Tabs */}
-        
-
-        {/* Tab content */}
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <h3 style={{ fontSize: '1.6rem', fontWeight: '800', color: '#1a1a2e', marginBottom: '20px' }}>
-            {content.heading}
-          </h3>
-          <p style={{ color: '#555', fontSize: '1rem', maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>
-            {content.description}
           </p>
         </div>
 

@@ -3,17 +3,28 @@ import { prisma } from "@/lib/prisma";
 export async function getLatestRunningWebinar() {
   try {
     const latest = await prisma.daWebinars.findFirst({
-      where: { status: "Running" },
-      orderBy: { createdAt: "desc" },
+      where: {
+        status: "Running",
+        dateTime: {
+          gte: new Date(), // Only upcoming webinars
+        },
+      },
+      orderBy: {
+        dateTime: "asc", // Get the nearest upcoming webinar
+      },
     });
 
-    if (!latest) {
-      return { ok: true, data: null };
-    }
-
-    return { ok: true, data: latest };
+    return {
+      ok: true,
+      data: latest ?? null,
+    };
   } catch (err) {
     console.error("Webinar Service Error:", err);
-    return { ok: false, error: "Database fetch failed" };
+
+    return {
+      ok: false,
+      data: null,
+      error: "Database fetch failed",
+    };
   }
 }

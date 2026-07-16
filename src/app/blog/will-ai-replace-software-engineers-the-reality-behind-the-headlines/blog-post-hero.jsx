@@ -12,13 +12,14 @@ export function BlogPostHero({
   author = 'Srinivas Dande',
   date = '24 Jan 2026',
 }) {
-
+ 
   const [showPopup, setShowPopup] = useState(false)
-
+  
   const socialLinks = [
     { name: 'WhatsApp', icon: '/icons/whatsapp.png' },
     { name: 'LinkedIn', icon: '/icons/linkedin.png' },
     { name: 'Facebook', icon: '/icons/facebook.png' },
+     { name: 'X', icon: '/images/dandes/icons/twitter.png' },
     { name: 'Email', icon: '/icons/email.png' },
   ]
 
@@ -27,11 +28,16 @@ export function BlogPostHero({
     const shareTitle = `${title} ${subtitle}`
 
     const shareUrls = {
-      WhatsApp: `https://wa.me/?text=${encodeURIComponent(shareTitle + ' ' + url)}`,
-      LinkedIn: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
-      Facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      Email: `mailto:?subject=${encodeURIComponent(shareTitle)}&body=${encodeURIComponent(url)}`,
-    }
+  WhatsApp: `https://wa.me/?text=${encodeURIComponent(shareTitle + ' ' + url)}`,
+
+  LinkedIn: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+
+  Facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+
+  X: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareTitle)}&url=${encodeURIComponent(url)}`,
+
+  Email: `mailto:?subject=${encodeURIComponent(shareTitle)}&body=${encodeURIComponent(url)}`,
+}
 
     if (typeof window !== 'undefined') {
       window.open(

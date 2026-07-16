@@ -29,7 +29,7 @@ export default function AboutHero() {
       >
         <img
           src="/images/about/hero-bg-about.png"
-          alt=""
+          alt="hero background"
           style={{
             width: '100%',
             height: '100%',

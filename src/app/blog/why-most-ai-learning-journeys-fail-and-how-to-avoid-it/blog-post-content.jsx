@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from "next/link";
 import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 export function BlogPostContent() {
@@ -14,6 +15,29 @@ export function BlogPostContent() {
   { bg: '#EDE9FE', color: '#7C3AED' }, // Purple
   { bg: '#CCFBF1', color: '#0F766E' }, // Teal
 ];
+const relatedArticles = [
+  {
+    title: "From Java Developer to AI Engineer",
+    href: "/blog/from-java-developer-to-ai-engineer",
+  },
+  {
+    title: "How Software Engineers Can Transition to AI/ML in 2026",
+    href: "/blog/how-software-engineers-can-transition-to-ai-ml-in-2026",
+  },
+  {
+    title: "Why Learning Python Alone Will Not Make You an AI Engineer",
+    href: "/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer",
+  },
+  {
+    title: "Will AI Replace Software Engineers? The Reality Behind the Headlines",
+    href: "/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines",
+  },
+  {
+    title: "AI Engineer vs Data Scientist vs ML Engineer",
+    href: "/blog/ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer",
+  },
+];
+
 
   return (
     <> 
@@ -402,13 +426,20 @@ export function BlogPostContent() {
 
             {/* INTERNAL LINKS */}
             <div className="b6-internal-links">
-              <h4>Continue Reading</h4>
-              <div className="b6-il-grid">
-                {['Will AI Replace Software Engineers?', 'Java Developer to AI Engineer', "Why Python Alone Won't Make You an AI Engineer", 'AI Engineer vs Data Scientist', 'Software Engineer to AI/ML', 'MCP Explained'].map(l => (
-                  <a key={l} href="#" className="b6-il-link">{l}</a>
-                ))}
-              </div>
-            </div>
+  <h4>Related AI Career Articles</h4>
+
+  <div className="b6-il-grid">
+    {relatedArticles.map((article) => (
+      <Link
+        key={article.href}
+        href={article.href}
+        className="b6-il-link"
+      >
+        {article.title}
+      </Link>
+    ))}
+  </div>
+</div>
 
             {/* FAQ */}
             <hr className="b6-divider" id="faq" />

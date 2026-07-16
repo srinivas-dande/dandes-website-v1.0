@@ -21,7 +21,7 @@ export function CourseHeroSection() {
       <div className="block md:hidden">
     <img
       src="/images/courses/hero-bg-course-mobile.png"
-      alt=""
+      alt="Mobile view Hero background"
       className="w-full h-auto object-cover"
     />
   </div>

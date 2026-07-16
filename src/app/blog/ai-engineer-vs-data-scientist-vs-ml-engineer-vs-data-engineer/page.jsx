@@ -5,8 +5,10 @@ import { BlogPostContent } from "@/app/blog/ai-engineer-vs-data-scientist-vs-ml-
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI & ML Blog | Dandes Academy',
-  description: 'Practical guides, project walkthroughs, and interview-ready tips for AI and Machine Learning careers.',
+  title:
+    "AI Engineer vs Data Scientist vs ML Engineer | Dandes Academy",
+  description:
+    "Compare AI Engineer, Data Scientist, ML Engineer, and Data Engineer roles to understand their responsibilities, required skills, salaries, and career paths.",
 }
 
 export default function BlogPage() {

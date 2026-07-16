@@ -5,8 +5,10 @@ import { BlogPostContent } from "@/app/blog/how-software-engineers-can-transitio
 import { Footer } from "@/components/dandes/footer"
 
 export const metadata = {
-  title: 'AI & ML Blog | Dandes Academy',
-  description: 'Practical guides, project walkthroughs, and interview-ready tips for AI and Machine Learning careers.',
+  title:
+    "How Software Engineers Can Transition to AI/ML | Dandes Academy",
+  description:
+    "Explore a step-by-step roadmap for software engineers to transition into AI and Machine Learning with the right skills, projects, and career strategy.",
 }
 
 export default function BlogPage() {

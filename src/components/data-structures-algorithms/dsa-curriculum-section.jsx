@@ -97,9 +97,9 @@ export function DsaCurriculumSection() {
             }}
           >
             What You'll Learn in This{' '}
-            <span style={{ color: '#d12027' }}>Data Structures & Algorithms</span>{' '}
-            {' '}
-            <span style={{ color: '#d12027' }}>Course</span>{' '}
+            <span style={{ color: '#d12027' }}>Data Structures & Algorithms</span>
+            
+            <span style={{ color: '#d12027' }}> Course</span>
             
           </h2>
           <p

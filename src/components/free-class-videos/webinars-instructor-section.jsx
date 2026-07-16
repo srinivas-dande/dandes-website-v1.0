@@ -14,7 +14,7 @@ export default function WebinarsInstructorSection() {
       <img
         src="/images/instructor-bg.png"
         className="instructor-bg-image"
-        alt=""
+        alt="Full section background image"
         aria-hidden="true"
         
         

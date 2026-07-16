@@ -3,7 +3,7 @@
 const features = [
   {
     title: 'Structured Clarity',
-    description: 'Stop jumping between random tutorials. Our step-by-step program takes you from foundational Python to advanced LLM deployment without the guesswork.',
+    description: 'Stop jumping between random tutorials. Our step-by-step program takes you from foundational Python to advanced LLMS deployment without the guesswork.',
   },
   {
     title: 'Confidence Through Doing',

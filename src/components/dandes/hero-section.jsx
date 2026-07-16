@@ -36,7 +36,7 @@ export function HeroSection() {
       >
         <img
           src="/images/dandes/hero-bg-home.png"
-          alt=""
+          alt="Hero Background"
           style={{
             width: '100%',
             height: '100%',
