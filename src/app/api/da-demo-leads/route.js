@@ -2,33 +2,16 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { isValidPhoneNumber } from "libphonenumber-js";
 
-const WORKING_WEBHOOK =
-  "https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTY5MDYzMDA0MzY1MjY0NTUzZDUxMzAi_pc";
-
-const STUDENT_WEBHOOK =
-  "https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY0MDYzMTA0MzA1MjZkNTUzZCI_3D_pc/IjU3NjcwNTY5MDYzMDA0MzY1MjY0NTUzZDUxMzEi_pc";
+const WEBHOOK_URL = "YOUR_PABBLY_WEBHOOK_URL";
 
 export async function POST(req) {
   try {
-
-    console.log(
-      "DATABASE_URL:",
-      process.env.DATABASE_URL?.replace(/\/\/.*@/, "//****:****@")
-    );
     const body = await req.json();
 
     const {
       fullName,
       email,
       phone,
-      candidateType,
-      currentJobRole,
-      experienceRange,
-      qualification,
-      yearOfPassout,
-      careerGoal,
-      preferredBatch,
-      city,
       leadSource,
       leadSubSource,
       pageUrl,
@@ -55,106 +38,41 @@ export async function POST(req) {
       );
     }
 
+    
     const forwarded = req.headers.get("x-forwarded-for");
-
     const ipAddress = forwarded
       ? forwarded.split(",")[0]
       : "Unknown";
-
-    
-      console.log("DATABASE_URL:", process.env.DATABASE_URL?.replace(/\/\/.*@/, "//****:****@"));
-
-const result = await prisma.$queryRawUnsafe(`
-  SELECT current_database() AS database,
-         current_schema() AS schema;
-`);
-
-console.log(result);
 
     const lead = await prisma.daDemoLead.create({
       data: {
         full_name: fullName,
         email,
         phone,
-
-        candidate_type: candidateType,
-        current_job_role: currentJobRole,
-        experience_range: experienceRange,
-
-        qualification,
-        year_of_passout: yearOfPassout,
-
-        career_goal: careerGoal,
-        preferred_batch: preferredBatch,
-        city,
-
         lead_source: leadSource,
         lead_sub_source: leadSubSource,
-
         page_url: pageUrl,
         course_interested: courseInterested,
         ip_address: ipAddress,
-
         lead_status: "New",
       },
     });
 
-    
     try {
-      let webhookUrl = "";
-      let webhookPayload = {};
-
-      const studentCandidateTypes = [
-        "Student",
-        "Job Seeker",
-      ];
-
-      if (studentCandidateTypes.includes(candidateType)) {
-        
-        webhookUrl = STUDENT_WEBHOOK;
-
-        webhookPayload = {
-          fullName,
-          email,
-          phone,
-          candidateType,
-          qualification,
-          yearOfPassout,
-          careerGoal,
-          preferredBatch,
-          city,
-          leadSource,
-          leadSubSource,
-          pageUrl,
-          courseInterested,
-        };
-      } else {
-        
-        webhookUrl = WORKING_WEBHOOK;
-
-        webhookPayload = {
-          fullName,
-          email,
-          phone,
-          candidateType,
-          currentJobRole,
-          experienceRange,
-          careerGoal,
-          preferredBatch,
-          city,
-          leadSource,
-          leadSubSource,
-          pageUrl,
-          courseInterested,
-        };
-      }
-
-      const webhookResponse = await fetch(webhookUrl, {
+      const webhookResponse = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(webhookPayload),
+        body: JSON.stringify({
+          fullName,
+          email,
+          phone,
+          leadSource,
+          leadSubSource,
+          pageUrl,
+          courseInterested,
+        }),
       });
 
       if (!webhookResponse.ok) {
@@ -170,10 +88,12 @@ console.log(result);
 
     return NextResponse.json({
       success: true,
+      message: "Lead saved successfully",
       data: lead,
     });
+
   } catch (error) {
-    console.error(error);
+    console.error("API Error:", error);
 
     return NextResponse.json(
       {

@@ -12,14 +12,6 @@ model DaDemoLead {
   full_name          String
   email              String
   phone              String
-  candidate_type     String?
-  current_job_role   String?
-  experience_range   String?
-  qualification      String?
-  year_of_passout    String?
-  career_goal        String?
-  preferred_batch    String?
-  city               String?
   lead_source        String?
   lead_sub_source    String?
   page_url           String?
