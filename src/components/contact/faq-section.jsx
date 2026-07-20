@@ -4,30 +4,53 @@ import { useState } from 'react'
 
 const faqData = [
   {
-    question: "Not ready to commit? That's okay.",
-    answer: "No. The program is structured to start with foundations and build up step by step. Basic coding familiarity helps, but you do not need prior AI experience."
+    question: "Not Ready to Enroll Yet?",
+    answer:
+      "Absolutely! Choosing the right learning program is an important decision. Attend one of our free demo sessions, speak with our program advisors, and get all your questions answered before enrolling. Take your time—we're here to help whenever you're ready.",
   },
   {
-    question: "How quickly will I get a response?",
-    answer: "We typically respond within a few hours on most days. WhatsApp messages get the fastest replies. If you write in over the weekend, expect a reply by Monday morning."
+    question: "How Soon Will I Receive a Response?",
+    answer:
+      "Our team strives to respond to all inquiries as quickly as possible during business hours. Whether you contact us through the contact form, WhatsApp, or phone, we'll get back to you at the earliest.",
   },
   {
-    question: "Can I call instead of filling the form?",
-    answer: "Yes, you can reach us directly on WhatsApp at +91 7090366699. We prefer WhatsApp for faster responses and better tracking of your queries."
+    question: "Can I Contact You Directly Instead of Filling Out the Form?",
+    answer: (
+    <>
+      Yes! You're welcome to call or message us directly on WhatsApp at{" "}
+      <a
+        href="https://wa.me/917090366699"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          fontWeight: 600,
+          color: "#d12027",
+          textDecoration: "none",
+        }}
+      >
+        +91 7090366699
+      </a>
+      . While the contact form helps us understand your requirements better,
+      we're happy to assist you through whichever method is most convenient.
+    </>
+  ),
   },
   {
-    question: "What if I'm not sure which course is right for me?",
-    answer: "No problem! Just mention your background and goals in the message, and we'll help you figure out the best path. You can also start with the free webinar to get a clearer picture."
+    question: "I'm Not Sure Which Course Is Right for Me. Can You Help?",
+    answer:
+      "Of course! Tell us about your background, current role, and career goals, and our team will recommend the most suitable learning path. You can also attend a free demo session to better understand the curriculum before making a decision.",
   },
   {
-    question: "I filled out the form but haven't heard back. What should I do?",
-    answer: "Please check your spam folder first. If you still haven't received a response within 24 hours, reach out to us directly on WhatsApp at +91 7090366699."
+    question: "I Submitted the Form but Haven't Heard Back. What Should I Do?",
+    answer:
+      "If you haven't received a response within one business day, please check your spam or junk folder. If you still don't see any communication from us, feel free to contact us directly via WhatsApp at , and we'll be happy to assist you.",
   },
   {
-    question: "Can I visit in person?",
-    answer: "We are an online-first academy, so all our classes and interactions happen virtually. However, if you're in Bangalore and would like to meet, feel free to reach out and we can arrange something."
-  }
-]
+    question: "Can I Visit Dandes Academy in Person?",
+    answer:
+      "Dandes Academy is an online-first learning platform, so all classes, mentoring sessions, and interactions are conducted virtually. If you're in Bangalore and would like to meet us, please contact us in advance and we'll do our best to arrange a suitable time.",
+  },
+];
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0)

@@ -109,7 +109,7 @@ export default function NotReadyCommit() {
                 marginBottom: 40,
               }}
             >
-              {"Start with the free webinar. You'll get a clear roadmap, see how the program is structured, and get your questions answered live. Before you make any decision."}
+              {"Absolutely! We understand that choosing the right learning program is an important decision. Feel free to attend a free demo session, speak with our program advisors, and get all your questions answered before enrolling. Take your time—we're here to help whenever you're ready."}
             </p>
 
             {/* CTAs */}

@@ -46,7 +46,19 @@ export default function FaqHeroSection() {
           className="faq-hero-subtitle"
         >
           Real answers to the questions people ask most. If you don&apos;t find yours here,
-          message us on <strong style={{ color: '#111' }}>WhatsApp at +91 7090366699</strong>.
+          message us on <strong style={{ color: '#111' }}>WhatsApp <a 
+  href="https://wa.me/917090366699"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    fontSize: 15,
+    fontWeight: 600,
+    color: "#1a1a1a",
+    textDecoration: "none",
+  }}
+>
+  +91 7090366699
+</a></strong>.
         </p>
       </div>
 

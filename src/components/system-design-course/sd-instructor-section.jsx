@@ -166,7 +166,7 @@ export function SdInstructorSection() {
                   alignItems: 'center',
                   gap: 8,
                 }}
-                href="/srinivas"
+                href="/srinivas-dande"
               >
                 
                 Know More

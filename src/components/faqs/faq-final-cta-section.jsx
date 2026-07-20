@@ -88,7 +88,19 @@ export default function FaqFinalCtaSection() {
                   margin: '0 auto 32px auto',
                 }}
               >
-                Message us on <strong style={{ color: '#111' }}>WhatsApp at +91 7090366699.</strong> Or register for the free webinar and ask Srinivas directly during the live Q&A.
+                Message us on <strong style={{ color: '#111' }}>WhatsApp <a 
+  href="https://wa.me/917090366699"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    fontSize: 15,
+    fontWeight: 600,
+    color: "#1a1a1a",
+    textDecoration: "none",
+  }}
+>
+  +91 7090366699
+</a></strong> Or register for the free webinar and ask Srinivas directly during the live Q&A.
               </p>
 
               {/* CTA Buttons */}
