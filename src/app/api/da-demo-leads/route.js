@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { isValidPhoneNumber } from "libphonenumber-js";
 
-const WEBHOOK_URL = "YOUR_PABBLY_WEBHOOK_URL";
 
 export async function POST(req) {
   try {
