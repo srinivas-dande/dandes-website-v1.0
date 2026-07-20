@@ -2,7 +2,7 @@ import { prisma } from "@/lib/prisma";
 
 export async function getLatestRunningWebinar() {
   try {
-    const latest = await prisma.daWebinars.findFirst({
+    const latest = await prisma.daDemoTimer.findFirst({
       where: {
         status: "Running",
         dateTime: {
