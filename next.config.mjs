@@ -36,11 +36,7 @@ const nextConfig = {
         destination: "/courses/ai-machine-learning-course",
         permanent: true,
       },
-      {
-        source: "/faqs",
-        destination: "/faq",
-        permanent: true,
-      },
+      
     ];
   },
 };
