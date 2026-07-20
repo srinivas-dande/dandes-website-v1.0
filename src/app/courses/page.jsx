@@ -15,6 +15,9 @@ export const metadata = {
   title: "Courses | AI/ML, System Design & DSA | Dandes Academy",
   description:
     "Explore live online courses in AI/ML, System Design, and Data Structures & Algorithms. Get syllabus, fees, batch details, and guidance before enrolling.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/courses",
+  },
   keywords: [
   'online technology courses',
   'live online courses for software engineers',

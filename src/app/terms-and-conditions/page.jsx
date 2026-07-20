@@ -7,6 +7,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Terms & Conditions | Dandes Academy',
   description: 'Review Dandes Academy’s terms for course access, payments, learner responsibilities, content usage, career support, and important policy updates.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/terms-and-conditions",
+  },
   keywords: [
   'Dandes Academy terms and conditions',
   'online course terms',

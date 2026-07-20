@@ -16,6 +16,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'DSA Course: Data Structures & Algorithms | Dandes Academy',
   description: 'Build DSA problem-solving skills with arrays, strings, hashing, stacks, queues, trees, graphs, recursion, DP, and guided coding interview practice.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/courses/dsa-course",
+  },
   keywords: [
   'DSA course',
   'data structures and algorithms course',

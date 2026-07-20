@@ -9,6 +9,9 @@ export const metadata = {
     "Why Python Alone Won't Make You an AI Engineer | Dandes Academy",
   description:
     "Python is only the beginning. Learn the essential AI, Machine Learning, mathematics, and project skills required to become an AI Engineer.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer",
+  },
 }
 export default function BlogPage() {
   return (

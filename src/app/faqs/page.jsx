@@ -9,6 +9,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'FAQs | Dandes Academy Courses, Batches & Support',
   description: 'Get answers about Dandes Academy courses, live classes, LMS recordings, projects, fees, batches, placement assistance, refunds, and learner support.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/faqs",
+  },
   keywords: [
   'Dandes Academy FAQs',
   'online course FAQs',

@@ -16,6 +16,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'System Design Course (HLD/LLD) | Dandes Academy',
   description: 'Learn HLD, LLD, CAP/PACELC, caching, databases, messaging, APIs, scalability, and real-world design cases with live online training.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/courses/system-design-course",
+  },
   keywords: [
   'system design course',
   'system design course online',

@@ -13,6 +13,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Srinivas Dande | Founder of Dandes Academy',
   description: 'Meet Srinivas Dande, founder and lead trainer of Dandes Academy, with 20+ years of experience in software development, System Design, DSA, and AI/ML.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/srinivas-dande",
+  },
   keywords: [
   'Srinivas Dande',
   'Dandes Academy founder',

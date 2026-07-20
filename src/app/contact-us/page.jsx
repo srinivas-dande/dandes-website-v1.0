@@ -10,6 +10,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Contact Dandes Academy | Admissions & Support',
   description: 'Contact Dandes Academy for AI/ML, System Design, and DSA course guidance, admissions details, batch schedules, fees, and learner support.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/contact-us",
+  },
   keywords: [
   'contact Dandes Academy',
   'Dandes Academy admissions',

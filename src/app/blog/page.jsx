@@ -7,6 +7,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Tech Career Insights & Learning Resources | Dandes Academy Blog',
   description: 'Explore practical articles on AI/ML, System Design, DSA, software careers, interview preparation, and skill development from Dandes Academy.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/blog",
+  },
   keywords: [
   'technology career blog',
   'AI ML learning resources',

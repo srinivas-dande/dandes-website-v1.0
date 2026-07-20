@@ -16,6 +16,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'AI & ML Course Online with Projects | Dandes Academy',
   description: 'Join live AI and Machine Learning classes with projects, capstone, LMS recordings, MLOps, Generative AI, and interview preparation.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/courses/ai-machine-learning-course",
+  },
   keywords: [
   'AI and machine learning course',
   'AI ML course online',

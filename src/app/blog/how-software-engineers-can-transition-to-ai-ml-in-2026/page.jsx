@@ -9,6 +9,9 @@ export const metadata = {
     "How Software Engineers Can Transition to AI/ML | Dandes Academy",
   description:
     "Explore a step-by-step roadmap for software engineers to transition into AI and Machine Learning with the right skills, projects, and career strategy.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/blog/how-software-engineers-can-transition-to-ai-ml-in-2026",
+  },
 }
 
 export default function BlogPage() {

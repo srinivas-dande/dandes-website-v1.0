@@ -72,6 +72,7 @@ export async function POST(req) {
           pageUrl,
           courseInterested,
           leadStatus: lead.lead_status,
+          createdAt: lead.created_at,
         }),
       });
 

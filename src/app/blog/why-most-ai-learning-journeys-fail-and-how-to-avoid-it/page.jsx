@@ -9,6 +9,9 @@ export const metadata = {
     "Why Most AI Learning Journeys Fail | Dandes Academy",
   description:
     "Discover why many AI learners struggle to make progress and learn a practical roadmap to build job-ready AI and Machine Learning skills.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it",
+  },
 }
 
 export default function BlogPage() {

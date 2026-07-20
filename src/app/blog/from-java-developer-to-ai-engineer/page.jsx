@@ -9,6 +9,9 @@ export const metadata = {
     "From Java Developer to AI Engineer | Dandes Academy",
   description:
     "Learn how Java developers can successfully move into AI Engineering by building practical AI skills, real-world projects, and industry experience.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/blog/from-java-developer-to-ai-engineer",
+  },
 }
 
 export default function BlogPage() {

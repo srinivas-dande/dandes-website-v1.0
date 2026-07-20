@@ -9,6 +9,9 @@ export const metadata = {
     "Will AI Replace Software Engineers? | Dandes Academy",
   description:
     "Will AI replace software engineers? Learn how AI is transforming software development, which skills remain essential, and how developers can stay ahead.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines",
+  },
 }
 
 export default function BlogPage() {

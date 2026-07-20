@@ -9,6 +9,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Student Reviews & Success Stories | Dandes Academy',
   description: 'Read student reviews and success stories from Dandes Academy learners who improved tech skills, prepared for interviews, and grew their careers.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/resources/testimonials",
+  },
   keywords: [
   'Dandes Academy reviews',
   'Dandes Academy testimonials',

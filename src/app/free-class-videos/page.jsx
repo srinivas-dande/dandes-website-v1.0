@@ -11,6 +11,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Free Class Videos | Python, DSA, System Design | Dandes',
   description: 'Watch free class videos from Dandes Academy on Python, Pandas, System Design, CAP, PACELC, consistency models, AVL trees, and Red-Black trees.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/free-class-videos",
+  },
   keywords: [
   'free coding class videos',
   'free Python classes',

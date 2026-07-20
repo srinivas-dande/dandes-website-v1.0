@@ -7,6 +7,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: 'Privacy Policy | Dandes Academy',
   description: 'Read Dandes Academy’s Privacy Policy to understand how personal information is collected, used, protected, and managed for courses, webinars, and support.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com/privacy-policy",
+  },
   keywords: [
   'Dandes Academy privacy policy',
   'online course privacy policy',
