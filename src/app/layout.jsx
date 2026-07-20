@@ -6,6 +6,7 @@ import LeadSourceProvider from "../components/LeadSourceProvider";
 const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
+
 export const metadata = {
   title: 'Dandes Academy | AI/ML, System Design & DSA Courses',
   description:
@@ -31,6 +32,12 @@ export const metadata = {
   'live system design classes',
   'Dandes Academy',
 ],
+
+  robots: {
+    index: false,
+    follow: false,
+  },
+
 };
 
 export default function RootLayout({ children }) {

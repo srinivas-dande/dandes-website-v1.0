@@ -15,6 +15,9 @@ import { Footer } from "@/components/dandes/footer"
 export const metadata = {
   title: "About Dandes Academy | Mission, Vision & Mentors",
   description: "Learn about Dandes Academy’s mission, founder-led teaching, and commitment to practical AI/ML, System Design, and DSA training for professionals.",
+  alternates: {
+    canonical: "https://www.dandesacademy.com/about-us",
+  },
   keywords: [
   'about Dandes Academy',
   'online technology training academy',

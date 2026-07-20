@@ -71,6 +71,7 @@ export async function POST(req) {
           leadSubSource,
           pageUrl,
           courseInterested,
+          leadStatus: lead.lead_status,
         }),
       });
 
