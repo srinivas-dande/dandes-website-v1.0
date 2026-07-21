@@ -5,7 +5,7 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
 export function BlogPostHero({
-  heroImage = '/blogs/hero-bg-blogs-page.png',
+  heroImage = '/blogs/hero-bg-blogs-page.webp',
   tags = ['Live classes', 'Structured curriculum'],
   title = 'Will AI Replace Software Engineers? The Reality Behind the Headlines',
   subtitle = 'AI is writing code, debugging, and reviewing PRs. But is it actually replacing you — or just changing what you do?',

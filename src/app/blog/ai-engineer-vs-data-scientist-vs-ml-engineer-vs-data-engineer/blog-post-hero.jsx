@@ -5,7 +5,7 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
 export function BlogPostHero({
-  heroImage = '/blogs/hero-bg-blogs-page.png',
+  heroImage = '/blogs/hero-bg-blogs-page.webp',
   tags = ['Live classes', 'Structured curriculum'],
   title = 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer',
   subtitle = 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.',

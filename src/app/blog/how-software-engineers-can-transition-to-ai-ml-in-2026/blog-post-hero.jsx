@@ -5,7 +5,7 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
 export function BlogPostHero({
-  heroImage = '/blogs/hero-bg-blogs-page.png',
+  heroImage = '/blogs/hero-bg-blogs-page.webp',
   tags = ['Live classes', 'Structured curriculum'],
   title = 'How Software Engineers Can Transition to AI/ML in 2026',
   subtitle = 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.',

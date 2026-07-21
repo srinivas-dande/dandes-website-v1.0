@@ -72,7 +72,7 @@ export default function JoinTheJourney() {
               }}
             >
               <img
-                src="/images/aiml/code-see.png"
+                src="/images/aiml/code-see.webp"
                 alt="Team collaborating on AI and ML projects"
                 style={{
                   width: '100%',

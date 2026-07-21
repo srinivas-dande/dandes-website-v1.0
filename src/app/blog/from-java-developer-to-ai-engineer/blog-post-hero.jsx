@@ -5,7 +5,7 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
 export function BlogPostHero({
-  heroImage = '/blogs/hero-bg-blogs-page.png',
+  heroImage = '/blogs/hero-bg-blogs-page.webp',
   tags = ['Live classes', 'Structured curriculum'],
   title = 'From Java Developer to AI Engineer',
   subtitle = 'You spent years mastering Java, Spring Boot and Microservices. Dont throw those skills away. Learn how to turn them into a high-paying AI career.',

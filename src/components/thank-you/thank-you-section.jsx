@@ -43,7 +43,7 @@ export default function ThankYouSection() {
         }}
       >
         <img
-          src="/images/thank-you/decorative-bg.png"
+          src="/images/thank-you/decorative-bg.webp"
           alt="thank you"
           aria-hidden="true"
           style={{

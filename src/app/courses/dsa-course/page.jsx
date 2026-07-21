@@ -1,4 +1,4 @@
-import { CountdownBanner } from '@/components/dandes/countdown-banner'
+import Schema from "@/components/seo/Schema";
 import { Header } from '@/components/dandes/header'
 import { DsaHeroSection } from '@/components/data-structures-algorithms/dsa-hero-section'
 import { DsaFeaturesSection } from "@/components/data-structures-algorithms/dsa-features-section"
@@ -42,9 +42,82 @@ export const metadata = {
 };
 
 export default function SDPage() {
+  const dsaSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/courses/dsa-course/#webpage",
+      "url": "https://www.dandesacademy.com/courses/dsa-course/",
+      "name": "Data Structures & Algorithms Course",
+      "description": "Data Structures & Algorithms Course",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/courses/dsa-course/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://www.dandesacademy.com/courses/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Data Structures & Algorithms",
+          "item": "https://www.dandesacademy.com/courses/dsa-course/"
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://www.dandesacademy.com/courses/dsa-course/#course",
+      "name": "Data Structures & Algorithms Course",
+      "description": "DSA training to build strong problem-solving fundamentals and prepare for technical interviews.",
+      "provider": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "inLanguage": "en-IN",
+      "educationalLevel": "Beginner to Intermediate",
+      "teaches": [
+        "Data Structures",
+        "Algorithms",
+        "Problem Solving",
+        "Coding Interviews"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": [
+          "online",
+          "live"
+        ],
+        "instructor": {
+          "@id": "https://www.dandesacademy.com/#founder"
+        }
+      }
+    }
+  ]
+};
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f7f8fa' }}>
-      <CountdownBanner />
+      <Schema data={dsaSchema} />
       <Header />
       <DsaHeroSection />
       <DsaFeaturesSection />

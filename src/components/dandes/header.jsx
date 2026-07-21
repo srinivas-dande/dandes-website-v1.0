@@ -16,7 +16,7 @@ const resourcesLinks = [
   { label: "Free Class videos", href: "/free-class-videos" },
   
   { label: "Blogs", href: "/blog" },
-  { label: "Testimonials", href: "/resources/testimonials/" },
+  { label: "Testimonials", href: "/testimonials/" },
   { label: "FAQs", href: "/faqs" },
 ]
 

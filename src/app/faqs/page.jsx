@@ -1,4 +1,4 @@
-import { CountdownBanner } from "@/components/dandes/countdown-banner"
+import Schema from "@/components/seo/Schema";
 import { Header } from "@/components/dandes/header"
 import FaqHeroSection from '@/components/faqs/faq-hero-section'
 import FaqContentSection from '@/components/faqs/faq-content-section'
@@ -34,9 +34,63 @@ export const metadata = {
 };
 
 export default function FaqsPage() {
+  const faqSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/faqs/#webpage",
+      "url": "https://www.dandesacademy.com/faqs/",
+      "name": "FAQs",
+      "description": "Frequently Asked Questions",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/faqs/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQs",
+          "item": "https://www.dandesacademy.com/faqs/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dandesacademy.com/faqs/#faq",
+      "mainEntity": Object.values(faqData)
+        .flatMap(section => section.questions)
+        .map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
+    }
+  ]
+};
   return (
     <main>
-      <CountdownBanner />
+      <Schema data={faqSchema} />
       <Header />
       <FaqHeroSection />
       <FaqContentSection />

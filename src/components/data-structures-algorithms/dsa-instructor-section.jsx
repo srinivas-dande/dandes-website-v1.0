@@ -21,7 +21,7 @@ export function DsaInstructorSection() {
     >
       {/* Full section background image */}
       <img
-        src="/images/instructor-bg.png"
+        src="/images/instructor-bg.webp"
         alt="Full section background image"
         aria-hidden="true"
         style={{
@@ -53,7 +53,7 @@ export function DsaInstructorSection() {
           {/* Mobile instructor image - shown only on mobile */}
           <div className="mobile-instructor-image">
             <img
-              src="/images/instructor.png"
+              src="/images/instructor.webp"
               alt="Srinivas Dande"
               style={{
                 width: '100%',

@@ -21,7 +21,7 @@ export function SdInstructorSection() {
     >
       {/* Full section background image */}
       <img
-        src="/images/instructor-bg.png"
+        src="/images/instructor-bg.webp"
         alt="Full section background image"
         aria-hidden="true"
         style={{

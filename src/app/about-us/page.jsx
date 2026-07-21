@@ -1,4 +1,4 @@
-import { CountdownBanner } from "@/components/dandes/countdown-banner"
+import Schema from "@/components/seo/Schema";
 import { Header } from "@/components/dandes/header"
 import AboutHero from '@/components/about/about-hero'
 import WhyDandesAcademy from '@/components/about/why-dandes-academy'
@@ -41,9 +41,58 @@ export const metadata = {
 
 
 export default function AboutPage() {
+  const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/about-us/#webpage",
+      "url": "https://www.dandesacademy.com/about-us/",
+      "name": "About Us",
+      "description": "Learn about Dandes Academy, our mission, training approach, and founder.",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/about-us/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://www.dandesacademy.com/about-us/"
+        }
+      ]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.dandesacademy.com/about-us/#aboutpage",
+      "url": "https://www.dandesacademy.com/about-us/",
+      "name": "About Dandes Academy",
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      }
+    }
+  ]
+};
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#fff' }}>
-      <CountdownBanner />
+      <Schema data={aboutSchema} />
       <Header />
       <AboutHero />
       <WhyDandesAcademy />

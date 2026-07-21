@@ -121,7 +121,7 @@ export function AimlStructuredSection() {
         {/* Right Image */}
         <div style={{ flex: 1, minWidth: 320 }}>
           <img
-            src="/images/aiml/code-see.png"
+            src="/images/aiml/code-see.webp"
             alt="Team collaborating on AI projects with laptops"
             style={{
               width: '100%',

@@ -1,4 +1,3 @@
-import { CountdownBanner } from "@/components/dandes/countdown-banner"
 import { Header } from "@/components/dandes/header"
 import  StudentTestimonial  from "@/components/student-testimonial/share-experience-section"
 import { Footer } from "@/components/dandes/footer"
@@ -14,7 +13,6 @@ export const metadata = {
 export default function SrinivasPage() {
   return (
     <main>
-      <CountdownBanner />
       <Header />
       <StudentTestimonial />
       <Footer />

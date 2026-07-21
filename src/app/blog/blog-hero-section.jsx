@@ -39,9 +39,9 @@ export function BlogHeroSection() {
         }}
       >
         <img
-          src="/images/blog/hero-bg-blog.png"
+          src="/blogs/hero-bg-blog.webp"
           alt=""
-          style={{
+          style={{ 
             width: '100%',
             height: '100%',
             objectFit: 'cover',

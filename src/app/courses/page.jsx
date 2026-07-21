@@ -1,4 +1,5 @@
-import { CountdownBanner } from '@/components/dandes/countdown-banner'
+
+import Schema from "@/components/seo/Schema";
 import { Header } from '@/components/dandes/header'
 import { CourseHeroSection } from '@/components/courses/course-hero-section'
 import { FeaturesSection } from "@/components/dandes/features-section"
@@ -41,9 +42,72 @@ export const metadata = {
 };
 
 export default function CoursesPage() {
+  const coursesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/courses/#webpage",
+      "url": "https://www.dandesacademy.com/courses/",
+      "name": "Courses",
+      "description": "Courses",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/courses/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://www.dandesacademy.com/courses/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.dandesacademy.com/courses/#collection",
+      "url": "https://www.dandesacademy.com/courses/",
+      "name": "Courses",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "hasPart": [
+        {
+          "@id": "https://www.dandesacademy.com/courses/ai-machine-learning/#course"
+        },
+        {
+          "@id": "https://www.dandesacademy.com/courses/system-design/#course"
+        },
+        {
+          "@id": "https://www.dandesacademy.com/courses/data-structures-algorithms/#course"
+        }
+      ]
+    }
+  ]
+};
   return (
     <main className="min-h-screen bg-background">
-      <CountdownBanner />
+      <Schema data={coursesSchema} />
       <Header />
       <CourseHeroSection />
       <FeaturesSection />

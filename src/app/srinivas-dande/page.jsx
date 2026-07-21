@@ -1,4 +1,4 @@
-import { CountdownBanner } from "@/components/dandes/countdown-banner"
+import Schema from "@/components/seo/Schema";
 import { Header } from "@/components/dandes/header"
 import SrinivasHero from '@/components/srinivas/srinivas-hero'
 import TrainerClarity from '@/components/srinivas/trainer-clarity'
@@ -38,9 +38,61 @@ export const metadata = {
 };
 
 export default function SrinivasPage() {
+  const founderSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/srinivas-dande/#webpage",
+      "url": "https://www.dandesacademy.com/srinivas-dande/",
+      "name": "Srinivas Dande",
+      "description": "Learn about Srinivas Dande, Founder & Lead Instructor at Dandes Academy, with 20+ years of experience in product development, system architecture, AI, and technical training.",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/srinivas-dande/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Srinivas Dande",
+          "item": "https://www.dandesacademy.com/srinivas-dande/"
+        }
+      ]
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.dandesacademy.com/srinivas-dande/#profilepage",
+      "url": "https://www.dandesacademy.com/srinivas-dande/",
+      "name": "Srinivas Dande - Founder & Lead Instructor",
+      "mainEntity": {
+        "@id": "https://www.dandesacademy.com/#founder"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#founder"
+      }
+    }
+  ]
+};
   return (
     <main>
-      <CountdownBanner />
+       <Schema data={founderSchema} />
       <Header />
       <SrinivasHero />
       <TrainerClarity />

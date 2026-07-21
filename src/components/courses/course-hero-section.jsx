@@ -20,7 +20,7 @@ export function CourseHeroSection() {
       
       <div className="block md:hidden">
     <img
-      src="/images/courses/hero-bg-course-mobile.png"
+      src="/images/courses/hero-bg-course-mobile.webp"
       alt="Mobile view Hero background"
       className="w-full h-auto object-cover"
     />
@@ -29,7 +29,7 @@ export function CourseHeroSection() {
   {/* ✅ Desktop Background Image */}
   <div className="hidden md:block absolute inset-0 z-0">
     <img
-      src="/images/courses/hero-bg-course.png"
+      src="/images/courses/hero-bg-course.webp"
       alt=""
       className="w-full h-full object-cover object-center"
     />

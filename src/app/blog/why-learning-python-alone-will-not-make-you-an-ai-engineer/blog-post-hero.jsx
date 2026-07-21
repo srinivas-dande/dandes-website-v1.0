@@ -5,7 +5,7 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
 export function BlogPostHero({
-  heroImage = '/blogs/hero-bg-blogs-page.png',
+  heroImage = '/blogs/hero-bg-blogs-page.webp',
   tags = ['Live classes', 'Structured curriculum'],
   title = 'Why Learning Python Alone Will Not Make You an AI Engineer',
   subtitle = 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.',

@@ -1,4 +1,5 @@
-import { CountdownBanner } from '@/components/dandes/countdown-banner'
+
+import Schema from "@/components/seo/Schema";
 import { Header } from '@/components/dandes/header'
 import { SdHeroSection } from '@/components/system-design-course/sd-hero-section'
 import { SdFeaturesSection } from "@/components/system-design-course/sd-features-section"
@@ -42,9 +43,82 @@ export const metadata = {
 };
 
 export default function SDPage() {
+  const systemDesignSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/courses/system-design-course/#webpage",
+      "url": "https://www.dandesacademy.com/courses/system-design-course/",
+      "name": "System Design Course",
+      "description": "System Design Course",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/courses/system-design-course/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://www.dandesacademy.com/courses/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "System Design",
+          "item": "https://www.dandesacademy.com/courses/system-design-course/"
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://www.dandesacademy.com/courses/system-design-course/#course",
+      "name": "System Design Course",
+      "description": "System Design training focused on fundamentals, real-world architecture, and interview preparation.",
+      "provider": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "inLanguage": "en-IN",
+      "educationalLevel": "Intermediate to Advanced",
+      "teaches": [
+        "System Design",
+        "Architecture",
+        "Scalability",
+        "Distributed Systems"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": [
+          "online",
+          "live"
+        ],
+        "instructor": {
+          "@id": "https://www.dandesacademy.com/#founder"
+        }
+      }
+    }
+  ]
+};
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f7f8fa' }}>
-      <CountdownBanner />
+      <Schema data={systemDesignSchema} />
       <Header />
       <SdHeroSection />
       <SdFeaturesSection />

@@ -39,7 +39,7 @@ export function AimlHeroSection() {
         }}
       >
         <img
-          src="/images/aiml/hero-bg-aiml.png"
+          src="/images/aiml/hero-bg-aiml.webp"
           alt="ai ml hero section background"
           style={{
             width: '100%',
@@ -60,13 +60,13 @@ export function AimlHeroSection() {
               style={{ color: "#000000" }}
             >
               <span className=" text #d12027 block text-3xl sm:text-4xl lg:text-5xl " style={{ color:"#AD1612" }}>
-                SWITCH TO
+                Switch To
               </span>
 
               <span
                 className="block font-bold text-[2rem] sm:text-[2.3rem] lg:text-[2.7rem] leading-tight"
               >
-                HIGH-PAYING AI/ML ROLES
+                Hight-Paying AI/ML Roles
               </span>
             </h1>
 

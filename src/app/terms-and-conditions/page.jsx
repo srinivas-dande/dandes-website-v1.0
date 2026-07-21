@@ -1,4 +1,4 @@
-import { CountdownBanner } from "@/components/dandes/countdown-banner"
+import Schema from "@/components/seo/Schema";
 import { Header } from "@/components/dandes/header"
 import TermsHero from '@/components/terms-conditions/terms-hero'
 import TermsContent from '@/components/terms-conditions/terms-content'
@@ -31,9 +31,49 @@ export const metadata = {
 }
 
 export default function TermsConditionsPage() {
+  const termsSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/terms-and-conditions/#webpage",
+      "url": "https://www.dandesacademy.com/terms-and-conditions/",
+      "name": "Terms & Conditions",
+      "description": "Read the Terms & Conditions governing the use of the Dandes Academy website, courses, services, and learning platform.",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/terms-and-conditions/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Terms & Conditions",
+          "item": "https://www.dandesacademy.com/terms-and-conditions/"
+        }
+      ]
+    }
+  ]
+};
   return (
     <main>
-      <CountdownBanner />
+      <Schema data={termsSchema} />
       <Header />
       <TermsHero />
       <TermsContent />

@@ -21,7 +21,7 @@ export default function SrinivasHero() {
       {/* ✅ Mobile Image */}
       <div className="block md:hidden">
         <img
-          src="/srinivas/hero-bg-mobile-srinivas.png"
+          src="/srinivas/hero-bg-mobile-srinivas.webp"
           alt="mobile view image"
           style={{
             width: '100%',
@@ -45,7 +45,7 @@ export default function SrinivasHero() {
         }}
       >
         <img
-          src="/srinivas/hero-bg.png"
+          src="/srinivas/hero-bg.webp"
           alt="Background Image"
           style={{
             width: '250%',

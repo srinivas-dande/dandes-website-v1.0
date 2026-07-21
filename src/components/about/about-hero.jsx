@@ -28,7 +28,7 @@ export default function AboutHero() {
         }}
       >
         <img
-          src="/images/about/hero-bg-about.png"
+          src="/images/about/hero-bg-about.webp"
           alt="hero background"
           style={{
             width: '100%',

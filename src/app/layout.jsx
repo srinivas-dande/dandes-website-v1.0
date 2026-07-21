@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from 'next/font/google'
 import Script from "next/script";
 import './globals.css'
+import Schema from "@/components/seo/Schema";
+import { globalSchema } from "@/lib/schema/globalSchema";
 
 import LeadSourceProvider from "../components/LeadSourceProvider";
 const geist = Geist({ subsets: ["latin"] })
@@ -55,11 +57,13 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         {/* End Google Tag Manager */}
+        <Schema data={globalSchema} />
       </head>
 
       <body
         className={`${geist.className} ${geistMono.variable} font-sans antialiased`}
       >
+
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

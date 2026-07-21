@@ -40,12 +40,12 @@ const topPosts = [
 ];
  
 const allBlogPosts = [
-  { id: 1, slug: 'will-ai-replace-software-engineers-the-reality-behind-the-headlines', image: '/blog/post-1.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Will AI Replace Software Engineers? The Reality Behind the Headlines', description: 'AI is writing code, debugging, and reviewing PRs. But is it actually replacing you — or just changing what you do?' },
-  { id: 2, slug: 'from-java-developer-to-ai-engineer', image: '/blog/post-2.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'From Java Developer to AI Engineer', description: 'You spent years mastering Java, Spring Boot and Microservices. Dont throw those skills away. Learn how to turn them into a high-paying AI career.' },
-  { id: 3, slug: 'how-software-engineers-can-transition-to-ai-ml-in-2026', image: '/blog/post-3.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'How Software Engineers Can Transition to AI/ML in 2026', description: 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.' },
-  { id: 4, slug: 'ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer', image: '/blog/post-4.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer', description: 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.' },
-  { id: 5, slug: 'why-learning-python-alone-will-not-make-you-an-ai-engineer', image: '/blog/post-5.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Why Learning Python Alone Will Not Make You an AI Engineer', description: 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.' },
-  { id: 6, slug: 'why-most-ai-learning-journeys-fail-and-how-to-avoid-it', image: '/blog/post-6.png', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Why Most AI Learning Journeys Fail And How to Avoid It', description: 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.' },
+  { id: 1, slug: 'will-ai-replace-software-engineers-the-reality-behind-the-headlines', image: '/blog/post-1.webp', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Will AI Replace Software Engineers? The Reality Behind the Headlines', description: 'AI is writing code, debugging, and reviewing PRs. But is it actually replacing you — or just changing what you do?' },
+  { id: 2, slug: 'from-java-developer-to-ai-engineer', image: '/blog/post-2.webp', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'From Java Developer to AI Engineer', description: 'You spent years mastering Java, Spring Boot and Microservices. Dont throw those skills away. Learn how to turn them into a high-paying AI career.' },
+  { id: 3, slug: 'how-software-engineers-can-transition-to-ai-ml-in-2026', image: '/blog/post-3.webp', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'How Software Engineers Can Transition to AI/ML in 2026', description: 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.' },
+  { id: 4, slug: 'ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer', image: '/blog/post-4.webp', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'AI Engineer vs Data Scientist vs ML Engineer vs Data Engineer', description: 'These four roles are constantly confused. They pay differently, require different skills, and lead to very different careers. Here’s the definitive breakdown.' },
+  { id: 5, slug: 'why-learning-python-alone-will-not-make-you-an-ai-engineer', image: '/blog/post-5.webp', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Why Learning Python Alone Will Not Make You an AI Engineer', description: 'Every week someone finishes a Python course and wonders why they still can’t get an AI job. Here’s the honest answer nobody is telling you.' },
+  { id: 6, slug: 'why-most-ai-learning-journeys-fail-and-how-to-avoid-it', image: '/blog/post-6.webp', tags: ['Live classes', 'Structured curriculum'], author: 'Srinivas Dande', date: '24 Jan 2026', title: 'Why Most AI Learning Journeys Fail And How to Avoid It', description: 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.' },
  
 ]
 
@@ -299,114 +299,129 @@ export function BlogListingSection() {
               rowGap: '35px',
             }}>
               {filteredPosts.map((post) => (
-                <article key={post.id} style={{ display: 'flex', flexDirection: 'column' }}>
-                  {/* Image */}
-                  <div
-  style={{
-    width: '100%',
-    aspectRatio: '16/10',
-    borderRadius: 8,
-    marginBottom: 12,
-    overflow: 'hidden',
-    backgroundColor: '#fff',
-  }}
->
-  <img
-    src={post.image}
-    alt={post.title}
+                <article key={post.id}>
+  <Link
+    href={`/blog/${post.slug}`}
     style={{
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain',
+      display: "flex",
+      flexDirection: "column",
+      textDecoration: "none",
+      color: "inherit",
+      height: "100%",
     }}
-  />
-</div>
+  >
+    {/* Image */}
+    <div
+      style={{
+        width: "100%",
+        aspectRatio: "16/10",
+        borderRadius: 8,
+        marginBottom: 12,
+        overflow: "hidden",
+        backgroundColor: "#fff",
+      }}
+    >
+      <img
+        src={post.image}
+        alt={post.title}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+        }}
+      />
+    </div>
 
-                  {/* Tags */}
-                  <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
-                    {post.tags.map((tag, j) => (
-                      <span
-                        key={j}
-                        style={{
-                          padding: '4px 10px',
-                          fontSize: 11,
-                          borderRadius: 4,
-                          backgroundColor: j === 0 ? '#dbeafe' : '#fee2e2',
-                          color: j === 0 ? '#1e40af' : '#dc2626',
-                          fontWeight: 500,
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+    {/* Tags */}
+    <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+      {post.tags.map((tag, j) => (
+        <span
+          key={j}
+          style={{
+            padding: "4px 10px",
+            fontSize: 11,
+            borderRadius: 4,
+            backgroundColor: j === 0 ? "#dbeafe" : "#fee2e2",
+            color: j === 0 ? "#1e40af" : "#dc2626",
+            fontWeight: 500,
+          }}
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
 
-                  {/* Author & Date */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                    <span style={{
-                      width: 8,
-                      height: 8,
-                      backgroundColor: '#d1d5db',
-                      borderRadius: '50%',
-                    }} />
-                    <span style={{ fontSize: 12, color: '#9ca3af' }}>{post.author}</span>
-                    <span style={{ fontSize: 12, color: '#9ca3af', marginLeft: 'auto' }}>{post.date}</span>
-                  </div>
+    {/* Author */}
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        marginBottom: 8,
+      }}
+    >
+     
+    </div>
 
-                  {/* Title */}
-                  <h3 style={{
-                    fontSize: 15,
-                    fontWeight: 700,
-                    color: '#1a1a1a',
-                    marginBottom: 8,
-                    lineHeight: 1.4,
-                  }}>
-                    {post.title}
-                  </h3>
+    {/* Title */}
+    <h3
+      style={{
+        fontSize: 15,
+        fontWeight: 700,
+        color: "#1a1a1a",
+        marginBottom: 8,
+        lineHeight: 1.4,
+      }}
+    >
+      {post.title}
+    </h3>
 
-                  {/* Description */}
-                  <p style={{
-                    fontSize: 13,
-                    color: '#6b7280',
-                    lineHeight: 1.6,
-                    marginBottom: 16,
-                    flex: 1,
-                  }}>
-                    {post.description}
-                  </p>
+    {/* Description */}
+    <p
+      style={{
+        fontSize: 13,
+        color: "#6b7280",
+        lineHeight: 1.6,
+        marginBottom: 16,
+        flex: 1,
+      }}
+    >
+      {post.description}
+    </p>
 
-                  {/* Read More */}
-                  <a
-                    href={`/blog/${post.slug}`}
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 8,
-                      padding: '8px 14px',
-                      border: '1px solid #e5e7eb',
-                      borderRadius: 6,
-                      fontSize: 13,
-                      color: '#1a1a1a',
-                      textDecoration: 'none',
-                      width: 'fit-content',
-                    }}
-                  >
-                    Read More
-                    <span style={{
-                      width: 22,
-                      height: 22,
-                      backgroundColor: '#d12027',
-                      borderRadius: 4,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}>
-                      <svg width={10} height={10} fill="none" stroke="#fff" strokeWidth={2}>
-                        <path d="M3 2 L7 5 L3 8" />
-                      </svg>
-                    </span>
-                  </a>
-                </article>
+    {/* Read More */}
+    <div
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 8,
+        padding: "8px 14px",
+        border: "1px solid #e5e7eb",
+        borderRadius: 6,
+        fontSize: 13,
+        color: "#1a1a1a",
+        width: "fit-content",
+      }}
+    >
+      Read More
+      <span
+        style={{
+          width: 22,
+          height: 22,
+          backgroundColor: "#d12027",
+          borderRadius: 4,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <svg width={10} height={10} fill="none" stroke="#fff" strokeWidth={2}>
+          <path d="M3 2 L7 5 L3 8" />
+        </svg>
+      </span>
+    </div>
+  </Link>
+</article>
               ))}
             </div>
 

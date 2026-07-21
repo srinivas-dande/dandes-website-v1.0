@@ -1,4 +1,4 @@
-import { CountdownBanner } from "@/components/dandes/countdown-banner"
+import Schema from "@/components/seo/Schema";
 import { Header } from "@/components/dandes/header"
 import PrivacyHero from '@/components/privacy-policy/privacy-hero'
 import PrivacyContent from '@/components/privacy-policy/privacy-content'
@@ -31,9 +31,49 @@ export const metadata = {
 }
 
 export default function PrivacyPolicyPage() {
+  const privacyPolicySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/privacy-policy/#webpage",
+      "url": "https://www.dandesacademy.com/privacy-policy/",
+      "name": "Privacy Policy",
+      "description": "Read the Dandes Academy Privacy Policy to understand how we collect, use, store, and protect your personal information.",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/privacy-policy/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy Policy",
+          "item": "https://www.dandesacademy.com/privacy-policy/"
+        }
+      ]
+    }
+  ]
+};
   return (
     <main>
-      <CountdownBanner />
+       <Schema data={privacyPolicySchema} />
       <Header />
       <PrivacyHero />
       <PrivacyContent />

@@ -12,7 +12,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Assistant VP, Citi Corp, Bangalore',
       linkedinUrl: 'https://www.linkedin.com/in/navneetranjan11/',
       experience: '15+ Years Experience',
-      image: '/images/testimonials/navneeth.jpg',
+      image: '/images/testimonials/navneeth.webp',
       afterJoining: 'Gaining hands-on experience in AI/ML projects and concepts',
       helpedMost: [
         'Structured learning path',
@@ -28,7 +28,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Technical Manager, WeSure Global Tech',
       linkedinUrl: 'https://www.linkedin.com/in/ravi-ranjan-singh-8861b83a/',
       experience: '15+ Years Experience',
-      image: '/images/testimonials/Ravi Ranjan Singh.jpg',
+      image: '/images/testimonials/Ravi Ranjan Singh.webp',
       afterJoining: 'Actively transitioning into AI/ML with strong practical understanding',
       helpedMost: [
         'Strong foundation from basics to advanced',
@@ -45,7 +45,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Lead Engineer, Societe General',
       linkedinUrl: 'https://www.linkedin.com/in/golakaram-uma-maheshwar-906728178/',
       experience: '9+ Years Experience',
-      image: '/images/testimonials/Uma Mahesh.jpg',
+      image: '/images/testimonials/Uma Mahesh.webp',
       afterJoining: 'Built strong foundation in AI/ML and working on real-world projects',
       helpedMost: [
         'Step-by-step fundamentals that removed all core gaps',
@@ -61,7 +61,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Associate Architect, Virtusa, Bangalore',
       linkedinUrl: 'https://www.linkedin.com/in/yashwant-kumar-45107529/',
       experience: '15+ Years Experience',
-      image: '/images/testimonials/Yashwant Kumar.jpg',
+      image: '/images/testimonials/Yashwant Kumar.webp',
       afterJoining: 'Building strong understanding of data analysis and ML concepts',
       helpedMost: [
         'EDA and statistics explained in simple way',
@@ -78,7 +78,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Solution Architect, Deloitte, Bangalore',
       linkedinUrl: 'https://www.linkedin.com/in/lgowrishankar/',
       experience: '15+ Years Experience',
-      image: '/images/testimonials/Lakshmi kanth.jpg',
+      image: '/images/testimonials/Lakshmi kanth.webp',
       afterJoining: 'Exploring AI-based system development with clear direction',
       helpedMost: [
         'Deep conceptual clarity',
@@ -95,7 +95,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Technical Lead, Wipro, Bangalore',
       linkedinUrl: 'https://www.linkedin.com/in/sowjanya2-v-7b997aa/',
       experience: '10+ Years Experience',
-      image: '/images/testimonials/Sowjanya.jpg',
+      image: '/images/testimonials/Sowjanya.webp',
       afterJoining: 'Building confidence to apply for AI/ML roles',
       helpedMost: [
         'Simplified explanation of complex topics',
@@ -112,7 +112,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Senior Java Consultant, ADCB bank',
       linkedinUrl: 'https://www.linkedin.com/in/loknathkumar/',
       experience: '12+ Years Experience',
-      image: '/images/testimonials/Loknath.jpg',
+      image: '/images/testimonials/Loknath.webp',
       afterJoining: 'Moving towards AI/ML with structured learning',
       helpedMost: [
         'Clear roadmap for beginners',
@@ -129,7 +129,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Engineering Manager, Vodafone (VOIS)',
       linkedinUrl: 'https://www.linkedin.com/in/dksftwre/',
       experience: '15+ Years Experience',
-      image: '/images/testimonials/Deepak.jpg',
+      image: '/images/testimonials/Deepak.webp',
       afterJoining: 'Understanding end-to-end AI/ML workflow',
       helpedMost: [
         'Real-world project approach',
@@ -146,7 +146,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Project Lead, TCS, USA',
       linkedinUrl: 'https://www.linkedin.com/in/rupesh-bhima-2b797a14/',
       experience: '18+ Years Experience',
-      image: '/images/testimonials/Rupesh Bima.jpg',
+      image: '/images/testimonials/Rupesh Bima.webp',
       afterJoining: 'Strengthening ML concepts and project experience',
       helpedMost: [
         'Strong statistics and ML foundation',
@@ -163,7 +163,7 @@ export default function SkillsTestimonialsSection() {
       title: 'Solution Architect, Worldline Global Services',
       linkedinUrl: 'https://www.linkedin.com/in/rupeshkumarsingh-21786917/',
       experience: '20+ Years Experience',
-      image: '/images/testimonials/Rupesh Kumar Singh.jpg',
+      image: '/images/testimonials/Rupesh Kumar Singh.webp',
       afterJoining: 'Building AI/ML portfolio with hands-on projects',
       helpedMost: [
         'Project-based learning',

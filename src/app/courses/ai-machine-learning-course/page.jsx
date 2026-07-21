@@ -1,4 +1,4 @@
-import { CountdownBanner } from '@/components/dandes/countdown-banner'
+import Schema from "@/components/seo/Schema";
 import { Header } from '@/components/dandes/header'
 import { AimlHeroSection } from '@/components/ai-ml/aiml-hero-section'
 import { FeaturesSection } from "@/components/dandes/features-section"
@@ -42,9 +42,107 @@ export const metadata = {
 };
 
 export default function AiMlPage() {
+  const aiMlSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/courses/ai-machine-learning-course/#webpage",
+      "url": "https://www.dandesacademy.com/courses/ai-machine-learning-course/",
+      "name": "AI & Machine Learning Course",
+      "description": "AI & Machine Learning Course",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/courses/ai-machine-learning-course/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Courses",
+          "item": "https://www.dandesacademy.com/courses/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI & Machine Learning",
+          "item": "https://www.dandesacademy.com/courses/ai-machine-learning-course/"
+        }
+      ]
+    },
+    {
+      "@type": "Course",
+      "@id": "https://www.dandesacademy.com/courses/ai-machine-learning-course/#course",
+      "name": "AI & Machine Learning Course",
+      "description": "Live instructor-led AI/ML training with hands-on projects, curriculum from fundamentals to production-ready systems, and interview preparation.",
+      "provider": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "inLanguage": "en-IN",
+      "educationalLevel": "Beginner to Advanced",
+      "teaches": [
+        "Python",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "Generative AI",
+        "LLMs",
+        "MLOps"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": [
+          "online",
+          "live"
+        ],
+        "instructor": {
+          "@id": "https://www.dandesacademy.com/#founder"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dandesacademy.com/courses/ai-machine-learning-course/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who can join this course? Is it suitable for freshers and non-IT backgrounds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This course is designed for anyone who wants to build a career in AI/ML. It is suitable for freshers, working professionals, career switchers, and non-IT backgrounds. The program starts from fundamentals and gradually moves to advanced concepts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the course online, and will I get recorded sessions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The course is conducted in online live mode. If you miss any class, recordings are provided so you can catch up at your convenience."
+          }
+        }
+      ]
+    }
+  ]
+};
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#f7f8fa' }}>
-      <CountdownBanner />
+      <Schema data={aiMlSchema} />
       <Header />
       <AimlHeroSection />
       <FeaturesSection />

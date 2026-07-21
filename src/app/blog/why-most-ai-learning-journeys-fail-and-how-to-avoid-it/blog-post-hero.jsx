@@ -5,7 +5,7 @@ import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
 export function BlogPostHero({
-  heroImage = '/blogs/hero-bg-blogs-page.png',
+  heroImage = '/blogs/hero-bg-blogs-page.webp',
   tags = ['Live classes', 'Structured curriculum'],
   title = 'Why Most AI Learning Journeys Fail And How to Avoid It',
   subtitle = 'Talented engineers start learning AI every day. Most quit within 6 months with nothing to show for it. Here’s exactly why — and how the ones who succeed do it differently.',

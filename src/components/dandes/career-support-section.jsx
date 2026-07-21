@@ -21,7 +21,7 @@ export function CareerSupportSection() {
           <div className="w-full lg:w-1/2">
             <div className="rounded-lg overflow-hidden">
               <Image
-                src="/images/team-collaboration.jpg"
+                src="/images/team-collaboration.webp"
                 alt="Team collaboration - professionals reviewing documents together"
                 width={500}
                 height={400}

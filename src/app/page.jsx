@@ -1,4 +1,4 @@
-import { CountdownBanner } from "../components/dandes/countdown-banner"
+import Schema from "@/components/seo/Schema";
 import { Header } from "../components/dandes/header";
 import { HeroSection } from "../components/dandes/hero-section"
 import { FeaturesSection } from "../components/dandes/features-section"
@@ -15,9 +15,43 @@ import { CTASection } from "../components/dandes/cta-section"
 import { Footer } from "../components/dandes/footer"
  
 export default function Home() {
+  const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dandesacademy.com/#webpage",
+      "url": "https://www.dandesacademy.com/",
+      "name": "Homepage",
+      "description": "Homepage",
+      "isPartOf": {
+        "@id": "https://www.dandesacademy.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dandesacademy.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.dandesacademy.com/#logo"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dandesacademy.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dandesacademy.com/"
+        }
+      ]
+    }
+  ]
+};
   return (
     <main className="min-h-screen bg-background">
-      <CountdownBanner />
+       <Schema data={homeSchema} />
       <Header />
       <HeroSection />
       <FeaturesSection />
