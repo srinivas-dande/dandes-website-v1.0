@@ -7,15 +7,15 @@ import { SdPopupFormModal } from "@/components/system-design-course/sd-popup-for
 export function SdCTASection() {
 
   const scrollToCourses = () => {
-  const courseSection = document.getElementById("sd-courses")
+  const courseSection = document.getElementById("courses")
     if (courseSection) {
       courseSection.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      })
+      }) 
     }
   }
-
+ 
 
   const [showPopup, setShowPopup] = useState(false)
 
@@ -57,7 +57,7 @@ export function SdCTASection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <button 
-              
+               
               onClick={scrollToCourses}
               className="bg-[#d12027] text-white px-8 py-3 rounded font-medium hover:bg-[#b81c22] transition-colors cursor-pointer"
             >

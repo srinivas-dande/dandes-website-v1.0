@@ -8,7 +8,7 @@ import { DsaPopupFormModal } from "@/components/data-structures-algorithms/dsa-p
 export function DsaCTASection() {
 
   const scrollToCourses = () => {
-  const courseSection = document.getElementById("dsa-courses")
+  const courseSection = document.getElementById("courses")
     if (courseSection) {
       courseSection.scrollIntoView({
         behavior: "smooth",
