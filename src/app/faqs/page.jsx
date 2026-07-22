@@ -3,6 +3,7 @@ import { Header } from "@/components/dandes/header"
 import FaqHeroSection from '@/components/faqs/faq-hero-section'
 import FaqContentSection from '@/components/faqs/faq-content-section'
 import FaqFinalCtaSection from '@/components/faqs/faq-final-cta-section'
+import { faqData } from "@/components/faqs/faq-data";
 
 import { Footer } from "@/components/dandes/footer"
 
