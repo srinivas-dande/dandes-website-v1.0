@@ -12,7 +12,7 @@ export default function WebinarsInstructorSection() {
     >
       {/* Full section background image */}
       <img
-        src="/images/instructor-bg.png"
+        src="/images/instructor-bg.webp"
         className="instructor-bg-image"
         alt="Full section background image"
         aria-hidden="true"
