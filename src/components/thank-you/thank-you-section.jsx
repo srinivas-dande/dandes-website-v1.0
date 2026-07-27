@@ -16,16 +16,9 @@ export default function ThankYouSection() {
   },
   {
   icon: "/images/thank-you/whatsapp.png",
-  title: "Message us on WhatsApp",
-  description: (
-    <>
-      <span style={{ color: "#6B7280" }}>WHATSAPP/CALL: </span>
-      <span style={{ color: "#DC2626", fontWeight: 600 }}>
-        +91 7090366699
-      </span>
-    </>
-  ),
-  link: "https://wa.me/917090366699",
+  title: "Read Blogs",
+  description: "Read Various Dandes Academys Blogs",
+  link: "/blog",
 },
 ];
 
@@ -289,85 +282,7 @@ export default function ThankYouSection() {
           ))}
         </div>
 
-        {/* Need Help Section */}
-        <div
-          style={{
-            backgroundColor: '#F9FAFB',
-            borderRadius: 12,
-            padding: '32px 40px',
-          }}
-        >
-          <p
-            style={{
-              fontSize: 14,
-              fontWeight: 700,
-              color: '#6B7280',
-              letterSpacing: '0.08em',
-              marginBottom: 20,
-            }}
-          >
-            NEED HELP?
-          </p>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 12,
-              alignItems: 'center',
-            }}
-          >
-            {/* Email */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <img
-                src="/images/thank-you/email.png"
-                alt="email"
-                style={{
-                  width: 18,
-                  height: 18,
-                  objectFit: 'contain',
-                }}
-              />
-              <span style={{ fontSize: 14, color: '#6B7280', fontWeight: 500 }}>EMAIL:</span>
-              <a
-                href="mailto:HELLO@DANDESACADEMY.COM"
-                style={{
-                  fontSize: 14,
-                  color: '#DC2626',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                }}
-              >
-                HELLO@DANDESACADEMY.COM
-              </a>
-            </div>
-
-            {/* WhatsApp */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <img
-                src="/images/thank-you/whatsapp2.png"
-                alt="whatsapp"
-                style={{
-                  width: 18,
-                  height: 18,
-                  objectFit: 'contain',
-                }}
-              />
-              <span style={{ fontSize: 14, color: '#6B7280', fontWeight: 500 }}>WHATSAPP/CALL:</span>
-              <a
-                href="tel:+917090366699"
-                style={{
-                  fontSize: 14,
-                  color: '#DC2626',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                }}
-              >
-                +91 7090366699
-              </a>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       {/* Responsive styles */}
