@@ -66,7 +66,7 @@ export function AimlHeroSection() {
               <span
                 className="block font-bold text-[2rem] sm:text-[2.3rem] lg:text-[2.7rem] leading-tight"
               >
-                Hight-Paying AI/ML Roles
+                High-Paying AI/ML Roles
               </span>
             </h1>
 
