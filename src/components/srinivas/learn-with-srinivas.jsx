@@ -31,7 +31,7 @@ export default function LearnWithSrinivas() {
     >
       {/* Full section background image - hidden on mobile */}
       <img
-        src="/images/instructor-bg.png"
+        src="/images/instructor-bg.webp"
         alt=""
         aria-hidden="true"
         className="instructor-bg-image"
@@ -64,7 +64,7 @@ export default function LearnWithSrinivas() {
           {/* Mobile instructor image - shown only on mobile at TOP */}
           <div className="mobile-instructor-image">
             <img
-              src="/images/instructor.png"
+              src="/images/instructor.webp"
               alt="Srinivas Dande - Founder and Instructor"
               style={{
                 width: '100%',

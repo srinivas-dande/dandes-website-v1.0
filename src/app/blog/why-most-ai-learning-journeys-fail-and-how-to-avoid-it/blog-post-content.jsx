@@ -309,11 +309,11 @@ const relatedArticles = [
               <div className="b6-tc-card good">
                 <h4>✓ The Successful Journey</h4>
                 {[
-                  ['Month 1–2:', 'Python + statistics foundation. Builds first mini-projects in Python.'],
-                  ['Month 3–4:', 'ML algorithms, model evaluation. Builds a deployed churn prediction API on GitHub.'],
-                  ['Month 5:', 'LLMs, RAG, AI agents. Builds and deploys a RAG chatbot. Starts applying.'],
-                  ['Month 6:', 'MLOps, capstone project. 2 portfolio projects deployed. First interviews coming in.'],
-                  ['Month 7–9:', 'Offer in hand. Career transition complete.'],
+                  ['Month 1–4:', 'Python + statistics foundation. Builds first mini-projects in Python.'],
+                  ['Month 5–7:', 'ML algorithms, model evaluation. Builds a deployed churn prediction API on GitHub.'],
+                  ['Month 8-10:', 'LLMs, RAG, AI agents. Builds and deploys a RAG chatbot. Starts applying.'],
+                  ['Month 11-12:', 'MLOps, capstone project. 2 portfolio projects deployed. First interviews coming in.'],
+                  ['Month 13–15:', 'Offer in hand. Career transition complete.'],
                 ].map(([month, text]) => (
                   <div key={month} className="b6-tc-month">
                     <div className="b6-tc-dot" />

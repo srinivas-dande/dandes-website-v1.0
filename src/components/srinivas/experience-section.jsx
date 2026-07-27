@@ -205,7 +205,7 @@ export default function ExperienceSection() {
                     marginBottom: 12,
                   }}
                 >
-                  Technical Lead
+                  System Architect
                 </h3>
                 <p
                   style={{

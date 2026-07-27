@@ -2,22 +2,32 @@
 
 export default function ThankYouSection() {
   const features = [
-    {
-      icon: "/images/thank-you/video.png",
-      title: 'Watch Free Class Videos',
-      description: 'Access our library of foundational AI concepts and tutorials.',
-    },
-    {
-      icon: "/images/thank-you/webinar.png",
-      title: 'View Upcoming Demo',
-      description: 'Register for live sessions with our industry-leading instructors.',
-    },
-    {
-      icon: "/images/thank-you/whatsapp.png",
-      title: 'Message us on WhatsApp',
-      description: 'Connect with our support team for immediate assistance.',
-    },
-  ]
+  {
+    icon: "/images/thank-you/video.png",
+    title: "Watch Free Class Videos",
+    description: "Access our library of foundational AI concepts and tutorials.",
+    link: "/free-class-videos",
+  },
+  {
+    icon: "/images/thank-you/webinar.png",
+    title: "View Testimonials",
+    description: "Register for live sessions with our industry-leading instructors.",
+    link: "/testimonials",
+  },
+  {
+  icon: "/images/thank-you/whatsapp.png",
+  title: "Message us on WhatsApp",
+  description: (
+    <>
+      <span style={{ color: "#6B7280" }}>WHATSAPP/CALL: </span>
+      <span style={{ color: "#DC2626", fontWeight: 600 }}>
+        +91 7090366699
+      </span>
+    </>
+  ),
+  link: "https://wa.me/917090366699",
+},
+];
 
   return (
     <section
@@ -124,8 +134,8 @@ export default function ThankYouSection() {
             lineHeight: 1.6,
           }}
         >
-          You&apos;re one step closer to becoming industry-ready in{' '}
-          <span style={{ color: '#DC2626', fontWeight: 600 }}>AI & Machine Learning</span>.
+          You&apos;re one step closer to becoming industry-ready{' '}
+          <span style={{ color: '#DC2626', fontWeight: 600 }}></span>.
         </p>
 
         {/* Next Steps Card */}
@@ -217,17 +227,33 @@ export default function ThankYouSection() {
           className="feature-cards-grid"
         >
           {features.map((feature, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundColor: '#fff',
-                borderRadius: 12,
-                padding: '28px 24px',
-                textAlign: 'left',
-                boxShadow: '0 2px 12px rgba(0, 0, 0, 0.04)',
-                border: '1px solid #F3F4F6',
-              }}
-            >
+            <a
+  key={index}
+  href={feature.link}
+  target={feature.link.startsWith("https") ? "_blank" : "_self"}
+  rel={feature.link.startsWith("https") ? "noopener noreferrer" : undefined}
+  style={{
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    padding: "28px 24px",
+    textAlign: "left",
+    boxShadow: "0 2px 12px rgba(0, 0, 0, 0.04)",
+    border: "1px solid #F3F4F6",
+    textDecoration: "none",
+    display: "block",
+    transition: "all 0.2s ease",
+    color: "inherit",
+    cursor: "pointer",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-4px)";
+    e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.1)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.04)";
+  }}
+>
               <div>
                 <img
                   src={feature.icon}
@@ -259,7 +285,7 @@ export default function ThankYouSection() {
               >
                 {feature.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
 
