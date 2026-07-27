@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 
 export const metadata = {
-  title: 'Dandes Academy | AI/ML, System Design & DSA Courses',
+  title: 'Dandes Academy | AI and Machine Learning, System Design & DSA Courses',
   description:
     'Learn AI/ML, System Design, and DSA with live online classes, projects, practice, and interview prep. Build job-ready skills with Dandes Academy.',
   keywords: [

@@ -82,31 +82,25 @@ const relatedArticles = [
           pointer-events: none;
         }
         .blog-layout {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 40px;
-          padding: 0 60px;
-        }
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
 
-        .b-container {
-          flex: 1;
-          max-width: 760px;
-        }
+.b-container {
+  flex: 1;
+  max-width: 820px;
+}
 
-        .b-sidebar {
-          width: 280px;
-          position: sticky;
-          top: 100px;
-          align-self: flex-start;
-        }
-
-        .b-sidebar {
-          width: 350px;
-          position: sticky;
-          top: 100px;
-          align-self: flex-start;
-        }
+.b-sidebar {
+  width: 300px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
 
         .b-container {
           max-width: 760px;
