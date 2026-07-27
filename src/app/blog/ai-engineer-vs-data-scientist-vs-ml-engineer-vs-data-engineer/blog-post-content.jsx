@@ -50,30 +50,36 @@ const relatedArticles = [
         .b4-hero-glow2 { position:absolute; bottom:-60px; left:-40px; width:240px; height:240px; border-radius:50%; background:rgba(124,58,237,0.1); pointer-events:none; }
         .b4-layout {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
-  padding: 0 60px;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .b4-container {
-  max-width: 760px;
+  flex: 1;
+  max-width: 820px;
   margin: 0;
   padding: 0;
-  flex: 1;
 }
 
 .b4-sidebar {
-  width: 320px;
+  width: 300px;
   position: sticky;
   top: 100px;
   align-self: flex-start;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {
   .b4-layout {
     display: block;
     padding: 0 20px;
+  }
+
+  .b4-container {
+    max-width: 100%;
   }
 
   .b4-sidebar {

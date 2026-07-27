@@ -49,21 +49,22 @@ const relatedArticles = [
         .b5-hero-ring2 { position:absolute; bottom:-80px; left:-50px; width:260px; height:260px; border-radius:50%; background:rgba(180,83,9,0.1); pointer-events:none; }
         .b5-layout {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
-  padding: 0 60px;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .b5-container {
-  max-width: 760px;
+  flex: 1;
+  max-width: 820px;
   margin: 0;
   padding: 0;
-  flex: 1;
 }
 
 .b5-sidebar {
-  width: 320px;
+  width: 300px;
   position: sticky;
   top: 100px;
   align-self: flex-start;
@@ -73,6 +74,10 @@ const relatedArticles = [
   .b5-layout {
     display: block;
     padding: 0 20px;
+  }
+
+  .b5-container {
+    max-width: 100%;
   }
 
   .b5-sidebar {

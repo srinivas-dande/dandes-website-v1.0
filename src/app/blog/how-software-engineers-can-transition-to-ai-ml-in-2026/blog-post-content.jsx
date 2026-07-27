@@ -76,37 +76,43 @@ const relatedArticles = [
           pointer-events: none;
         }
         .b3-layout {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 40px;
-          padding: 0 60px;
-        }
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
 
-        .b3-container {
-          max-width: 760px;
-          margin: 0;
-          padding: 0;
-          flex: 1;
-        }
+.b3-container {
+  flex: 1;
+  max-width: 820px;
+  margin: 0;
+  padding: 0;
+}
 
-        .b3-sidebar {
-          width: 320px;
-          position: sticky;
-          top: 100px;
-          align-self: flex-start;
-        }
+.b3-sidebar {
+  width: 300px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
 
         @media (max-width: 1024px) {
-          .b3-layout {
-            display: block;
-            padding: 0 20px;
-          }
+  .b3-layout {
+    display: block;
+    padding: 0 20px;
+  }
 
-          .b3-sidebar {
-            display: none;
-          }
-        }
+  .b3-container {
+    max-width: 100%;
+  }
+
+  .b3-sidebar {
+    display: none;
+  }
+}
         .b3-tag {
           display: inline-block;
           background: #2b4a8a;

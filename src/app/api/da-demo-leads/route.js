@@ -62,7 +62,7 @@ export async function POST(req) {
         page_url: pageUrl,
         course_interested: courseInterested,
         ip_address: ipAddress,
-        lead_status: "New",
+        lead_status: "New Lead",
       },
     });
 

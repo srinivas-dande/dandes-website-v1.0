@@ -44,37 +44,43 @@ export function BlogPostContent() {
           pointer-events: none;
         }
         .b2-layout {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 40px;
-          padding: 0 60px;
-        }
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
 
-        .b2-container {
-          max-width: 760px;
-          margin: 0;
-          padding: 0;
-          flex: 1;
-        }
+.b2-container {
+  flex: 1;
+  max-width: 820px;
+  margin: 0;
+  padding: 0;
+}
 
-        .b2-sidebar {
-          width: 320px;
-          position: sticky;
-          top: 100px;
-          align-self: flex-start;
-        }
+.b2-sidebar {
+  width: 300px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
 
         @media (max-width: 1024px) {
-          .b2-layout {
-            display: block;
-            padding: 0 20px;
-          }
+  .b2-layout {
+    display: block;
+    padding: 0 20px;
+  }
 
-          .b2-sidebar {
-            display: none;
-          }
-        }
+  .b2-container {
+    max-width: 100%;
+  }
+
+  .b2-sidebar {
+    display: none;
+  }
+}
         .b2-tag {
           display: inline-block;
           background: #1a6b3c;
