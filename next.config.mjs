@@ -4,9 +4,22 @@ const nextConfig = {
     unoptimized: true,
   },
 
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "index, follow",
+          },
+        ],
+      },
+    ];
+  },
+
   async redirects() {
     return [
-      
       {
         source: "/terms",
         destination: "/terms-and-conditions",
@@ -22,7 +35,7 @@ const nextConfig = {
         destination: "/courses/ai-machine-learning-course",
         permanent: true,
       },
-       {
+      {
         source: "/ai-machine-learning-course",
         destination: "/courses/ai-machine-learning-course",
         permanent: true,
@@ -37,7 +50,6 @@ const nextConfig = {
         destination: "/courses/ai-machine-learning-course",
         permanent: true,
       },
-      
     ];
   },
 };

@@ -33,6 +33,10 @@ export const metadata = {
   'Dandes Academy contact',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function ContactPage() {

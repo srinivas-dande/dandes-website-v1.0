@@ -12,6 +12,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/blog/from-java-developer-to-ai-engineer",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogPage() {

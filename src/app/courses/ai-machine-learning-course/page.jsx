@@ -39,6 +39,10 @@ export const metadata = {
   'online artificial intelligence course',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AiMlPage() {

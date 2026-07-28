@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Thanks for contacting Dandes Academy. We’ve received your details and will reach out soon with course information and next steps.',
   robots: {
     index: false,
-    follow: true,
+    follow: false,
   },
 }
 

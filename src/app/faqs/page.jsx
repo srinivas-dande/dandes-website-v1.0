@@ -32,6 +32,10 @@ export const metadata = {
   'technical mentorship',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function FaqsPage() {

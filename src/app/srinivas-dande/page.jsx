@@ -35,6 +35,10 @@ export const metadata = {
   'online coding trainer',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function SrinivasPage() {

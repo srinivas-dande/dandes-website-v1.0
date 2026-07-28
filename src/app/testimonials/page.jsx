@@ -32,6 +32,10 @@ export const metadata = {
   'Dandes Academy student feedback',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TestimonialsPage() {

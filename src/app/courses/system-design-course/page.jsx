@@ -40,6 +40,10 @@ export const metadata = {
   'software engineering design course',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function SDPage() {

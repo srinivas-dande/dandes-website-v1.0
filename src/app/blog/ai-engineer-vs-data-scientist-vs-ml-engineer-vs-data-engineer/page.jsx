@@ -13,6 +13,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/blog/ai-engineer-vs-data-scientist-vs-ml-engineer-vs-data-engineer",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogPage() {

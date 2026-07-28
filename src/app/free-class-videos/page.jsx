@@ -34,6 +34,10 @@ export const metadata = {
   'Dandes Academy free classes',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function WebinarsPage() {

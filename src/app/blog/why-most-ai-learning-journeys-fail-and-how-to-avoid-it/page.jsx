@@ -12,6 +12,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/blog/why-most-ai-learning-journeys-fail-and-how-to-avoid-it",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogPage() {

@@ -28,6 +28,10 @@ export const metadata = {
   'Dandes Academy policies',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function TermsConditionsPage() {

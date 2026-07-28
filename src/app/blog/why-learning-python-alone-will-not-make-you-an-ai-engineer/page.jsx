@@ -12,6 +12,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/blog/why-learning-python-alone-will-not-make-you-an-ai-engineer",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 export default function BlogPage() {
   const blogPostSchema = {

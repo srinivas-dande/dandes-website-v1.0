@@ -37,6 +37,10 @@ export const metadata = {
   'technology learning platform',
   'Dandes Academy',
 ],
+robots: {
+  index: true,
+  follow: true,
+},
 };
 
 

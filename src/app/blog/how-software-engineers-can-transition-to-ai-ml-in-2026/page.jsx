@@ -12,6 +12,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/blog/how-software-engineers-can-transition-to-ai-ml-in-2026",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogPage() {

@@ -39,6 +39,10 @@ export const metadata = {
   'online DSA training',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function SDPage() {

@@ -30,6 +30,10 @@ export const metadata = {
   'Dandes Academy blog',
   'Dandes Academy',
 ],
+robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogPage() {

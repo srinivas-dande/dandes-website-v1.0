@@ -12,6 +12,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/blog/will-ai-replace-software-engineers-the-reality-behind-the-headlines",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function BlogPage() {

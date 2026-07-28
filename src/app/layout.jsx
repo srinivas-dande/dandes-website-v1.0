@@ -8,11 +8,14 @@ import LeadSourceProvider from "../components/LeadSourceProvider";
 const geist = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
-
+ 
 export const metadata = {
   title: 'Dandes Academy | AI and Machine Learning, System Design & DSA Courses',
   description:
     'Learn AI/ML, System Design, and DSA with live online classes, projects, practice, and interview prep. Build job-ready skills with Dandes Academy.',
+  alternates: {
+    canonical: "https://www.dandesacademy.com",
+  },
   keywords: [
   'online tech courses',
   'live online tech courses',
@@ -36,8 +39,8 @@ export const metadata = {
 ],
 
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 
 };

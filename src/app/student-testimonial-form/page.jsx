@@ -8,6 +8,10 @@ export const metadata = {
   alternates: {
     canonical: "https://www.dandesacademy.com/student-testimonial-form",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function SrinivasPage() {
