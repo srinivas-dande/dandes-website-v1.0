@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { PopupFormModal } from "@/components/dandes/popup-form-modal"
 
 
@@ -10,10 +10,12 @@ export function BlogPostHero({
   title = 'How Software Engineers Can Transition to AI/ML in 2026',
   subtitle = 'You already build systems. You already think in logic, pipelines, and scale. The transition to AI engineering is closer than you think — here’s the exact path.',
   author = 'Srinivas Dande',
-  date = '24 Jan 2026',
+  date = '13 July 2026',
 }) {
 
   const [showPopup, setShowPopup] = useState(false)
+  const [views, setViews] = useState(0)
+
 
   const socialLinks = [
     { name: 'WhatsApp', icon: '/icons/whatsapp.png' },
@@ -41,6 +43,32 @@ export function BlogPostHero({
       )
     }
   }
+  useEffect(() => {
+  const updateViews = async () => {
+    try {
+      const response = await fetch("/api/blog-views", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          blogTitle: title,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setViews(data.count);
+      }
+    } catch (error) {
+      console.error("Error updating blog views:", error);
+    }
+  };
+updateViews();
+}, [title]);
+
+  
 
   return (
     <section style={{ backgroundColor: '#fff' }}>
@@ -232,6 +260,19 @@ export function BlogPostHero({
               </button>
             ))}
           </div>
+          <div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: 6,
+    marginLeft: 16,
+    color: "#666",
+    fontSize: 14,
+    fontWeight: 500,
+  }}
+>
+  👁 {views.toLocaleString()} Views
+</div>
         </div>
 
         {/* Right Side - Webinar CTA */}
