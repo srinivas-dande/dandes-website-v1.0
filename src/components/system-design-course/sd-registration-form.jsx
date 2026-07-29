@@ -103,26 +103,20 @@ if (Object.keys(newErrors).length > 0) {
 
     const data = await res.json()
 
-    if (data.success) {
-      setSuccessMsg("You are registered successfully for the webinar!")
-      setCountryCode("+91")
-      
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        
-      })
-    } else {
-      alert(data.message || "Something went wrong")
-    }
+    if (!res.ok) {
+  alert(data.message || "Something went wrong");
+  return;
+}
+
+router.replace("/thank-you");
+return;
   } catch (error) {
     console.error(error)
     alert("Something went wrong. Please try again.")
   } finally {
     setLoading(false)
   }
-  router.push('/thank-you')
+  
 }
 
   return (

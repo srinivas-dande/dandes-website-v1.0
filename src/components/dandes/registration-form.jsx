@@ -40,7 +40,6 @@ export function RegistrationForm() {
 
   })
 
-  const [successMsg, setSuccessMsg] = useState("")
   const [loading, setLoading] = useState(false)
   const [countryCode, setCountryCode] = useState("+91")
   const [phoneError, setPhoneError] = useState("")
@@ -49,8 +48,7 @@ export function RegistrationForm() {
 
   const handleSubmit = async (e) => {
   e.preventDefault()
-  if (loading || successMsg) return
-
+  if (loading) return;
   const newErrors = {}
 
 if (Object.keys(newErrors).length > 0) {
@@ -75,7 +73,6 @@ if (!isValidPhoneNumber(fullPhone)) {
 }
   setLoading(true)
 
-  const params = new URLSearchParams(window.location.search)
   const { leadSource, leadSubSource } = getLeadSource();
 
   const payload = {
@@ -100,26 +97,19 @@ if (!isValidPhoneNumber(fullPhone)) {
     const data = await res.json()
 
     if (data.success) {
-      setSuccessMsg("You are registered successfully for the webinar!")
-      setCountryCode("+91")
-      
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        
-      })
-    } else {
-      alert(data.message || "Something went wrong")
+      router.replace("/thank-you");
+      return;
     }
-  } catch (error) {
-    console.error(error)
-    alert("Something went wrong. Please try again.")
-  } finally {
-    setLoading(false)
-  }
-  router.push('/thank-you')
+
+    alert(data.message || "Something went wrong");
+
+    } catch (error) {
+  console.error(error);
+  alert("Something went wrong. Please try again.");
+} finally {
+  setLoading(false);
 }
+  }
   
 
   return (
