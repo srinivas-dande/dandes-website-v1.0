@@ -227,17 +227,14 @@ return;
     </p>
   )}
 
-
             </div>
-
-            
 
 
             {/* Submit Button */}
             <button
   type="submit"
   disabled={loading}
-  className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2 cursor-pointer"
+  className="bg-[var(--dandes-red)] text-white py-3 px-6 rounded font-medium flex items-center justify-center gap-2 hover:bg-[#b81c22] transition-colors mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
 >
   {loading ? "Submitting..." : "Get Course Details"}
   <ArrowRight className="size-4" />
@@ -251,6 +248,21 @@ return;
             </p>
         
       </form>
+      {loading && (
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/20 backdrop-blur-sm">
+    <div className="bg-white rounded-xl px-8 py-6 shadow-xl flex flex-col items-center">
+      <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-300 border-t-[var(--dandes-red)]"></div>
+
+      <h3 className="mt-5 text-lg font-semibold text-gray-900">
+        Processing your registration...
+      </h3>
+
+      <p className="mt-2 text-sm text-gray-600 text-center">
+        Please wait a moment. Do not refresh or close this page.
+      </p>
+    </div>
+  </div>
+)}
     </div>
   )
 }

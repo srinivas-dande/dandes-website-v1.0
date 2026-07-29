@@ -47,7 +47,7 @@ export default function WebinarsInstructorSection() {
           {/* Mobile instructor image - shown only on mobile at TOP */}
           <div className="mobile-instructor-image">
             <img
-              src="/images/instructor.png"
+              src="/images/instructor.webp"
               alt="Srinivas Dande - Founder and Instructor"
               style={{
                 width: '100%',

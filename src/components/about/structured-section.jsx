@@ -117,7 +117,7 @@ export function StructuredSection() {
             }}
           >
             <img
-              src="/images/about/team.png"
+              src="/images/about/team.webp"
               alt="Team collaborating on AI projects with laptops"
               style={{
                 width: '100%',

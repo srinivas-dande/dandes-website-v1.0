@@ -53,7 +53,7 @@ export function SdInstructorSection() {
           {/* Mobile instructor image - shown only on mobile */}
           <div className="mobile-instructor-image">
             <img
-              src="/images/instructor.png"
+              src="/images/instructor.webp"
               alt="Srinivas Dande"
               style={{
                 width: '100%',
