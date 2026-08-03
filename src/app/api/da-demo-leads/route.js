@@ -45,8 +45,7 @@ export async function POST(req) {
         { status: 400 }
       );
     }
-
-    
+ 
     const forwarded = req.headers.get("x-forwarded-for");
     const ipAddress = forwarded
       ? forwarded.split(",")[0]
@@ -70,11 +69,10 @@ export async function POST(req) {
   transporter.sendMail({
     from: `"Dandes Academy" <${process.env.EMAIL_USER}>`,
     to: [
-      "inbound@pipelinevelocity.com",
       "hello@dandesacademy.com",
       "chaitanya@dandesacademy.com",
       "swetha@dandesacademy.com",
-      "murali@dandesacademy.com",
+      
     ],
     subject: `New Demo Lead - ${fullName} - AI & Machine Learning Program`,
     html: `
