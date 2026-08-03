@@ -71,8 +71,7 @@ export async function POST(req) {
     to: [
       "hello@dandesacademy.com",
       "chaitanya@dandesacademy.com",
-      "swetha@dandesacademy.com",
-      
+      "swetha@dandesacademy.com"
     ],
     subject: `New Demo Lead - ${fullName} - AI & Machine Learning Program`,
     html: `
