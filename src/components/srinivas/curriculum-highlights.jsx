@@ -2,7 +2,7 @@
 export default function CurriculumHighlights() {
   const areas = [
     {
-      title: "AI",
+      title: "Applied AI",
       description:
         "Comprehensive artificial intelligence fundamentals and core logic architectures.",
       icon: "/srinivas/icons/ai.png",

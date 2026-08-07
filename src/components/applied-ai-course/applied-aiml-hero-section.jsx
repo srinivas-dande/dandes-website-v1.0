@@ -1,18 +1,20 @@
 "use client"
-
 import { CheckCircle2, Star } from "lucide-react"
-import { RegistrationForm } from "./registration-form"
+import { AppliedAimlRegistrationForm } from "./applied-aiml-registration-form"
+
 
 const features = [
-  "Live Classes with Expert Mentor Support",
-  "Structured Roadmaps from Fundamentals to Advanced",
-  "Real Projects & Practical Assignments",
-  "Interview Preparation for Career Growth",
+  "Generative AI, LLMs, RAG & Agentic AI",
+  "LangChain, LangGraph, CrewAI, MCP & Vector Databases",
+  "FastAPI, Docker, MLOps & AWS Deployment",
+  "Enterprise-Grade AI Capstone Project",
+  "Live Weekend Classes, LMS Recordings & Career Support",
 ]
 
-export function HeroSection() {
+export function AimlHeroSection() {
+
   const scrollToCourses = () => {
-    const courseSection = document.getElementById("courses-section")
+    const courseSection = document.getElementById("courses")
     if (courseSection) {
       courseSection.scrollIntoView({
         behavior: "smooth",
@@ -22,7 +24,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-[calc(100vh-140px)] overflow-hidden">
+    <section id="ai-courses" className="relative min-h-[calc(100vh-140px)] overflow-hidden">
       {/* Full Background Image */}
       <div
         style={{
@@ -35,8 +37,8 @@ export function HeroSection() {
         }}
       >
         <img
-          src="/images/dandes/hero-bg-home.webp"
-          alt="Hero Background"
+          src="/images/aiml/hero-bg-aiml.webp"
+          alt="ai ml hero section background"
           style={{
             width: '100%',
             height: '100%',
@@ -51,12 +53,23 @@ export function HeroSection() {
         <div className="flex flex-col lg:flex-row justify-between items-start h-full">
           {/* Left Content */}
           <div className="flex-1 max-w-[600px]">
-            <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[var(--dandes-dark)] leading-tight mb-6 text-balance">
-              Build In-Demand Tech Skills with Live, Project-Based Training
+            <h1
+              className="font-bold leading-tight mb-6"
+              style={{ color: "#000000" }}
+            >
+              <span className=" text #d12027 block text-3xl sm:text-4xl lg:text-5xl " style={{ color:"#AD1612" }}>
+                Become Job-Ready
+              </span>
+
+              <span
+                className="block font-bold text-[2rem] sm:text-[2.3rem] lg:text-[2.7rem] leading-tight"
+              >
+               in Applied AI Engineering
+              </span>
             </h1>
 
             <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8 max-w-xl">
-              At Dandes Academy, we help students and professionals master Applied AI Engineering, AI & Machine Learning, System Design, and Data Structures & Algorithms through live classes, structured learning, real-world projects, and career-focused interview preparation.
+              Build, deploy and scale real-world AI applications using Generative AI, Large Language Models, RAG, Agentic AI, and MLOps with Cloud Deployment
             </p>
 
             {/* Feature List */}
@@ -84,18 +97,16 @@ export function HeroSection() {
             <div className="flex items-start gap-3 text-sm text-gray-600">
               <Star className="size-5 text-amber-400 fill-amber-400 shrink-0" />
               <p>
-                Trusted by 25,000+ Students Since 2005 • 20+ Years of Training Excellence
+                Industry-focused training with live learning, practical assignments, and career support.
               </p>
             </div>
           </div>
 
           {/* Right Form */}
-          <div
-
-            className="w-full lg:w-auto lg:shrink-0 lg:ml-8"
-          >
-            <RegistrationForm />
+          <div className="w-full lg:w-auto lg:shrink-0 lg:ml-8">
+            <AppliedAimlRegistrationForm />
           </div>
+
         </div>
       </div>
     </section>

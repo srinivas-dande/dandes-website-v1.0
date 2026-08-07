@@ -8,12 +8,6 @@ const features = [
     description: "of experience, Friendly transition track",
   },
   {
-    image: "/icons/duration.png",
-    iconBg: "bg-blue-100",
-    title: "12 Months",
-    description: "Pace you can sustain",
-  },
-  {
     image: "/icons/live-class.png",
     iconBg: "bg-purple-100",
     title: "Live instructor-led classes",
@@ -35,57 +29,71 @@ const features = [
 
 export function SdFeaturesSection() {
   return (
-    <section className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-white py-16 lg:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-balance">
-          Made for <span className="text-[#d12027]">Working Professionals</span> and
-          <br className="hidden md:block" /> Career-Focused Students
-        </h2>
+        <div className="mb-12 text-center lg:mb-14">
+          <h2 className="mx-auto max-w-4xl text-3xl font-bold leading-tight text-black md:text-4xl lg:text-5xl">
+            Made for{" "}
+            <span className="text-[#dc2626]">
+              Working Professionals
+            </span>{" "}
+            and
+            <br className="hidden md:block" />
+            {" "}Career-Focused Students
+          </h2>
+        </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
             <article
               key={index}
-              className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow"
+              className="flex min-h-[220px] flex-col rounded-xl border border-gray-200 p-6 transition-shadow hover:shadow-md"
             >
               <div
-                className={`w-14 h-14 ${feature.iconBg} rounded-lg flex items-center justify-center mb-4 mx-auto`}
+                className={`mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-lg ${feature.iconBg}`}
               >
                 <Image
                   src={feature.image}
                   alt={feature.title}
                   width={56}
-                  height={5}
+                  height={56}
+                  className="h-14 w-14 object-contain"
                 />
               </div>
-              <p className="text-gray-900 text-sm leading-relaxed">
-                <span className="font-bold">{feature.title}</span> {feature.description}
+
+              <p className="text-sm leading-relaxed text-gray-900">
+                <span className="font-bold">
+                  {feature.title}
+                </span>{" "}
+                {feature.description}
               </p>
             </article>
           ))}
         </div>
 
         {/* JLC Legacy Badge */}
-        <div className="flex flex-col items-center text-center">
-          <div className="w-14 h-14 rounded-2xl overflow-hidden flex items-center justify-center mb-4">
+        <div className="mt-14 flex flex-col items-center text-center">
+          <div className="mb-4 flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl">
             <Image
               src="/icons/jlc-logo.png"
               alt="JLC Logo"
               width={150}
               height={150}
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
 
-          <p className="text-gray-700 text-base max-w-xl">
+          <p className="max-w-xl text-base text-gray-700">
             Trusted by learners from the legacy JLC,{" "}
             <span className="font-bold">Java Learning Center</span>,
             <br />
             now Dandes Academy.
           </p>
         </div>
+
       </div>
     </section>
   )

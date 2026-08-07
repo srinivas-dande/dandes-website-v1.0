@@ -16,7 +16,9 @@ const tabContent = {
       "Learn consistently with mentor guidance and practice",
     ],
     tracks: [
-      "AI and Machine Learning for a portfolio and modern specialization.",
+      
+      "Applied AI Engineering for a fast, focused path into GenAI, LLM and Agentic AI roles.",
+       "AI and Machine Learning for a portfolio and modern specialization.",
       "DSA for placements and coding interviews.",
       "System Design for stronger interview discussions and role clarity.",
     ],
@@ -33,6 +35,7 @@ const tabContent = {
       "Gain confidence through mock interviews",
     ],
     tracks: [
+      "Applied AI Engineering for a fast, focused path into GenAI, LLM and Agentic AI roles.",
       "AI and Machine Learning for a portfolio and modern specialization.",
       "DSA for placements and coding interviews.",
     ],

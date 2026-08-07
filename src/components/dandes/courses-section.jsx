@@ -1,6 +1,5 @@
 "use client"
-
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -20,6 +19,17 @@ const courses = [
   },
   {
     id: 2,
+    image: "/icons/ai-course.png",
+    title: "Applied AI Course",
+    description:
+      "Master AI & Machine Learning from fundamentals to advanced topics, including Deep Learning, Generative AI, Agentic AI, and MLOps through live classes, real projects, and interview-focused learning.",
+    highlights: ["Live Instructor-Led Classes", "Structured Roadmap", "Real Industry Projects", "Interview Preparation"],
+    highlightColor: "bg-cyan-50 text-cyan-700",
+    ctaText: "View Applied AI course",
+    url: "/courses/applied-ai-engineering-course",
+  },
+  {
+    id: 3,
     image: "/icons/system-design.png",
     title: "System Design Course",
     description:
@@ -30,7 +40,7 @@ const courses = [
     url: "/courses/system-design-course",
   },
   {
-    id: 3,
+    id: 4,
     image: "/icons/dsa.png",
     title: "DSA Course",
     description:
@@ -96,38 +106,30 @@ export function CoursesSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
-  const [isTransitioning, setIsTransitioning] = useState(true)
   const [showPopup, setShowPopup] = useState(false)
 
-  useEffect(() => {
-    if (isPaused) return
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1)
-      setIsTransitioning(true)
-    }, 4000)
-
-    return () => clearInterval(interval)
-  }, [isPaused])
-
-  useEffect(() => {
-    if (currentIndex === courses.length) {
-      setTimeout(() => {
-        setIsTransitioning(false)
-        setCurrentIndex(0)
-      }, 700)
-    }
-  }, [currentIndex])
-
-  
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? courses.length - 1 : prev - 1))
-  }
+  setCurrentIndex((prev) => {
+    if (prev === 0) {
+      return courses.length - 3
+    }
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === courses.length - 1 ? 0 : prev + 1))
-  }
+    return prev - 1
+  })
+}
+
+const handleNext = () => {
+  setCurrentIndex((prev) => {
+    const maxIndex = courses.length - 3
+
+    if (prev >= maxIndex) {
+      return 0
+    }
+
+    return prev + 1
+  })
+}
 
   return (
     <section 
@@ -152,37 +154,38 @@ export function CoursesSection() {
         </div>
 
         {/* Course Cards */}
-        <div className="relative">
-          {/* Desktop View - Show all cards */}
-          <div className="hidden gap-6 lg:grid lg:grid-cols-3">
-            {courses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
-
-          {/* Mobile/Tablet View - Carousel */}
-          <div className="lg:hidden">
-            <div
-              className="overflow-hidden"
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              onTouchStart={() => setIsPaused(true)}
-              onTouchEnd={() => setIsPaused(false)}
-            >
-              <div
-                className={`flex ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
-                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-              >
-                {[...courses, courses[0]].map((course, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2">
-                    <CourseCard course={course} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
+        {/* Course Cards */}
+<div
+  className="overflow-hidden"
+  onMouseEnter={() => setIsPaused(true)}
+  onMouseLeave={() => setIsPaused(false)}
+  onTouchStart={() => setIsPaused(true)}
+  onTouchEnd={() => setIsPaused(false)}
+>
+  <div
+    className="flex transition-transform duration-500 ease-in-out"
+    style={{
+      transform: `translateX(-${
+        currentIndex * (100 / 3)
+      }%)`,
+    }}
+  >
+    {courses.map((course) => (
+      <div
+        key={course.id}
+        className="
+          w-full
+          flex-shrink-0
+          px-2
+          md:w-1/2
+          lg:w-1/3
+        "
+      >
+        <CourseCard course={course} />
+      </div>
+    ))}
+  </div>
+</div>
         {/* Navigation Arrows */}
         <div className="mt-8 flex items-center justify-center gap-4">
           <button

@@ -1,0 +1,139 @@
+'use client'
+import { useState } from "react"
+import { AppliedAimlPopupFormModal } from "./applied-aiml-popup-form-modal"
+
+const checkItems = [
+  'Clear roadmap with milestones.',
+  'Live classes with real-time Q&A.',
+  'Real, deployed projects that become portfolio proof.',
+  'Deep GenAI, LLM, RAG and Agentic AI workflows.',
+  'Full MLOps and Cloud Deployment on AWS.',
+  'One Enterprise AI Capstone, built and deployed end to end.',
+  'Outcome-focused learning you can explain in interviews.',
+]
+ 
+export function AimlStructuredSection() {
+
+  const [showPopup, setShowPopup] = useState(false)
+
+  return (
+    <section style={{ backgroundColor: '#fff', padding: '80px 0' }}>
+      <div style={{
+        maxWidth: 1200,
+        margin: '0 auto',
+        padding: '0 24px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 64,
+        flexWrap: 'wrap',
+      }}>
+
+        {/* Left Content */}
+        <div style={{ flex: 1, minWidth: 320 }}>
+          <h2 style={{
+            fontSize: 32,
+            fontWeight: 800,
+            color: '#1a1a1a',
+            lineHeight: 1.3,
+            margin: '0 0 24px',
+            maxWidth: 520,
+          }}>
+            A Focused AI Program Built For Real Jobs, Not Just Certificates
+          </h2>
+
+          <p style={{
+            fontSize: '1rem',
+            color: '#555',
+            lineHeight: 1.75,
+            margin: '0 0 32px',
+            maxWidth: 560,
+          }}>
+            A lot of AI courses either stay too theoretical or jump straight into tools without real foundations — that creates confusion later, especially in interviews. This program builds the AI Foundations you actually need first, then moves straight into GenAI, LLMs, Agentic AI, and shipping to production — nothing you won't use in these roles.
+          </p>
+
+          <h3 style={{
+            fontSize: '1.1rem',
+            fontWeight: 700,
+            color: '#1a1a1a',
+            margin: '0 0 20px',
+          }}>
+            What sets us apart
+          </h3>
+
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 36px' }}>
+            {checkItems.map((item, i) => (
+              <li key={i} style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: 12,
+                marginBottom: 14,
+              }}>
+                <svg
+                  width={22}
+                  height={22}
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  style={{ flexShrink: 0, marginTop: 2 }}
+                >
+                  <circle cx={11} cy={11} r={10} stroke="#10b981" strokeWidth={1.5} fill="none" />
+                  <path d="M7 11 L10 14 L15 8" stroke="#10b981" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                </svg>
+                <span style={{ fontSize: '0.95rem', color: '#444', lineHeight: 1.6 }}>
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <button
+            onClick={() => setShowPopup(true)}
+
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 10,
+              backgroundColor: '#d12027',
+              color: '#fff',
+              fontSize: '0.95rem',
+              fontWeight: 600,
+              padding: '14px 28px',
+              border: 'none',
+              borderRadius: 8,
+              cursor: 'pointer',
+            }}
+          >
+            Register For Live Demo
+            <svg width={18} height={18} fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+              <line x1={4} y1={9} x2={14} y2={9} />
+              <polyline points="10,5 14,9 10,13" />
+            </svg>
+          </button>
+        </div>
+
+        <AppliedAimlPopupFormModal
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        />
+
+ 
+
+        {/* Right Image */}
+        <div style={{ flex: 1, minWidth: 320 }}>
+          <img
+            src="/images/aiml/code-see.webp"
+            alt="Team collaborating on AI projects with laptops"
+            style={{
+              width: '100%',
+              maxWidth: 540,
+              height: 'auto',
+              borderRadius: 16,
+              objectFit: 'cover',
+              objectPosition: 'right center',
+            }}
+          />
+        </div>
+
+      </div>
+    </section>
+  )
+}

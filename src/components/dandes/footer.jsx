@@ -6,6 +6,7 @@ import Link from "next/link";
 
 
 const coursesLinks = [
+  { label: "Applied AI Course", href: "/courses/applied-ai-engineering-course" },
   { label: "AI/ML Course", href: "/courses/ai-machine-learning-course" },
   { label: "System Design Course", href: "/courses/system-design-course" },
   { label: "DSA Course", href: "/courses/dsa-course" },

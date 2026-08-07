@@ -71,9 +71,11 @@ export async function POST(req) {
     to: [
       "hello@dandesacademy.com",
       "chaitanya@dandesacademy.com",
-      "swetha@dandesacademy.com"
+      "swetha@dandesacademy.com",
+      "murali@dandesacademy.com",
+      "srinivas@dandeacademy.com",
     ],
-    subject: `New Demo Lead - ${fullName} - AI & Machine Learning Program`,
+    subject: `New Demo Lead - ${fullName} - ${courseInterested}`,
     html: `
       <div style="font-family:Arial,sans-serif;background:#f5f7fa;padding:30px;">
         <div style="max-width:520px;margin:auto;background:#fff;border-radius:8px;padding:25px;box-shadow:0 2px 8px rgba(0,0,0,.05);">

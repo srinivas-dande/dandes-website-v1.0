@@ -6,8 +6,8 @@ import { PopupFormModal } from "./popup-form-modal"
 
 const webinarPoints = [
 
-
-  "Understand the roadmap for AI/ML, System Design, or DSA.",
+  
+  "Understand the roadmap for Applied AI, AI/ML, System Design, or DSA.",
   "Learn the common mistakes that slow down learning and how to avoid them.",
   "Understand the skills, projects, career opportunities, and time commitment.",
   "Ask your questions live about the curriculum, batches, and learning approach.",

@@ -37,6 +37,38 @@ const coursesData = {
       "Confidence to Build Real AI Applications"
     ]
   },
+  appliedaicource: {
+    title: "AI & Machine Learning Course",
+    titleHighlight: "AI & Machine Learning Course",
+    subtitle: "For Working Professionals And Students",
+    description: "Build a strong foundation in AI & Machine Learning through live instructor-led classes, hands-on projects, and industry-relevant tools. Follow a structured roadmap from Python and Machine Learning to Deep Learning, Generative AI, Agentic AI, and MLOps, while building a portfolio that prepares you for AI careers.",
+    ctaText: "Get AI and ML course details",
+    url : "/courses/applied-ai-engineering-course",
+    highlights: [
+      "12-Month Structured Learning Roadmap",
+      "Live Instructor-Led Classes with Recordings",
+      "6 Real-World AI Projects & Capstone",
+      "Interview Preparation & Career Support"
+    ],
+    learn: [
+      "Python Programming & Data Analysis",
+      "Machine Learning & Deep Learning",
+      "Generative AI, LLMs & Agentic AI",
+      "MLOps, Deployment & Cloud"
+    ],
+    program: [
+      "Live Online Classes",
+      "Hands-on Assignments & Projects",
+      "Weekly Mentor Support",
+      "Recorded Sessions on LMS"
+    ],
+    takeaway: [
+      "Production-Ready AI Portfolio",
+      "Industry-Relevant Technical Skills",
+      "Interview & Resume Preparation",
+      "Confidence to Build Real AI Applications"
+    ]
+  },
   systemDesign: {
     title: "System Design course",
     titleHighlight: "System Design Course",
@@ -105,7 +137,9 @@ const coursesData = {
 }
 
 const tabs = [
+  
   { id: "aiml", label: "AI and Machine Learning Course" },
+  { id: "appliedaicource", label: "Applied AI Course" },
   { id: "systemDesign", label: "System Design Course" },
   { id: "dsa", label: "DSA Course" }
 ]

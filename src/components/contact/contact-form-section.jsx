@@ -419,6 +419,7 @@ try {
   Select Type
 </option>
                     <option value="AI/ML Course">AI/ML Course</option>
+                    <option value="AI/ML Course">Applied AI Course</option>
                     <option value="System Design Course">System Design Course</option>
                     <option value="DSA Course">DSA Course</option>
                     <option value="Corporate Training">Corporate Training</option>

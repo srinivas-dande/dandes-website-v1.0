@@ -6,6 +6,7 @@ import { faqData } from "./faq-data";
 
 const categories = [
   { id: 'general', label: 'General' },
+  { id: 'applied', label: 'Applied AI Course' },
   { id: 'aiml', label: 'AI/ML Course' },
   { id: 'systemDesign', label: 'System Design Course' },
   { id: 'dsa', label: 'DSA Course' },
@@ -66,7 +67,7 @@ function FaqAccordion({ category, data }) {
                   fontWeight: 600,
                   color: '#111',
                 }}
-              >
+              > 
                 {index + 1}. {item.question}
               </span>
               <span
@@ -206,6 +207,7 @@ export default function FaqContentSection() {
         {/* Right Content */}
         <div style={{ flex: 1, minWidth: 0 }} className="faq-content">
           <FaqAccordion category="general" data={faqData.general} />
+          <FaqAccordion category="applied" data={faqData.applied} />
           <FaqAccordion category="aiml" data={faqData.aiml} />
           <FaqAccordion category="systemDesign" data={faqData.systemDesign} />
           <FaqAccordion category="dsa" data={faqData.dsa} />

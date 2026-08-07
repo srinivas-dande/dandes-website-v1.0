@@ -45,7 +45,7 @@ const comparisonData = [
   },
   {
     criteria: "Learning Journey",
-    dandes: "Structured 12-month program with clear milestones.",
+    dandes: "Structured 6-month & 12-month programs with clear milestones.",
     typical: "Usually self-paced with no fixed learning path.",
   },
   {
@@ -67,7 +67,7 @@ export function ComparisonSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Dandes Academy <span className="text-[#d12027]">AI & Machine Learning Program</span> vs Typical AI Courses
+            Dandes Academy <span className="text-[#d12027]">AI Programs</span> vs Typical AI Courses
           </h2>
           <p className="text-muted-foreground">The real difference</p>
         </div>

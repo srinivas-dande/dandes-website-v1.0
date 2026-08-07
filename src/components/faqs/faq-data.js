@@ -76,6 +76,60 @@ export const faqData = {
     answer: 'Book a counseling call to understand the program structure and see if it fits your goals.'
   }
 ] 
+},
+
+  applied: {
+  title: 'Applied AI Course',
+  questions: [
+    {
+      question: 'Do I need prior experience in AI or Machine Learning?',
+      answer: 'No. Course 1 (AI Foundations) teaches the ML, DL and NLP concepts this track uses before you touch GenAI or Agentic AI. The only real requirement is being comfortable with Python.'
+    },
+    {
+      question: 'Is this course suitable for working professionals?',
+      answer: 'Yes — it is built specifically for them. Classes run on weekends (Sat–Sun), so it never clashes with your job or job search. Recordings are available if you miss a session.'
+    },
+    {
+      question: 'How long is the Applied AI Engineering course?',
+      answer: '6 months, live on weekends — 8 hours per week (Sat–Sun).'
+    },
+    {
+      question: 'Will I get projects and a capstone?',
+      answer: 'Yes — assignments and mini projects throughout, finishing with an Enterprise AI Capstone: a real system with LLM/RAG/Agent integration, built on FastAPI, containerized with Docker, and deployed on AWS.'
+    },
+    {
+      question: 'What topics are covered in the program?',
+      answer: '7 courses: AI Foundations, Generative AI, Large Language Models, Agentic AI, AI Engineering & Deployment, MLOps & Production Operations, and the Enterprise AI Capstone.'
+    },
+    {
+      question: 'Is the course fully recorded or live?',
+      answer: 'The course includes live instructor-led sessions with recordings available on the LMS for revision and catch-up.'
+    },
+    {
+      question: 'Do I need strong math to start?',
+      answer: 'No separate math module is required. The math intuition you need — gradients, vectors, cosine similarity — is taught inside Course 1 (AI Foundations), directly connected to where it is used, not as standalone theory.'
+    },
+    {
+      question: 'Do you provide placement support or guarantee placement?',
+      answer: 'We provide placement support including resume building, interview preparation, and job referrals. We do not guarantee placement.'
+    },
+    {
+      question: 'Can I switch batches if my schedule changes?',
+      answer: 'Yes. You can request a batch switch if your schedule changes, subject to availability.'
+    },
+    {
+      question: 'What is the course fee, and are EMIs available?',
+      answer: 'Please contact our team for current pricing. Yes, EMI options are available to make the program more accessible.'
+    },
+    {
+      question: 'Is there a refund policy?',
+      answer: 'Yes. We have a refund policy. Please review our terms or contact support for specific details.'
+    },
+    {
+      question: 'What is the best first step before enrolling?',
+      answer: 'Book a counseling call to understand the program structure and see if it fits your goals.'
+    }
+  ]
     
   },
   systemDesign: {
