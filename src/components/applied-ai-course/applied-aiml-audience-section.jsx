@@ -13,7 +13,7 @@ const professionalsContent = {
     'If you are already in tech and need to move into GenAI, LLM or Agentic AI roles quickly — whether by choice or because of a layoff — this course is built for real urgency, not a leisurely 12-month pace. You learn on weekends, with recordings if you miss a session, and a focused roadmap built to get you interview-ready fast.',
   cardTitle: 'You will benefit most if you want to:',
   benefits: [
-    'Move into GenAI/LLM/Agentic AI roles in 5 months, not a year Skip classical ML and Computer Vision you dont need for these roles',
+    'Move into GenAI/LLM/Agentic AI roles in 6 months, not a year Skip classical ML and Computer Vision you dont need for these roles',
     'Learn on weekends — Sat/Sun, without quitting your job or pausing your search',
     'Build deployed projects you can confidently walk through in interviews',
     

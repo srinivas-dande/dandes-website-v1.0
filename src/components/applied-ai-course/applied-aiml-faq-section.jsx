@@ -62,7 +62,7 @@ export function AimlFaqSection() {
         {/* Heading */}
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <h2 style={{ fontSize: 28, fontWeight: 800, color: '#1a1a1a', margin: '0 0 12px' }}>
-            Questions to ask before joining an AI and ML course
+            Questions to ask before joining an Applied AI course
           </h2>
           <p style={{ color: '#6b7280', fontSize: '0.95rem', margin: 0 }}>
             Quick answers to common queries about batches, recordings, and career support.
