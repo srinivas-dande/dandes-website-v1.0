@@ -20,9 +20,9 @@ const courses = [
   {
     id: 2,
     image: "/icons/ai-course.png",
-    title: "Applied AI Course",
+    title: "Applied AI Engineering Course",
     description:
-      "Master AI & Machine Learning from fundamentals to advanced topics, including Deep Learning, Generative AI, Agentic AI, and MLOps through live classes, real projects, and interview-focused learning.",
+      "Master Applied AI Engineering from fundamentals to advanced topics, including Deep Learning, Generative AI, Agentic AI, and MLOps through live classes, real projects, and interview-focused learning.",
     highlights: ["Live Instructor-Led Classes", "Structured Roadmap", "Real Industry Projects", "Interview Preparation"],
     highlightColor: "bg-cyan-50 text-cyan-700",
     ctaText: "View Applied AI course",
