@@ -41,6 +41,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/ai-machine-learning-program",
+        destination: "/courses/ai-machine-learning-course",
+        permanent: true,
+      },
+      {
         source: "/webinars/software-engineers-switch-to-ai-career",
         destination: "/courses/ai-machine-learning-course",
         permanent: true,
