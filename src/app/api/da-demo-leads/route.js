@@ -73,7 +73,6 @@ export async function POST(req) {
       "chaitanya@dandesacademy.com",
       "swetha@dandesacademy.com",
       "murali@dandesacademy.com",
-      "srinivas@dandeacademy.com",
     ],
     subject: `New Demo Lead - ${fullName} - ${courseInterested}`,
     html: `
